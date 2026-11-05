@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "design-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4411", "--bind", "127.0.0.1", "--directory", ".aidesigner"],
+      "port": 4411
+    }
+  ]
+}

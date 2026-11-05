@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "wide-tracking",
+        "value": "*",
+        "files": [
+          ".aidesigner/stampila.html"
+        ],
+        "createdAt": "2026-11-05T12:34:24.311Z",
+        "reason": "Tracking is only on short uppercase brand labels (AVA wordmark, stamp ring text), matching the brand identity PDF"
+      }
+    ]
+  }
+}
