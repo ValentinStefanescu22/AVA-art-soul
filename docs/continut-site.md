@@ -51,7 +51,7 @@ Acasă are 8 blocuri, de sus în jos. Cineva care dă scroll 30 de secunde trebu
    - Titlu: *AVA Art & Soul — autocunoaștere prin creație*
    - Subtitlu: *Ateliere cu lut, consiliere și retreaturi pentru momentele în care ai nevoie să te auzi din nou. Pentru tine sau pentru echipa ta.*
    - Două butoane: „Pentru tine” și „Pentru companii”
-2. **Cine sunt, pe scurt (2–3 rânduri).** *Sunt** Alessia și* *cred că mâinile știu uneori lucruri pe care mintea încă nu le-a spus. Fac ateliere în care lutul e doar începutul: restul e despre tine, despre ce simți și despre oamenii cu care împarți masa.* + link „Povestea mea”
+2. **Cine sunt, pe scurt (2–3 rânduri).** *Sunt** Alessia și* *cred că mâinile știu uneori lucruri pe care mintea încă nu le-a spus. Creez experiențe în care lutul e doar începutul: restul e despre tine, despre ce simți și despre oamenii cu care împarți masa.* + link „Povestea mea”
 3. **Ce facem.** 5 sectiuni, fiecare cu o poză, o propoziție și un link: Ateliere de grup · Pentru companii · Consiliere 1:1 · Atelier privat 1:1 · Retreaturi
 4. **Cum arată un atelier.** 3 pași simpli: *Ajungi, bei un ceai și te așezi* → *Lucrezi cu lutul, ghidată de o temă** **sau f**re**e** flow* → *Vorbim, **creăm**, pleci **c**u **minte**a** **m**ai** **l**i**n**i**ș**t**i**tă **ș**i** su**f**l**etul p**l**i**n** (și cu piesa ta, după ardere)*
 5. **Următorul eveniment.** Anunțul celui mai apropiat atelier: nume, dată, loc, preț, buton „Mă înscriu”
