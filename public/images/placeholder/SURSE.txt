@@ -1,0 +1,9 @@
+Placeholder photos from Unsplash (free licence), to be replaced after AVA's own photo shoot.
+grup       https://unsplash.com/photos/1682868067843-11fbc221174a
+companii   https://unsplash.com/photos/1759646828783-7e1b8f02f89b
+privat     https://unsplash.com/photos/1673252414896-50825d7bbc18
+consiliere https://unsplash.com/photos/1604881988758-f76ad2f7aac1
+retreat    https://unsplash.com/photos/1449158743715-0a90ebb6d2d8
+copii      https://unsplash.com/photos/1794209166620-da8b20428227
+pictat     https://unsplash.com/photos/1772485719348-761b3c608eef
+piese      https://unsplash.com/photos/1577576223085-3eb295cd414f
