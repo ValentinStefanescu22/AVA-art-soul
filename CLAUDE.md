@@ -73,7 +73,7 @@ Nicăieri adresa exactă. Pe site apare „București”, plus zona sau locația
 
 ## Animații
 
-- Un singur moment orchestrat la încărcare (hero), apoi mișcare discretă. Nu animăm fiecare secțiune la scroll.
+- Un singur moment orchestrat la încărcare (hero), apoi mișcare discretă. La scroll (cerut de Vali, 11 nov 2026): blocurile de conținut apar o singură dată, opacitate + ridicare de 16px, 800ms ease-out, decalaj de 80ms între frați; nimic ascuns fără JS sau cu `prefers-reduced-motion` (vezi `REVEAL` în `.aidesigner/acasa_combine.py`).
 - Animații întreruptibile (lerp / spring din poziția curentă), fără să blocheze input-ul. Easing ease-out, sub ~300ms pentru interacțiuni.
 - Tot ce se mișcă respectă `prefers-reduced-motion`.
 

@@ -1,0 +1,19 @@
+- region [ref=f5e7]:
+  - paragraph [aria-hidden]: Alessia
+  - generic [ref=f5e8]:
+    - button "Artist ceramist Lucrez cu lutul de peste trei ani, cu cursuri de specializare la Brașov." [pressed] [ref=f5e9] [cursor=pointer]:
+      - generic [ref=f5e10]: Artist ceramist
+      - generic [ref=f5e11]: Lucrez cu lutul de peste trei ani, cu cursuri de specializare la Brașov.
+    - figure [ref=f5e12]:
+      - img "Alessia Văideanu, fondatoarea AVA Art & Soul" [ref=f5e13]
+    - button "Consilier acreditat Consilier în dezvoltare personală (Sandonia Institute), cu licență în Psihologie." [ref=f5e14] [cursor=pointer]:
+      - generic [ref=f5e15]: Consilier acreditat
+      - generic [ref=f5e16]: Consilier în dezvoltare personală (Sandonia Institute), cu licență în Psihologie.
+  - generic [ref=f5e17]:
+    - heading [level=2] [ref=f5e18]:
+      - text: Sunt Alessia și cred că
+      - emphasis [ref=f5e19]: mâinile știu
+      - text: uneori lucruri pe care mintea încă nu le-a spus.
+    - paragraph [ref=f5e20]: "Creez experiențe în care lutul e doar începutul: restul e despre tine, despre ce simți și despre oamenii cu care împarți masa."
+    - link "Povestea mea" [ref=f5e21] [cursor=pointer]:
+      - /url: "#povestea"

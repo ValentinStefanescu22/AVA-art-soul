@@ -45,7 +45,7 @@ Un sfat de structură: fă toate paginile de servicii după același tipar, ca o
 
 ## Pagina Acasă
 
-Acasă are 8 blocuri, de sus în jos. Cineva care dă scroll 30 de secunde trebuie să înțeleagă cine ești, ce faci și unde apasă ca să se înscrie.
+Acasă are 7 blocuri, de sus în jos. Cineva care dă scroll 30 de secunde trebuie să înțeleagă cine ești, ce faci și unde apasă ca să se înscrie.
 
 1. **Primul ecran (hero).** Logo-ul, o poză caldă cu mâini în lut și textul:
    - Titlu: *AVA Art & Soul — autocunoaștere prin creație*
@@ -53,11 +53,10 @@ Acasă are 8 blocuri, de sus în jos. Cineva care dă scroll 30 de secunde trebu
    - Două butoane: „Pentru tine” și „Pentru companii”
 2. **Cine sunt, pe scurt (2–3 rânduri).** *Sunt** Alessia și* *cred că mâinile știu uneori lucruri pe care mintea încă nu le-a spus. Creez experiențe în care lutul e doar începutul: restul e despre tine, despre ce simți și despre oamenii cu care împarți masa.* + link „Povestea mea”
 3. **Ce facem.** 5 sectiuni, fiecare cu o poză, o propoziție și un link: Ateliere de grup · Pentru companii · Consiliere 1:1 · Atelier privat 1:1 · Retreaturi
-4. **Cum arată un atelier.** 3 pași simpli: *Ajungi, bei un ceai și te așezi* → *Lucrezi cu lutul, ghidată de o temă** **sau f**re**e** flow* → *Vorbim, **creăm**, pleci **c**u **minte**a** **m**ai** **l**i**n**i**ș**t**i**tă **ș**i** su**f**l**etul p**l**i**n** (și cu piesa ta, după ardere)*
-5. **Următorul eveniment.** Anunțul celui mai apropiat atelier: nume, dată, loc, preț, buton „Mă înscriu”
-6. **Ce spun oamenii.** 3 testimoniale scurte, cu prenume și, ideal, poză
-7. **Galerie mini.** 6–8 poze + link spre galeria completă și spre Instagram
-8. **Final.** Abonare la newsletter (*„Află primele despre atelierele noi”*) + link de contact // vreau si pop up cu abonează-te la newsletter
+4. **Următorul eveniment.** Anunțul celui mai apropiat atelier: nume, dată, loc, preț, buton „Mă înscriu”
+5. **Ce spun oamenii.** 3 testimoniale scurte, cu prenume și, ideal, poză
+6. **Galerie mini.** 6–8 poze + link spre galeria completă și spre Instagram
+7. **Final.** Abonare la newsletter (*„Află primele despre atelierele noi”*) + link de contact // vreau si pop up cu abonează-te la newsletter
 
 **De completat:** pozele pentru hero și secțiuni, 3 testimoniale reale, dacă vrei newsletter acum sau mai târziu.
 
@@ -300,6 +299,13 @@ Atelierele trecute pot sta într-o arhivă, cu 2–3 poze fiecare. Arată că fa
 ### Testimoniale
 
 Strânge-le sistematic: după fiecare atelier, un mesaj scurt cu 2 întrebări (*Cu ce ai plecat de la atelier?* și *Cui l-ai recomanda?*). Cere acordul pentru publicare și alege dacă apar cu prenume, prenume + inițială sau anonim. Pune-le pe Acasă (3 bucăți) și pe fiecare pagină de serviciu (1–2 relevante).
+
+**Testimoniale primite (pe Acasă, în ordinea asta, fără numele atelierului):**
+
+1. „Foarte frumos și cozy, chiar am reușit să reflect asupra mea cât timp lucram cu lutul.” – Costin
+2. „A fost o experiență foarte plăcută și relaxantă. Pauzele de socializare dintre activități au fost exact ce trebuia.” – Mario
+3. „Mi-a plăcut «intenția» cu care am pornit atelierul și faptul că acum obiectul semnifică ceva cu adevărat deosebit pentru fiecare.” – Mădălina
+4. „O activitate foarte relaxantă într-un cadru intim și frumos. Revin cu siguranță!” – Adina
 
 ## Contact, FAQ și paginile legale
 

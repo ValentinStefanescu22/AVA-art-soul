@@ -1,0 +1,350 @@
+- main [ref=f2e3]:
+  - generic [ref=f2e5]:
+    - generic [ref=f2e6]:
+      - paragraph [ref=f2e7]:
+        - generic [ref=f2e9]: duminică, 15 noiembrie, ora 17:00
+        - link "Sold out" [ref=f2e10] [cursor=pointer]:
+          - /url: "#evenimente"
+      - generic [ref=f2e13]:
+        - link "AVA Art & Soul, pagina principală" [ref=f2e14] [cursor=pointer]:
+          - /url: "#top"
+          - generic [ref=f2e19]:
+            - generic [ref=f2e20]: AVA
+            - generic [ref=f2e21]: ART & SOUL
+        - navigation "Meniu principal"
+        - button "Deschide meniul" [ref=f2e23] [cursor=pointer]
+    - generic [ref=f2e41]:
+      - generic [aria-hidden] [ref=f2e42]: Art & Soul
+      - 'heading "AVA Art & Soul: Creație. Conexiune. Autocunoaștere." [level=1] [ref=f2e43]':
+        - generic [ref=f2e44]: "AVA Art & Soul:"
+        - text: Creație. Conexiune. Autocunoaștere.
+      - paragraph [ref=f2e45]: Ateliere cu lut, consiliere și retreaturi pentru momentele în care ai nevoie să te auzi din nou. Pentru tine sau pentru echipa ta.
+      - generic [ref=f2e46]:
+        - link "Pentru tine" [ref=f2e47] [cursor=pointer]:
+          - /url: "#pentru-tine"
+        - link "Pentru companii" [ref=f2e48] [cursor=pointer]:
+          - /url: "#pentru-companii"
+  - region [ref=f2e51]:
+    - paragraph [aria-hidden]: Alessia
+    - generic [ref=f2e52]:
+      - button "Artist ceramist Lucrez cu lutul de peste trei ani, cu cursuri de specializare la Brașov." [pressed] [ref=f2e53] [cursor=pointer]:
+        - generic [ref=f2e54]: Artist ceramist
+        - generic [ref=f2e55]: Lucrez cu lutul de peste trei ani, cu cursuri de specializare la Brașov.
+      - figure [ref=f2e56]:
+        - img "Alessia Văideanu, fondatoarea AVA Art & Soul" [ref=f2e57]
+      - button "Consilier acreditat Consilier în dezvoltare personală (Sandonia Institute), cu licență în Psihologie." [ref=f2e58] [cursor=pointer]:
+        - generic [ref=f2e59]: Consilier acreditat
+        - generic [ref=f2e60]: Consilier în dezvoltare personală (Sandonia Institute), cu licență în Psihologie.
+    - generic [ref=f2e61]:
+      - heading [level=2] [ref=f2e62]:
+        - text: Sunt Alessia și cred că
+        - emphasis [ref=f2e63]: mâinile știu
+        - text: uneori lucruri pe care mintea încă nu le-a spus.
+      - paragraph [ref=f2e64]: "Creez experiențe în care lutul e doar începutul: restul e despre tine, despre ce simți și despre oamenii cu care împarți masa."
+      - link "Povestea mea" [ref=f2e65] [cursor=pointer]:
+        - /url: "#povestea"
+  - region [ref=f2e70]:
+    - generic [ref=f2e71]:
+      - generic [ref=f2e72]:
+        - heading "Ce facem" [level=2] [ref=f2e73]
+        - paragraph [ref=f2e74]: Pentru tine sau pentru echipa ta.
+      - generic [ref=f2e75]:
+        - link [ref=f2e76] [cursor=pointer]:
+          - /url: "#grup"
+          - img "Un grup lucrează la roata olarului într-un atelier de ceramică (fotografie provizorie)" [ref=f2e77]
+          - generic [aria-hidden] [ref=f2e78]: Ateliere de grup
+          - generic:
+            - generic: 3 ore · max. 8 persoane · de la 185 lei
+            - generic: Ateliere de grup
+            - generic: O dată pe lună ne strângem în jurul lutului, cu o temă nouă de fiecare dată.
+            - generic: Vezi atelierele care urmează
+        - link [ref=f2e79] [cursor=pointer]:
+          - /url: "#privat"
+          - img "O femeie modelează un bol de lut la masă (fotografie provizorie)" [ref=f2e80]
+          - generic [aria-hidden] [ref=f2e81]: Atelier privat 1:1
+          - generic:
+            - generic: pentru adulți și copii · de la 220 lei
+            - generic: Atelier privat 1:1
+            - generic: Lutul, tu și eu. Un atelier de modelaj, în ritmul tău, fără grup și fără grabă.
+            - generic: Rezervă un atelier privat
+        - link [ref=f2e82] [cursor=pointer]:
+          - /url: "#consiliere"
+          - img "Două persoane stau la masă, cu câte o cană în mâini (fotografie provizorie)" [ref=f2e83]
+          - generic [aria-hidden] [ref=f2e84]: Consiliere 1:1
+          - generic:
+            - generic: 60–90 min · online sau față în față · 180 lei / oră
+            - generic: Consiliere 1:1
+            - generic: Te susțin în drumul tău și te ghidez spre versiunea ta autentică.
+            - generic: Programează o ședință
+        - link [ref=f2e85] [cursor=pointer]:
+          - /url: "#companii"
+          - img "Mâini care își dau din mână în mână un vas de lut (fotografie provizorie)" [ref=f2e86]
+          - generic [aria-hidden] [ref=f2e87]: Pentru companii
+          - generic:
+            - generic: 4–16 persoane · la voi sau în locații partenere · ofertă personalizată
+            - generic: Pentru companii
+            - generic: Ateliere de autocunoaștere și conectare pentru echipe, în care lutul este unealta.
+            - generic: Cere o ofertă
+        - link [ref=f2e88] [cursor=pointer]:
+          - /url: "#retreat"
+          - img "Cabană de lemn într-o pădure de pini (fotografie provizorie)" [ref=f2e89]
+          - generic [aria-hidden] [ref=f2e90]: Retreaturi
+          - generic:
+            - generic: în curând
+            - generic: Retreaturi
+            - generic: Câteva zile departe de oraș, cu lut, natură, liniște și oameni care caută același lucru ca tine.
+            - generic: Anunță-mă la lansare
+        - link [ref=f2e91] [cursor=pointer]:
+          - /url: "#copii"
+          - img "Un copil zâmbește, cu un vas de lut în mâini (fotografie provizorie)" [ref=f2e92]
+          - generic [aria-hidden] [ref=f2e93]: Pentru școli și copii
+          - generic:
+            - generic: de la 6 ani · 60 min · 50 lei / copil
+            - generic: Pentru școli și copii
+            - generic: "Modelaj în lut pentru școli și afterschool, în joacă: copiii învață despre argilă și își iau piesa acasă."
+            - generic: Află mai multe
+  - region [ref=f2e96]:
+    - generic [ref=f2e97]:
+      - generic [ref=f2e98]:
+        - heading "Următorul atelier" [level=2] [ref=f2e99]
+        - paragraph [ref=f2e100]: 15 noiembrie 2026, duminică, ora 17:00 (3 ore)
+        - generic [ref=f2e101]:
+          - generic [ref=f2e102]:
+            - term [ref=f2e103]: Unde
+            - definition [ref=f2e104]: Cotroceni, sector 5
+          - generic [ref=f2e105]:
+            - term [ref=f2e106]: Preț
+            - definition [ref=f2e107]: 200 lei
+          - generic [ref=f2e108]:
+            - term [ref=f2e109]: Locuri
+            - definition [ref=f2e110]: Toate cele 8 locuri sunt ocupate
+          - generic [ref=f2e111]:
+            - term [ref=f2e112]: Facilitează
+            - definition [ref=f2e113]: Alessia, AVA Art & Soul
+        - paragraph [ref=f2e114]: 200 lei, include toate materialele, îndrumarea și o băutură și o gustare făcute în casă.
+        - generic [ref=f2e115]:
+          - link "Intră pe lista de așteptare" [ref=f2e116] [cursor=pointer]:
+            - /url: "#contact"
+          - paragraph [ref=f2e119]: Dacă se eliberează un loc, te anunțăm primii.
+      - generic [ref=f2e121]:
+        - generic [ref=f2e122]:
+          - 'img "Masa atelierului din octombrie: oameni care lucrează lutul, cu ceai și prăjitură" [ref=f2e123]'
+          - img "Doi participanți își dau din mână în mână un bol de lut, la atelierul din octombrie" [ref=f2e124]
+          - img "O femeie pictează un bol de ceramică cu pensula (fotografie provizorie)" [ref=f2e125]
+          - img "Prăjitură făcută în casă și căni pe masa atelierului din octombrie" [ref=f2e126]
+          - img "Boluri de ceramică arse, în culori diferite (fotografie provizorie)" [ref=f2e127]
+        - generic [aria-hidden] [ref=f2e136]:
+          - text: ava.art.soul
+          - generic [ref=f2e137]: · 15 nov
+        - button "Cadrul anterior" [ref=f2e138] [cursor=pointer]
+        - button "Cadrul următor" [ref=f2e139] [cursor=pointer]
+        - generic [ref=f2e140]:
+          - generic [ref=f2e141]: Sold out
+          - paragraph [ref=f2e142]: duminică · 15 noiembrie · ora 17:00
+          - paragraph [ref=f2e143]: Atelier de ceramică & socializare
+          - paragraph [ref=f2e144]: Cotroceni, sector 5
+        - generic:
+          - paragraph: O seară liniștită cu lut, culoare și oameni noi. Modelăm împreună,
+        - generic:
+          - paragraph: apoi îți pictezi piesa cu underglaze, culori speciale pentru ceramică,
+        - generic:
+          - paragraph: iar între timp povestim și ne bucurăm de o băutură și o gustare făcute în casă.
+        - generic:
+          - paragraph: Piesa modelată și pictată de tine rămâne a ta, după ardere.
+          - paragraph: 200 lei · Sold out
+          - link "Lista de așteptare":
+            - /url: "#contact"
+  - region [ref=f2e147]:
+    - generic [ref=f2e149]:
+      - heading "Ce spun oamenii" [level=2] [ref=f2e150]
+      - generic [ref=f2e151]:
+        - link "Vezi toată galeria" [ref=f2e152] [cursor=pointer]:
+          - /url: "#galerie"
+        - link "@ava.art.soul pe Instagram" [ref=f2e155] [cursor=pointer]:
+          - /url: https://www.instagram.com/ava.art.soul/
+    - list [ref=f2e159]:
+      - listitem [ref=f2e160]:
+        - 'img "Atelierul din octombrie: opt oameni în jurul unei mese cu lut, ceai și prăjitură" [ref=f2e161]'
+      - listitem [ref=f2e162]:
+        - img "O femeie pictează un bol de ceramică (fotografie provizorie)" [ref=f2e163]
+      - listitem [ref=f2e164]:
+        - img "Două persoane stau la masă, cu câte o cană în mâini (fotografie provizorie)" [ref=f2e165]
+      - listitem [ref=f2e166]:
+        - img "Boluri de ceramică arse, în culori diferite (fotografie provizorie)" [ref=f2e167]
+      - listitem [ref=f2e168]:
+        - img "Doi participanți își dau din mână în mână un bol de lut, la atelierul din octombrie" [ref=f2e169]
+      - listitem [ref=f2e170]:
+        - img "Un copil zâmbește, cu un vas de lut în mâini (fotografie provizorie)" [ref=f2e171]
+      - listitem [aria-hidden] [ref=f2e172]
+      - listitem [aria-hidden] [ref=f2e173]
+      - listitem [aria-hidden] [ref=f2e174]
+      - listitem [aria-hidden] [ref=f2e175]
+      - listitem [aria-hidden] [ref=f2e176]
+      - listitem [aria-hidden] [ref=f2e177]
+    - region "Testimoniale" [ref=f2e178]:
+      - generic [ref=f2e179]:
+        - button "Testimonialul 1" [ref=f2e180] [cursor=pointer]
+        - button "Testimonialul 2" [ref=f2e182] [cursor=pointer]
+        - button "Testimonialul 3" [ref=f2e184] [cursor=pointer]
+        - button "Testimonialul 4" [ref=f2e186] [cursor=pointer]
+      - group "1 din 4" [ref=f2e189]:
+        - figure "Costin" [ref=f2e190]:
+          - blockquote [ref=f2e191]: „Foarte frumos și cozy, chiar am reușit să reflect asupra mea cât timp lucram cu lutul.”
+      - button "Testimonialul anterior" [ref=f2e194] [cursor=pointer]
+      - button "Testimonialul următor" [ref=f2e197] [cursor=pointer]
+    - list [ref=f2e201]:
+      - listitem [ref=f2e202]:
+        - img "Mâini care modelează un bol de lut (fotografie provizorie)" [ref=f2e203]
+      - listitem [ref=f2e204]:
+        - img "Un grup lucrează lutul într-un atelier de ceramică (fotografie provizorie)" [ref=f2e205]
+      - listitem [ref=f2e206]:
+        - img "Masa atelierului din octombrie văzută de sus, cu lut, căni și pensule" [ref=f2e207]
+      - listitem [ref=f2e208]:
+        - img "Mâini care își dau din mână în mână un vas de lut (fotografie provizorie)" [ref=f2e209]
+      - listitem [ref=f2e210]:
+        - img "Cabană de lemn într-o pădure de pini (fotografie provizorie)" [ref=f2e211]
+      - listitem [ref=f2e212]:
+        - img "O femeie pictează un bol de ceramică (fotografie provizorie)" [ref=f2e213]
+      - listitem [aria-hidden] [ref=f2e214]
+      - listitem [aria-hidden] [ref=f2e215]
+      - listitem [aria-hidden] [ref=f2e216]
+      - listitem [aria-hidden] [ref=f2e217]
+      - listitem [aria-hidden] [ref=f2e218]
+      - listitem [aria-hidden] [ref=f2e219]
+    - button "Oprește mișcarea" [ref=f2e221] [cursor=pointer]
+  - region [ref=f2e228]:
+    - generic [ref=f2e229]:
+      - heading "Întrebări frecvente" [level=2] [ref=f2e231]
+      - generic [ref=f2e232]:
+        - generic [ref=f2e233]:
+          - group [ref=f2e234]:
+            - generic "Trebuie să știu să lucrez cu lutul?" [ref=f2e235] [cursor=pointer]
+            - paragraph [ref=f2e240]: Deloc. Majoritatea celor care vin la atelierele mele ating lutul pentru prima dată. Te ghidez pas cu pas.
+          - group [ref=f2e241]:
+            - generic "Pot veni singur(ă)?" [ref=f2e242] [cursor=pointer]
+          - group [ref=f2e246]:
+            - generic "Nu știu ce mi se potrivește. De unde încep?" [ref=f2e247] [cursor=pointer]
+        - complementary "Ai altă întrebare?" [ref=f2e251]:
+          - paragraph [ref=f2e252]: Ai altă întrebare?
+          - paragraph [ref=f2e253]: Îți răspundem în maxim 24 de ore.
+          - generic [ref=f2e254]:
+            - link "Scrie-mi" [ref=f2e255] [cursor=pointer]:
+              - /url: "#contact"
+            - link "Toate întrebările" [ref=f2e258] [cursor=pointer]:
+              - /url: "#faq"
+  - generic "Subsol" [ref=f2e263]:
+    - generic [ref=f2e264]:
+      - generic [ref=f2e265]:
+        - generic [ref=f2e266]:
+          - heading "Rămâi aproape" [level=2] [ref=f2e267]
+          - paragraph [ref=f2e268]: Vești despre atelierele noi, înaintea tuturor, și 5% discount la următorul eveniment.
+          - paragraph [ref=f2e269]: – Alessia Văideanu
+        - generic [ref=f2e270]:
+          - img [aria-hidden] [ref=f2e271]:
+            - generic [ref=f2e274]: AVA · ART & SOUL · AUTOCUNOAȘTERE PRIN CREAȚIE ·
+          - generic [ref=f2e280]:
+            - generic [ref=f2e281]: Emailul tău
+            - generic [ref=f2e282]:
+              - textbox "Emailul tău" [ref=f2e283]:
+                - /placeholder: nume@exemplu.ro
+              - button "Abonează-te" [ref=f2e284] [cursor=pointer]
+            - generic [ref=f2e286] [cursor=pointer]:
+              - checkbox "Sunt de acord să primesc emailuri de la AVA Art & Soul. Am citit Politica de confidențialitate." [ref=f2e287]
+              - generic [ref=f2e288]:
+                - text: Sunt de acord să primesc emailuri de la AVA Art & Soul. Am citit
+                - link "Politica de confidențialitate" [ref=f2e289]:
+                  - /url: "#confidentialitate"
+                - text: .
+      - generic [ref=f2e290]:
+        - generic [ref=f2e291]:
+          - generic [ref=f2e292]:
+            - link "AVA Art & Soul, pagina principală" [ref=f2e293] [cursor=pointer]:
+              - /url: "#top"
+              - generic [ref=f2e298]:
+                - generic [ref=f2e299]: AVA
+                - generic [ref=f2e300]: ART & SOUL
+            - paragraph [ref=f2e301]: autocunoaștere prin creație
+          - navigation "Navigare" [ref=f2e302]:
+            - paragraph [ref=f2e303]: Navigare
+            - list [ref=f2e304]:
+              - listitem [ref=f2e305]:
+                - link "Acasă" [ref=f2e306] [cursor=pointer]:
+                  - /url: "#top"
+              - listitem [ref=f2e307]:
+                - link "Despre noi" [ref=f2e308] [cursor=pointer]:
+                  - /url: "#despre"
+              - listitem [ref=f2e309]:
+                - link "Ce facem" [ref=f2e310] [cursor=pointer]:
+                  - /url: "#ce-facem"
+              - listitem [ref=f2e311]:
+                - link "Evenimente" [ref=f2e312] [cursor=pointer]:
+                  - /url: "#evenimente"
+              - listitem [ref=f2e313]:
+                - link "Galerie" [ref=f2e314] [cursor=pointer]:
+                  - /url: "#galerie"
+              - listitem [ref=f2e315]:
+                - link "Contact" [ref=f2e316] [cursor=pointer]:
+                  - /url: "#contact"
+          - navigation "Ce facem" [ref=f2e317]:
+            - paragraph [ref=f2e318]: Ce facem
+            - list [ref=f2e319]:
+              - listitem [ref=f2e320]:
+                - link "Ateliere de grup" [ref=f2e321] [cursor=pointer]:
+                  - /url: "#ateliere-de-grup"
+              - listitem [ref=f2e322]:
+                - link "Pentru companii" [ref=f2e323] [cursor=pointer]:
+                  - /url: "#companii"
+              - listitem [ref=f2e324]:
+                - link "Consiliere 1:1" [ref=f2e325] [cursor=pointer]:
+                  - /url: "#consiliere"
+              - listitem [ref=f2e326]:
+                - link "Atelier privat 1:1" [ref=f2e327] [cursor=pointer]:
+                  - /url: "#atelier-privat"
+              - listitem [ref=f2e328]:
+                - link "Retreaturi" [ref=f2e329] [cursor=pointer]:
+                  - /url: "#retreaturi"
+              - listitem [ref=f2e330]:
+                - link "Pentru școli și copii" [ref=f2e331] [cursor=pointer]:
+                  - /url: "#scoli"
+          - navigation "Informații" [ref=f2e332]:
+            - paragraph [ref=f2e333]: Informații
+            - list [ref=f2e334]:
+              - listitem [ref=f2e335]:
+                - link "Întrebări frecvente" [ref=f2e336] [cursor=pointer]:
+                  - /url: "#faq"
+              - listitem [ref=f2e337]:
+                - link "Înscrieri, plată și anulare" [ref=f2e338] [cursor=pointer]:
+                  - /url: "#inscrieri"
+              - listitem [ref=f2e339]:
+                - link "Termeni și condiții" [ref=f2e340] [cursor=pointer]:
+                  - /url: "#termeni"
+              - listitem [ref=f2e341]:
+                - link "Politica de confidențialitate" [ref=f2e342] [cursor=pointer]:
+                  - /url: "#confidentialitate"
+              - listitem [ref=f2e343]:
+                - link "Cookies" [ref=f2e344] [cursor=pointer]:
+                  - /url: "#cookies"
+          - generic [ref=f2e345]:
+            - paragraph [ref=f2e346]: Contact
+            - list [ref=f2e347]:
+              - listitem [ref=f2e348]:
+                - link "ava.events.26@gmail.com" [ref=f2e349] [cursor=pointer]:
+                  - /url: mailto:ava.events.26@gmail.com
+              - listitem [ref=f2e350]:
+                - link "0730 301 996" [ref=f2e351] [cursor=pointer]:
+                  - /url: tel:+40730301996
+              - listitem [ref=f2e352]:
+                - link "@ava.art.soul" [ref=f2e353] [cursor=pointer]:
+                  - /url: https://www.instagram.com/ava.art.soul/
+              - listitem [ref=f2e354]:
+                - generic [ref=f2e355]: București
+        - generic [ref=f2e356]:
+          - paragraph [ref=f2e357]: "© 2026 AVA Art & Soul · VAIDEANU ALESSIA-ALEXANDRA PFA · CUI 55380756 · Reg. Com. F2026038934007 · Sediu: [ADRESA SEDIULUI] · ava.events.26@gmail.com"
+          - generic [ref=f2e358]:
+            - link "ANPC · SAL" [ref=f2e359] [cursor=pointer]:
+              - /url: https://anpc.ro/ce-este-sal/
+            - group "Limba site-ului" [ref=f2e360]:
+              - link "RO" [ref=f2e361] [cursor=pointer]:
+                - /url: "#ro"
+              - link "EN" [ref=f2e362] [cursor=pointer]:
+                - /url: "#en"

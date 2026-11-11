@@ -1,0 +1,52 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - paragraph [ref=e5]:
+      - generic [ref=e7]: Următorul atelier
+      - generic [aria-hidden] [ref=e8]: ·
+      - generic [ref=e9]: duminică, 15 noiembrie, ora 17:00
+      - generic [aria-hidden] [ref=e10]: ·
+      - generic [ref=e11]: Cotroceni, sector 5
+      - link "Sold out" [ref=e12] [cursor=pointer]:
+        - /url: "#evenimente"
+    - banner [ref=e15]:
+      - link "AVA Art & Soul, pagina principală" [ref=e16] [cursor=pointer]:
+        - /url: "#top"
+        - generic [ref=e21]:
+          - generic [ref=e22]: AVA
+          - generic [ref=e23]: ART & SOUL
+      - navigation "Meniu principal" [ref=e24]:
+        - list [ref=e25]:
+          - listitem [ref=e26]:
+            - link "Acasă" [ref=e27] [cursor=pointer]:
+              - /url: "#top"
+          - listitem [ref=e28]:
+            - link "Despre noi" [ref=e29] [cursor=pointer]:
+              - /url: "#despre"
+          - listitem [ref=e30]:
+            - link "Ce facem" [ref=e31] [cursor=pointer]:
+              - /url: "#ce-facem"
+          - listitem [ref=e32]:
+            - link "Evenimente" [ref=e33] [cursor=pointer]:
+              - /url: "#evenimente"
+          - listitem [ref=e34]:
+            - link "Galerie" [ref=e35] [cursor=pointer]:
+              - /url: "#galerie"
+          - listitem [ref=e36]:
+            - link "Contact" [ref=e37] [cursor=pointer]:
+              - /url: "#contact"
+      - group "Limba site-ului" [ref=e39]:
+        - link "RO" [ref=e40] [cursor=pointer]:
+          - /url: "#ro"
+        - link "EN" [ref=e41] [cursor=pointer]:
+          - /url: "#en"
+  - generic [ref=e57]:
+    - generic [aria-hidden] [ref=e58]: Art & Soul
+    - 'heading "AVA Art & Soul: Creație. Conexiune. Autocunoaștere." [level=1] [ref=e59]':
+      - generic [ref=e60]: "AVA Art & Soul:"
+      - text: Creație. Conexiune. Autocunoaștere.
+    - paragraph [ref=e61]: Ateliere cu lut, consiliere și retreaturi pentru momentele în care ai nevoie să te auzi din nou. Pentru tine sau pentru echipa ta.
+    - generic [ref=e62]:
+      - link "Pentru tine" [ref=e63] [cursor=pointer]:
+        - /url: "#pentru-tine"
+      - link "Pentru companii" [ref=e64] [cursor=pointer]:
+        - /url: "#pentru-companii"
