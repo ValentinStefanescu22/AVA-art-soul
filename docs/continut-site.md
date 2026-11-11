@@ -16,13 +16,13 @@ Edwardian Script ITC as where it fits best. Besides that also find fonts that fi
 # \
 Harta site-ului
 
-Site-ul are 6 pagini în meniu, iar toate serviciile stau sub un singur meniu, „Ce facem”. Oamenii ajung la tine pe două drumuri: cineva care vrea ceva pentru el (atelier, consiliere, retreat) sau o firmă care vrea ceva pentru echipă. Pagina de Acasă trebuie să le arate imediat ambele drumuri.
+Site-ul are 6 pagini în meniu, iar toate serviciile stau sub un singur meniu, „Ce oferim”. Oamenii ajung la tine pe două drumuri: cineva care vrea ceva pentru el (atelier, consiliere, retreat) sau o firmă care vrea ceva pentru echipă. Pagina de Acasă trebuie să le arate imediat ambele drumuri.
 
 Textele din document sunt ciorne de pornire. Tot ce e între paranteze drepte, \[așa\], e de completat de tine.
 
-**Meniul de sus:** Acasă · Despre noi · Ce facem · Evenimente · Galerie · Contact
+**Meniul de sus:** Acasă · Despre noi · Ce oferim · Evenimente · Galerie · Contact
 
-**Subpaginile din „Ce facem”:** Ateliere de grup · Pentru companii · Consiliere 1:1 · Atelier privat 1:1 · Retreaturi · (opțional) Pentru școli și copii
+**Subpaginile din „Ce oferim”:** Ateliere de grup · Pentru companii · Consiliere 1:1 · Atelier privat 1:1 · Retreaturi · (opțional) Pentru școli și copii
 
 **Footer (jos, pe toate paginile):** FAQ · Înscrieri, plată și anulare · Termeni și condiții · Politica de confidențialitate · Cookies · ANPC · datele PFA · Instagram
 
@@ -52,7 +52,7 @@ Acasă are 7 blocuri, de sus în jos. Cineva care dă scroll 30 de secunde trebu
    - Subtitlu: *Ateliere cu lut, consiliere și retreaturi pentru momentele în care ai nevoie să te auzi din nou. Pentru tine sau pentru echipa ta.*
    - Două butoane: „Pentru tine” și „Pentru companii”
 2. **Cine sunt, pe scurt (2–3 rânduri).** *Sunt** Alessia și* *cred că mâinile știu uneori lucruri pe care mintea încă nu le-a spus. Creez experiențe în care lutul e doar începutul: restul e despre tine, despre ce simți și despre oamenii cu care împarți masa.* + link „Povestea mea”
-3. **Ce facem.** 5 sectiuni, fiecare cu o poză, o propoziție și un link: Ateliere de grup · Pentru companii · Consiliere 1:1 · Atelier privat 1:1 · Retreaturi
+3. **Ce oferim.** 5 sectiuni, fiecare cu o poză, o propoziție și un link: Ateliere de grup · Pentru companii · Consiliere 1:1 · Atelier privat 1:1 · Retreaturi
 4. **Următorul eveniment.** Anunțul celui mai apropiat atelier: nume, dată, loc, preț, buton „Mă înscriu”
 5. **Ce spun oamenii.** 3 testimoniale scurte, cu prenume și, ideal, poză
 6. **Galerie mini.** 6–8 poze + link spre galeria completă și spre Instagram

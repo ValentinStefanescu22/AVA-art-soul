@@ -35,14 +35,14 @@ Facturarea (e-Factura) rămâne la contabilă / SmartBill / Oblio, nu în site. 
 ## Bilingv (RO/EN)
 
 - Rute: `/ro/...` și `/en/...` (`app/[lang]/...` cu `generateStaticParams`); rădăcina `/` redirecționează spre `/ro` (regulă `_redirects` în Cloudflare).
-- Slug-urile rămân în română în ambele limbi (ex. `/en/ce-facem/ateliere-de-grup`).
+- Slug-urile rămân în română în ambele limbi (ex. `/en/ce-oferim/ateliere-de-grup`).
 - Fără librărie de i18n: câte un dicționar / fișier de conținut per limbă. Engleza o traduce Claude, o verifică Alessia. Paginile legale au și versiune EN, cu mențiunea că varianta în română e cea obligatorie.
 
 ## Pagini
 
-Meniu: Acasă · Despre noi · Ce facem · Evenimente · Galerie · Contact
+Meniu: Acasă · Despre noi · Ce oferim · Evenimente · Galerie · Contact
 
-Subpagini „Ce facem”: Ateliere de grup · Pentru companii · Consiliere 1:1 · Atelier privat 1:1 · Retreaturi · Pentru școli și copii
+Subpagini „Ce oferim”: Ateliere de grup · Pentru companii · Consiliere 1:1 · Atelier privat 1:1 · Retreaturi · Pentru școli și copii
 
 Footer: FAQ · Înscrieri, plată și anulare · Termeni și condiții · Politica de confidențialitate · Cookies · link ANPC · datele PFA · Instagram
 
@@ -79,7 +79,7 @@ Nicăieri adresa exactă. Pe site apare „București”, plus zona sau locația
 
 ## Detalii UX de aplicat (din lista celor 20)
 
-Se aplică: prerendering cu Speculation Rules (`moderate`, link-uri interne), placeholder blur pentru imagini (generat la build), View Transitions între pagini (sub 300ms), animații întreruptibile, ținte de atins ≥44px, safe-area insets (`viewport-fit=cover`), `tabular-nums` la prețuri / date / ore, `text-wrap: balance` pe titluri și `pretty` pe paragrafe, `corner-shape: squircle` lângă `border-radius`, safe triangle pe submeniul „Ce facem”, butoane dezactivate cât timp se trimite un formular, bottom sheet cu swipe pentru meniul de mobil (cu buton de închidere).
+Se aplică: prerendering cu Speculation Rules (`moderate`, link-uri interne), placeholder blur pentru imagini (generat la build), View Transitions între pagini (sub 300ms), animații întreruptibile, ținte de atins ≥44px, safe-area insets (`viewport-fit=cover`), `tabular-nums` la prețuri / date / ore, `text-wrap: balance` pe titluri și `pretty` pe paragrafe, `corner-shape: squircle` lângă `border-radius`, safe triangle pe submeniul „Ce oferim”, butoane dezactivate cât timp se trimite un formular, bottom sheet cu swipe pentru meniul de mobil (cu buton de închidere).
 
 Nu se aplică (site static de prezentare): skeleton loaders, optimistic updates, command menu, scurtături de tastatură, undo toasts, stale-while-revalidate, predictive back (Android nativ), one-time-code, idempotency keys (le gestionează Stripe).
 
