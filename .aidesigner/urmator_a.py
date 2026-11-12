@@ -11,8 +11,9 @@ from about_options2 import P, HERE, FONTS, BASE_CSS, ARROW
 from urmator_options import (COMMON, H, TITLE, DATE, WHERE, PRICE, PRICE_NOTE, WHO, FRAMES, IMGS, N, STAMP, LINK_ICON, states)
 
 SOLD = "Sold out"
-WAIT = "Intră pe lista de așteptare"
-WAIT_NOTE = "Dacă se eliberează un loc, te anunțăm primii."
+# Vali (12 nov): there is no waiting list; the sold-out workshop points to the ones that still have places
+WAIT = "Vezi următoarele ateliere"
+WAIT_NOTE = "Următoarele: 6 și 13 decembrie."
 CHEV = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8L6 12.5" fill="none" stroke="currentColor" style="stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"></path></svg>'
 
 
@@ -26,7 +27,7 @@ def story():
                        f'<p class="t">{TITLE}</p><p class="w">{WHERE}</p></div>')
         elif kind == "end":
             frs.append(f'<div class="fr f{k}"><p class="t">{text}</p><p class="w">{PRICE} · {SOLD}</p>'
-                       f'<a class="stk" href="#contact">{LINK_ICON}Lista de așteptare</a></div>')
+                       f'<a class="stk" href="#ateliere-de-grup">{LINK_ICON}Următoarele ateliere</a></div>')
         else:
             frs.append(f'<div class="fr f{k}"><p class="t">{text}</p></div>')
     return (f'<div class="sw">'
@@ -76,7 +77,7 @@ HTML = f"""<section class="u ua" id="evenimente" aria-labelledby="u-h" data-a="0
 <div class="wrap grid">
 <div class="l"><h2 class="disp" id="u-h">{H}</h2><div class="tr"><p class="ttl">{TITLE}</p><span class="badge">{SOLD}</span></div><p class="date">{DATE}</p>
 {DL}<p class="note">{PRICE}, {PRICE_NOTE}</p>
-<div class="buy"><a class="wait" href="#contact">{WAIT} {ARROW}</a><p class="wn">{WAIT_NOTE}</p></div></div>
+<div class="buy"><a class="wait" href="#ateliere-de-grup">{WAIT}</a><p class="wn">{WAIT_NOTE}</p></div></div>
 {story()}
 </div>
 </section>"""

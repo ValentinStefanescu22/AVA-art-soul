@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Atelierele care urmează 4: calendar</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.gp{position:relative;overflow:clip;--so:cubic-bezier(.22,1,.36,1)}
+.gp a{text-decoration:none}
+.gh{font-size:clamp(60px,7.4vw,108px);line-height:.98;letter-spacing:-.022em;font-variation-settings:'opsz' 72}
+.gh .w{display:inline-block;white-space:nowrap}.gh .l{display:inline-block}
+.gp .lede{margin:0;font:400 clamp(20px,1.7vw,24px)/1.45 var(--display);font-variation-settings:'opsz' 20;text-wrap:pretty}
+.gp .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 28px;border-radius:999px;background:#9C472C;color:#F8F1E8;font:500 15px/1 var(--text);letter-spacing:.02em;transition:background-color .25s ease,translate .2s var(--so)}
+.gp .btn:hover{background:#833A22}.gp .btn:hover .ar{transform:translateX(4px)}
+.gp .btn:active{translate:0 1px}
+.gp .btn:focus-visible{outline:2px solid #9C472C;outline-offset:3px}
+.gp .meta{display:flex;flex-wrap:wrap;gap:6px 0;margin:0;padding:0;list-style:none;font-size:15px;color:var(--ink2);font-variant-numeric:tabular-nums}
+.gp .meta li:not(:last-child)::after{content:"·";margin:0 10px}
+.gp img{display:block;width:100%;height:100%;object-fit:cover}
+@keyframes gh-l{from{opacity:0;translate:0 .4em;filter:blur(8px)}}
+@keyframes gh-up{from{opacity:0;translate:0 16px}}
+@keyframes gh-uncover{from{clip-path:inset(100% 0 0 0 round 22px)}}
+@media (prefers-reduced-motion:no-preference){
+  .gh .l{animation:gh-l 1s var(--so) backwards;animation-delay:calc(.1s + var(--k) * 40ms)}
+  .gp .up{animation:gh-up .8s var(--so) backwards;animation-delay:var(--d,.5s)}
+}
+@media (max-width:980px){.gh{font-size:clamp(48px,13.5vw,72px)}.gp .meta{font-size:14px}}
+@media (prefers-reduced-motion:reduce){.gp *{animation:none!important;transition:none!important}}
+
+.ga{background:linear-gradient(180deg,#F4EDE4 0%,#EDE0CD 100%);padding:96px 0 112px}
+.ga h2{font-size:clamp(40px,4.4vw,64px);line-height:1.05}
+.ga .t{margin:0;font:400 26px/1.15 var(--display);font-variation-settings:'opsz' 20;letter-spacing:-.01em;text-wrap:balance}
+.ga .w{margin:6px 0 0;font-size:15px;color:var(--ink2);font-variant-numeric:tabular-nums}
+.ga .d{margin:12px 0 0;font-size:16px;line-height:1.6;color:#4A382C;text-wrap:pretty}
+.ga .pr{font:400 24px/1 var(--display);font-variation-settings:'opsz' 20;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ga .todo{display:inline-block;padding:0 6px;border:1px dashed rgba(156,71,44,.55);border-radius:6px;color:var(--terra-d);font-size:.92em;letter-spacing:.02em}
+.ga .badge{display:inline-flex;align-items:center;min-height:28px;padding:0 12px;border-radius:999px;border:1px solid #9C472C;color:#9C472C;font-size:13px;font-weight:600;letter-spacing:.02em}
+.ga .btn{white-space:nowrap;justify-content:center}
+.ga .alt{justify-self:start;align-self:start;display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--ink);font-weight:500;white-space:nowrap;
+  background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s var(--so)}
+.ga .alt:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.ga .alt .dn{transition:transform .3s var(--so)}.ga .alt:hover .dn{transform:translateY(3px)}
+.ga .alt:focus-visible{outline:2px solid #9C472C;outline-offset:3px}
+.a4 .pane .alt{color:#F2C79C}
+.ga .card{transition:translate .4s var(--so),box-shadow .4s ease}
+@media (hover:hover){.ga .card:hover{translate:0 -3px;box-shadow:0 0 0 1px rgba(58,42,32,.08),0 22px 40px -28px rgba(58,30,15,.5)}}
+.ga .sold{opacity:.78}
+@keyframes ga-up{from{opacity:0;translate:0 16px}}
+.ga.js:not(.in) .ri{opacity:0}
+.ga.js.in .ri{animation:ga-up .8s var(--so) backwards;animation-delay:calc(var(--i,0) * 80ms)}
+@media (max-width:980px){.ga{padding:64px 0 80px}.ga .t{font-size:23px}.ga .card .btn{align-self:stretch;width:100%;box-sizing:border-box}}
+@media (prefers-reduced-motion:reduce){.ga *{animation:none!important;transition:none!important}}
+
+.a4 h2{margin-bottom:12px}
+.a4 .sub{margin:0 0 40px;font-size:15px;color:var(--ink2)}
+.a4 .stage{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px;align-items:stretch}
+.a4 .cal{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:28px;border-radius:22px;corner-shape:squircle;background:#FBF7F1;box-shadow:0 0 0 1px rgba(58,42,32,.06)}
+.a4 .mn{margin:0 0 14px;font:400 22px/1 var(--display);font-variation-settings:'opsz' 20;text-transform:capitalize}
+.a4 .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.a4 abbr{padding-bottom:6px;font-size:12px;color:var(--ink2);text-decoration:none}
+.a4 .day{display:grid;place-items:center;aspect-ratio:1;border:0;border-radius:50%;background:none;font:400 14.5px/1 var(--text);color:rgba(58,42,32,.42);font-variant-numeric:tabular-nums}
+.a4 button.day{position:relative;cursor:pointer;color:var(--ink);font-weight:600;background:#EFE2D0;transition:background-color .25s,color .25s,scale .3s cubic-bezier(.3,1.32,.5,1)}
+.a4 button.day::after{content:"";position:absolute;bottom:5px;left:50%;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#9C472C}
+.a4 button.day.so{background:none;text-decoration:line-through;text-decoration-color:rgba(156,71,44,.6);color:var(--ink2)}
+.a4 button.day.so::after{background:rgba(58,42,32,.3)}
+.a4 button.day:hover{scale:1.08}
+.a4 button.day[aria-pressed="true"]{background:#3A2A20;color:#F4EDE4}
+.a4 button.day[aria-pressed="true"]::after{background:#F2C79C}
+.a4 button.day:focus-visible{outline:2px solid #9C472C;outline-offset:2px}
+.a4 .panes{position:relative}
+.a4 .pane{display:none;flex-direction:column;height:100%;box-sizing:border-box;padding:28px 28px 26px;border-radius:22px;corner-shape:squircle;background:#3A2A20;color:#F4EDE4}
+.a4 .pane.on{display:flex}
+@keyframes a4-in{from{opacity:0;translate:0 8px}}
+@media (prefers-reduced-motion:no-preference){.a4 .pane.on{animation:a4-in .35s var(--so)}}
+.a4 .pane .when{margin:0;font:400 italic 20px/1.3 var(--display);font-variation-settings:'opsz' 20;color:#F2C79C}
+.a4 .pane .t{margin-top:10px;font-size:30px}
+.a4 .pane .w{color:#D8C6B2}
+.a4 .pane .d{flex:1;color:#EFE3D3}
+.a4 .pane .ft{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px}
+.a4 .pane .btn{background:#F4EDE4;color:#2E1D14}
+.a4 .pane .btn:hover{background:#FFF8EE}
+.a4 .pane .btn.wait{background:transparent;color:#F4EDE4;box-shadow:inset 0 0 0 1.5px rgba(244,237,228,.6)}
+.a4 .pane .badge{border-color:#F2C79C;color:#F2C79C}
+.a4 .pane .todo{border-color:rgba(242,199,156,.6);color:#F2C79C}
+@media (max-width:980px){
+  .a4 .sub{margin-bottom:24px}
+  .a4 .stage{grid-template-columns:1fr;gap:12px}
+  .a4 .cal{grid-template-columns:1fr;gap:24px;padding:20px}
+  .a4 .pane{padding:22px 20px}.a4 .pane .t{font-size:25px}
+}
+</style>
+</helmet>
+<div class="pg" data-src="cal.com: calendarul pe luni; alegi o zi marcată și vezi atelierul ei">
+<section class="gp ga a4" id="ateliere" aria-labelledby="ga-h" ref="{{ secRef }}"><div class="wrap"><h2 class="disp" id="ga-h">Atelierele care urmează</h2><p class="sub ri">Zilele marcate au atelier. Alege una ca să vezi detaliile.</p><div class="stage"><div class="cal ri" style="--i: 1"><div class="mon"><p class="mn">noiembrie 2026</p><div class="grid"><abbr>L</abbr><abbr>Ma</abbr><abbr>Mi</abbr><abbr>J</abbr><abbr>V</abbr><abbr>S</abbr><abbr>D</abbr><span></span><span></span><span></span><span></span><span></span><span></span><span class="day">1</span><span class="day">2</span><span class="day">3</span><span class="day">4</span><span class="day">5</span><span class="day">6</span><span class="day">7</span><span class="day">8</span><span class="day">9</span><span class="day">10</span><span class="day">11</span><span class="day">12</span><span class="day">13</span><span class="day">14</span><span class="day">15</span><span class="day">16</span><span class="day">17</span><span class="day">18</span><span class="day">19</span><span class="day">20</span><span class="day">21</span><span class="day">22</span><span class="day">23</span><span class="day">24</span><span class="day">25</span><span class="day">26</span><span class="day">27</span><span class="day">28</span><span class="day">29</span><span class="day">30</span><span></span><span></span><span></span><span></span><span></span><span></span></div></div><div class="mon"><p class="mn">decembrie 2026</p><div class="grid"><abbr>L</abbr><abbr>Ma</abbr><abbr>Mi</abbr><abbr>J</abbr><abbr>V</abbr><abbr>S</abbr><abbr>D</abbr><span></span><span class="day">1</span><span class="day">2</span><span class="day">3</span><span class="day">4</span><span class="day">5</span><button type="button" class="day ev" data-i="1" aria-pressed="true" aria-label="duminică, 6 decembrie" onClick="{{ pick }}">6</button><span class="day">7</span><span class="day">8</span><span class="day">9</span><span class="day">10</span><span class="day">11</span><span class="day">12</span><button type="button" class="day ev" data-i="2" aria-pressed="false" aria-label="duminică, 13 decembrie" onClick="{{ pick }}">13</button><span class="day">14</span><span class="day">15</span><span class="day">16</span><span class="day">17</span><span class="day">18</span><span class="day">19</span><span class="day">20</span><span class="day">21</span><span class="day">22</span><span class="day">23</span><span class="day">24</span><span class="day">25</span><span class="day">26</span><span class="day">27</span><span class="day">28</span><span class="day">29</span><span class="day">30</span><span class="day">31</span><span></span><span></span><span></span></div></div></div><div class="panes ri" style="--i: 2" aria-live="polite"><article class="pane" data-i="0"><p class="when">duminică, 15 noiembrie · ora 17:00</p><h3 class="t">Atelier de ceramică &amp; socializare</h3><p class="w">Cotroceni, sector 5</p><p class="d">O seară liniștită cu lut, culoare și oameni noi. Modelăm împreună, apoi îți pictezi piesa cu underglaze, culori speciale pentru ceramică, iar între timp povestim și ne bucurăm de o băutură și o gustare făcute în casă.</p><div class="ft"><span class="pr">200 lei</span><span class="badge">Sold out</span><a class="alt" href="#atelier-6-dec">Vezi următorul atelier <svg class="ar dn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3V13M4 9L8 13L12 9" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a></div></article><article class="pane on" data-i="1"><p class="when">duminică, 6 decembrie · [ORA]</p><h3 class="t">Atelier cu tematică de Crăciun</h3><p class="w"><span class="todo">[LOCAȚIA]</span></p><p class="d">În spiritul sărbătorilor: ceramică și pictură pe ceramică în același atelier, cu pauze de socializare și gustări.</p><div class="ft"><span class="pr">200 lei</span><a class="btn" href="#inscriere">Mă înscriu</a></div></article><article class="pane" data-i="2"><p class="when">duminică, 13 decembrie · [ORA]</p><h3 class="t">Atelier cu tematică de Crăciun</h3><p class="w"><span class="todo">[LOCAȚIA]</span></p><p class="d">În spiritul sărbătorilor: ceramică și pictură pe ceramică în același atelier, cu pauze de socializare și gustări.</p><div class="ft"><span class="pr">200 lei</span><a class="btn" href="#inscriere">Mă înscriu</a></div></article></div></div></div></section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":717}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this, s = this.sec; if (!s) return;
+    var reduce = this.reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    s.classList.add('js');
+    if (reduce || !window.IntersectionObserver) s.classList.add('in');
+    else { this.io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { s.classList.add('in'); self.io.disconnect(); } }, { threshold: 0.1 }); this.io.observe(s); }
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); }
+  renderVals() { var self = this; if (!this.cb) this.cb = {
+    pick: function (e) {
+      var b = e.currentTarget, s = self.sec, i = b.getAttribute('data-i');
+      s.querySelectorAll('button.day.ev').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      s.querySelectorAll('.pane').forEach(function (p) { p.classList.toggle('on', p.getAttribute('data-i') === i); });
+    }, secRef: function (el) { self.sec = el; } }; return this.cb; }
+}
+</script>
+</body>
+</html>

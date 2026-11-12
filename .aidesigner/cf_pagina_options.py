@@ -17,7 +17,7 @@ from ce_facem2_options import BYK, COPII
 TITLE = "Ce oferim"
 LEDE = "Ateliere cu lut, consiliere și retreaturi pentru momentele în care ai nevoie să te auzi din nou. Pentru tine sau pentru echipa ta."
 # Vali's canvas comments on Ce oferim 1 (11 nov): button labels, „Evenimente” for companies, schools without „60 min”
-G = dict(BYK["grup"], cta="Vezi atelierul din decembrie")
+G = dict(BYK["grup"], cta="Vezi următoarele ateliere")
 PR = dict(BYK["privat"], cta="Află mai multe")
 CO = dict(BYK["consiliere"], cta="Află mai multe")
 RE = BYK["retreat"]

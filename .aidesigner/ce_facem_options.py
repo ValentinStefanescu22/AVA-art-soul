@@ -14,8 +14,8 @@ PRIVAT = "/_blob/5e489655abd7b9581fb23d21b13616c7"
 RETREAT = "/_blob/84d195670e939aba045cc2966fe09dd9"
 
 S = [  # order = 'for you' first, the team path last
-    dict(k="grup", name="Ateliere de grup", line="O dată pe lună ne strângem în jurul lutului, cu o temă nouă de fiecare dată.",
-         meta=["3 ore", "max. 8 persoane", "de la 185 lei"], cta="Vezi atelierele care urmează", img=GRUP, pos="50% 40%",
+    dict(k="grup", name="Ateliere de grup", line="În fiecare lună ne strângem în jurul lutului, cu o temă nouă de fiecare dată.",
+         meta=["3 ore", "max. 8 persoane", "de la 200 lei"], cta="Vezi următoarele ateliere", img=GRUP, pos="50% 40%",
          alt="Participanți modelând lut în jurul mesei, la un atelier AVA"),
     dict(k="privat", name="Atelier privat 1:1", line="Lutul, tu și eu. Un atelier de modelaj, în ritmul tău, fără grup și fără grabă.",
          meta=["pentru adulți și copii", "de la 220 lei"], cta="Rezervă un atelier privat", img=PRIVAT, pos="50% 40%",

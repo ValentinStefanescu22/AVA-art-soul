@@ -123,15 +123,15 @@ Fiecare serviciu primește pagina lui, după același tipar. Mai jos ai, pentru 
 
 ### Ateliere de grup
 
-*O dată pe lună ne strângem în jurul lutului, cu o temă nouă de fiecare dată. Lucrăm cu mâinile, vorbim, ne ascultăm. Nu ai nevoie de experiență, doar de **c**u**riozi**t**a**t**e**.*
+*În fiecare lună ne strângem în jurul lutului, cu o temă nouă de fiecare dată. Lucrăm cu mâinile, vorbim, ne ascultăm. Nu ai nevoie de experiență, doar de **c**u**riozi**t**a**t**e**.*
 
 - **Cum funcționează:** atelier lunar, 3 ore, temă diferită, uneori în colaborare cu alți artiști sau antreprenori
 - **Ce include:** materiale, ghidare, o băutură / gustare, și posibilitatea de ardere a piesei, la alegerea fiecăruia.&#32;
 - **Grup:** maxim 8 persoane, ca să rămână intim
-- **Preț:** de la 185 lei / persoană (variază după temă)
+- **Preț:** de la 200 lei / persoană (variază după temă)
 - **Unde:** Strada Elefterie 31, Cotroceni, București&#32;
 - **Colaborări:** un paragraf scurt + link spre Contact: *Ești artist sau antreprenor și vrei să facem un atelier împreună? Scrie-ne.** **/** **P**entru c**ă** AVA Art & soul este o comunitate în continuă creștere , ne**-**ar face plăcere sa te avem **î**n echipa noastr**ă** de colaboratori. *
-- **Buton:** „Vezi atelierele care urmează” → Evenimente
+- **Buton:** „Vezi următoarele ateliere” → Evenimente
 
 **Întrebări frecvente (Ateliere de grup)**
 
@@ -267,7 +267,7 @@ Activitatea este conceputa intr un mod ludic si educational  - invata despre arg
 
 ## Evenimente, galerie și testimoniale
 
-Paginile astea țin site-ul viu: dacă Evenimente arată ateliere trecute, oamenii presupun că nu mai faceți nimic. Actualizează-le măcar o dată pe lună.
+Paginile astea țin site-ul viu: dacă Evenimente arată ateliere trecute, oamenii presupun că nu mai faceți nimic. Actualizează-le măcar în fiecare lună.
 
 ### Evenimente
 
@@ -282,6 +282,16 @@ O listă cu ce urmează, cel mai apropiat eveniment primul. Fiecare eveniment ar
 - Cine facilitează: Alessia, AVA Art & Soul
 - Buton „Mă înscriu” aș vrea cu plată direct pe site în contul de ING Business\
 Fii primul care află de următorul nostru eveniment si primește 5% discount la următorul eveniment *Lasă-ne emailul **ș**i** **s**ă f**ie po**p-u**p** **cu **c**ă**s**u**ță de** c**o**l**ectare** emai**l**”*
+
+**Ateliere de Crăciun, 6 decembrie și 13 decembrie** (de la Vali, 12 nov 2026)
+
+- Ateliere cu tematică de Crăciun, în spiritul sărbătorilor
+- Ceramică + pictură pe ceramică în același atelier
+- Pauze de socializare și gustări
+- 200 lei
+- [ORA] · [LOCAȚIA]
+
+Pe pagina „Ateliere de grup” apar toate atelierele care urmează (acum: 15 noiembrie, 6 decembrie, 13 decembrie). Prețul de început pentru toate atelierele este 200 lei.
 
 Atelierele trecute pot sta într-o arhivă, cu 2–3 poze fiecare. Arată că faceți lucruri constant.
 

@@ -202,7 +202,13 @@ Sursa: `Footer3Heath`.
 | Contur pe închis | `rgba(244,237,228,.08)` + contur 1px crem 50% + blur | al doilea buton din hero |
 | Link „mai mult” | text 500 + săgeată, sublinierea se strânge la hover, săgeata alunecă 4px | „Află mai multe”, „Vezi atelierul…” |
 
-Textele butoanelor sunt verbe clare, cele din document sau cele aprobate în comentarii („Află mai multe”, „Vezi atelierul din decembrie”, „Intră pe lista de așteptare”).
+**Săgeți și telefon (Vali, 12 nov):**
+- Butoanele pline nu au săgeată. Săgeata rămâne doar la linkurile de text („Află mai multe →”).
+- Pe telefon, butoanele din carduri ocupă toată lățimea cardului, cu textul centrat.
+
+**Sold out (Vali, 12 nov):** nu există listă de așteptare și nu folosim buton dezactivat, care pare stricat și nu se poate atinge de la tastatură. Biletul își păstrează ștampila „Sold out”, iar în locul butonului apare un link de text spre următorul atelier cu locuri („Vezi următorul atelier ↓”).
+
+Textele butoanelor sunt verbe clare, cele din document sau cele aprobate în comentarii („Află mai multe”, „Vezi următoarele ateliere”, „Intră pe lista de așteptare”).
 
 ### Carduri
 
@@ -273,6 +279,7 @@ Textele butoanelor sunt verbe clare, cele din document sau cele aprobate în com
 | **Acasă** (`Acasa`) | Hero: bandă de anunț + titlu centrat (`HeroAnuntCentrat`) · Cine sunt (`CopertaH`) · Ce oferim, acordeon de poze (`CeFacem5Acordeon`) · Următorul atelier, story + bilet (`UrmatorulA`) · Ce spun oamenii (`OameniB2`) · FAQ în carduri (`Faq3Carduri`) · Footer 3 · Pop-up 3 |
 | **Despre noi** (`DespreNoi`) | Deschiderea maro cu portretul (`DespreNoiDeschidere`) · Povestea, interviu (`Povestea4Interviu`) · Formări, centrat (`Formari3DCentrat`) · Comunitatea AVA, intro + carduri (`Comunitate5Carduri`) · Footer 3 |
 | **Ce oferim** (`CeFacem`) | Comutatorul cu degradeu (`CFPagina1Comutator`) · De ce să alegi AVA Art & Soul? (`CFDeCe`, textul vine de la Vali) · Footer 3 |
+| **Ateliere de grup** (`AteliereDeGrup`) | Fotografie pe tot ecranul (`GrupHero2Aman`) · Atelierele care urmează, bilete cu ștampila „Sold out”; cele de Crăciun au o ghirlandă de beculețe care sclipește pe marginea de sus (`GrupCraciun2Beculete`, construit din `GrupAteliere3Bilete`) · Ai deja un grup? (`GrupSolicita`) · Cum funcționează + colaborări (`GrupDetalii`) · Întrebări frecvente în carduri (`GrupFaq`) · Footer 3 |
 
 Numele fișierelor `CeFacem…` / `CF…` au rămas așa din motive tehnice; pe site scrie peste tot „Ce oferim”.
 
@@ -287,6 +294,7 @@ Procesul pe canvas:
 
 **Pagini de completat:**
 - **Șablonul paginilor de serviciu**, unul pentru toate 6, cu 4 variante pe secțiune. Structura: pentru cine e · ce se întâmplă concret · ce primești · cine facilitează · durată / preț / locație · întrebări frecvente · buton de înscriere sau contact (Stripe / Cal.com / formular). Consilierea păstrează delimitarea față de psihoterapie; atelierele pentru copii, precizarea despre terapii.
+- **Retreaturi** (decizia lui Vali, 12 nov): pagina arată doar „În curând”, pentru că nu e încă nimic concret. Fără program, preț sau FAQ până nu există.
 - **Evenimente**, cu 4 variante. Cel mai apropiat eveniment primul, arhiva celor trecute și starea „Pregătim următorul atelier…” + newsletter. Pornește de la cardul de eveniment de pe Acasă.
 - **Galerie.**
 - **Contact**, cu formularul Web3Forms și bifa GDPR. Propunere: 2 variante.

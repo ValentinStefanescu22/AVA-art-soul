@@ -22,6 +22,10 @@ PAGES = {
                                 ("Comunitate5Carduri", "s-com"), ("Footer3Heath", "s-footer")]),
     "CeFacem": dict(title="Ce oferim", cls="cf", heights=(2843, 4600), dark=".s-cfhero .c1", current=("#ce-facem", "Ce oferim"),
                     sections=[("CFPagina1Comutator", "s-cfhero"), ("CFDeCe", "s-dece"), ("Footer3Heath", "s-footer")]),
+    # Vali (12 nov): hero 2 (Aman) + lista 3 (bilete; the December ones with the light garland, Crăciun 2), then „Cum funcționează”, the FAQ (grup_page_options.py) and the footer
+    "AteliereDeGrup": dict(title="Ateliere de grup", cls="ag", heights=(5089, 7082), dark=".s-ghero .g2", current=("#ce-facem", "Ce oferim"),
+                           sections=[("GrupHero2Aman", "s-ghero"), ("GrupCraciun2Beculete", "s-glista"), ("GrupSolicita", "s-gsol"), ("GrupDetalii", "s-gdet"),
+                                     ("GrupFaq", "s-gfaq"), ("Footer3Heath", "s-footer")]),
 }
 
 # shared by both pages: the page's own header replaces the sections' ones and sits at the very top (no announcement strip)
@@ -53,6 +57,16 @@ CF_CSS = (
 FOOT_SEL = ".s-footer .f3 .card,.s-footer .f3 .grid>*"
 
 
+# Ateliere de grup: the hero's photo already melts into paper → tickets paper→sand → „Cum funcționează” sand→paper
+# → FAQ paper→sand → footer sand. The header turns light where the photo's fade begins.
+AG_CSS = (
+    ".ag .s-ghero .g2{--hx-dark:780px}"
+    ".ag .s-glista .a3 ul{max-width:none}.ag .s-glista .ga{padding:40px 0 104px}.ag .s-gdet .gd,.ag .s-gfaq .fq{padding:88px 0 104px}"
+    "@media (max-width:980px){.ag .s-ghero .g2{--hx-dark:690px}.ag .s-glista .ga{padding:24px 0 72px}.ag .s-gdet .gd,.ag .s-gfaq .fq{padding:56px 0 72px}}"
+)
+PAGE_CSS = {"dn": DN_CSS, "cf": CF_CSS, "ag": AG_CSS}
+
+
 def header(href, label):
     h = HX_HEAD.replace(' aria-current="page"', "")
     a = f'<a href="{href}" aria-haspopup="true">' if href == "#ce-facem" else f'<a href="{href}">{label}</a>'
@@ -74,7 +88,7 @@ if __name__ == "__main__":
             print(("scoped " if scope_file(f, sc) else "already scoped ") + f)
         cls, (dh, mh) = pg["cls"], pg["heights"]
         mount = REVEAL_MOUNT.replace(REVEAL, FOOT_SEL).replace("main.acasa", "main.pgx")
-        css = (COMMON + (DN_CSS if cls == "dn" else CF_CSS)
+        css = (COMMON + PAGE_CSS[cls]
                + REVEAL_CSS.replace(".acasa.rv-on", ".pgx.rv-on") + HX_CSS)
         imports = "\n".join(f'<dc-import name="{f}" hint-size="100%,1000px"></dc-import>' for f, _ in pg["sections"])
         body = (f'<main class="pgx {cls} hxv v1" style="background: #F4EDE4">\n{header(*pg["current"])}\n{imports}\n'
@@ -84,6 +98,6 @@ if __name__ == "__main__":
         open(os.path.join(P, name + "Mobil.dc.html"), "w", encoding="utf-8").write(
             page(pg["title"] + ": mobil", f'<div style="width: 390px; background: #F4EDE4">\n<dc-import name="{name}" hint-size="390px,{mh}px"></dc-import>\n</div>',
                  390, mh, STATIC))
-        local = {"DespreNoi": "despre-noi.html", "CeFacem": "ce-facem.html"}[name]
+        local = {"DespreNoi": "despre-noi.html", "CeFacem": "ce-facem.html", "AteliereDeGrup": "ateliere-de-grup.html"}[name]
         subprocess.run(["python3", os.path.join(HERE, "dc2html.py"), out, os.path.join(HERE, local)], check=True)
         print("wrote", name, dh, mh)

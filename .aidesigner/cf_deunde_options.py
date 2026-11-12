@@ -272,7 +272,7 @@ I = {
     "inc": '<path d="M2.5 8.5L6 12L13.5 4"></path>',
 }
 FACTS = {
-    "grup": [("who", "Grup de maxim 8 persoane"), ("time", "3 ore, o dată pe lună"), ("price", "De la 185 lei / persoană"), ("where", "București"), ("inc", "Materiale, ghidare, o băutură / gustare")],
+    "grup": [("who", "Grup de maxim 8 persoane"), ("time", "3 ore, în fiecare lună"), ("price", "De la 200 lei / persoană"), ("where", "București"), ("inc", "Materiale, ghidare, o băutură / gustare")],
     "privat": [("who", "Doar tu, sau doi: cuplu, mamă-fiică"), ("time", "60 sau 90 de minute"), ("price", "De la 220 lei"), ("where", "București"), ("inc", "Pentru adult sau copil, materialele incluse")],
     "consiliere": [("who", "Doar tu"), ("time", "60–90 de minute"), ("price", "180 lei / oră"), ("where", "Online sau față în față"), ("inc", "Prima discuție, de 15 minute, gratuită")],
 }

@@ -27,7 +27,7 @@ Workshops facilitated by someone who is both a ceramic artist and an accredited 
 
 ## Operating Context
 
-- Monthly themed group workshops in Bucharest (Cotroceni and partner locations), 3 hours, from 185 lei.
+- Monthly themed group workshops in Bucharest (Cotroceni and partner locations), 3 hours, from 200 lei.
 - Companies: on-site or at partner venues, 4–16 people.
 - Counselling: 60–90 min, online or in person.
 - Private 1:1 workshops for adults and children.

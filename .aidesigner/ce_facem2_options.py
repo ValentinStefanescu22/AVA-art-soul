@@ -39,7 +39,7 @@ OPTS = {}
 pan5 = "".join(
     f'<a class="p" href="#{s["k"]}" data-i="{i}" onMouseEnter="{{{{ pick }}}}" onFocus="{{{{ pick }}}}" onClick="{{{{ pick }}}}">'
     f'<img src="{s["img"]}" alt="{s["alt"]}" style="object-position:{s["pos"]}"><span class="vl" aria-hidden="true">{s["name"]}</span>'
-    f'<span class="tx">{meta(s)}<span class="n">{s["name"]}</span><span class="l">{s["line"]}</span><span class="cta">{s["cta"]} {ARROW}</span></span></a>'
+    f'<span class="tx">{meta(s)}<span class="n">{s["name"]}</span><span class="l">{s["line"]}</span><span class="cta">{s["cta"]}</span></span></a>'
     for i, s in enumerate(ORDER))
 OPTS["CeFacem5Acordeon"] = ("Ce oferim 5: acordeon de fotografii", """
 .ac .panels{display:flex;gap:12px;height:620px}

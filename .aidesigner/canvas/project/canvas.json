@@ -27,6 +27,14 @@
    "name": "Ce oferim: lucru"
   },
   {
+   "id": "grup",
+   "name": "Ce oferim › Ateliere de grup: lucru"
+  },
+  {
+   "id": "grup-arh",
+   "name": "Arhivă: Ateliere de grup"
+  },
+  {
    "id": "header",
    "name": "Arhivă: Header"
   },
@@ -2184,9 +2192,321 @@
    "title": "Ce oferim · mobil",
    "page": "ce-facem",
    "is_interactive": true
+  },
+  "GrupHero1Galerie.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 1336,
+   "title": "Ateliere de grup 1: galerie + card de rezervare · inspirație: airbnb.com/experiences: galeria de poze sus, apoi detaliile și cardul de rezervare care stă lângă text",
+   "page": "grup-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "GrupHero1GalerieMobil.dc.html": {
+   "x": 0,
+   "y": 1456,
+   "w": 390,
+   "h": 1698,
+   "title": "Ateliere de grup 1: galerie + card de rezervare · mobil",
+   "page": "grup-arh",
+   "is_interactive": true
+  },
+  "GrupHero2Aman.dc.html": {
+   "x": 2100,
+   "y": 0,
+   "w": 1440,
+   "h": 905,
+   "title": "Ateliere de grup 2: fotografie pe tot ecranul · inspirație: aman.com: fotografia pe tot ecranul, titlul centrat, totul foarte liniștit",
+   "page": "grup",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "GrupHero2AmanMobil.dc.html": {
+   "x": 3620,
+   "y": 0,
+   "w": 390,
+   "h": 789,
+   "title": "Ateliere de grup 2: fotografie pe tot ecranul · mobil",
+   "page": "grup",
+   "is_interactive": true
+  },
+  "GrupHero3Continuare.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 1440,
+   "h": 1231,
+   "title": "Ateliere de grup 3: continuarea paginii „Ce oferim” · inspirație: apple.com, paginile de produs: o deschidere închisă care se luminează lin spre fotografie (aici, ca pagina „Ce oferim”)",
+   "page": "grup-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "GrupHero3ContinuareMobil.dc.html": {
+   "x": 1520,
+   "y": 1456,
+   "w": 390,
+   "h": 938,
+   "title": "Ateliere de grup 3: continuarea paginii „Ce oferim” · mobil",
+   "page": "grup-arh",
+   "is_interactive": true
+  },
+  "GrupHero4Invitatie.dc.html": {
+   "x": 3040,
+   "y": 0,
+   "w": 1440,
+   "h": 997,
+   "title": "Ateliere de grup 4: invitație · inspirație: lu.ma: pagina unui eveniment, cu coperta pătrată în stânga și invitația în dreapta",
+   "page": "grup-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "GrupHero4InvitatieMobil.dc.html": {
+   "x": 3040,
+   "y": 1456,
+   "w": 390,
+   "h": 1268,
+   "title": "Ateliere de grup 4: invitație · mobil",
+   "page": "grup-arh",
+   "is_interactive": true
+  },
+  "GrupAteliere1Lista.dc.html": {
+   "x": 0,
+   "y": 3554,
+   "w": 1440,
+   "h": 940,
+   "title": "Atelierele care urmează 1: listă de calendar · inspirație: lu.ma: lista de evenimente a unui calendar, cu data mare în stânga și o linie care le leagă",
+   "page": "grup-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "GrupAteliere1ListaMobil.dc.html": {
+   "x": 0,
+   "y": 4671,
+   "w": 390,
+   "h": 1500,
+   "title": "Atelierele care urmează 1: listă de calendar · mobil",
+   "page": "grup-arh",
+   "is_interactive": true
+  },
+  "GrupAteliere2Carduri.dc.html": {
+   "x": 1520,
+   "y": 3554,
+   "w": 1440,
+   "h": 997,
+   "title": "Atelierele care urmează 2: carduri cu poză · inspirație: airbnb.com/experiences: cardurile cu poză, câte unul pentru fiecare dată",
+   "page": "grup-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "GrupAteliere2CarduriMobil.dc.html": {
+   "x": 1520,
+   "y": 4671,
+   "w": 390,
+   "h": 966,
+   "title": "Atelierele care urmează 2: carduri cu poză · mobil",
+   "page": "grup-arh",
+   "is_interactive": true
+  },
+  "GrupAteliere3Bilete.dc.html": {
+   "x": 0,
+   "y": 6571,
+   "w": 1440,
+   "h": 1011,
+   "title": "Atelierele care urmează 3: bilete · inspirație: dice.fm: biletele cu cotor, iar „Sold out” e o ștampilă de lut, ca ștampila AVA",
+   "page": "grup-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "GrupAteliere3BileteMobil.dc.html": {
+   "x": 1520,
+   "y": 6571,
+   "w": 390,
+   "h": 1521,
+   "title": "Atelierele care urmează 3: bilete · mobil",
+   "page": "grup-arh",
+   "is_interactive": true
+  },
+  "GrupAteliere4Calendar.dc.html": {
+   "x": 3040,
+   "y": 3554,
+   "w": 1440,
+   "h": 717,
+   "title": "Atelierele care urmează 4: calendar · inspirație: cal.com: calendarul pe luni; alegi o zi marcată și vezi atelierul ei",
+   "page": "grup-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "GrupAteliere4CalendarMobil.dc.html": {
+   "x": 3040,
+   "y": 4671,
+   "w": 390,
+   "h": 1335,
+   "title": "Atelierele care urmează 4: calendar · mobil",
+   "page": "grup-arh",
+   "is_interactive": true
+  },
+  "AteliereDeGrup.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 5089,
+   "title": "Ateliere de grup: toate secțiunile alese, în ordine",
+   "page": "grup",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "AteliereDeGrupMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 7082,
+   "title": "Ateliere de grup · mobil",
+   "page": "grup",
+   "is_interactive": true
+  },
+  "GrupDetalii.dc.html": {
+   "title": "Ateliere de grup: cum funcționează + colaborări",
+   "page": "grup",
+   "expand": "fill",
+   "is_interactive": true,
+   "w": 1440,
+   "x": 2100,
+   "y": 3793,
+   "h": 834
+  },
+  "GrupDetaliiMobil.dc.html": {
+   "title": "Ateliere de grup: cum funcționează + colaborări · mobil",
+   "page": "grup",
+   "is_interactive": true,
+   "w": 390,
+   "x": 3620,
+   "y": 3793,
+   "h": 1181
+  },
+  "GrupFaq.dc.html": {
+   "title": "Ateliere de grup: întrebări frecvente",
+   "page": "grup",
+   "expand": "fill",
+   "is_interactive": true,
+   "w": 1440,
+   "x": 2100,
+   "y": 5174,
+   "h": 934
+  },
+  "GrupFaqMobil.dc.html": {
+   "title": "Ateliere de grup: întrebări frecvente · mobil",
+   "page": "grup",
+   "is_interactive": true,
+   "w": 390,
+   "x": 3620,
+   "y": 5174,
+   "h": 1112
+  },
+  "GrupSolicita.dc.html": {
+   "title": "Ateliere de grup: ai deja un grup?",
+   "page": "grup",
+   "expand": "fill",
+   "is_interactive": true,
+   "w": 1440,
+   "x": 2100,
+   "y": 2826,
+   "h": 547
+  },
+  "GrupSolicitaMobil.dc.html": {
+   "title": "Ateliere de grup: ai deja un grup? · mobil",
+   "page": "grup",
+   "is_interactive": true,
+   "w": 390,
+   "x": 3620,
+   "y": 2826,
+   "h": 767
+  },
+  "GrupCraciun1Ninsoare.dc.html": {
+   "x": 2070,
+   "y": 6571,
+   "w": 1440,
+   "h": 1011,
+   "title": "Biletele de Crăciun 1: ninsoare · inspirație: Google, căutarea „let it snow”: fulgi care cad peste pagină; aici fulgi desenați cu linie de lut, doar pe biletele din decembrie",
+   "page": "grup-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "GrupCraciun1NinsoareMobil.dc.html": {
+   "x": 3590,
+   "y": 6571,
+   "w": 390,
+   "h": 1521,
+   "title": "Biletele de Crăciun 1: ninsoare · mobil",
+   "page": "grup-arh",
+   "is_interactive": true
+  },
+  "GrupCraciun2Beculete.dc.html": {
+   "x": 2100,
+   "y": 1105,
+   "w": 1440,
+   "h": 1059,
+   "title": "Biletele de Crăciun 2: beculețe · inspirație: luminițele de Crăciun de pe Regent Street, Londra: o ghirlandă de beculețe calde atârnă pe marginea de sus a biletului",
+   "page": "grup",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "GrupCraciun2BeculeteMobil.dc.html": {
+   "x": 3620,
+   "y": 1105,
+   "w": 390,
+   "h": 1561,
+   "title": "Biletele de Crăciun 2: beculețe · mobil",
+   "page": "grup",
+   "is_interactive": true
+  },
+  "GrupCraciun3Crengute.dc.html": {
+   "x": 4140,
+   "y": 6571,
+   "w": 1440,
+   "h": 1011,
+   "title": "Biletele de Crăciun 3: crenguțe de brad · inspirație: felicitările de iarnă Papier: ilustrații botanice cu linie fină; o crenguță de brad cu boabe de lut se desenează pe bilet",
+   "page": "grup-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "GrupCraciun3CrenguteMobil.dc.html": {
+   "x": 5660,
+   "y": 6571,
+   "w": 390,
+   "h": 1521,
+   "title": "Biletele de Crăciun 3: crenguțe de brad · mobil",
+   "page": "grup-arh",
+   "is_interactive": true
+  },
+  "GrupCraciun4Glob.dc.html": {
+   "x": 6210,
+   "y": 6571,
+   "w": 1440,
+   "h": 1011,
+   "title": "Biletele de Crăciun 4: glob de lut · inspirație: globurile de ceramică pictate de mână de la Anthropologie: un glob de lut cu inelele AVA atârnă de bilet și se leagănă",
+   "page": "grup-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "GrupCraciun4GlobMobil.dc.html": {
+   "x": 7730,
+   "y": 6571,
+   "w": 390,
+   "h": 1521,
+   "title": "Biletele de Crăciun 4: glob de lut · mobil",
+   "page": "grup-arh",
+   "is_interactive": true
   }
  },
  "order": [
+  "AteliereDeGrup.dc.html",
+  "AteliereDeGrupMobil.dc.html",
+  "GrupSolicitaMobil.dc.html",
+  "GrupSolicita.dc.html",
+  "GrupDetalii.dc.html",
+  "GrupDetaliiMobil.dc.html",
+  "GrupFaq.dc.html",
+  "GrupFaqMobil.dc.html",
   "DespreNoi.dc.html",
   "DespreNoiMobil.dc.html",
   "CeFacem.dc.html",
@@ -2409,7 +2729,31 @@
   "Comunitate5Carduri.dc.html",
   "Comunitate5CarduriMobil.dc.html",
   "CFDeCe.dc.html",
-  "CFDeCeMobil.dc.html"
+  "CFDeCeMobil.dc.html",
+  "GrupHero1Galerie.dc.html",
+  "GrupHero1GalerieMobil.dc.html",
+  "GrupHero2Aman.dc.html",
+  "GrupHero2AmanMobil.dc.html",
+  "GrupHero3Continuare.dc.html",
+  "GrupHero3ContinuareMobil.dc.html",
+  "GrupHero4Invitatie.dc.html",
+  "GrupHero4InvitatieMobil.dc.html",
+  "GrupAteliere1Lista.dc.html",
+  "GrupAteliere1ListaMobil.dc.html",
+  "GrupAteliere2Carduri.dc.html",
+  "GrupAteliere2CarduriMobil.dc.html",
+  "GrupAteliere3Bilete.dc.html",
+  "GrupAteliere3BileteMobil.dc.html",
+  "GrupAteliere4Calendar.dc.html",
+  "GrupAteliere4CalendarMobil.dc.html",
+  "GrupCraciun1Ninsoare.dc.html",
+  "GrupCraciun1NinsoareMobil.dc.html",
+  "GrupCraciun2Beculete.dc.html",
+  "GrupCraciun2BeculeteMobil.dc.html",
+  "GrupCraciun3Crengute.dc.html",
+  "GrupCraciun3CrenguteMobil.dc.html",
+  "GrupCraciun4Glob.dc.html",
+  "GrupCraciun4GlobMobil.dc.html"
  ],
  "notes": {
   "title2": {
@@ -2983,6 +3327,59 @@
    "fill": "teal",
    "page": "ce-facem",
    "text": "Aceeași pagină la lățime de telefon."
+  },
+  "noteArhGrupHero": {
+   "x": 0,
+   "y": -200,
+   "w": 4400,
+   "size": "m",
+   "fill": "orange",
+   "page": "grup-arh",
+   "text": "Ateliere de grup, variantele nealese. Sus: deschiderea 1 (galerie), 3 (continuarea „Ce oferim”), 4 (invitație); aleasă: 2 (fotografie pe tot ecranul). Jos: lista 1 (calendar lu.ma), 2 (carduri), 4 (calendar pe luni); aleasă: 3 (bilete)."
+  },
+  "noteArhGrupLista": {
+   "x": 0,
+   "y": 3354,
+   "w": 4400,
+   "size": "s",
+   "fill": "orange",
+   "page": "grup-arh",
+   "text": "Atelierele care urmează: variantele nealese."
+  },
+  "titleGrupPag": {
+   "x": 0,
+   "y": -400,
+   "text": "Ateliere de grup",
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "grup"
+  },
+  "noteGrupPag": {
+   "x": 0,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "grup",
+   "text": "Ateliere de grup, pagina întreagă: deschiderea 2 (fotografie pe tot ecranul) · atelierele care urmează, varianta 3 (bilete), cu ghirlanda de beculețe pe atelierele de Crăciun · Ai deja un grup? (cerut de Vali) · Cum funcționează + colaborări · Întrebări frecvente · Footer 3. Butoanele pline nu mai au săgeată, iar pe telefon ocupă toată lățimea, cu textul centrat. La atelierele sold out nu există listă de așteptare: biletul își păstrează ștampila, iar în locul butonului e un link spre următorul atelier cu locuri. La fel și pe Acasă. Propuse de mine, de aprobat: textul de la „Ai deja un grup?”, „Vezi următorul atelier”, titlul „Atelier cu tematică de Crăciun” și fraza lui, și „ne-ar face plăcere să te avem alături, printre colaboratorii noștri” (în document: „în echipa noastră de colaboratori”). Ora și locația din decembrie sunt placeholdere. Variantele nealese sunt pe „Arhivă: Ateliere de grup”. Secțiunile sunt în dreapta."
+  },
+  "noteGrupMobil": {
+   "x": 1520,
+   "y": -200,
+   "w": 390,
+   "size": "s",
+   "fill": "teal",
+   "page": "grup",
+   "text": "Aceeași pagină la lățime de telefon."
+  },
+  "noteArhGrupCraciun": {
+   "x": 0,
+   "y": 6371,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "grup-arh",
+   "text": "Biletele de Crăciun, variantele nealese (Vali, 12 nov, a ales beculețele): biletele fără decor (varianta 3 de bază) · 1 ninsoare · 3 crenguțe de brad · 4 globuri de lut."
   }
  },
  "designSystems": []
