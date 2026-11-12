@@ -1,0 +1,2989 @@
+{
+ "v": 3,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-11-05T12:55:00Z"
+ },
+ "title": "AVA Art & Soul: direcții de design",
+ "launch": {
+  "view": "canvas",
+  "page": "acasa"
+ },
+ "pages": [
+  {
+   "id": "acasa",
+   "name": "Acasă: lucru"
+  },
+  {
+   "id": "despre-noi",
+   "name": "Despre noi: lucru"
+  },
+  {
+   "id": "despre-noi-arh",
+   "name": "Arhivă: Despre noi"
+  },
+  {
+   "id": "ce-facem",
+   "name": "Ce oferim: lucru"
+  },
+  {
+   "id": "header",
+   "name": "Arhivă: Header"
+  },
+  {
+   "id": "fin-arh",
+   "name": "Arhivă: Final și pop-up"
+  },
+  {
+   "id": "faq-arh",
+   "name": "Arhivă: FAQ"
+  },
+  {
+   "id": "oameni-arh",
+   "name": "Arhivă: Ce spun oamenii"
+  },
+  {
+   "id": "urmator-arh",
+   "name": "Arhivă: Următorul atelier"
+  },
+  {
+   "id": "cefacem-arh",
+   "name": "Arhivă: Ce oferim"
+  },
+  {
+   "id": "hero-opt",
+   "name": "Arhivă: hero (opțiuni)"
+  },
+  {
+   "id": "despre1",
+   "name": "Arhivă: Despre"
+  },
+  {
+   "id": "r2",
+   "name": "Arhivă: runda 2"
+  },
+  {
+   "id": "r1",
+   "name": "Arhivă: runda 1"
+  }
+ ],
+ "boards": {
+  "Acasa.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 7030,
+   "title": "Acasă: toate secțiunile alese, în ordine",
+   "page": "acasa",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "AcasaMobil.dc.html": {
+   "x": 7000,
+   "y": 0,
+   "w": 390,
+   "h": 8130,
+   "title": "Acasă · mobil",
+   "page": "acasa",
+   "is_interactive": true
+  },
+  "Popup.dc.html": {
+   "x": 1990,
+   "y": 0,
+   "w": 560,
+   "h": 620,
+   "title": "Pop-up newsletter",
+   "page": "r2",
+   "is_interactive": true
+  },
+  "HeroRoata.dc.html": {
+   "x": 2630,
+   "y": 0,
+   "w": 1440,
+   "h": 900,
+   "title": "Hero 1: Roata olarului",
+   "page": "r2",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "HeroStampila.dc.html": {
+   "x": 2630,
+   "y": 1020,
+   "w": 1440,
+   "h": 900,
+   "title": "Hero 2: Ștampila în lut",
+   "page": "r2",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "HeroInvitatie.dc.html": {
+   "x": 2630,
+   "y": 2040,
+   "w": 1440,
+   "h": 900,
+   "title": "Hero 3: Invitația",
+   "page": "r2",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Fonturi.dc.html": {
+   "x": 2630,
+   "y": 3060,
+   "w": 1440,
+   "h": 1560,
+   "title": "Fonturi: 4 perechi",
+   "page": "r2"
+  },
+  "Main.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 2240,
+   "title": "A. Lumină de nisip",
+   "page": "r1",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Seara.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 1440,
+   "h": 2320,
+   "title": "B. Seară la atelier",
+   "page": "r1",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Portret.dc.html": {
+   "x": 3040,
+   "y": 0,
+   "w": 1440,
+   "h": 2240,
+   "title": "C. Vasul de lut",
+   "page": "r1",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "FonturiR3.dc.html": {
+   "x": 2630,
+   "y": 4740,
+   "w": 1440,
+   "h": 1800,
+   "title": "Fonturi: runda 3 (comparație)",
+   "page": "r2"
+  },
+  "Header1Editorial.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 960,
+   "title": "Header A: editorial, logo în centru",
+   "page": "hero-opt",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Header2Anunt.dc.html": {
+   "x": 0,
+   "y": 1080,
+   "w": 1440,
+   "h": 960,
+   "title": "Header B: anunț + bară minimă",
+   "page": "hero-opt",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Header3Rama.dc.html": {
+   "x": 0,
+   "y": 2160,
+   "w": 1440,
+   "h": 960,
+   "title": "Header C: ramă de galerie",
+   "page": "hero-opt",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Header4Sticla.dc.html": {
+   "x": 0,
+   "y": 3240,
+   "w": 1440,
+   "h": 960,
+   "title": "Header D: bară de sticlă",
+   "page": "hero-opt",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Text1Editorial.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 1440,
+   "h": 960,
+   "title": "Text 1: editorial",
+   "page": "hero-opt",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Text2Card.dc.html": {
+   "x": 1520,
+   "y": 1080,
+   "w": 1440,
+   "h": 960,
+   "title": "Text 2: card de eveniment",
+   "page": "hero-opt",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Text3Usi.dc.html": {
+   "x": 1520,
+   "y": 2160,
+   "w": 1440,
+   "h": 960,
+   "title": "Text 3: două uși",
+   "page": "hero-opt",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Text4Centrat.dc.html": {
+   "x": 1520,
+   "y": 3240,
+   "w": 1440,
+   "h": 960,
+   "title": "Text 4: centrat, monumental",
+   "page": "hero-opt",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "HeroAnuntCentrat.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 1440,
+   "h": 960,
+   "title": "Combinat: Header B + Text 4",
+   "page": "acasa",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "HeroAnuntCentratMobil.dc.html": {
+   "x": 1520,
+   "y": 1080,
+   "w": 390,
+   "h": 840,
+   "title": "Combinat B + 4: mobil",
+   "page": "acasa",
+   "is_interactive": true
+  },
+  "Despre1Stampila.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 960,
+   "title": "Despre 1: ștampila cu portret",
+   "page": "despre1",
+   "expand": "fill"
+  },
+  "Despre2Citat.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 1440,
+   "h": 980,
+   "title": "Despre 2: citat editorial",
+   "page": "despre1",
+   "expand": "fill"
+  },
+  "Despre3Arcada.dc.html": {
+   "x": 3040,
+   "y": 0,
+   "w": 1440,
+   "h": 940,
+   "title": "Despre 3: portret în arcadă",
+   "page": "despre1",
+   "expand": "fill"
+  },
+  "Despre4Atelier.dc.html": {
+   "x": 4560,
+   "y": 0,
+   "w": 1440,
+   "h": 1060,
+   "title": "Despre 4: atelier și portret",
+   "page": "despre1",
+   "expand": "fill"
+  },
+  "Despre5Scrisoare.dc.html": {
+   "x": 0,
+   "y": 1300,
+   "w": 1440,
+   "h": 914,
+   "title": "Despre 5: scrisoarea (închis, portret mic)",
+   "page": "despre1",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Despre5ScrisoareMobil.dc.html": {
+   "x": 0,
+   "y": 2400,
+   "w": 390,
+   "h": 720,
+   "title": "Despre 5: scrisoarea · mobil",
+   "page": "despre1",
+   "is_interactive": true
+  },
+  "Despre6Coperta.dc.html": {
+   "x": 0,
+   "y": 4100,
+   "w": 1440,
+   "h": 980,
+   "title": "Despre 6: coperta (deschis, portret mare)",
+   "page": "despre1",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Despre6CopertaMobil.dc.html": {
+   "x": 0,
+   "y": 5200,
+   "w": 390,
+   "h": 960,
+   "title": "Despre 6: coperta · mobil",
+   "page": "despre1",
+   "is_interactive": true
+  },
+  "Despre7Amprenta.dc.html": {
+   "x": 1520,
+   "y": 1300,
+   "w": 1440,
+   "h": 903,
+   "title": "Despre 7: amprenta (deschis, portret mic)",
+   "page": "despre1",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Despre7AmprentaMobil.dc.html": {
+   "x": 1520,
+   "y": 2400,
+   "w": 390,
+   "h": 952,
+   "title": "Despre 7: amprenta · mobil",
+   "page": "despre1",
+   "is_interactive": true
+  },
+  "Despre8Lumina.dc.html": {
+   "x": 3040,
+   "y": 1300,
+   "w": 1440,
+   "h": 940,
+   "title": "Despre 8: lumina (închis, portret mare)",
+   "page": "despre1",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Despre8LuminaMobil.dc.html": {
+   "x": 3040,
+   "y": 2400,
+   "w": 390,
+   "h": 916,
+   "title": "Despre 8: lumina · mobil",
+   "page": "despre1",
+   "is_interactive": true
+  },
+  "CopertaA.dc.html": {
+   "x": 1520,
+   "y": 4100,
+   "w": 1440,
+   "h": 1402,
+   "title": "Coperta A: rând de copertă, centrat",
+   "page": "despre1",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CopertaAMobil.dc.html": {
+   "x": 1520,
+   "y": 7130,
+   "w": 390,
+   "h": 1000,
+   "title": "Coperta A · mobil",
+   "page": "despre1",
+   "is_interactive": true
+  },
+  "CopertaB.dc.html": {
+   "x": 3040,
+   "y": 4100,
+   "w": 1440,
+   "h": 910,
+   "title": "Coperta B: rânduri de copertă, ierarhie",
+   "page": "despre1",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CopertaBMobil.dc.html": {
+   "x": 1990,
+   "y": 7130,
+   "w": 390,
+   "h": 1045,
+   "title": "Coperta B · mobil",
+   "page": "despre1",
+   "is_interactive": true
+  },
+  "CopertaC.dc.html": {
+   "x": 1520,
+   "y": 5640,
+   "w": 1440,
+   "h": 1369,
+   "title": "Coperta C: copertă curată, text dedesubt",
+   "page": "despre1",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CopertaCMobil.dc.html": {
+   "x": 2460,
+   "y": 7130,
+   "w": 390,
+   "h": 1035,
+   "title": "Coperta C · mobil",
+   "page": "despre1",
+   "is_interactive": true
+  },
+  "CopertaD.dc.html": {
+   "x": 3040,
+   "y": 5640,
+   "w": 1440,
+   "h": 970,
+   "title": "Coperta D: copertă asimetrică",
+   "page": "despre1",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CopertaDMobil.dc.html": {
+   "x": 2930,
+   "y": 7130,
+   "w": 390,
+   "h": 991,
+   "title": "Coperta D · mobil",
+   "page": "despre1",
+   "is_interactive": true
+  },
+  "CeFacem1Drumuri.dc.html": {
+   "x": 0,
+   "y": 2320,
+   "w": 1440,
+   "h": 1684,
+   "title": "Ce oferim 1: două drumuri",
+   "page": "cefacem-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CeFacem1DrumuriMobil.dc.html": {
+   "x": 3040,
+   "y": 2320,
+   "w": 390,
+   "h": 1696,
+   "title": "Ce oferim 1 · mobil",
+   "page": "cefacem-arh",
+   "is_interactive": true
+  },
+  "CeFacem2Galerie.dc.html": {
+   "x": 1520,
+   "y": 2320,
+   "w": 1440,
+   "h": 1168,
+   "title": "Ce oferim 2: galerie orizontală",
+   "page": "cefacem-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CeFacem2GalerieMobil.dc.html": {
+   "x": 3510,
+   "y": 2320,
+   "w": 390,
+   "h": 1002,
+   "title": "Ce oferim 2 · mobil",
+   "page": "cefacem-arh",
+   "is_interactive": true
+  },
+  "CeFacem3PrimPlan.dc.html": {
+   "x": 0,
+   "y": 4124,
+   "w": 1440,
+   "h": 1104,
+   "title": "Ce oferim 3: prim-plan",
+   "page": "cefacem-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CeFacem3PrimPlanMobil.dc.html": {
+   "x": 3980,
+   "y": 2320,
+   "w": 390,
+   "h": 1584,
+   "title": "Ce oferim 3 · mobil",
+   "page": "cefacem-arh",
+   "is_interactive": true
+  },
+  "CeFacem4Stampile.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 924,
+   "title": "Ce oferim 4: ștampile",
+   "page": "cefacem-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CeFacem4StampileMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 1720,
+   "title": "Ce oferim 4 · mobil",
+   "page": "cefacem-arh",
+   "is_interactive": true
+  },
+  "CeFacem5Acordeon.dc.html": {
+   "x": 1520,
+   "y": 4600,
+   "w": 1440,
+   "h": 996,
+   "title": "Ce oferim 5: acordeon de fotografii (ales)",
+   "page": "acasa",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CeFacem5AcordeonMobil.dc.html": {
+   "x": 3040,
+   "y": 4600,
+   "w": 390,
+   "h": 1183,
+   "title": "Ce oferim 5 · mobil (ales)",
+   "page": "acasa",
+   "is_interactive": true
+  },
+  "CeFacem6Fereastra.dc.html": {
+   "x": 0,
+   "y": 5348,
+   "w": 1440,
+   "h": 1029,
+   "title": "Ce oferim 6: fereastră",
+   "page": "cefacem-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CeFacem6FereastraMobil.dc.html": {
+   "x": 3040,
+   "y": 4160,
+   "w": 390,
+   "h": 809,
+   "title": "Ce oferim 6 · mobil",
+   "page": "cefacem-arh",
+   "is_interactive": true
+  },
+  "CeFacem7Teanc.dc.html": {
+   "x": 1520,
+   "y": 5240,
+   "w": 1440,
+   "h": 4286,
+   "title": "Ce oferim 7: teanc de cărți",
+   "page": "cefacem-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CeFacem7TeancMobil.dc.html": {
+   "x": 3510,
+   "y": 4160,
+   "w": 390,
+   "h": 3187,
+   "title": "Ce oferim 7 · mobil",
+   "page": "cefacem-arh",
+   "is_interactive": true
+  },
+  "CeFacem8Vase.dc.html": {
+   "x": 0,
+   "y": 6497,
+   "w": 1440,
+   "h": 1168,
+   "title": "Ce oferim 8: raftul cu vase",
+   "page": "cefacem-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CeFacem8VaseMobil.dc.html": {
+   "x": 3980,
+   "y": 4160,
+   "w": 390,
+   "h": 960,
+   "title": "Ce oferim 8 · mobil",
+   "page": "cefacem-arh",
+   "is_interactive": true
+  },
+  "CopertaE.dc.html": {
+   "x": 6000,
+   "y": 4100,
+   "w": 1440,
+   "h": 1342,
+   "title": "Coperta E: numele ca fereastră spre atelier · inspirație: Awwwards: Interactive Text Mask; Mask cursor",
+   "page": "despre1",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CopertaEMobil.dc.html": {
+   "x": 6000,
+   "y": 6800,
+   "w": 390,
+   "h": 1035,
+   "title": "Coperta E · mobil",
+   "page": "despre1",
+   "is_interactive": true
+  },
+  "CopertaF.dc.html": {
+   "x": 7520,
+   "y": 4100,
+   "w": 1440,
+   "h": 970,
+   "title": "Coperta F: lumina umple literele · inspirație: Awwwards: Rollover name reveal; Bruno Tomé, decorative typography hover",
+   "page": "despre1",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CopertaFMobil.dc.html": {
+   "x": 6470,
+   "y": 6800,
+   "w": 390,
+   "h": 991,
+   "title": "Coperta F · mobil",
+   "page": "despre1",
+   "is_interactive": true
+  },
+  "CopertaG.dc.html": {
+   "x": 6000,
+   "y": 5562,
+   "w": 1440,
+   "h": 1112,
+   "title": "Coperta G: rândurile se umplu la scroll · inspirație: Framer: Scroll Text Fill; Webflow: Text color fills in while scrolling",
+   "page": "despre1",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CopertaGMobil.dc.html": {
+   "x": 6940,
+   "y": 6800,
+   "w": 390,
+   "h": 1137,
+   "title": "Coperta G · mobil",
+   "page": "despre1",
+   "is_interactive": true
+  },
+  "CopertaH.dc.html": {
+   "x": 1520,
+   "y": 2600,
+   "w": 1440,
+   "h": 1358,
+   "title": "Coperta H: două roluri (ales) · inspirație: Awwwards: Mask changes shape when hover",
+   "page": "acasa",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CopertaHMobil.dc.html": {
+   "x": 3040,
+   "y": 2600,
+   "w": 390,
+   "h": 1140,
+   "title": "Coperta H · mobil (ales)",
+   "page": "acasa",
+   "is_interactive": true
+  },
+  "UrmatorulA.dc.html": {
+   "x": 1520,
+   "y": 6400,
+   "w": 1440,
+   "h": 960,
+   "title": "Următorul atelier A: story + bilet, sold out (ales) · inspirație: Framer Instagram Story, StoryCard",
+   "page": "acasa",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "UrmatorulAMobil.dc.html": {
+   "x": 3040,
+   "y": 6400,
+   "w": 390,
+   "h": 1366,
+   "title": "Următorul atelier A · mobil (ales)",
+   "page": "acasa",
+   "is_interactive": true
+  },
+  "UrmatorulB.dc.html": {
+   "x": 1520,
+   "y": 300,
+   "w": 1440,
+   "h": 1347,
+   "title": "Următorul atelier B: vizualizator · inspirație: Instagram pe web (story-ul din mijloc, vecinii pe laturi); Framer: Story Slider",
+   "page": "urmator-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "UrmatorulBMobil.dc.html": {
+   "x": 3510,
+   "y": 300,
+   "w": 390,
+   "h": 1233,
+   "title": "Următorul atelier B · mobil",
+   "page": "urmator-arh",
+   "is_interactive": true
+  },
+  "UrmatorulC.dc.html": {
+   "x": 0,
+   "y": 1767,
+   "w": 1440,
+   "h": 960,
+   "title": "Următorul atelier C: highlights · inspirație: Instagram: Highlights; Framer: Story Section",
+   "page": "urmator-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "UrmatorulCMobil.dc.html": {
+   "x": 3980,
+   "y": 300,
+   "w": 390,
+   "h": 1460,
+   "title": "Următorul atelier C · mobil",
+   "page": "urmator-arh",
+   "is_interactive": true
+  },
+  "UrmatorulD.dc.html": {
+   "x": 1520,
+   "y": 1767,
+   "w": 1440,
+   "h": 1164,
+   "title": "Următorul atelier D: data mare + countdown · inspirație: Instagram: stickerul Countdown; Framer: Instagram Stories",
+   "page": "urmator-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "UrmatorulDMobil.dc.html": {
+   "x": 4450,
+   "y": 300,
+   "w": 390,
+   "h": 1446,
+   "title": "Următorul atelier D · mobil",
+   "page": "urmator-arh",
+   "is_interactive": true
+  },
+  "OameniA.dc.html": {
+   "x": 0,
+   "y": 300,
+   "w": 1440,
+   "h": 1274,
+   "title": "Ce spun oamenii A: mozaic · inspirație: Framer: Testimonial Mosaic; Framer: Social Proof Wall",
+   "page": "oameni-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "OameniAMobil.dc.html": {
+   "x": 3040,
+   "y": 300,
+   "w": 390,
+   "h": 1783,
+   "title": "Ce spun oamenii A · mobil",
+   "page": "oameni-arh",
+   "is_interactive": true
+  },
+  "OameniB.dc.html": {
+   "x": 1520,
+   "y": 1740,
+   "w": 1440,
+   "h": 1304,
+   "title": "Ce spun oamenii B: bandă + săgeți · inspirație: Framer: Testimonial Arrow, Testimonial Split; W3C APG: Carousel",
+   "page": "oameni-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "OameniBMobil.dc.html": {
+   "x": 4450,
+   "y": 300,
+   "w": 390,
+   "h": 1060,
+   "title": "Ce spun oamenii B: bandă + săgeți · mobil",
+   "page": "oameni-arh",
+   "is_interactive": true
+  },
+  "OameniC.dc.html": {
+   "x": 1520,
+   "y": 300,
+   "w": 1440,
+   "h": 1236,
+   "title": "Ce spun oamenii C: postare · inspirație: Framer: Instagram Post Pro; Framer: Insta Post Slider",
+   "page": "oameni-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "OameniCMobil.dc.html": {
+   "x": 3510,
+   "y": 300,
+   "w": 390,
+   "h": 1729,
+   "title": "Ce spun oamenii C · mobil",
+   "page": "oameni-arh",
+   "is_interactive": true
+  },
+  "OameniD.dc.html": {
+   "x": 0,
+   "y": 1740,
+   "w": 1440,
+   "h": 934,
+   "title": "Ce spun oamenii D: galerie cu citate · inspirație: Framer: Testimonial Gallery; Framer: Vertical Gallery",
+   "page": "oameni-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "OameniDMobil.dc.html": {
+   "x": 3980,
+   "y": 300,
+   "w": 390,
+   "h": 801,
+   "title": "Ce spun oamenii D · mobil",
+   "page": "oameni-arh",
+   "is_interactive": true
+  },
+  "OameniB2.dc.html": {
+   "x": 1520,
+   "y": 8400,
+   "w": 1440,
+   "h": 1277,
+   "title": "Ce spun oamenii B2: bandă + bare de progres (ales) · inspirație: Framer: Testimonial Rotation, Smooth Testimonial (bare de progres (ales))",
+   "page": "acasa",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "OameniB2Mobil.dc.html": {
+   "x": 3040,
+   "y": 8400,
+   "w": 390,
+   "h": 986,
+   "title": "Ce spun oamenii B2 · mobil (ales)",
+   "page": "acasa",
+   "is_interactive": true
+  },
+  "OameniB3.dc.html": {
+   "x": 0,
+   "y": 3160,
+   "w": 1440,
+   "h": 1126,
+   "title": "Ce spun oamenii B3: carduri + bandă · inspirație: Framer: TestimonialSpotlight, Customer Review",
+   "page": "oameni-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "OameniB3Mobil.dc.html": {
+   "x": 4920,
+   "y": 300,
+   "w": 390,
+   "h": 975,
+   "title": "Ce spun oamenii B3: carduri + bandă · mobil",
+   "page": "oameni-arh",
+   "is_interactive": true
+  },
+  "OameniB4.dc.html": {
+   "x": 1520,
+   "y": 3160,
+   "w": 1440,
+   "h": 986,
+   "title": "Ce spun oamenii B4: citat cu poza atelierului · inspirație: Framer: Testimonial Edition, Testimonial Split",
+   "page": "oameni-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "OameniB4Mobil.dc.html": {
+   "x": 5390,
+   "y": 300,
+   "w": 390,
+   "h": 1064,
+   "title": "Ce spun oamenii B4: citat cu poza atelierului · mobil",
+   "page": "oameni-arh",
+   "is_interactive": true
+  },
+  "Faq1DouaColoane.dc.html": {
+   "x": 0,
+   "y": 300,
+   "w": 1440,
+   "h": 620,
+   "title": "FAQ 1: două coloane · inspirație: Framer: FAQ Pro Accordion (stilul Dividers)",
+   "page": "faq-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Faq1DouaColoaneMobil.dc.html": {
+   "x": 3040,
+   "y": 300,
+   "w": 390,
+   "h": 890,
+   "title": "FAQ 1: două coloane · mobil",
+   "page": "faq-arh",
+   "is_interactive": true
+  },
+  "Faq2Centrat.dc.html": {
+   "x": 1520,
+   "y": 300,
+   "w": 1440,
+   "h": 970,
+   "title": "FAQ 2: centrat, numerotat · inspirație: Framer: Minimal Accordion",
+   "page": "faq-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Faq2CentratMobil.dc.html": {
+   "x": 3510,
+   "y": 300,
+   "w": 390,
+   "h": 970,
+   "title": "FAQ 2: centrat, numerotat · mobil",
+   "page": "faq-arh",
+   "is_interactive": true
+  },
+  "Faq3Carduri.dc.html": {
+   "x": 1520,
+   "y": 10300,
+   "w": 1440,
+   "h": 790,
+   "title": "FAQ 3: carduri (ales) · inspirație: Framer: FAQ Image Accordion (stilul Cards)",
+   "page": "acasa",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Faq3CarduriMobil.dc.html": {
+   "x": 3040,
+   "y": 10300,
+   "w": 390,
+   "h": 1060,
+   "title": "FAQ 3: carduri · mobil (ales)",
+   "page": "acasa",
+   "is_interactive": true
+  },
+  "Final1Inchis.dc.html": {
+   "x": 0,
+   "y": 300,
+   "w": 1440,
+   "h": 696,
+   "title": "Final 1: bandă închisă · inspirație: Aesop (footerul închis, cu abonare)",
+   "page": "fin-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Final1InchisMobil.dc.html": {
+   "x": 3040,
+   "y": 300,
+   "w": 390,
+   "h": 825,
+   "title": "Final 1: bandă închisă · mobil",
+   "page": "fin-arh",
+   "is_interactive": true
+  },
+  "Final2CartePostala.dc.html": {
+   "x": 0,
+   "y": 2400,
+   "w": 1440,
+   "h": 803,
+   "title": "Final 2A: carte poștală (aleasă), deschisă · inspirație: cărțile poștale + ștampila din hero; Framer: Envelope Popup",
+   "page": "fin-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Final2CartePostalaMobil.dc.html": {
+   "x": 3040,
+   "y": 2400,
+   "w": 390,
+   "h": 1065,
+   "title": "Final 2A · mobil",
+   "page": "fin-arh",
+   "is_interactive": true
+  },
+  "Final3CuPoza.dc.html": {
+   "x": 1520,
+   "y": 300,
+   "w": 1440,
+   "h": 825,
+   "title": "Final 3: cu poză · inspirație: Framer: Exit Popups (imagine în stânga)",
+   "page": "fin-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Final3CuPozaMobil.dc.html": {
+   "x": 3510,
+   "y": 300,
+   "w": 390,
+   "h": 1148,
+   "title": "Final 3: cu poză · mobil",
+   "page": "fin-arh",
+   "is_interactive": true
+  },
+  "Popup1CuPoza.dc.html": {
+   "x": 0,
+   "y": 1300,
+   "w": 1440,
+   "h": 900,
+   "title": "Pop-up 1: cu poză · inspirație: Framer: Exit Popups, Newsletter Modal Pop",
+   "page": "fin-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Popup1CuPozaMobil.dc.html": {
+   "x": 3980,
+   "y": 300,
+   "w": 390,
+   "h": 844,
+   "title": "Pop-up 1: cu poză · mobil",
+   "page": "fin-arh",
+   "is_interactive": true
+  },
+  "Popup2Colt.dc.html": {
+   "x": 1520,
+   "y": 1300,
+   "w": 1440,
+   "h": 900,
+   "title": "Pop-up 2: colț discret · inspirație: Framer: Timed Popup, Newsletter Card",
+   "page": "fin-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Popup2ColtMobil.dc.html": {
+   "x": 4450,
+   "y": 300,
+   "w": 390,
+   "h": 844,
+   "title": "Pop-up 2: colț discret · mobil",
+   "page": "fin-arh",
+   "is_interactive": true
+  },
+  "Popup3Plic.dc.html": {
+   "x": 1520,
+   "y": 14550,
+   "w": 1440,
+   "h": 900,
+   "title": "Pop-up 3: plic cu ștampilă (ales) · inspirație: Framer: Envelope Popup",
+   "page": "acasa",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Popup3PlicMobil.dc.html": {
+   "x": 3040,
+   "y": 14550,
+   "w": 390,
+   "h": 844,
+   "title": "Pop-up 3 · mobil (ales)",
+   "page": "acasa",
+   "is_interactive": true
+  },
+  "Final2BFundalInchis.dc.html": {
+   "x": 1520,
+   "y": 2400,
+   "w": 1440,
+   "h": 803,
+   "title": "Final 2B: carte poștală pe fundal închis · inspirație: Final 2A + banda închisă de la Aesop",
+   "page": "fin-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Final2BFundalInchisMobil.dc.html": {
+   "x": 3510,
+   "y": 2400,
+   "w": 390,
+   "h": 1065,
+   "title": "Final 2B · mobil",
+   "page": "fin-arh",
+   "is_interactive": true
+  },
+  "Final2CCardInchis.dc.html": {
+   "x": 0,
+   "y": 3300,
+   "w": 1440,
+   "h": 803,
+   "title": "Final 2C: carte poștală închisă · inspirație: Final 2A, în lut ars",
+   "page": "fin-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Final2CCardInchisMobil.dc.html": {
+   "x": 3980,
+   "y": 2400,
+   "w": 390,
+   "h": 1065,
+   "title": "Final 2C · mobil",
+   "page": "fin-arh",
+   "is_interactive": true
+  },
+  "Final2DTeracota.dc.html": {
+   "x": 1520,
+   "y": 3300,
+   "w": 1440,
+   "h": 803,
+   "title": "Final 2D: carte poștală teracotă pe lut ars · inspirație: Final 2A, în culorile brandului",
+   "page": "fin-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Final2DTeracotaMobil.dc.html": {
+   "x": 4450,
+   "y": 2400,
+   "w": 390,
+   "h": 1065,
+   "title": "Final 2D · mobil",
+   "page": "fin-arh",
+   "is_interactive": true
+  },
+  "Footer1Aesop.dc.html": {
+   "x": 0,
+   "y": 4300,
+   "w": 1440,
+   "h": 742,
+   "title": "Footer 1: coloane + newsletter · inspirație: aesop.com",
+   "page": "fin-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Footer1AesopMobil.dc.html": {
+   "x": 3040,
+   "y": 4300,
+   "w": 390,
+   "h": 1569,
+   "title": "Footer 1: coloane + newsletter · mobil",
+   "page": "fin-arh",
+   "is_interactive": true
+  },
+  "Footer2EastFork.dc.html": {
+   "x": 1520,
+   "y": 4300,
+   "w": 1440,
+   "h": 805,
+   "title": "Footer 2: oferta mare + coloane · inspirație: eastfork.com",
+   "page": "fin-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Footer2EastForkMobil.dc.html": {
+   "x": 3510,
+   "y": 4300,
+   "w": 390,
+   "h": 1681,
+   "title": "Footer 2: oferta mare + coloane · mobil",
+   "page": "fin-arh",
+   "is_interactive": true
+  },
+  "Footer3Heath.dc.html": {
+   "x": 1520,
+   "y": 11900,
+   "w": 1440,
+   "h": 1146,
+   "title": "Footer 3: carte poștală pe cusătură (ales) · inspirație: heathceramics.com",
+   "page": "acasa",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Footer3HeathMobil.dc.html": {
+   "x": 3040,
+   "y": 11900,
+   "w": 390,
+   "h": 2042,
+   "title": "Footer 3 · mobil (ales)",
+   "page": "acasa",
+   "is_interactive": true
+  },
+  "Footer4HelenLevi.dc.html": {
+   "x": 0,
+   "y": 5200,
+   "w": 1440,
+   "h": 926,
+   "title": "Footer 4: fotografie + ștampilă · inspirație: helenlevi.com",
+   "page": "fin-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Footer4HelenLeviMobil.dc.html": {
+   "x": 3980,
+   "y": 4300,
+   "w": 390,
+   "h": 1021,
+   "title": "Footer 4: fotografie + ștampilă · mobil",
+   "page": "fin-arh",
+   "is_interactive": true
+  },
+  "AcasaRunda2.dc.html": {
+   "x": 4770,
+   "y": 0,
+   "w": 1440,
+   "h": 6600,
+   "title": "Acasă (runda 2): pagina veche, înainte de secțiunile alese",
+   "page": "r2",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "AcasaRunda2Mobil.dc.html": {
+   "x": 6290,
+   "y": 0,
+   "w": 390,
+   "h": 9400,
+   "title": "Acasă (runda 2) · mobil",
+   "page": "r2",
+   "is_interactive": true
+  },
+  "HeaderSticky1Pastila.dc.html": {
+   "x": 1520,
+   "y": 15600,
+   "w": 1440,
+   "h": 900,
+   "title": "Header 1: pastilă de sticlă (ales) · inspirație: Apple Liquid Glass (iOS 26); meniul ca foaia din Apple Maps",
+   "page": "acasa",
+   "is_interactive": true
+  },
+  "HeaderSticky1PastilaMobil.dc.html": {
+   "x": 3040,
+   "y": 15600,
+   "w": 390,
+   "h": 844,
+   "title": "Header 1: pastilă de sticlă (ales) · mobil",
+   "page": "acasa",
+   "is_interactive": true
+  },
+  "HeaderSticky2Bara.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 900,
+   "title": "Header 2: bară care se retrage · inspirație: apple.com (bara de sticlă) + medium.com (dispare la scroll în jos); submeniu ca pe apple.com mobil",
+   "page": "header",
+   "is_interactive": true
+  },
+  "HeaderSticky2BaraMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "Header 2: bară care se retrage · mobil",
+   "page": "header",
+   "is_interactive": true
+  },
+  "HeaderSticky3Insule.dc.html": {
+   "x": 0,
+   "y": 1020,
+   "w": 1440,
+   "h": 900,
+   "title": "Header 3: două insule · inspirație: iPhone Dynamic Island",
+   "page": "header",
+   "is_interactive": true
+  },
+  "HeaderSticky3InsuleMobil.dc.html": {
+   "x": 1520,
+   "y": 1020,
+   "w": 390,
+   "h": 844,
+   "title": "Header 3: două insule · mobil",
+   "page": "header",
+   "is_interactive": true
+  },
+  "DespreNoi1Revista.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 1000,
+   "title": "Despre noi 1: profil de revistă · inspirație: Kinfolk (revista): paginile de profil",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "DespreNoi1RevistaMobil.dc.html": {
+   "x": 0,
+   "y": 1400,
+   "w": 390,
+   "h": 1210,
+   "title": "Despre noi 1: profil de revistă · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "DespreNoi2Muzeu.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 1440,
+   "h": 810,
+   "title": "Despre noi 2: sala de muzeu · inspirație: Rijksmuseum (sălile cu pereți închiși) + etichetele de perete de la MoMA",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "DespreNoi2MuzeuMobil.dc.html": {
+   "x": 1520,
+   "y": 1400,
+   "w": 390,
+   "h": 1225,
+   "title": "Despre noi 2: sala de muzeu · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "DespreNoi3Semnatura.dc.html": {
+   "x": 0,
+   "y": 5531,
+   "w": 1440,
+   "h": 930,
+   "title": "Despre noi 3: semnătura (semnătură provizorie) · inspirație: Apple: „hello” scris de mână (Macintosh 1984, iMac 2021)",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "DespreNoi3SemnaturaMobil.dc.html": {
+   "x": 0,
+   "y": 6931,
+   "w": 390,
+   "h": 1130,
+   "title": "Despre noi 3: semnătura · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "DespreNoi4PaginaTitlu.dc.html": {
+   "x": 3040,
+   "y": 0,
+   "w": 1440,
+   "h": 1240,
+   "title": "Despre noi 4: pagina de titlu · inspirație: Giambattista Bodoni, Manuale Tipografico (1818): pagina de titlu și frontispiciul oval",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "DespreNoi4PaginaTitluMobil.dc.html": {
+   "x": 3040,
+   "y": 1400,
+   "w": 390,
+   "h": 1100,
+   "title": "Despre noi 4: pagina de titlu · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "DespreNoi3BScrisoare.dc.html": {
+   "x": 1520,
+   "y": 5531,
+   "w": 1440,
+   "h": 930,
+   "title": "Despre noi 3B: semnătura sub text (semnătură provizorie) · inspirație: Patagonia: scrisoarea semnată de Yvon Chouinard („Earth is now our only shareholder”, 2022)",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "DespreNoi3BScrisoareMobil.dc.html": {
+   "x": 1520,
+   "y": 6931,
+   "w": 390,
+   "h": 1241,
+   "title": "Despre noi 3B: semnătura sub text · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "DespreNoi3CPolaroid.dc.html": {
+   "x": 3040,
+   "y": 5531,
+   "w": 1440,
+   "h": 890,
+   "title": "Despre noi 3C: polaroid semnat (semnătură provizorie) · inspirație: Polaroid SX-70: fotografiile instant semnate pe banda albă",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "DespreNoi3CPolaroidMobil.dc.html": {
+   "x": 3040,
+   "y": 6931,
+   "w": 390,
+   "h": 1118,
+   "title": "Despre noi 3C: polaroid semnat · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "DespreNoi3DLumina.dc.html": {
+   "x": 4560,
+   "y": 5531,
+   "w": 1440,
+   "h": 930,
+   "title": "Despre noi 3D: semnătura scrisă cu lumină (semnătură provizorie) · inspirație: Gjon Mili, LIFE (1949): Picasso desenând cu lumina",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "DespreNoi3DLuminaMobil.dc.html": {
+   "x": 4560,
+   "y": 6931,
+   "w": 390,
+   "h": 1130,
+   "title": "Despre noi 3D: semnătura scrisă cu lumină · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "DespreNoi3EOlar.dc.html": {
+   "x": 6080,
+   "y": 5531,
+   "w": 1440,
+   "h": 930,
+   "title": "Despre noi 3E: semnătura imprimată în lut (semnătură provizorie) · inspirație: Leach Pottery, St Ives: sigiliul olarului imprimat în lut",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "DespreNoi3EOlarMobil.dc.html": {
+   "x": 6080,
+   "y": 6931,
+   "w": 390,
+   "h": 1130,
+   "title": "Despre noi 3E: semnătura imprimată în lut · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Povestea1Medium.dc.html": {
+   "x": 0,
+   "y": 24700,
+   "w": 1440,
+   "h": 2085,
+   "title": "Povestea 1: coloana de lectură · inspirație: medium.com: coloana de lectură și citatele scoase în evidență",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Povestea1MediumMobil.dc.html": {
+   "x": 0,
+   "y": 27380,
+   "w": 390,
+   "h": 1817,
+   "title": "Povestea 1: coloana de lectură · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Povestea2SnowFall.dc.html": {
+   "x": 1520,
+   "y": 24700,
+   "w": 1440,
+   "h": 2559,
+   "title": "Povestea 2: capitole cu fotografie fixă · inspirație: The New York Times, „Snow Fall” (2012): fotografia stă pe loc cât citești capitolul",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Povestea2SnowFallMobil.dc.html": {
+   "x": 1520,
+   "y": 27380,
+   "w": 390,
+   "h": 1934,
+   "title": "Povestea 2: capitole cu fotografie fixă · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Povestea3Stories.dc.html": {
+   "x": 3040,
+   "y": 24700,
+   "w": 1440,
+   "h": 950,
+   "title": "Povestea 3: poveste în cadre · inspirație: Instagram Stories: cadre cu bare de progres, atingi ca să treci mai departe",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Povestea3StoriesMobil.dc.html": {
+   "x": 3040,
+   "y": 27380,
+   "w": 390,
+   "h": 920,
+   "title": "Povestea 3: poveste în cadre · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Povestea4Interviu.dc.html": {
+   "x": 2100,
+   "y": 3300,
+   "w": 1440,
+   "h": 1151,
+   "title": "Povestea 4: interviu · inspirație: The Paris Review: interviurile întrebare–răspuns",
+   "page": "despre-noi",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Povestea4InterviuMobil.dc.html": {
+   "x": 2100,
+   "y": 6000,
+   "w": 390,
+   "h": 1392,
+   "title": "Povestea 4: interviu · mobil",
+   "page": "despre-noi",
+   "is_interactive": true
+  },
+  "Formari1LinkedIn.dc.html": {
+   "x": 0,
+   "y": 3000,
+   "w": 1440,
+   "h": 832,
+   "title": "Formări 1: listă cu iconițe · inspirație: linkedin.com: secțiunea „Licențe și certificări” de pe profil",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Formari1LinkedInMobil.dc.html": {
+   "x": 0,
+   "y": 4000,
+   "w": 390,
+   "h": 831,
+   "title": "Formări 1: listă cu iconițe · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Formari2ReadCv.dc.html": {
+   "x": 1520,
+   "y": 3000,
+   "w": 1440,
+   "h": 628,
+   "title": "Formări 2: CV minimalist · inspirație: read.cv: profilurile-CV minimaliste (anul în stânga, rândul în dreapta)",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Formari2ReadCvMobil.dc.html": {
+   "x": 1520,
+   "y": 4000,
+   "w": 390,
+   "h": 709,
+   "title": "Formări 2: CV minimalist · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Formari3Airbnb.dc.html": {
+   "x": 3040,
+   "y": 3000,
+   "w": 1440,
+   "h": 580,
+   "title": "Formări 3: fapte cu iconițe · inspirație: airbnb.com: profilul gazdei, fapte scurte cu iconițe",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Formari3AirbnbMobil.dc.html": {
+   "x": 3040,
+   "y": 4000,
+   "w": 390,
+   "h": 731,
+   "title": "Formări 3: fapte cu iconițe · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Formari4Wallet.dc.html": {
+   "x": 0,
+   "y": 8872,
+   "w": 1440,
+   "h": 720,
+   "title": "Formări 4: carduri împărțite · inspirație: apple.com/wallet: cardurile din Apple Wallet; vecinii se dau la o parte ca în Dock-ul de pe macOS",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Formari4WalletMobil.dc.html": {
+   "x": 0,
+   "y": 9827,
+   "w": 390,
+   "h": 600,
+   "title": "Formări 4: carduri împărțite · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Formari4BTeanc.dc.html": {
+   "x": 1520,
+   "y": 8872,
+   "w": 1440,
+   "h": 826,
+   "title": "Formări 4B: teancul din Wallet · inspirație: Apple Wallet pe iPhone: teancul de carduri; atingi unul și vine în față",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Formari4BTeancMobil.dc.html": {
+   "x": 1520,
+   "y": 9827,
+   "w": 390,
+   "h": 696,
+   "title": "Formări 4B: teancul din Wallet · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Formari4CEvantai.dc.html": {
+   "x": 3040,
+   "y": 8872,
+   "w": 1440,
+   "h": 835,
+   "title": "Formări 4C: evantaiul de cărți · inspirație: Cărțile ținute în mână, ca un evantai; inspirație: apple.com/wallet + Dock-ul macOS",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Formari4CEvantaiMobil.dc.html": {
+   "x": 3040,
+   "y": 9827,
+   "w": 390,
+   "h": 600,
+   "title": "Formări 4C: evantaiul de cărți · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Formari4DHolo.dc.html": {
+   "x": 4560,
+   "y": 8872,
+   "w": 1440,
+   "h": 700,
+   "title": "Formări 4D: carduri holografice · inspirație: poke-holo.simey.me (Simon Goellner): cardurile holografice care se înclină după cursor",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Formari4DHoloMobil.dc.html": {
+   "x": 4560,
+   "y": 9827,
+   "w": 390,
+   "h": 600,
+   "title": "Formări 4D: carduri holografice · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Comunitate1Lista.dc.html": {
+   "x": 0,
+   "y": 11223,
+   "w": 1440,
+   "h": 1152,
+   "title": "Comunitatea 1: numele mari · inspirație: Awwwards: liste de nume cu imaginea care urmărește cursorul (hover image reveal)",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Comunitate1ListaMobil.dc.html": {
+   "x": 0,
+   "y": 12662,
+   "w": 390,
+   "h": 1223,
+   "title": "Comunitatea 1: numele mari · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Comunitate2Highlights.dc.html": {
+   "x": 1520,
+   "y": 11223,
+   "w": 1440,
+   "h": 1106,
+   "title": "Comunitatea 2: cercurile Highlights · inspirație: Instagram: cercurile „Highlights” de pe profil",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Comunitate2HighlightsMobil.dc.html": {
+   "x": 1520,
+   "y": 12662,
+   "w": 390,
+   "h": 1158,
+   "title": "Comunitatea 2: cercurile Highlights · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Comunitate3Contributori.dc.html": {
+   "x": 3040,
+   "y": 11223,
+   "w": 1440,
+   "h": 1319,
+   "title": "Comunitatea 3: contributorii · inspirație: The New Yorker: pagina „Contributors” din fiecare număr",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Comunitate3ContributoriMobil.dc.html": {
+   "x": 3040,
+   "y": 12662,
+   "w": 390,
+   "h": 2219,
+   "title": "Comunitatea 3: contributorii · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Comunitate4Cursoare.dc.html": {
+   "x": 4560,
+   "y": 11223,
+   "w": 1440,
+   "h": 1091,
+   "title": "Comunitatea 4: cursoare care lucrează împreună · inspirație: figma.com: cursoarele cu nume care lucrează împreună pe aceeași pânză",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Comunitate4CursoareMobil.dc.html": {
+   "x": 4560,
+   "y": 12662,
+   "w": 390,
+   "h": 2333,
+   "title": "Comunitatea 4: cursoare care lucrează împreună · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Masa1Amintiri.dc.html": {
+   "x": 0,
+   "y": 15695,
+   "w": 1440,
+   "h": 786,
+   "title": "Oamenii la masă 1: amintiri · inspirație: Apple Photos: „Amintiri” (fotografiile se apropie încet, efectul Ken Burns)",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Masa1AmintiriMobil.dc.html": {
+   "x": 0,
+   "y": 17334,
+   "w": 390,
+   "h": 1002,
+   "title": "Oamenii la masă 1: amintiri · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Masa2Pinterest.dc.html": {
+   "x": 1520,
+   "y": 15695,
+   "w": 1440,
+   "h": 1519,
+   "title": "Oamenii la masă 2: grila care respiră · inspirație: pinterest.com: grila în coloane inegale; coloanele alunecă cu viteze diferite la scroll",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Masa2PinterestMobil.dc.html": {
+   "x": 1520,
+   "y": 17334,
+   "w": 390,
+   "h": 1575,
+   "title": "Oamenii la masă 2: grila care respiră · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Masa3Masa.dc.html": {
+   "x": 3040,
+   "y": 15695,
+   "w": 1440,
+   "h": 1078,
+   "title": "Oamenii la masă 3: masa de lucru · inspirație: Apple Freeform: tabla pe care muți pozele și bilețelele cu degetul",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Masa3MasaMobil.dc.html": {
+   "x": 3040,
+   "y": 17334,
+   "w": 390,
+   "h": 1677,
+   "title": "Oamenii la masă 3: masa de lucru · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Masa4Banda.dc.html": {
+   "x": 4560,
+   "y": 15695,
+   "w": 1440,
+   "h": 1114,
+   "title": "Oamenii la masă 4: banda care curge · inspirație: framer.com: componenta Ticker (rânduri care curg fără oprire)",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Masa4BandaMobil.dc.html": {
+   "x": 4560,
+   "y": 17334,
+   "w": 390,
+   "h": 985,
+   "title": "Oamenii la masă 4: banda care curge · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Credem1Wrapped.dc.html": {
+   "x": 0,
+   "y": 19711,
+   "w": 1440,
+   "h": 863,
+   "title": "Ce credem 1: panouri pline · inspirație: Spotify Wrapped: panouri pline de culoare, cu forme mari care se mișcă",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Credem1WrappedMobil.dc.html": {
+   "x": 0,
+   "y": 20694,
+   "w": 390,
+   "h": 1092,
+   "title": "Ce credem 1: panouri pline · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Credem2Inele.dc.html": {
+   "x": 1520,
+   "y": 19711,
+   "w": 1440,
+   "h": 702,
+   "title": "Ce credem 2: inelele · inspirație: Apple Watch: inelele Activity care se închid",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Credem2IneleMobil.dc.html": {
+   "x": 1520,
+   "y": 20694,
+   "w": 390,
+   "h": 890,
+   "title": "Ce credem 2: inelele · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Credem3Forme.dc.html": {
+   "x": 3040,
+   "y": 19711,
+   "w": 1440,
+   "h": 748,
+   "title": "Ce credem 3: forme care respiră · inspirație: headspace.com: forme organice, rotunde, care respiră",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Credem3FormeMobil.dc.html": {
+   "x": 3040,
+   "y": 20694,
+   "w": 390,
+   "h": 1212,
+   "title": "Ce credem 3: forme care respiră · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Credem4Stampila.dc.html": {
+   "x": 4560,
+   "y": 19711,
+   "w": 1440,
+   "h": 708,
+   "title": "Ce credem 4: ștampila care se rotește · inspirație: Awwwards: insigne cu text circular care se rotește",
+   "page": "despre-noi-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Credem4StampilaMobil.dc.html": {
+   "x": 4560,
+   "y": 20694,
+   "w": 390,
+   "h": 916,
+   "title": "Ce credem 4: ștampila care se rotește · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "CFPagina1Comutator.dc.html": {
+   "x": 2100,
+   "y": 0,
+   "w": 1440,
+   "h": 1462,
+   "title": "Ce oferim 1: comutatorul · inspirație: airbnb.com: filele „Locuințe · Experiențe · Servicii” cu iconițe animate (2025)",
+   "page": "ce-facem",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CFPagina1ComutatorMobil.dc.html": {
+   "x": 2100,
+   "y": 1582,
+   "w": 390,
+   "h": 2535,
+   "title": "Ce oferim 1: comutatorul · mobil",
+   "page": "ce-facem",
+   "is_interactive": true
+  },
+  "CFPagina2Bento.dc.html": {
+   "x": 1520,
+   "y": 10226,
+   "w": 1440,
+   "h": 1416,
+   "title": "Ce oferim 2: bento · inspirație: apple.com: grila „bento” de pe paginile de produs (plăci de mărimi diferite)",
+   "page": "cefacem-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CFPagina2BentoMobil.dc.html": {
+   "x": 1520,
+   "y": 11762,
+   "w": 390,
+   "h": 2322,
+   "title": "Ce oferim 2: bento · mobil",
+   "page": "cefacem-arh",
+   "is_interactive": true
+  },
+  "CFPagina3Drum.dc.html": {
+   "x": 3040,
+   "y": 10226,
+   "w": 1440,
+   "h": 1072,
+   "title": "Ce oferim 3: drumul · inspirație: Duolingo: drumul lecțiilor, cu butoane rotunde care se apasă",
+   "page": "cefacem-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CFPagina3DrumMobil.dc.html": {
+   "x": 3040,
+   "y": 11762,
+   "w": 390,
+   "h": 1980,
+   "title": "Ce oferim 3: drumul · mobil",
+   "page": "cefacem-arh",
+   "is_interactive": true
+  },
+  "CFPagina4CoverFlow.dc.html": {
+   "x": 4560,
+   "y": 10226,
+   "w": 1440,
+   "h": 1221,
+   "title": "Ce oferim 4: cover flow · inspirație: Apple iTunes (2006): Cover Flow, copertele care se rotesc în 3D, cu reflexie",
+   "page": "cefacem-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CFPagina4CoverFlowMobil.dc.html": {
+   "x": 4560,
+   "y": 11762,
+   "w": 390,
+   "h": 1008,
+   "title": "Ce oferim 4: cover flow · mobil",
+   "page": "cefacem-arh",
+   "is_interactive": true
+  },
+  "DeUnde1Typeform.dc.html": {
+   "x": 0,
+   "y": 14784,
+   "w": 1440,
+   "h": 680,
+   "title": "De unde încep 1: întrebarea · inspirație: typeform.com: o singură întrebare pe ecran, variante cu literele A, B, C",
+   "page": "cefacem-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "DeUnde1TypeformMobil.dc.html": {
+   "x": 0,
+   "y": 16266,
+   "w": 390,
+   "h": 793,
+   "title": "De unde încep 1: întrebarea · mobil",
+   "page": "cefacem-arh",
+   "is_interactive": true
+  },
+  "DeUnde2Mesaje.dc.html": {
+   "x": 1520,
+   "y": 14784,
+   "w": 1440,
+   "h": 787,
+   "title": "De unde încep 2: mesajele · inspirație: Apple Messages (iMessage): bulele de chat și cele trei puncte „scrie…”",
+   "page": "cefacem-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "DeUnde2MesajeMobil.dc.html": {
+   "x": 1520,
+   "y": 16266,
+   "w": 390,
+   "h": 817,
+   "title": "De unde încep 2: mesajele · mobil",
+   "page": "cefacem-arh",
+   "is_interactive": true
+  },
+  "DeUnde3Carte.dc.html": {
+   "x": 3040,
+   "y": 14784,
+   "w": 1440,
+   "h": 840,
+   "title": "De unde încep 3: cartea · inspirație: „Choose Your Own Adventure” (Bantam Books, 1979): alegi și întorci pagina",
+   "page": "cefacem-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "DeUnde3CarteMobil.dc.html": {
+   "x": 3040,
+   "y": 16266,
+   "w": 390,
+   "h": 941,
+   "title": "De unde încep 3: cartea · mobil",
+   "page": "cefacem-arh",
+   "is_interactive": true
+  },
+  "DeUnde4Compara.dc.html": {
+   "x": 4560,
+   "y": 14784,
+   "w": 1440,
+   "h": 1362,
+   "title": "De unde încep 4: comparația · inspirație: apple.com/iphone/compare: modelele puse unul lângă altul, pe coloane",
+   "page": "cefacem-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "DeUnde4ComparaMobil.dc.html": {
+   "x": 4560,
+   "y": 16266,
+   "w": 390,
+   "h": 1214,
+   "title": "De unde încep 4: comparația · mobil",
+   "page": "cefacem-arh",
+   "is_interactive": true
+  },
+  "DespreNoiDeschidere.dc.html": {
+   "x": 2100,
+   "y": 0,
+   "w": 1440,
+   "h": 945,
+   "title": "Despre noi: deschiderea (din 3D, fără semnătură și fără lumină) · inspirație: Despre noi 3D (Gjon Mili, LIFE 1949), fără semnătură și fără efectul de lumină",
+   "page": "despre-noi",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "DespreNoiDeschidereMobil.dc.html": {
+   "x": 2100,
+   "y": 1065,
+   "w": 390,
+   "h": 1125,
+   "title": "Despre noi: deschiderea (din 3D, fără semnătură și fără lumină) · mobil",
+   "page": "despre-noi",
+   "is_interactive": true
+  },
+  "Formari3ADoua.dc.html": {
+   "x": 0,
+   "y": 22606,
+   "w": 1440,
+   "h": 544,
+   "title": "Formări 3A: două coloane, fără iconițe · inspirație: Formări 3 (airbnb.com, profilul gazdei), fără iconițe: două coloane",
+   "page": "despre-noi-arh",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Formari3ADouaMobil.dc.html": {
+   "x": 0,
+   "y": 23516,
+   "w": 390,
+   "h": 604,
+   "title": "Formări 3A: două coloane, fără iconițe · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Formari3BRand.dc.html": {
+   "x": 1520,
+   "y": 22606,
+   "w": 1440,
+   "h": 540,
+   "title": "Formări 3B: un rând, sub linii fine · inspirație: aesop.com: detaliile produsului în coloane, fiecare sub o linie fină",
+   "page": "despre-noi-arh",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Formari3BRandMobil.dc.html": {
+   "x": 1520,
+   "y": 23516,
+   "w": 390,
+   "h": 777,
+   "title": "Formări 3B: un rând, sub linii fine · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Formari3CMargine.dc.html": {
+   "x": 3040,
+   "y": 22606,
+   "w": 1440,
+   "h": 528,
+   "title": "Formări 3C: titlul pe margine · inspirație: Kinfolk (revista): titlul pe margine, textul în dreapta",
+   "page": "despre-noi-arh",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Formari3CMargineMobil.dc.html": {
+   "x": 3040,
+   "y": 23516,
+   "w": 390,
+   "h": 600,
+   "title": "Formări 3C: titlul pe margine · mobil",
+   "page": "despre-noi-arh",
+   "is_interactive": true
+  },
+  "Formari3DCentrat.dc.html": {
+   "x": 2100,
+   "y": 8500,
+   "w": 1440,
+   "h": 790,
+   "title": "Formări 3D: centrat · inspirație: Cereal (revista): text centrat, cu mult spațiu alb",
+   "page": "despre-noi",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Formari3DCentratMobil.dc.html": {
+   "x": 2100,
+   "y": 9410,
+   "w": 390,
+   "h": 650,
+   "title": "Formări 3D: centrat · mobil",
+   "page": "despre-noi",
+   "is_interactive": true
+  },
+  "Comunitate5Carduri.dc.html": {
+   "x": 2100,
+   "y": 10800,
+   "w": 1440,
+   "h": 662,
+   "title": "Comunitatea 5: intro + carduri · inspirație: un card mic per colaboratoare, după exemplul trimis de Vali (în stilul AVA)",
+   "page": "despre-noi",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "Comunitate5CarduriMobil.dc.html": {
+   "x": 2100,
+   "y": 11582,
+   "w": 390,
+   "h": 855,
+   "title": "Comunitatea 5: intro + carduri · mobil",
+   "page": "despre-noi",
+   "is_interactive": true
+  },
+  "CFDeCe.dc.html": {
+   "x": 2100,
+   "y": 4400,
+   "w": 1440,
+   "h": 448,
+   "title": "Ce oferim: De ce să alegi AVA Art & Soul? · secțiune nouă cerută de Vali; textul vine de la Vali",
+   "page": "ce-facem",
+   "is_interactive": true,
+   "expand": "fill"
+  },
+  "CFDeCeMobil.dc.html": {
+   "x": 2100,
+   "y": 4968,
+   "w": 390,
+   "h": 311,
+   "title": "Ce oferim: De ce să alegi AVA Art & Soul? · secțiune nouă cerută de Vali; textul vine de la Vali · mobil",
+   "page": "ce-facem",
+   "is_interactive": true
+  },
+  "DespreNoi.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 4544,
+   "title": "Despre noi: toate secțiunile alese, în ordine",
+   "page": "despre-noi",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "DespreNoiMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 5876,
+   "title": "Despre noi · mobil",
+   "page": "despre-noi",
+   "is_interactive": true
+  },
+  "CeFacem.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 2843,
+   "title": "Ce oferim: toate secțiunile alese, în ordine",
+   "page": "ce-facem",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CeFacemMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 4600,
+   "title": "Ce oferim · mobil",
+   "page": "ce-facem",
+   "is_interactive": true
+  }
+ },
+ "order": [
+  "DespreNoi.dc.html",
+  "DespreNoiMobil.dc.html",
+  "CeFacem.dc.html",
+  "CeFacemMobil.dc.html",
+  "Acasa.dc.html",
+  "HeroAnuntCentrat.dc.html",
+  "HeroAnuntCentratMobil.dc.html",
+  "Despre5Scrisoare.dc.html",
+  "Despre5ScrisoareMobil.dc.html",
+  "Despre6Coperta.dc.html",
+  "Despre6CopertaMobil.dc.html",
+  "CopertaA.dc.html",
+  "CopertaAMobil.dc.html",
+  "CopertaB.dc.html",
+  "CopertaBMobil.dc.html",
+  "CopertaC.dc.html",
+  "CopertaCMobil.dc.html",
+  "CopertaD.dc.html",
+  "CopertaDMobil.dc.html",
+  "CopertaE.dc.html",
+  "CopertaEMobil.dc.html",
+  "CopertaF.dc.html",
+  "CopertaFMobil.dc.html",
+  "CopertaG.dc.html",
+  "CopertaGMobil.dc.html",
+  "CopertaH.dc.html",
+  "CopertaHMobil.dc.html",
+  "CeFacem1Drumuri.dc.html",
+  "CeFacem1DrumuriMobil.dc.html",
+  "CeFacem2Galerie.dc.html",
+  "CeFacem2GalerieMobil.dc.html",
+  "CeFacem3PrimPlan.dc.html",
+  "CeFacem3PrimPlanMobil.dc.html",
+  "CeFacem5Acordeon.dc.html",
+  "CeFacem5AcordeonMobil.dc.html",
+  "CeFacem6Fereastra.dc.html",
+  "CeFacem6FereastraMobil.dc.html",
+  "CeFacem7Teanc.dc.html",
+  "CeFacem7TeancMobil.dc.html",
+  "CeFacem8Vase.dc.html",
+  "CeFacem8VaseMobil.dc.html",
+  "CeFacem4Stampile.dc.html",
+  "CeFacem4StampileMobil.dc.html",
+  "Despre7Amprenta.dc.html",
+  "Despre7AmprentaMobil.dc.html",
+  "Despre8Lumina.dc.html",
+  "Despre8LuminaMobil.dc.html",
+  "AcasaMobil.dc.html",
+  "Header1Editorial.dc.html",
+  "Header2Anunt.dc.html",
+  "Header3Rama.dc.html",
+  "Header4Sticla.dc.html",
+  "Text1Editorial.dc.html",
+  "Text2Card.dc.html",
+  "Text3Usi.dc.html",
+  "Text4Centrat.dc.html",
+  "Popup.dc.html",
+  "HeroRoata.dc.html",
+  "HeroStampila.dc.html",
+  "HeroInvitatie.dc.html",
+  "Fonturi.dc.html",
+  "FonturiR3.dc.html",
+  "Main.dc.html",
+  "Seara.dc.html",
+  "Portret.dc.html",
+  "Despre1Stampila.dc.html",
+  "Despre2Citat.dc.html",
+  "Despre3Arcada.dc.html",
+  "Despre4Atelier.dc.html",
+  "UrmatorulA.dc.html",
+  "UrmatorulAMobil.dc.html",
+  "UrmatorulB.dc.html",
+  "UrmatorulBMobil.dc.html",
+  "UrmatorulC.dc.html",
+  "UrmatorulCMobil.dc.html",
+  "UrmatorulD.dc.html",
+  "UrmatorulDMobil.dc.html",
+  "OameniA.dc.html",
+  "OameniAMobil.dc.html",
+  "OameniB.dc.html",
+  "OameniBMobil.dc.html",
+  "OameniC.dc.html",
+  "OameniCMobil.dc.html",
+  "OameniD.dc.html",
+  "OameniDMobil.dc.html",
+  "OameniB2.dc.html",
+  "OameniB2Mobil.dc.html",
+  "OameniB3.dc.html",
+  "OameniB3Mobil.dc.html",
+  "OameniB4.dc.html",
+  "OameniB4Mobil.dc.html",
+  "Faq1DouaColoane.dc.html",
+  "Faq1DouaColoaneMobil.dc.html",
+  "Faq2Centrat.dc.html",
+  "Faq2CentratMobil.dc.html",
+  "Faq3Carduri.dc.html",
+  "Faq3CarduriMobil.dc.html",
+  "Final1Inchis.dc.html",
+  "Final1InchisMobil.dc.html",
+  "Final2CartePostala.dc.html",
+  "Final2CartePostalaMobil.dc.html",
+  "Final3CuPoza.dc.html",
+  "Final3CuPozaMobil.dc.html",
+  "Popup1CuPoza.dc.html",
+  "Popup1CuPozaMobil.dc.html",
+  "Popup2Colt.dc.html",
+  "Popup2ColtMobil.dc.html",
+  "Popup3Plic.dc.html",
+  "Popup3PlicMobil.dc.html",
+  "Final2BFundalInchis.dc.html",
+  "Final2BFundalInchisMobil.dc.html",
+  "Final2CCardInchis.dc.html",
+  "Final2CCardInchisMobil.dc.html",
+  "Final2DTeracota.dc.html",
+  "Final2DTeracotaMobil.dc.html",
+  "Footer1Aesop.dc.html",
+  "Footer1AesopMobil.dc.html",
+  "Footer2EastFork.dc.html",
+  "Footer2EastForkMobil.dc.html",
+  "Footer3Heath.dc.html",
+  "Footer3HeathMobil.dc.html",
+  "Footer4HelenLevi.dc.html",
+  "Footer4HelenLeviMobil.dc.html",
+  "AcasaRunda2.dc.html",
+  "AcasaRunda2Mobil.dc.html",
+  "HeaderSticky1Pastila.dc.html",
+  "HeaderSticky1PastilaMobil.dc.html",
+  "HeaderSticky2Bara.dc.html",
+  "HeaderSticky2BaraMobil.dc.html",
+  "HeaderSticky3Insule.dc.html",
+  "HeaderSticky3InsuleMobil.dc.html",
+  "DespreNoi1Revista.dc.html",
+  "DespreNoi1RevistaMobil.dc.html",
+  "DespreNoi2Muzeu.dc.html",
+  "DespreNoi2MuzeuMobil.dc.html",
+  "DespreNoi3Semnatura.dc.html",
+  "DespreNoi3SemnaturaMobil.dc.html",
+  "DespreNoi4PaginaTitlu.dc.html",
+  "DespreNoi4PaginaTitluMobil.dc.html",
+  "DespreNoi3BScrisoare.dc.html",
+  "DespreNoi3BScrisoareMobil.dc.html",
+  "DespreNoi3CPolaroid.dc.html",
+  "DespreNoi3CPolaroidMobil.dc.html",
+  "DespreNoi3DLumina.dc.html",
+  "DespreNoi3DLuminaMobil.dc.html",
+  "DespreNoi3EOlar.dc.html",
+  "DespreNoi3EOlarMobil.dc.html",
+  "Povestea1Medium.dc.html",
+  "Povestea1MediumMobil.dc.html",
+  "Povestea2SnowFall.dc.html",
+  "Povestea2SnowFallMobil.dc.html",
+  "Povestea3Stories.dc.html",
+  "Povestea3StoriesMobil.dc.html",
+  "Povestea4Interviu.dc.html",
+  "Povestea4InterviuMobil.dc.html",
+  "Formari1LinkedIn.dc.html",
+  "Formari1LinkedInMobil.dc.html",
+  "Formari2ReadCv.dc.html",
+  "Formari2ReadCvMobil.dc.html",
+  "Formari3Airbnb.dc.html",
+  "Formari3AirbnbMobil.dc.html",
+  "Formari4Wallet.dc.html",
+  "Formari4WalletMobil.dc.html",
+  "Formari4BTeanc.dc.html",
+  "Formari4BTeancMobil.dc.html",
+  "Formari4CEvantai.dc.html",
+  "Formari4CEvantaiMobil.dc.html",
+  "Formari4DHolo.dc.html",
+  "Formari4DHoloMobil.dc.html",
+  "Comunitate1Lista.dc.html",
+  "Comunitate1ListaMobil.dc.html",
+  "Comunitate2Highlights.dc.html",
+  "Comunitate2HighlightsMobil.dc.html",
+  "Comunitate3Contributori.dc.html",
+  "Comunitate3ContributoriMobil.dc.html",
+  "Comunitate4Cursoare.dc.html",
+  "Comunitate4CursoareMobil.dc.html",
+  "Masa1Amintiri.dc.html",
+  "Masa1AmintiriMobil.dc.html",
+  "Masa2Pinterest.dc.html",
+  "Masa2PinterestMobil.dc.html",
+  "Masa3Masa.dc.html",
+  "Masa3MasaMobil.dc.html",
+  "Masa4Banda.dc.html",
+  "Masa4BandaMobil.dc.html",
+  "Credem1Wrapped.dc.html",
+  "Credem1WrappedMobil.dc.html",
+  "Credem2Inele.dc.html",
+  "Credem2IneleMobil.dc.html",
+  "Credem3Forme.dc.html",
+  "Credem3FormeMobil.dc.html",
+  "Credem4Stampila.dc.html",
+  "Credem4StampilaMobil.dc.html",
+  "CFPagina1Comutator.dc.html",
+  "CFPagina1ComutatorMobil.dc.html",
+  "CFPagina2Bento.dc.html",
+  "CFPagina2BentoMobil.dc.html",
+  "CFPagina3Drum.dc.html",
+  "CFPagina3DrumMobil.dc.html",
+  "CFPagina4CoverFlow.dc.html",
+  "CFPagina4CoverFlowMobil.dc.html",
+  "DeUnde1Typeform.dc.html",
+  "DeUnde1TypeformMobil.dc.html",
+  "DeUnde2Mesaje.dc.html",
+  "DeUnde2MesajeMobil.dc.html",
+  "DeUnde3Carte.dc.html",
+  "DeUnde3CarteMobil.dc.html",
+  "DeUnde4Compara.dc.html",
+  "DeUnde4ComparaMobil.dc.html",
+  "DespreNoiDeschidere.dc.html",
+  "DespreNoiDeschidereMobil.dc.html",
+  "Formari3ADoua.dc.html",
+  "Formari3ADouaMobil.dc.html",
+  "Formari3BRand.dc.html",
+  "Formari3BRandMobil.dc.html",
+  "Formari3CMargine.dc.html",
+  "Formari3CMargineMobil.dc.html",
+  "Formari3DCentrat.dc.html",
+  "Formari3DCentratMobil.dc.html",
+  "Comunitate5Carduri.dc.html",
+  "Comunitate5CarduriMobil.dc.html",
+  "CFDeCe.dc.html",
+  "CFDeCeMobil.dc.html"
+ ],
+ "notes": {
+  "title2": {
+   "x": 0,
+   "y": -360,
+   "text": "Round 2: one merged direction, three new heroes, fonts",
+   "kind": "title1",
+   "maxW": 4070,
+   "page": "r2"
+  },
+  "noteAcasa": {
+   "x": 0,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "acasa",
+   "text": "Acasă, asamblată din secțiunile alese, în ordine: hero (Header B + Text 4, cu Sold out) · Cine sunt (Coperta H) · Ce oferim (5, acordeon) · Următorul atelier (A, story, sold out) · Ce spun oamenii (B2, cu testimonialele reale) · Întrebări frecvente (3, carduri) · Footer 3 (carte poștală + footer). Pop-up-ul 3 apare după 8 secunde. Fiecare secțiune e importată din planșa ei, deci o schimbare acolo apare și aici. Tranzițiile: un singur fundal continuu (fiecare secțiune începe cu culoarea în care s-a terminat cea dinainte) și același spațiu între secțiuni. Pagina veche e în „Arhivă: runda 2” (Acasă runda 2)."
+  },
+  "noteMobil": {
+   "x": 7000,
+   "y": -200,
+   "w": 390,
+   "size": "s",
+   "fill": "teal",
+   "page": "acasa",
+   "text": "Aceeași pagină la lățime de telefon."
+  },
+  "notePopup": {
+   "x": 1990,
+   "y": -200,
+   "w": 560,
+   "size": "s",
+   "fill": "teal",
+   "page": "r2",
+   "text": "Newsletter pop-up (5% off the next event). On phones it becomes a bottom sheet."
+  },
+  "noteRoata": {
+   "x": 4150,
+   "y": 0,
+   "w": 420,
+   "size": "m",
+   "fill": "purple",
+   "page": "r2",
+   "text": "Hero 1, Roata olarului (potter's wheel). The workshop table, photographed from above, becomes the wheel head; throwing lines spin around it. Move the cursor sideways and the wheel turns faster, like a nudge of the hand."
+  },
+  "noteStampila": {
+   "x": 4150,
+   "y": 1020,
+   "w": 420,
+   "size": "m",
+   "fill": "purple",
+   "page": "r2",
+   "text": "Hero 2, Ștampila în lut (stamp in clay). The brand's ceramic stamp pressed into real-looking clay (generated, not a photo). The cursor is a raking light: the impression's shadows move with it. On load the stamp presses in once."
+  },
+  "noteInvitatie": {
+   "x": 4150,
+   "y": 2040,
+   "w": 420,
+   "size": "m",
+   "fill": "purple",
+   "page": "r2",
+   "text": "Hero 3, Invitația. The next workshop as a paper invitation lying on the workshop table. It tilts towards the cursor and the light glints across it. Most direct path to booking."
+  },
+  "noteFonturi": {
+   "x": 4150,
+   "y": 3060,
+   "w": 420,
+   "size": "m",
+   "fill": "green",
+   "page": "r2",
+   "text": "Four font pairings, all with correct ș and ț. Pinyon Script stays the accent in each. Pick one: the Acasă artboard can preview all four (Tweaks)."
+  },
+  "title": {
+   "x": 0,
+   "y": -360,
+   "text": "AVA Art & Soul: three design directions",
+   "kind": "title1",
+   "maxW": 4480,
+   "page": "r1"
+  },
+  "noteA": {
+   "x": 0,
+   "y": 2440,
+   "w": 440,
+   "size": "m",
+   "fill": "orange",
+   "page": "r1",
+   "text": "A. Lumină de nisip (Sand light)\nFollows your hero sketch exactly. Diffuse beige-to-light-brown light, the brand's clay rings become layered hills, small vessels stand where the wind turbines were. Woodsprite lights follow the cursor; hills shift slightly with it.\nCalm, light, closest to the brand PDFs."
+  },
+  "noteB": {
+   "x": 1520,
+   "y": 2520,
+   "w": 440,
+   "size": "m",
+   "fill": "purple",
+   "page": "r1",
+   "text": "B. Seară la atelier (Evening at the atelier)\nSame structure, but the hero is the real workshop photo at lamp-light, darkened to Lut ars. Clay rings flow slowly across it, the sprites glow like fireflies.\nRichest and most emotional; depends on good evening photos."
+  },
+  "noteC": {
+   "x": 3040,
+   "y": 2440,
+   "w": 440,
+   "size": "m",
+   "fill": "green",
+   "page": "r1",
+   "text": "C. Vasul de lut (The clay vessel)\nAn alternative to your sketch: split layout, the workshop photo seen through the logo's vase shape, its bands drawing themselves on load. Alessia sits inside the brand's ceramic stamp.\nMost distinctive and ownable; less like a classic hero."
+  },
+  "noteFonturiR3": {
+   "x": 4150,
+   "y": 4740,
+   "w": 420,
+   "size": "m",
+   "fill": "green",
+   "page": "r2",
+   "text": "Fonts, round 3: the free Google fonts from your list, in the real hero copy. Your choice after this round: Bodoni Moda + Hanken Grotesk (from round 2), now applied on Acasă and the mobile version, with a sturdier optical size so the hairlines hold up on screen."
+  },
+  "titleAcasa": {
+   "x": 0,
+   "y": -400,
+   "text": "Acasă",
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "acasa"
+  },
+  "titleHeader": {
+   "x": 0,
+   "y": -400,
+   "text": "Header: 4 variante",
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "hero-opt"
+  },
+  "titleText": {
+   "x": 1520,
+   "y": -400,
+   "text": "Text și butoane: 4 variante",
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "hero-opt"
+  },
+  "noteHeader": {
+   "x": 0,
+   "y": 4320,
+   "w": 1440,
+   "size": "m",
+   "fill": "purple",
+   "page": "hero-opt",
+   "text": "Headers, each on the real hero with today's text.\nA. Editorial: logo centred, links split left and right in small tracked caps, a fading hairline below. Gallery / magazine feel.\nB. Announcement: a thin strip with the next workshop (date, place, 'Doar 8 locuri', Mă înscriu) above a minimal row; a small dot marks the page you're on.\nC. Gallery frame: the hero sits inside a fine cream frame; logo pairs AVA with 'Art & Soul' in script; links in small caps with dot separators; outlined 'Mă înscriu' that fills on hover.\nD. Glass bar: a floating dark-glass bar with a hairline edge; cream 'Mă înscriu' with an arrow chip."
+  },
+  "noteText": {
+   "x": 1520,
+   "y": 4320,
+   "w": 1440,
+   "size": "m",
+   "fill": "green",
+   "page": "hero-opt",
+   "text": "Hero text and buttons, each with today's header.\n1. Editorial: eyebrow 'Conectare · Comunitate · Apartenență', larger title, cream button with an arrow chip + 'Pentru companii' as a text link, the next workshop as one fine line under a hairline.\n2. Event card: title and buttons, plus a frosted card for the next workshop with a big '15'.\n3. Two doors: 'Pentru tine' (cream) and 'Pentru companii' (glass) as whole clickable cards with their one-line scope.\n4. Centred, monumental: stamp on top, a very large centred title, symmetric like a poster.\nMix and match: any header works with any text."
+  },
+  "titleCombo": {
+   "x": 1520,
+   "y": -400,
+   "text": "Hero ales: B + 4",
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "acasa"
+  },
+  "noteCombo": {
+   "x": 1990,
+   "y": 1080,
+   "w": 440,
+   "size": "m",
+   "fill": "orange",
+   "page": "acasa",
+   "text": "Header B (announcement strip + minimal row) with Text 4 (centred, monumental).\nHeadline chosen by Vali: 'Creație. Conexiune. Autocunoaștere.' (two lines on desktop, one word per line on phones). The offers are spelled out right below it in the content-doc subtitle; the tagline 'autocunoaștere prin creație' stays engraved on the stamp's ring.\nThe 'Următorul atelier' line under the buttons was dropped: the top strip already says it.\nOn phones the strip shows only the date + Mă înscriu, on one line."
+  },
+  "titleDespre": {
+   "x": 0,
+   "y": 3800,
+   "text": "Cine sunt: Coperta, variantele nealese (Despre 6, A–G)",
+   "kind": "title1",
+   "maxW": 4480,
+   "page": "despre1"
+  },
+  "noteDespre": {
+   "x": 4560,
+   "y": 4100,
+   "w": 440,
+   "size": "m",
+   "fill": "orange",
+   "page": "despre1",
+   "text": "Ai ales Coperta (Despre 6, în stânga). Am păstrat conceptul (numele uriaș, portretul în fața lui) și am încercat 4 feluri de a așeza textul. Text nou din comentariul tău: „Creez experiențe în care lutul e doar începutul…”.\nA. Rând de copertă: propoziția centrată sub portret, ca pe o copertă de revistă; restul, centrat dedesubt.\nB. Rânduri de copertă: aceeași propoziție în trei mărimi, „mâinile știu” mare, cu italic, aliniată lângă siluetă; în dreapta rolul și textul.\nC. Copertă curată: doar numele și portretul; textul vine dedesubt, într-un rând lat, după o linie fină.\nD. Asimetric: numele pornește din stânga, portretul stă în dreapta peste ultimele litere, iar textul are o coloană lată sub nume.\nVersiunile de telefon sunt în dreapta."
+  },
+  "noteArhDespre": {
+   "x": 0,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "teal",
+   "page": "despre1",
+   "text": "Prima rundă pentru „Cine sunt, pe scurt”, respinsă: toate patru aveau schema poză + text, pe crem."
+  },
+  "titleCeFacem": {
+   "x": 0,
+   "y": 2000,
+   "text": "Ce oferim: variantele nealese (1, 2, 3, 6, 7, 8)",
+   "kind": "title1",
+   "maxW": 4480,
+   "page": "cefacem-arh"
+  },
+  "noteCeFacem": {
+   "x": 4960,
+   "y": 2320,
+   "w": 440,
+   "size": "m",
+   "fill": "purple",
+   "page": "cefacem-arh",
+   "text": "Blocul 3 de pe Acasă: serviciile, fiecare cu poză, o propoziție (prima frază de pe pagina lui) și un link.\n1–3: prima rundă (pozele sunt decupaje din poza reală a atelierului, în culori naturale).\n5–8, runda nouă, cu poze provizorii de pe Unsplash (se înlocuiesc după ședința foto):\n5. Acordeon: șase panouri-foto înalte; cel pe care treci se deschide larg și își spune povestea. Pe telefon, se deschide la atingere.\n6. Fereastră: toată secțiunea e o fereastră spre serviciul ales; lista mare din stânga schimbă încet fotografia din spate.\n7. Teanc: câte o carte mare, în culorile brandului, pentru fiecare serviciu; la scroll se așază una peste alta (efectul se vede la derulare, pe canvas apar una sub alta).\n8. Raftul cu vase: fiecare serviciu e o fotografie în forma unui vas diferit (bol pentru grup, cană de ceai pentru consiliere, amforă pentru drum), pe un raft.\nVarianta 4 (ștampile) e mutată în „Arhivă: Ce oferim”."
+  },
+  "titleDespre3": {
+   "x": 6000,
+   "y": 3800,
+   "text": "Cine sunt: Coperta, runda 3 (mai vie)",
+   "kind": "title1",
+   "maxW": 2960,
+   "page": "despre1"
+  },
+  "noteDespre3": {
+   "x": 9040,
+   "y": 4100,
+   "w": 460,
+   "size": "m",
+   "fill": "orange",
+   "page": "despre1",
+   "text": "Același „Alessia” mare, dar care răspunde (ai zis „prea statice”). Fiecare variantă pornește de la un site real:\nE. Numele ca fereastră: literele sunt tăiate din lut; lumina-woodsprite e o lentilă care arată atelierul real din spatele lor (urmărește cursorul; pe telefon plutește singură). Inspirație: Awwwards: Interactive Text Mask; Mask cursor — https://www.awwwards.com/inspiration/interactive-text-mask\nF. Lumina umple literele: numele e desenat doar din contur, ca o schiță în lut; pe unde trece lumina, literele se umplu cu teracotă. Inspirație: Awwwards: Rollover name reveal; Bruno Tomé, decorative typography hover — https://www.awwwards.com/inspiration/rollover-name-reveal\nG. Rândurile se umplu: cele două propoziții, scrise mare, se colorează cuvânt cu cuvânt pe măsură ce derulezi, ca lutul care se închide la culoare când se usucă. Inspirație: Framer: Scroll Text Fill; Webflow: Text color fills in while scrolling — https://webflow.com/made-in-webflow/website/text-color-fills-in-while-scrolling\nH. Două roluri: „Artist ceramist” și „Consilier acreditat”, mari, de o parte și de alta a portretului; treci pe unul și poza se schimbă, iar rama trece din arcadă de vas în cerc. Inspirație: Awwwards: Mask changes shape when hover — https://www.awwwards.com/inspiration/mask-changes-shape-when-hover\nPoza cu mâini în lut din H e provizorie (Unsplash)."
+  },
+  "titleCineSunt": {
+   "x": 1520,
+   "y": 2300,
+   "text": "Cine sunt: ales Coperta H",
+   "kind": "title1",
+   "maxW": 2400,
+   "page": "acasa"
+  },
+  "noteCineSunt": {
+   "x": 3510,
+   "y": 2600,
+   "w": 440,
+   "size": "m",
+   "fill": "orange",
+   "page": "acasa",
+   "text": "Ales: Coperta H (două roluri). Cum ai cerut, poza nu se mai schimbă la hover: e portretul decupat de la Despre 6, cu marginile estompate ca să nu se vadă tăietura pozei. Când treci cu mouse-ul peste un rol (sau îl atingi pe telefon), doar acela se colorează și se subliniază.\nVariantele nealese (Despre 6, Coperta A–G) sunt în „Arhivă: Despre”."
+  },
+  "titleCeFacemAles": {
+   "x": 1520,
+   "y": 4300,
+   "text": "Ce oferim: ales 5, acordeon de fotografii",
+   "kind": "title1",
+   "maxW": 2400,
+   "page": "acasa"
+  },
+  "noteCeFacemAles": {
+   "x": 3510,
+   "y": 4600,
+   "w": 440,
+   "size": "m",
+   "fill": "purple",
+   "page": "acasa",
+   "text": "Ales: Ce oferim 5, acordeon de fotografii. Inspirație: Framer, Service Accordion. Pozele sunt provizorii (Unsplash) până avem fotografii reale de la ateliere.\nVariantele 1, 2, 3, 6, 7, 8 sunt în „Arhivă: Ce oferim”."
+  },
+  "titleUrmator": {
+   "x": 1520,
+   "y": 6100,
+   "text": "Următorul atelier: ales A (story + bilet)",
+   "kind": "title1",
+   "maxW": 2400,
+   "page": "acasa"
+  },
+  "noteUrmator": {
+   "x": 3510,
+   "y": 6400,
+   "w": 440,
+   "size": "m",
+   "fill": "teal",
+   "page": "acasa",
+   "text": "Ales: A (story + bilet). Acum e sold out: badge lângă titlu, sticker „Sold out” pe prima imagine din story, iar butonul devine „Intră pe lista de așteptare” (din FAQ-ul de la Evenimente: „Dacă se eliberează un loc, te anunțăm primii.”).\nStory-ul pornește de la primul cadru când ajunge pe ecran și o ia de la capăt după ultimul. Pe laptop are săgețile rotunde de pe Instagram, în afara cardului (cea din stânga apare de la cadrul 2). Pe telefon: atingi, ca înainte.\nB, C, D sunt în „Arhivă: Următorul atelier”."
+  },
+  "titleUrmatorArh": {
+   "x": 0,
+   "y": 0,
+   "text": "Următorul atelier: variantele nealese (B, C, D)",
+   "kind": "title1",
+   "maxW": 5300,
+   "page": "urmator-arh"
+  },
+  "titleOameni": {
+   "x": 1520,
+   "y": 8100,
+   "text": "Ce spun oamenii + galerie: ales B2 (bandă + bare de progres)",
+   "kind": "title1",
+   "maxW": 2400,
+   "page": "acasa"
+  },
+  "noteOameni": {
+   "x": 3510,
+   "y": 8400,
+   "w": 440,
+   "size": "m",
+   "fill": "teal",
+   "page": "acasa",
+   "text": "Ales: B2. Două rânduri de poze care curg încet în direcții opuse (se opresc la hover), iar între ele un citat mare. Deasupra lui, 3 bare ca la story arată că urmează alt citat și când (9 secunde fiecare); apeși o bară ca să sari direct la citat. Săgeți rotunde pe laturi (pe telefon, lângă bare), tastele ← → și swipe.\nRotirea se oprește la hover, când secțiunea nu e pe ecran și de tot după prima săgeată. „Oprește mișcarea” oprește banda și rotirea.\nTestimonialele sunt încă [locuri goale]. B, B3, B4 (și A, C, D) sunt în „Arhivă: Ce spun oamenii”."
+  },
+  "titleOameniArh": {
+   "x": 0,
+   "y": 0,
+   "text": "Ce spun oamenii: variantele nealese (A, C, D, apoi B, B3, B4)",
+   "kind": "title1",
+   "maxW": 5800,
+   "page": "oameni-arh"
+  },
+  "titleFaq": {
+   "x": 1520,
+   "y": 10000,
+   "text": "Întrebări frecvente: ales 3 (carduri)",
+   "kind": "title1",
+   "maxW": 2400,
+   "page": "acasa"
+  },
+  "noteFaq": {
+   "x": 3510,
+   "y": 10300,
+   "w": 440,
+   "size": "m",
+   "fill": "teal",
+   "page": "acasa",
+   "text": "Ales: 3 (carduri). Cele 3 întrebări de Acasă, câte un card; se deschide una câte una, prima e deschisă. Alături, un card închis „Ai altă întrebare?” cu „Scrie-mi” și „Toate întrebările” (text propus, de aprobat). 1 și 2 sunt în „Arhivă: FAQ”."
+  },
+  "titleFaqArh": {
+   "x": 0,
+   "y": 0,
+   "text": "Întrebări frecvente: variantele nealese (1, 2)",
+   "kind": "title1",
+   "maxW": 3900,
+   "page": "faq-arh"
+  },
+  "titleNl": {
+   "x": 1520,
+   "y": 11600,
+   "text": "Final: newsletter + footer, ales 3 (carte poștală pe cusătură)",
+   "kind": "title1",
+   "maxW": 2400,
+   "page": "acasa"
+  },
+  "noteNl": {
+   "x": 3510,
+   "y": 11900,
+   "w": 440,
+   "size": "m",
+   "fill": "teal",
+   "page": "acasa",
+   "text": "Ales: Footer 3. Comentariile rezolvate: titlul e acum „Rămâi aproape” (în loc de „Află primele despre atelierele noi”, care a trecut în textul de sub titlu), semnătura e „– Alessia Văideanu”, „Ce te interesează?” e scos. Am adăugat emailul în rândul cu datele PFA. Același titlu și în pop-up. Footer 1, 2, 4 sunt în „Arhivă: Final și pop-up”."
+  },
+  "titlePop": {
+   "x": 1520,
+   "y": 14250,
+   "text": "Pop-up newsletter: ales 3 (plic cu ștampilă)",
+   "kind": "title1",
+   "maxW": 4400,
+   "page": "acasa"
+  },
+  "notePop": {
+   "x": 3510,
+   "y": 14550,
+   "w": 440,
+   "size": "m",
+   "fill": "teal",
+   "page": "acasa",
+   "text": "Ales: Pop-up 3 (plic cu ștampilă). Pe telefon urcă de jos și îl tragi în jos ca să-l închizi.\nÎn machetă apare după 1,2 secunde (butonul din stânga jos îl arată din nou).\nPe site: după ~8 secunde SAU după 40% din pagină, ce vine întâi; o singură dată per vizitator; după × sau „Nu acum”, nu mai apare 30 de zile; niciodată după abonare și nu pe paginile legale / de plată."
+  },
+  "titleFinArh": {
+   "x": 0,
+   "y": 0,
+   "text": "Final, footer și pop-up: variantele nealese",
+   "kind": "title1",
+   "maxW": 4900,
+   "page": "fin-arh"
+  },
+  "noteDespreNoi": {
+   "x": 2100,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "despre-noi",
+   "text": "Despre noi, partea 1: deschiderea aleasă, din 3D (fundal maro), fără semnătură și fără efectul de lumină. Portretul stă într-un dreptunghi simplu, fără ramă. Variantele nealese sunt pe „Arhivă: Despre noi”."
+  },
+  "notePovestea": {
+   "x": 2100,
+   "y": 3000,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "despre-noi",
+   "text": "Despre noi, partea 2: Povestea, aleasă 4 (interviu, după The Paris Review). Variantele 1–3 sunt pe „Arhivă: Despre noi”."
+  },
+  "noteFormari": {
+   "x": 2100,
+   "y": 8200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "despre-noi",
+   "text": "Despre noi, partea 3: Formări, aleasă 3D (centrat): Formări 3 ca bază, fără iconițe, doar o apariție discretă la scroll. Variantele 3A–3C și familia Wallet sunt pe „Arhivă: Despre noi”. La prima formare am scos „Curs acreditat” (comentariul tău)."
+  },
+  "noteComunitate": {
+   "x": 2100,
+   "y": 10500,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "despre-noi",
+   "text": "Despre noi, partea 4: Comunitatea AVA, doar intro + câte un card mic pentru fiecare colaborator(oare). Cardul e o propunere în stilul AVA până primim exemplul. Subtitlurile din comentariile tale: Iuliana „Colaboratoare · Facilitatoare”, Valentin „Specialist IT”. Variantele nealese sunt pe „Arhivă: Despre noi”."
+  },
+  "noteMasa": {
+   "x": 0,
+   "y": 15395,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "despre-noi-arh",
+   "text": "Despre noi, partea 5: Oamenii care vin la masă. 4 variante animate, fiecare după un produs/site real (sursa e în titlul boardului). Testimonialele sunt cele primite (Costin, Mario, Adina), fără numele atelierului; bolurile și pictatul sunt poze provizorii (Unsplash). 1: amintiri care se derulează · 2: grila cu coloane în paralaxă · 3: trage pozele pe masă cu mouse-ul · 4: banda încetinește la hover."
+  },
+  "noteCredem": {
+   "x": 0,
+   "y": 19411,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "despre-noi-arh",
+   "text": "Despre noi, partea 6: Ce credem (Prezență · Comunitate · Creativitate). 4 variante animate, fiecare după un produs/site real (sursa e în titlul boardului). Frazele pentru valori lipsesc din document: [FRAZA PENTRU …] sunt placeholdere. 1: treci peste un panou · 2: inelele se închid, treci peste o valoare · 3: formele respiră · 4: treci peste o valoare și ștampila o aduce sus."
+  },
+  "noteCeFacemPag": {
+   "x": 2100,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "ce-facem",
+   "text": "Ce oferim, partea 1: hero-ul ales, Ce oferim 1 (comutatorul), cu fundal în degradeu lin de la maro la crem (cu easing și amestec în OKLab, ca să nu apară o bandă); filele scrise cu fontul titlurilor. Am aplicat comentariile tale (textul butoanelor, „Evenimente”, „de la 50 lei / copil”). Variantele 2–4 și „De unde încep?” sunt pe „Arhivă: Ce oferim”."
+  },
+  "noteDeUnde": {
+   "x": 0,
+   "y": 14484,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "cefacem-arh",
+   "text": "Pagina Ce oferim, „De unde încep?”: scoasă de pe pagină (Vali, 11 nov). Cele 4 variante rămân aici."
+  },
+  "noteArhDeschidere": {
+   "x": 0,
+   "y": 5231,
+   "w": 1440,
+   "size": "m",
+   "fill": "gray",
+   "page": "despre-noi-arh",
+   "text": "Despre noi, deschiderea: variantele nealese din familia „semnătura” (3, 3B, 3C, 3D original, 3E). Aleasă: 3D, fără semnătură și fără lumină (pe „Despre noi: lucru”)."
+  },
+  "noteArhWallet": {
+   "x": 0,
+   "y": 8572,
+   "w": 1440,
+   "size": "m",
+   "fill": "gray",
+   "page": "despre-noi-arh",
+   "text": "Formări: familia Wallet (4, 4B, 4C, 4D), înlocuită de familia discretă bazată pe Formări 3 (feedback de la Alessia, 11 nov)."
+  },
+  "noteArhComunitate": {
+   "x": 0,
+   "y": 10923,
+   "w": 1440,
+   "size": "m",
+   "fill": "gray",
+   "page": "despre-noi-arh",
+   "text": "Comunitatea AVA: variantele 1–4, cu textul fiecărei colaboratoare. Înlocuite de intro + carduri mici (feedback de la Alessia, 11 nov)."
+  },
+  "noteArhCFPagina": {
+   "x": 0,
+   "y": 9926,
+   "w": 1440,
+   "size": "m",
+   "fill": "gray",
+   "page": "cefacem-arh",
+   "text": "Pagina Ce oferim, deschiderea: variantele nealese (2 bento, 3 drum, 4 cover flow). Aleasă: 1, comutatorul (pe „Ce oferim: lucru”)."
+  },
+  "noteDeCe": {
+   "x": 2100,
+   "y": 4200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "ce-facem",
+   "text": "Ce oferim, partea 2: „De ce să alegi AVA Art & Soul?”, imediat sub hero. Textul îl trimiți tu; până atunci rămâne un placeholder vizibil."
+  },
+  "noteArhFormari3": {
+   "x": 0,
+   "y": 22306,
+   "w": 1440,
+   "size": "m",
+   "fill": "gray",
+   "page": "despre-noi-arh",
+   "text": "Formări, familia discretă: variantele nealese 3A, 3B, 3C. Aleasă: 3D, centrat (Vali, 11 nov)."
+  },
+  "noteArhPovestea": {
+   "x": 0,
+   "y": 24500,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "despre-noi-arh",
+   "text": "Povestea: variantele nealese (1 Medium, 2 Snow Fall, 3 Stories). Aleasă: Povestea 4, interviul."
+  },
+  "titleDNPag": {
+   "x": 0,
+   "y": -400,
+   "text": "Despre noi",
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "despre-noi"
+  },
+  "noteDNPag": {
+   "x": 0,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "despre-noi",
+   "text": "Despre noi, asamblată din secțiunile alese, în ordine: deschiderea (fundal maro, portret în dreptunghi simplu) · Povestea 4 (interviu) · Formări 3D (centrat) · Comunitatea AVA (intro + carduri) · Footer 3, ca la Acasă. Headerul e același ca la Acasă: pastila de sticlă care te urmărește, acum mai puțin transparentă, ca textul să se citească peste orice. Trecerea de la maro la Povestea e un degradeu lin (easing + OKLab), ca la Ce oferim. Fiecare secțiune apare la scroll o singură dată. Secțiunile sunt importate din planșele lor (în dreapta), deci o schimbare acolo apare și aici."
+  },
+  "noteDNMobil": {
+   "x": 1520,
+   "y": -200,
+   "w": 390,
+   "size": "s",
+   "fill": "teal",
+   "page": "despre-noi",
+   "text": "Aceeași pagină la lățime de telefon."
+  },
+  "titleCFPag": {
+   "x": 0,
+   "y": -400,
+   "text": "Ce oferim",
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "ce-facem"
+  },
+  "noteCFPag": {
+   "x": 0,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "ce-facem",
+   "text": "Ce oferim, asamblată din secțiunile alese, în ordine: Ce oferim 1 (comutatorul, cu degradeul lin) · De ce să alegi AVA Art & Soul? (textul vine de la tine) · Footer 3, ca la Acasă. Același header de sticlă ca pe celelalte pagini; devine deschis când trece peste partea crem a degradeului. Secțiunile apar la scroll o singură dată."
+  },
+  "noteCFMobil": {
+   "x": 1520,
+   "y": -200,
+   "w": 390,
+   "size": "s",
+   "fill": "teal",
+   "page": "ce-facem",
+   "text": "Aceeași pagină la lățime de telefon."
+  }
+ },
+ "designSystems": []
+}

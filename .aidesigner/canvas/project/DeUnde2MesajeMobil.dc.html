@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>De unde încep 2: mesajele · mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.du{position:relative;overflow:clip;--sp:cubic-bezier(.3,1.32,.5,1);--so:cubic-bezier(.22,1,.36,1)}
+.du a{text-decoration:none}
+.du h2{font-size:clamp(38px,4vw,58px);line-height:1.06}
+.du .m{display:block;font-size:14px;line-height:1.5;color:#833A22;font-variant-numeric:tabular-nums}
+.du .n{display:block;font:400 30px/1.1 var(--display);font-variation-settings:'opsz' 20;letter-spacing:-.01em}
+.du .btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;background:var(--ink);color:#F4EDE4;font-weight:500;transition:background .25s ease,scale .4s var(--sp)}
+.du .btn:hover{background:#2A1D16;scale:1.03}.du .btn:hover .ar{transform:translateX(4px)}
+.du .btn.ghost{background:none;color:var(--ink);box-shadow:inset 0 0 0 1px rgba(58,42,32,.35)}
+.du .btn.ghost:hover{background:rgba(58,42,32,.06)}
+.du :is(button,a):focus-visible{outline:2px solid var(--terra-d);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){.du *{animation:none!important;transition:none!important}}
+
+.d2{background:radial-gradient(ellipse 50% 60% at 50% 40%,#FAF4EA 0%,rgba(250,244,234,0) 70%),#EFE4D4;padding:112px 0 120px}
+.d2 .win{max-width:680px;margin:0 auto;border-radius:34px;corner-shape:squircle;background:#FBF7F1;box-shadow:0 40px 70px -40px rgba(58,30,15,.55),0 0 0 1px rgba(58,42,32,.06);overflow:hidden}
+.d2 .top{display:flex;flex-direction:column;align-items:center;gap:6px;padding:22px 0 16px;border-bottom:1px solid rgba(58,42,32,.08);background:rgba(244,237,228,.7)}
+.d2 .top img{width:52px;height:52px;border-radius:50%;object-fit:cover}
+.d2 .top span{font-size:14px;font-weight:500}
+.d2 .log{display:flex;flex-direction:column;gap:8px;padding:28px 26px 30px}
+.d2 .b{max-width:78%;margin:0;padding:12px 18px;border-radius:22px;font:400 17px/1.45 var(--text);text-wrap:pretty}
+.d2 h2.b{align-self:flex-end;background:var(--terra-d);color:#FBF3EA;font:400 17px/1.45 var(--text);letter-spacing:0;border-bottom-right-radius:6px;margin-bottom:14px}
+.d2 .row{display:flex;align-items:flex-end;gap:10px}
+.d2 .av{flex:none;width:30px;height:30px;border-radius:50%;object-fit:cover;opacity:0}
+.d2 .row.last .av{opacity:1}
+.d2 .her{background:#EADCC8;color:var(--ink);border-bottom-left-radius:6px}
+.d2 .dots{display:none;gap:5px;padding:4px 2px}
+.d2 .dots i{width:8px;height:8px;border-radius:50%;background:#8C7564;animation:d2-dot 1.2s ease-in-out infinite}
+.d2 .dots i:nth-child(2){animation-delay:.15s}.d2 .dots i:nth-child(3){animation-delay:.3s}
+@keyframes d2-dot{0%,60%,100%{translate:0 0;opacity:.45}30%{translate:0 -5px;opacity:1}}
+@keyframes d2-pop{from{opacity:0;scale:.6;translate:0 12px}}
+.d2.js .row:not(.typing):not(.said){display:none}
+.d2.js .row.typing .dots{display:flex}.d2.js .row.typing .t{display:none}
+.d2.js .row.typing,.d2.js .row.said .t{animation:d2-pop .45s var(--sp) backwards}
+.d2.js .row .her{transform-origin:0 100%}
+.d2.js h2.b{transform-origin:100% 100%}
+.d2.js:not(.in) h2.b{opacity:0}
+.d2.js.in h2.b{animation:d2-pop .5s var(--sp) .2s backwards}
+.d2 .chips{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;margin-top:16px}
+.d2 .chips a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(156,71,44,.5);color:var(--terra-d);font-weight:500;font-size:15px;transition:background .25s ease,scale .4s var(--sp)}
+.d2 .chips a:hover{background:rgba(180,88,58,.1);scale:1.04}
+.d2.js:not(.done) .chips a{opacity:0}
+.d2.js.done .chips a{animation:d2-pop .5s var(--sp) backwards;animation-delay:calc(var(--i) * 80ms)}
+@media (max-width:980px){.d2{padding:64px 0 72px}.d2 .win{border-radius:26px}.d2 .log{padding:22px 14px 24px}.d2 .b{max-width:84%;font-size:16px}.d2 h2.b{font-size:16px}.d2 .chips{justify-content:flex-start;padding-left:40px}}
+</style>
+</helmet>
+<div class="pg" data-src="Apple Messages (iMessage): bulele de chat și cele trei puncte „scrie…”">
+<section class="du d2" aria-labelledby="du-h" ref="{{ secRef }}"><div class="wrap"><div class="win"><div class="top"><img src="/_blob/61696ece195f787b8ccb139b396a6450" alt="Alessia Văideanu, fondatoarea AVA Art &amp; Soul"><span>Alessia Văideanu</span></div><div class="log"><h2 class="b" id="du-h">Nu știu ce mi se potrivește. De unde încep?</h2><div class="row"><img class="av" src="/_blob/61696ece195f787b8ccb139b396a6450" alt="" aria-hidden="true"><p class="b her"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="t">Dacă vrei să încerci, un atelier de grup e cel mai simplu început.</span></p></div><div class="row"><img class="av" src="/_blob/61696ece195f787b8ccb139b396a6450" alt="" aria-hidden="true"><p class="b her"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="t">Dacă vrei ceva doar pentru tine, alege un atelier privat sau o ședință de consiliere.</span></p></div><div class="row last"><img class="av" src="/_blob/61696ece195f787b8ccb139b396a6450" alt="" aria-hidden="true"><p class="b her"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="t">Poți explora opțiunile pe site sau îmi poți scrie și te ajut să alegi.</span></p></div><div class="chips"><a href="#grup" style="--i: 0">Ateliere de grup <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a><a href="#privat" style="--i: 1">Atelier privat 1:1 <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a><a href="#consiliere" style="--i: 2">Consiliere 1:1 <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a><a href="#contact" style="--i: 3">Scrie-mi <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a></div></div></div></div></section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":817}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this, s = this.sec; if (!s) return;
+    var reduce = this.reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    s.classList.add('js');
+    if (reduce || !window.IntersectionObserver) s.classList.add('in');
+    else { this.io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { s.classList.add('in'); self.io.disconnect(); } }, { threshold: 0.1 }); this.io.observe(s); }
+    var rows = [].slice.call(s.querySelectorAll('.row')), timers = this.timers = [];
+    var all = function () { rows.forEach(function (r) { r.classList.remove('typing'); r.classList.add('said'); }); s.classList.add('done'); };
+    if (reduce || !window.IntersectionObserver) { all(); return; }
+    var at = function (ms, f) { timers.push(setTimeout(f, ms)); };
+    this.io2 = new IntersectionObserver(function (es) {
+      if (!es[0].isIntersecting) return; self.io2.disconnect();
+      var t = 900;
+      rows.forEach(function (r, i) {
+        at(t, function () { r.classList.add('typing'); });
+        t += 1100 + i * 250;
+        at(t, function () { r.classList.remove('typing'); r.classList.add('said'); });
+        t += 450;
+      });
+      at(t + 150, function () { s.classList.add('done'); });
+    }, { threshold: 0.35 });
+    this.io2.observe(s);
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); if (this.io2) this.io2.disconnect(); (this.timers || []).forEach(clearTimeout); }
+  renderVals() { var self = this; if (!this.cb) this.cb = { secRef: function (el) { self.sec = el; } }; return this.cb; }
+}
+</script>
+</body>
+</html>

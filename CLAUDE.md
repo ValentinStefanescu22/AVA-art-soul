@@ -10,7 +10,7 @@ Misiune: să ne relaxăm, să ne conectăm și să creăm conștient, împreună
 
 Tot conținutul site-ului (texte, structură, FAQ-uri, prețuri) e în `docs/continut-site.md`. Folosește textele de acolo exact cum sunt scrise. Ce e între paranteze drepte, [așa], e încă necompletat: păstrează-l ca placeholder vizibil și nu inventa valori. Fișierul vine dintr-un export Google Docs, cu bold pus literă cu literă (`**c**u**riozi**t**a**t**e**`): curăță formatarea, nu cuvintele.
 
-Designul ales și sistemul vizual: `DESIGN.md` (se scrie după ce alegem direcția din canvas-ul de direcții).
+Designul ales și sistemul vizual: `DESIGN.md` (scris pe 12 nov 2026 din paginile alese: Acasă, Despre noi, Ce oferim). Unde descrierea mai veche a direcției din secțiunea „Design” de mai jos îl contrazice, are prioritate `DESIGN.md`.
 
 ## Stack
 

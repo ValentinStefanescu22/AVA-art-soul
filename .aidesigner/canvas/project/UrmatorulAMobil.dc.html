@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Următorul atelier: sold out · mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.u{position:relative;padding:120px 0 128px;overflow:hidden}
+.u h2{font-size:clamp(44px,5vw,72px);line-height:1}
+.u .date{margin:0;font:400 italic 22px/1.35 var(--display);font-variation-settings:'opsz' 20;color:var(--ink2);font-variant-numeric:tabular-nums}
+.u .ttl{margin:0;font:400 clamp(30px,2.9vw,42px)/1.1 var(--display);font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance}
+.u .dl{display:grid;grid-template-columns:1fr 1fr;gap:18px 32px;margin:0;padding-top:24px;border-top:1px solid rgba(58,42,32,.2)}
+.u dt{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#833A22}
+.u dd{margin:4px 0 0;font-size:16px;line-height:1.45;color:var(--ink)}
+.u .num{font-variant-numeric:tabular-nums}
+.u .note{margin:0;font-size:15px;line-height:1.55;color:var(--ink2);max-width:46ch;text-wrap:pretty}
+.u .buy{display:flex;align-items:center;gap:20px 24px;flex-wrap:wrap}
+.u .cta{display:inline-flex;align-items:center;gap:12px;min-height:52px;padding:0 30px;border-radius:999px;background:#9C472C;color:#F8F1E8;font-weight:500;text-decoration:none;transition:background .25s}
+.u .cta:hover{background:#833A22}.u .cta:hover .ar{transform:translateX(4px)}
+.u .cta:focus-visible{outline:2px solid #9C472C;outline-offset:4px}
+.u .seats{font-size:15px;color:#833A22}
+/* the story */
+.sy{position:relative;width:400px;aspect-ratio:9/16;border-radius:30px;corner-shape:squircle;overflow:hidden;background:#2A170E;isolation:isolate;user-select:none;-webkit-touch-callout:none;box-shadow:0 2px 6px rgba(70,35,15,.18),0 44px 80px -36px rgba(70,35,15,.6)}
+.sy .ph,.sy .shade{position:absolute;inset:0}
+.sy .ph{z-index:-2}
+.sy .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .55s ease,transform 7s linear}
+.sy .shade{z-index:-1;background:linear-gradient(180deg,rgba(22,12,7,.5) 0%,rgba(22,12,7,0) 20%,rgba(22,12,7,0) 46%,rgba(22,12,7,.88) 100%)}
+.sy .bars{position:absolute;top:12px;left:12px;right:12px;display:flex;gap:4px;z-index:2}
+.sy .bar{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.38);overflow:hidden}
+.sy .bar i{display:block;height:100%;background:#FFF;transform:scaleX(0);transform-origin:left}
+.sy .who{position:absolute;top:26px;left:14px;z-index:2;display:flex;align-items:center;gap:10px;color:#FFF;font-size:14px;font-weight:500;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.sy .who img{width:34px;height:34px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px #F2C79C}
+.sy .who span{font-weight:400;opacity:.85}
+.sy .nav{position:absolute;top:0;bottom:0;width:50%;z-index:1;background:none;border:0;padding:0;margin:0;cursor:pointer}
+.sy .nav.p{left:0;width:34%}.sy .nav.n{right:0;width:66%}
+.sy .nav:focus-visible{outline:2px solid #F2C79C;outline-offset:-8px;border-radius:24px}
+.sy .fr{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 26px 30px;color:#F4EDE4;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .4s,transform .6s cubic-bezier(.2,.7,.2,1)}
+.sy .fr p{margin:0}
+.sy .fr .t{font:400 28px/1.2 var(--display);font-variation-settings:'opsz' 20;letter-spacing:-.01em;text-wrap:balance}
+.sy .fr.cover .t{font-size:38px;line-height:1.06}
+.sy .fr .k{margin-bottom:12px;font-size:14px;letter-spacing:.01em;color:#F2C79C;font-variant-numeric:tabular-nums}
+.sy .fr .w{margin-top:12px;font-size:15px;color:#EFE3D3;font-variant-numeric:tabular-nums}
+.sy .stk{display:inline-flex;align-items:center;gap:8px;min-height:46px;margin-top:20px;padding:0 20px;border-radius:999px;background:#FBF7F0;color:#2E1D14;font-weight:600;font-size:15px;text-decoration:none;box-shadow:0 8px 20px -8px rgba(0,0,0,.5);transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+.sy .stk:hover{transform:scale(1.04)}.sy .stk:focus-visible{outline:2px solid #F2C79C;outline-offset:3px}
+.sy .li{width:16px;height:16px;color:#9C472C}
+.sy .cd{display:inline-flex;flex-direction:column;gap:8px;margin-bottom:22px;padding:14px 18px 14px;border-radius:18px;background:rgba(251,247,240,.94);color:#2E1D14;box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
+.sy .cdt{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#833A22;font-weight:600}
+.sy .cdn{display:flex;gap:14px}
+.sy .cdn span{display:flex;flex-direction:column;align-items:center}
+.sy .cdn b{font:400 34px/1 var(--display);font-variation-settings:'opsz' 20;font-variant-numeric:tabular-nums}
+.sy .cdn i{font-style:normal;font-size:12px;color:#6B5444;margin-top:4px}
+[data-hold] .sy .bar i{animation-play-state:paused!important}
+@keyframes syfill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (max-width:820px){.u{padding:76px 0 84px}.u h2{font-size:clamp(40px,11vw,52px)}.u .date{font-size:20px}.u .dl{grid-template-columns:1fr 1fr}.u .buy{flex-direction:column;align-items:stretch}.u .cta{justify-content:center}.u .seats{text-align:center}
+.sy{width:100%;max-width:360px}.sy .fr .t{font-size:25px}.sy .fr.cover .t{font-size:33px}.sy .cdn b{font-size:30px}}
+@media (prefers-reduced-motion:reduce){.sy .ph img,.sy .fr{transition:none}}
+
+.ua{background:linear-gradient(180deg,#F4EDE4 0%,#EDE0CD 100%)}
+.ua .grid{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:120px;align-items:center}
+.ua .l{display:flex;flex-direction:column;gap:22px}
+.ua .l h2{margin-bottom:18px}
+.ua .tr{display:flex;align-items:center;flex-wrap:wrap;gap:12px 18px}
+.ua .badge{display:inline-flex;align-items:center;min-height:30px;padding:0 14px;border-radius:999px;border:1px solid #9C472C;color:#9C472C;font-size:14px;font-weight:600;letter-spacing:.02em}
+.ua .dl{margin-top:10px}
+.ua .buy{margin-top:16px}
+.ua .wait{display:inline-flex;align-items:center;gap:12px;min-height:52px;padding:0 28px;border-radius:999px;border:1.5px solid #9C472C;background:#9C472C;color:#F4EDE4;font-weight:500;text-decoration:none;transition:background .25s,border-color .25s}
+.ua .wait:hover{background:var(--ink);border-color:var(--ink)}  /* Vali (11 nov): filled, so it stands out from the sand */.ua .wait:hover .ar{transform:translateX(4px)}
+.ua .wait:focus-visible{outline:2px solid #9C472C;outline-offset:4px}
+.ua .wn{margin:0;font-size:15px;color:var(--ink2)}
+/* sold-out sticker on the cover frame */
+.sy .so{display:inline-block;margin-bottom:16px;padding:8px 14px 7px;border-radius:10px;background:#9C472C;color:#FBF4EA;font:400 italic 22px/1 var(--display);font-variation-settings:'opsz' 20;transform:rotate(-4deg);box-shadow:0 8px 18px -8px rgba(0,0,0,.5)}
+/* laptop arrows, as on Instagram on the web: round, outside the card, hidden where they lead nowhere */
+.sw{position:relative}
+.arw{position:absolute;top:50%;z-index:3;display:grid;place-items:center;width:32px;height:32px;margin-top:-16px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.94);color:#262626;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.18),0 4px 12px -4px rgba(0,0,0,.25);transition:transform .2s cubic-bezier(.2,.7,.2,1),opacity .2s}
+.arw::before{content:"";position:absolute;inset:-8px}
+.arw svg{width:16px;height:16px}
+.arw.pv{left:-48px}.arw.pv svg{transform:rotate(180deg)}
+.arw.nx{right:-48px}
+.arw:hover{transform:scale(1.08)}
+.arw:focus-visible{outline:2px solid #9C472C;outline-offset:3px}
+.ua[data-a="0"] .arw.pv{opacity:0;pointer-events:none}
+@media (max-width:820px){.arw{display:none}.sw{justify-self:center;width:100%;max-width:360px}
+.ua .grid{grid-template-columns:1fr;gap:36px}.ua .l{display:contents}.ua .l h2{order:-3;margin:0}.ua .date{order:-2}.ua .sw{order:-1}.ua .tr{display:none}.ua .l>*{margin:0}.ua .wait{justify-content:center}.ua .wn{text-align:center}}
+.ua[data-a="0"] .sy .i0{opacity:1;transform:none}.ua[data-a="0"] .sy .f0{opacity:1;transform:none;pointer-events:auto;transition-delay:.12s}.ua[data-a="0"][data-run] .sy .b0 i{animation:syfill 6s linear forwards}.ua[data-a="0"]:not([data-run]) .sy .b0 i{transform:none}.ua[data-a="1"] .sy .i1{opacity:1;transform:none}.ua[data-a="1"] .sy .f1{opacity:1;transform:none;pointer-events:auto;transition-delay:.12s}.ua[data-a="1"][data-run] .sy .b1 i{animation:syfill 6s linear forwards}.ua[data-a="1"]:not([data-run]) .sy .b1 i{transform:none}.ua[data-a="1"] .sy .b0 i{transform:none}.ua[data-a="2"] .sy .i2{opacity:1;transform:none}.ua[data-a="2"] .sy .f2{opacity:1;transform:none;pointer-events:auto;transition-delay:.12s}.ua[data-a="2"][data-run] .sy .b2 i{animation:syfill 6s linear forwards}.ua[data-a="2"]:not([data-run]) .sy .b2 i{transform:none}.ua[data-a="2"] .sy .b0 i{transform:none}.ua[data-a="2"] .sy .b1 i{transform:none}.ua[data-a="3"] .sy .i3{opacity:1;transform:none}.ua[data-a="3"] .sy .f3{opacity:1;transform:none;pointer-events:auto;transition-delay:.12s}.ua[data-a="3"][data-run] .sy .b3 i{animation:syfill 6s linear forwards}.ua[data-a="3"]:not([data-run]) .sy .b3 i{transform:none}.ua[data-a="3"] .sy .b0 i{transform:none}.ua[data-a="3"] .sy .b1 i{transform:none}.ua[data-a="3"] .sy .b2 i{transform:none}.ua[data-a="4"] .sy .i4{opacity:1;transform:none}.ua[data-a="4"] .sy .f4{opacity:1;transform:none;pointer-events:auto;transition-delay:.12s}.ua[data-a="4"][data-run] .sy .b4 i{animation:syfill 6s linear forwards}.ua[data-a="4"]:not([data-run]) .sy .b4 i{transform:none}.ua[data-a="4"] .sy .b0 i{transform:none}.ua[data-a="4"] .sy .b1 i{transform:none}.ua[data-a="4"] .sy .b2 i{transform:none}.ua[data-a="4"] .sy .b3 i{transform:none}</style>
+</helmet>
+<div class="pg">
+<section class="u ua" id="evenimente" aria-labelledby="u-h" data-a="0" ref="{{ rootRef }}">
+<div class="wrap grid">
+<div class="l"><h2 class="disp" id="u-h">Următorul atelier</h2><div class="tr"><p class="ttl">Atelier de ceramică &amp; socializare</p><span class="badge">Sold out</span></div><p class="date">15 noiembrie 2026, duminică, ora 17:00 (3 ore)</p>
+<dl class="dl"><div><dt>Unde</dt><dd>Cotroceni, sector 5</dd></div><div><dt>Preț</dt><dd class="num">200 lei</dd></div><div><dt>Locuri</dt><dd>Toate cele 8 locuri sunt ocupate</dd></div><div><dt>Facilitează</dt><dd>Alessia, AVA Art &amp; Soul</dd></div></dl><p class="note">200 lei, include toate materialele, îndrumarea și o băutură și o gustare făcute în casă.</p>
+<div class="buy"><a class="wait" href="#contact">Intră pe lista de așteptare <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a><p class="wn">Dacă se eliberează un loc, te anunțăm primii.</p></div></div>
+<div class="sw"><button class="arw pv" type="button" aria-label="Cadrul anterior" data-d="-1" onClick="{{ step }}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8L6 12.5" fill="none" stroke="currentColor" style="stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"></path></svg></button><div class="sy" onPointerDown="{{ hold }}" onPointerUp="{{ release }}" onPointerLeave="{{ release }}" onPointerCancel="{{ release }}"><div class="ph"><img class="i0" src="/_blob/988e3a505fd5ae1db56d481b3d1e33b1" alt="Masa atelierului din octombrie: oameni care lucrează lutul, cu ceai și prăjitură" style="object-position:62% 50%"><img class="i1" src="/_blob/42c18be93cd80d91d6d1d16793e790c6" alt="Doi participanți își dau din mână în mână un bol de lut, la atelierul din octombrie" style="object-position:40% 50%"><img class="i2" src="/_blob/dad600a42f9bdc35b94ba47b4a49fc4a" alt="O femeie pictează un bol de ceramică cu pensula (fotografie provizorie)" style="object-position:42% 50%"><img class="i3" src="/_blob/988e3a505fd5ae1db56d481b3d1e33b1" alt="Prăjitură făcută în casă și căni pe masa atelierului din octombrie" style="object-position:52% 60%"><img class="i4" src="/_blob/74f239bfbd557a0a5a661ddd26484b66" alt="Boluri de ceramică arse, în culori diferite (fotografie provizorie)" style="object-position:50% 50%"></div><span class="shade" aria-hidden="true"></span><div class="bars" aria-hidden="true"><span class="bar b0"><i></i></span><span class="bar b1"><i></i></span><span class="bar b2"><i></i></span><span class="bar b3"><i></i></span><span class="bar b4"><i></i></span></div><div class="who" aria-hidden="true"><img src="/_blob/61696ece195f787b8ccb139b396a6450" alt="">ava.art.soul <span>· 15 nov</span></div><button class="nav p" type="button" aria-label="Cadrul anterior" data-d="-1" onClick="{{ step }}" tabindex="-1"></button><button class="nav n" type="button" aria-label="Cadrul următor" data-d="1" onClick="{{ step }}" tabindex="-1"></button><div class="fr f0 cover"><span class="so">Sold out</span><p class="k">duminică · 15 noiembrie · ora 17:00</p><p class="t">Atelier de ceramică &amp; socializare</p><p class="w">Cotroceni, sector 5</p></div><div class="fr f1"><p class="t">O seară liniștită cu lut, culoare și oameni noi. Modelăm împreună,</p></div><div class="fr f2"><p class="t">apoi îți pictezi piesa cu underglaze, culori speciale pentru ceramică,</p></div><div class="fr f3"><p class="t">iar între timp povestim și ne bucurăm de o băutură și o gustare făcute în casă.</p></div><div class="fr f4"><p class="t">Piesa modelată și pictată de tine rămâne a ta, după ardere.</p><p class="w">200 lei · Sold out</p><a class="stk" href="#contact"><svg class="li" viewBox="0 0 16 16" aria-hidden="true"><path d="M6.5 9.5l3-3M7 4.5l1-1a2.5 2.5 0 013.5 3.5l-1 1M9 11.5l-1 1A2.5 2.5 0 014.5 9l1-1" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round"></path></svg>Lista de așteptare</a></div></div><button class="arw nx" type="button" aria-label="Cadrul următor" data-d="1" onClick="{{ step }}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8L6 12.5" fill="none" stroke="currentColor" style="stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"></path></svg></button></div>
+</div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1400}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this, r = this.root, reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!r) return;
+    this.go(0);
+    if (reduce) return;
+    // (re)start from the first frame whenever the story comes into view; stop when it leaves
+    this.start = function () { self.go(0); r.removeAttribute('data-run'); void r.offsetWidth; r.setAttribute('data-run', ''); };
+    this.stop = function () { r.removeAttribute('data-run'); };
+    if ('IntersectionObserver' in window) {
+      this.io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) self.start(); else self.stop(); }, { threshold: 0.5 });
+      this.io.observe(r.querySelector('.sy'));
+    } else this.start();
+    this.onEnd = function (e) {
+      if (e.animationName !== 'syfill') return;
+      self.go((parseInt(r.getAttribute('data-a'), 10) + 1) % 5);
+    };
+    r.addEventListener('animationend', this.onEnd);
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); if (this.root && this.onEnd) this.root.removeEventListener('animationend', this.onEnd); }
+  renderVals() {
+    var self = this, n = 5;
+    if (!this.cb) {
+      this.go = function (i) { if (self.root) self.root.setAttribute('data-a', String(i)); };
+      this.cb = {
+        rootRef: function (el) { self.root = el; },
+        step: function (e) {
+          var a = parseInt(self.root.getAttribute('data-a'), 10) + parseInt(e.currentTarget.getAttribute('data-d'), 10);
+          self.go((a + n) % n);
+        },
+        hold: function () { if (self.root) self.root.setAttribute('data-hold', ''); },
+        release: function () { if (self.root) self.root.removeAttribute('data-hold'); }
+      };
+    }
+    return this.cb;
+  }
+}
+</script>
+</body>
+</html>

@@ -1,2 +1,9 @@
+# Design sources (canvas boards, the scripts that generate them, the canvas images) are tracked;
+# local previews (*.html made by dc2html.py) and screenshots are generated, so they stay out.
 .aidesigner/*
 !.aidesigner/.gitkeep
+!.aidesigner/*.py
+!.aidesigner/canvas/
+!.aidesigner/_blob/
+!.aidesigner/stampila.html
+.aidesigner/__pycache__/

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Comunitatea 3: contributorii</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.cm{position:relative;overflow:hidden;--spring:cubic-bezier(.3,1.32,.5,1);--soft:cubic-bezier(.22,1,.36,1)}
+.cm h2{font-size:clamp(40px,4.4vw,64px);line-height:1.05}
+.cm .intro{margin:24px 0 0;max-width:46ch;font-size:19px;line-height:1.7;color:#4A382C;text-wrap:pretty}
+.cm .role{display:block;font:italic 400 19px/1.3 var(--display);font-variation-settings:'opsz' 20;color:var(--terra-d)}
+.cm .desc{margin:0;color:#4A382C;font-size:17px;line-height:1.7;text-wrap:pretty}
+.ph{position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse 70% 60% at 50% 35%,rgba(255,250,242,.55),rgba(255,250,242,0) 70%),
+  repeating-linear-gradient(135deg,rgba(58,42,32,.045) 0 2px,transparent 2px 12px),color-mix(in srgb,var(--c) 22%,#EDE0CD)}
+.ph b{font:400 clamp(64px,7vw,120px)/1 var(--display);font-variation-settings:'opsz' 60;color:color-mix(in srgb,var(--c) 75%,#3A2A20)}
+.ph i{position:absolute;left:0;right:0;bottom:14px;font:500 11.5px/1 var(--text);letter-spacing:.08em;font-style:normal;text-align:center;color:color-mix(in srgb,var(--c) 70%,#3A2A20)}
+@media (max-width:980px){.cm .intro{font-size:18px}.cm .desc{font-size:16.5px}}
+
+.cn{background:#F4EDE4;padding:112px 0 120px}
+.cn .stage{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:0 88px;align-items:start}
+.cn .head{position:sticky;top:112px}
+.cn ol{margin:0;padding:0;list-style:none}
+.cn li{display:grid;grid-template-columns:200px minmax(0,1fr);gap:0 36px;padding:0 0 56px}
+.cn li+li{padding-top:56px;border-top:1px solid rgba(58,42,32,.14)}
+.cn .pic{overflow:hidden;aspect-ratio:4/5;border-radius:18px;corner-shape:squircle}
+.cn .pic .ph{width:100%;height:100%;transition:scale .7s var(--soft)}
+.cn h3{display:inline;margin:0;font:400 clamp(28px,2.6vw,36px)/1.15 var(--display);font-variation-settings:'opsz' 40;
+  background:linear-gradient(var(--terra),var(--terra)) 0 100%/0 2px no-repeat;padding-bottom:4px;transition:background-size .5s var(--soft)}
+.cn .role{margin:12px 0 16px}
+@media (hover:hover){.cn li:hover .pic .ph{scale:1.05}.cn li:hover h3{background-size:100% 2px}}
+@keyframes cn-rise{from{clip-path:inset(100% 0 0 0 round 18px)}to{clip-path:inset(0 0 0 0 round 18px)}}
+@keyframes cn-settle{from{scale:1.18}}
+@keyframes cn-up{from{opacity:0;translate:0 18px}}
+.cn.js:not(.in) :is(.pic,.tx>*){opacity:0}
+.cn.js.in .pic{animation:cn-rise 1.1s var(--soft) backwards;animation-delay:calc(var(--i) * 180ms)}
+.cn.js.in .pic .ph{animation:cn-settle 1.6s var(--soft) backwards;animation-delay:calc(var(--i) * 180ms)}
+.cn.js.in .tx>*{animation:cn-up .8s var(--soft) backwards;animation-delay:calc(var(--i) * 180ms + 250ms + var(--k) * 80ms)}
+@media (max-width:980px){.cn{padding:72px 0 80px}.cn .stage{grid-template-columns:1fr;gap:40px}.cn .head{position:static}.cn li{grid-template-columns:1fr;gap:20px;padding-bottom:40px}.cn li+li{padding-top:40px}.cn .pic{width:170px}}
+@media (prefers-reduced-motion:reduce){.cn *{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<div class="pg" data-src="The New Yorker: pagina „Contributors” din fiecare număr">
+<section class="cm cn" aria-labelledby="cm-h" ref="{{ secRef }}"><div class="wrap stage"><div class="head"><h2 class="disp" id="cm-h">Comunitatea AVA</h2><p class="intro">Comunitatea AVA înseamnă oamenii alături de care creez și cei care iau parte la evenimentele noastre. AVA este proiectul meu, dar îmi place să creez experiențe și alături de alți artiști și antreprenori care cred în aceleași lucruri ca mine.</p></div><ol><li style="--i: 0"><div class="pic"><span class="ph" role="img" aria-label="[POZĂ CASANDRA]" style="--c: #B4583A"><b aria-hidden="true">C</b><i aria-hidden="true">[POZĂ CASANDRA]</i></span></div><div class="tx"><h3 style="--k: 0">Samargiu Casandra</h3><span class="role" style="--k: 1">Social Media &amp; Brand Manager</span><p class="desc" style="--k: 2">Ea e motivul pentru care AVA Art &amp; Soul arată așa cum arată. Are grijă ca fiecare culoare, poză și postare să transmită aceeași căldură pe care o simți la atelierele și evenimentele noastre. Prietene încă din gimnaziu, ne cunoaștem atât de bine încât știe, de multe ori, cum vreau să arate ceva înainte să îi spun.</p></div></li><li style="--i: 1"><div class="pic"><span class="ph" role="img" aria-label="[POZĂ RAMONA]" style="--c: #6F7B5C"><b aria-hidden="true">R</b><i aria-hidden="true">[POZĂ RAMONA]</i></span></div><div class="tx"><h3 style="--k: 0">Ramona Nichifor</h3><span class="role" style="--k: 1">Colaboratoare · Artă &amp; Povești</span><p class="desc" style="--k: 2">De la ea am învățat, înainte de orice, că cel mai frumos mod de a-ți trăi viața este prin AUTENTICITATE, iar arta e un fel de a spune ce simți. Mama mea este pictoriță, ilustratoare, scriitoare și consilier în dezvoltare personală. În cadrul colaborărilor noastre, ea aduce culoarea, poveștile și blândețea cu care m-a crescut.</p></div></li><li style="--i: 2"><div class="pic"><span class="ph" role="img" aria-label="[POZĂ IULIANA]" style="--c: #C07A4E"><b aria-hidden="true">I</b><i aria-hidden="true">[POZĂ IULIANA]</i></span></div><div class="tx"><h3 style="--k: 0">Iuliana Petrescu</h3><span class="role" style="--k: 1">Colaboratoare</span><p class="desc" style="--k: 2">Ne-am cunoscut pe băncile facultății de Psihologie și am mers mai departe împreună, la master. Astăzi ne întâlnim și la masa de lucru: în atelierele la care colaborăm, aduce o privire atentă asupra oamenilor și grija ca fiecare să se simtă bine primit, de la primul ceai până la ultima poveste spusă la masă.</p></div></li></ol></div></section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1319}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this, s = this.sec; if (!s) return;
+    var reduce = this.reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    s.classList.add('js');
+    if (reduce || !window.IntersectionObserver) s.classList.add('in');
+    else { this.io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { s.classList.add('in'); self.io.disconnect(); } }, { threshold: 0.2 }); this.io.observe(s); }
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect();  }
+  renderVals() {
+    var self = this;
+    if (!this.cb) this.cb = { secRef: function (el) { self.sec = el; } };
+    return this.cb;
+  }
+}
+</script>
+</body>
+</html>

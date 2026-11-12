@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Despre 5: scrisoarea (închis, portret mic) · mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.dk{position:relative;background:#24150E;color:#F4EDE4;overflow:hidden;isolation:isolate}
+.dk::before{content:"";position:absolute;inset:0;z-index:-2;background:url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 78%/cover no-repeat}
+.dk::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(42,20,12,.45) 0,rgba(36,20,13,.84) 280px,rgba(28,16,10,.93) 100%)}
+.dk .spacer{height:120px}
+.letter{position:relative;z-index:2;padding-top:72px;padding-bottom:120px}
+.big{font-size:clamp(36px,5.3vw,78px);line-height:1.08;max-width:21ch;color:#F4EDE4}
+.big em{color:var(--glowc)}
+.sign{display:grid;grid-template-columns:auto minmax(0,.9fr) minmax(0,1.1fr);gap:28px 56px;align-items:center;margin-top:84px;padding-top:44px;border-top:1px solid rgba(244,237,228,.16)}
+.coin{width:120px;height:120px;margin:0;border-radius:50%;padding:7px;box-sizing:border-box;background:#1C100A;box-shadow:inset 3px 4px 8px rgba(0,0,0,.65),inset -2px -2px 1px rgba(255,214,170,.16),0 1px 0 rgba(255,214,170,.08)}
+.coin img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px rgba(255,214,170,.18)}
+.who .n{display:block;font:400 58px/1 var(--script);color:var(--glowc);margin-bottom:10px}
+.who .role{color:#D7C3A9;max-width:30ch}
+.txt .body{color:#E6D7C4}
+.txt .more{color:var(--glowc)}
+@media (max-width:820px){.dk .spacer{height:72px}.letter{padding-top:48px;padding-bottom:84px}.big{font-size:clamp(32px,9vw,44px);line-height:1.12}.sign{grid-template-columns:auto 1fr;gap:20px 20px;margin-top:52px;padding-top:32px}.coin{width:92px;height:92px;padding:5px}.who .n{font-size:46px}.txt{grid-column:1/-1}}
+</style>
+</helmet>
+<div class="pg">
+<div class="dk" ref="{{ secRef }}" onPointerMove="{{ onMove }}" onPointerLeave="{{ onLeave }}">
+<div class="glow" aria-hidden="true"></div>
+<span class="sprite" aria-hidden="true" ref="{{ spriteRef }}"></span>
+<div class="spacer" aria-hidden="true"></div>
+<section class="wrap letter" id="despre" aria-labelledby="despre-h">
+<h2 class="disp big" id="despre-h">Sunt Alessia și cred că <em>mâinile știu</em> uneori lucruri pe care mintea încă nu le-a spus.</h2>
+<div class="sign">
+<figure class="coin" ref="{{ anchorRef }}" data-ax=".5" data-ay=".5" data-wr="1.6"><img src="/_blob/61696ece195f787b8ccb139b396a6450" alt="Alessia Văideanu, fondatoarea AVA Art &amp; Soul"></figure>
+<div class="who"><span class="n" aria-hidden="true">Alessia</span><span class="role">Artist ceramist și consilier acreditat în dezvoltare personală</span></div>
+<div class="txt"><p class="body">Creez experiențe în care lutul e doar începutul: restul e despre tine, despre ce simți și despre oamenii cu care împarți masa.</p><a class="more" href="#povestea">Povestea mea <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a></div>
+</div>
+</section>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1100}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this;
+    var reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    var W = 2 * Math.PI / 0.5, P = { x: 0, y: 0, vx: 0, vy: 0 }, started = false, t0 = performance.now(), last = t0;
+    var tick = function (now) {
+      var dt = Math.min(0.05, (now - last) / 1000); last = now;
+      var r = self.sec && self.sec.getBoundingClientRect(), a = self.anchor;
+      if (r && a && r.bottom > 0) {
+        var f = a.getBoundingClientRect(), T = self.T, s = (now - t0) / 1000;
+        var ax = f.left - r.left + f.width * +a.dataset.ax, ay = f.top - r.top + f.height * +a.dataset.ay, wr = f.width * +a.dataset.wr;
+        if (!T.on) { T.x = ax + Math.cos(-2.2 + s * 0.23) * wr; T.y = ay + Math.sin(-2.2 + s * 0.31) * (a.dataset.wy ? f.height * +a.dataset.wy : wr * 0.6); }
+        if (!started) { P.x = T.x; P.y = T.y; started = true; }
+        P.vx += (W * W * (T.x - P.x) - 2 * W * P.vx) * dt; P.x += P.vx * dt;
+        P.vy += (W * W * (T.y - P.y) - 2 * W * P.vy) * dt; P.y += P.vy * dt;
+        if (self.sprite) self.sprite.style.transform = 'translate3d(' + P.x.toFixed(1) + 'px,' + P.y.toFixed(1) + 'px,0)';
+        self.sec.style.setProperty('--lx', P.x.toFixed(1) + 'px'); self.sec.style.setProperty('--ly', P.y.toFixed(1) + 'px');
+        a.style.setProperty('--fx', (P.x - (f.left - r.left)).toFixed(1) + 'px'); a.style.setProperty('--fy', (P.y - (f.top - r.top)).toFixed(1) + 'px');
+        a.style.setProperty('--fr', Math.max(200, f.width * 0.55).toFixed(0) + 'px');
+      }
+      if (!reduce) self.raf = requestAnimationFrame(tick);
+    };
+    this.raf = requestAnimationFrame(tick);
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); }
+  renderVals() {
+    var self = this;
+    if (!this.cb) {
+      this.T = { x: 0, y: 0, on: false };
+      this.cb = {
+        secRef: function (el) { self.sec = el; },
+        spriteRef: function (el) { self.sprite = el; },
+        anchorRef: function (el) { self.anchor = el; },
+        onMove: function (e) {
+          if (!self.sec) return;
+          var r = self.sec.getBoundingClientRect();
+          self.T.x = e.clientX - r.left; self.T.y = e.clientY - r.top; self.T.on = e.pointerType === 'mouse';
+        },
+        onLeave: function () { self.T.on = false; }
+      };
+    }
+    return this.cb;
+  }
+}
+</script>
+</body>
+</html>

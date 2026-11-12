@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Povestea 2: capitole cu fotografie fixă · mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.pv{position:relative;overflow:clip;--so:cubic-bezier(.22,1,.36,1)}
+/* reveals (Vali, 11 nov: more motion): blocks rise in as they reach the screen, words of a quote/question arrive one by one,
+   and the sentence Alessia bolded gets a clay-coloured marker stroke drawn under it. Nothing hidden without JS. */
+.js .rv:not(.in),.js .ws:not(.in) .w,.js .qa:not(.in) .a{opacity:0}
+.ws .w{display:inline-block}
+@media (prefers-reduced-motion:no-preference){
+  .js .rv.in{animation:pv-up .9s var(--so) backwards}
+  .js .ws.in .w{animation:pv-w .8s var(--so) backwards;animation-delay:calc(var(--k) * 45ms)}
+  .js .qa.in .a{animation:pv-up .9s var(--so) .5s backwards}
+}
+@keyframes pv-up{from{opacity:0;translate:0 26px}}
+@keyframes pv-w{from{opacity:0;translate:0 .5em;filter:blur(6px)}}
+.pv strong{background:linear-gradient(transparent 60%,rgba(192,122,78,.3) 60%) 0 0/0% 100% no-repeat;transition:background-size 1.3s var(--so) .35s}
+.pv:not(.js) strong,.js .in strong{background-size:100% 100%}
+.pv h2{font-size:clamp(44px,4.8vw,68px);line-height:1.04}
+.pv strong{font-weight:600;color:var(--ink)}
+.orn{display:block;width:84px;height:24px;fill:none;stroke-width:2.2px;stroke-linecap:round}
+
+.ps{background:linear-gradient(180deg,#F4EDE4 0%,#EDE0CD 100%);padding:120px 0 64px}
+.ps h2{margin-bottom:24px}
+.ps .ch{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:0 88px;min-height:760px}
+.ps .ch:nth-of-type(even){grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+.ps .ch:nth-of-type(even) .fig{order:2}
+.ps .fig{position:sticky;top:96px;align-self:start;height:min(78vh,620px);margin:40px 0;border-radius:26px;corner-shape:squircle;overflow:hidden;background:#E6D5BD}
+.ps .fig img{display:block;width:100%;height:100%;object-fit:cover}
+@media (prefers-reduced-motion:no-preference){.ps .fig img{animation:ps-kb 16s ease-in-out infinite alternate}.js .ps .fig.rv.in{animation:ps-open 1.2s var(--so) backwards}}
+@keyframes ps-kb{to{scale:1.09}}
+@keyframes ps-open{from{clip-path:inset(18% 10% 18% 10% round 26px);opacity:0}}
+.ps .t{align-self:center;margin:0;padding:96px 0;font-size:20px;line-height:1.75;color:#4A382C;max-width:30em;text-wrap:pretty}
+@media (max-width:980px){.ps{padding:72px 0 40px}.ps .ch,.ps .ch:nth-of-type(even){grid-template-columns:1fr;min-height:0}.ps .ch:nth-of-type(even) .fig{order:0}.ps .fig{position:relative;top:auto;height:auto;aspect-ratio:4/3;margin:24px 0 0;border-radius:20px}.ps .t{padding:24px 0 32px;font-size:18px}}
+</style>
+</helmet>
+<div class="pg" data-src="The New York Times, „Snow Fall” (2012): fotografia stă pe loc cât citești capitolul">
+<section class="pv ps" id="povestea" aria-labelledby="pv-h" ref="{{ secRef }}"><div class="wrap">
+<h2 class="disp" id="pv-h">Povestea</h2>
+<div class="ch"><figure class="fig rv"><img src="/_blob/27d62de5381eeee8e9ab504567023c22" alt="Mâini care modelează un bol de lut pe roată"></figure><p class="t rv">În primul an de facultate am simțit nevoia de o activitate care să mă ajute să mă reconectez cu latura mea creativă și ludică, pe care am reprimat-o din ce în ce mai mult pe măsură ce creșteam. <strong>Așa am ajuns la lut, fără să știu cât de mult avea să-mi schimbe drumul.</strong> Lucrând cu el, simțeam liniște și curiozitate, iar acum este modalitatea care mă ajută să mă apropii mai mult de copilul meu interior.</p></div>
+<div class="ch"><figure class="fig rv"><img src="/_blob/42c18be93cd80d91d6d1d16793e790c6" alt="Doi participanți își dau din mână în mână un bol de lut, la un atelier AVA"></figure><p class="t rv">Cu timpul, mi-am dat seama că modelajul în lut nu este doar un prilej de conectare cu sinele, ci și cu ceilalți oameni cu care stai la masă. <strong>Când mâinile sunt ocupate, oamenii încep să vorbească altfel: mai sincer, mai blând, mai aproape unii de alții.</strong></p></div>
+<div class="ch"><figure class="fig rv"><img src="/_blob/988e3a505fd5ae1db56d481b3d1e33b1" alt="Participanți modelând lut în jurul mesei, la un atelier AVA"></figure><p class="t rv">AVA a pornit dintr-o pasiune, însă pe parcurs am descoperit că, în timp ce mâinile lucrează, mintea se liniștește, oamenii își dau voie să se relaxeze. Așa a devenit AVA un loc de conectare, comunitate și prezență, unde creăm împreună conștient.</p></div>
+</div></section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1934}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this, s = this.sec; if (!s) return;
+    var reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    s.classList.add('js');
+    var els = s.querySelectorAll('.rv, .ws, .qa');
+    if (reduce || !window.IntersectionObserver) els.forEach(function (e) { e.classList.add('in'); });
+    else {
+      this.io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); self.io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+      els.forEach(function (e) { self.io.observe(e); });
+    }
+    /*EXTRA*/
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); /*UNEXTRA*/ }
+  renderVals() { var self = this; if (!this.cb) this.cb = { secRef: function (el) { self.sec = el; } }; return this.cb; }
+}
+</script>
+</body>
+</html>

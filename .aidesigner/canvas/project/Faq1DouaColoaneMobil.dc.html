@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>FAQ 1: două coloane · mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.pg{interpolate-size:allow-keywords}
+.fq{padding:120px 0 128px;background:#F4EDE4}
+.fq h2{font-size:clamp(44px,5vw,72px);line-height:1}
+.fq .acc details{border-top:1px solid rgba(58,42,32,.18)}
+.fq .acc details:last-child{border-bottom:1px solid rgba(58,42,32,.18)}
+.fq summary{list-style:none;display:flex;align-items:center;gap:20px;min-height:44px;padding:26px 0;cursor:pointer;font:400 25px/1.3 var(--display);font-variation-settings:'opsz' 20;letter-spacing:-.005em;text-wrap:balance}
+.fq summary::-webkit-details-marker{display:none}
+.fq summary .qq{flex:1}
+.fq .ic{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(58,42,32,.25);transition:background .25s,color .25s,border-color .25s}
+.fq .ic svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;overflow:visible}
+.fq .ic .v{transform-origin:center;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.fq details[open] .ic .v{transform:scaleY(0)}
+.fq summary:hover .ic{background:var(--ink);border-color:var(--ink);color:#F4EDE4}
+.fq summary:focus-visible{outline:2px solid #9C472C;outline-offset:4px;border-radius:4px}
+.fq .ans p{margin:0;padding:0 64px 30px 0;max-width:60ch;color:var(--ink2);text-wrap:pretty}
+.fq .ans a{color:var(--ink);text-decoration:underline;text-decoration-color:rgba(58,42,32,.35);text-underline-offset:4px;transition:text-decoration-color .2s}
+.fq .ans a:hover{text-decoration-color:currentColor}
+.fq .ans a:focus-visible,.fq .more:focus-visible{outline:2px solid #9C472C;outline-offset:3px}
+.fq details::details-content{block-size:0;overflow:clip;transition:block-size .4s cubic-bezier(.2,.7,.2,1),content-visibility .4s allow-discrete}
+.fq details[open]::details-content{block-size:auto}
+.fq .ask{margin:0;font:400 italic 24px/1.3 var(--display);font-variation-settings:'opsz' 20}
+.fq .reply{margin:6px 0 0;font-size:15px;color:var(--ink2)}
+.fq .links{display:flex;flex-wrap:wrap;gap:0 28px}
+.fq .more{color:var(--ink)}
+@media (max-width:820px){.fq{padding:76px 0 84px}.fq h2{font-size:clamp(40px,11vw,52px)}.fq summary{font-size:21px;padding:20px 0;gap:14px}.fq .ic{width:36px;height:36px}.fq .ans p{padding:0 0 24px}}
+@media (prefers-reduced-motion:reduce){.fq details::details-content{transition:none}.fq .ic .v{transition:none}}
+
+.f1 .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.55fr);gap:96px;align-items:start}
+.f1 .l{position:sticky;top:40px}
+.f1 .l h2{margin-bottom:36px}
+.f1 .l .links{margin-top:18px}
+.f1 .acc details:first-child{border-top:0}
+.f1 .acc summary{padding-top:22px}.f1 .acc details:first-child summary{padding-top:0}
+@media (max-width:820px){.f1 .grid{grid-template-columns:1fr;gap:36px}.f1 .l{position:static;display:contents}.f1 .l h2{order:-2;margin:0}.f1 .l .side{order:2}
+.f1 .acc details:first-child summary{padding-top:4px}}
+</style>
+</helmet>
+<div class="pg">
+<section class="fq f1" id="intrebari" aria-labelledby="fq-h"><div class="wrap grid">
+<div class="l"><h2 class="disp" id="fq-h">Întrebări frecvente</h2><div class="side"><p class="ask">Ai altă întrebare?</p><p class="reply">Îți răspundem în maxim 24 de ore.</p><div class="links"><a class="more" href="#contact">Scrie-mi <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a><a class="more" href="#faq">Toate întrebările <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a></div></div></div>
+<div class="acc"><details name="faq-acasa" open><summary><span class="qq">Trebuie să știu să lucrez cu lutul?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path class="h" d="M3 8H13"></path><path class="v" d="M8 3V13"></path></svg></span></summary><div class="ans"><p>Deloc. Majoritatea celor care vin la atelierele mele ating lutul pentru prima dată. Te ghidez pas cu pas.</p></div></details><details name="faq-acasa"><summary><span class="qq">Pot veni singur(ă)?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path class="h" d="M3 8H13"></path><path class="v" d="M8 3V13"></path></svg></span></summary><div class="ans"><p>Sigur. Mulți vin singuri și pleacă făcând parte dintr-o comunitate.</p></div></details><details name="faq-acasa"><summary><span class="qq">Nu știu ce mi se potrivește. De unde încep?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path class="h" d="M3 8H13"></path><path class="v" d="M8 3V13"></path></svg></span></summary><div class="ans"><p>Dacă vrei să încerci, un <a href="#ateliere-de-grup">atelier de grup</a> e cel mai simplu început. Dacă vrei ceva doar pentru tine, alege un <a href="#atelier-privat">atelier privat</a> sau o <a href="#consiliere">ședință de consiliere</a>. Poți explora opțiunile pe site sau <a href="#contact">îmi poți scrie</a> și te ajut să alegi.</p></div></details></div>
+</div></section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

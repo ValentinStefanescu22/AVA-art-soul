@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Ce oferim 8: raftul cu vase · mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.cf{position:relative;background:var(--paper);padding:120px 0 128px;overflow:hidden}
+.cf .head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px}
+.cf .head h2{font-size:clamp(44px,5vw,72px);line-height:1}
+.cf .head p{margin:0;color:var(--ink2);font:400 italic 22px/1.3 var(--display);font-variation-settings:'opsz' 20}
+.cf .m{display:block;font-size:14px;line-height:1.5;color:#833A22;font-variant-numeric:tabular-nums}
+.cf .more{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-weight:500;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.cf a{text-decoration:none}
+.cf a:hover .more{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.cf a:hover .ar{transform:translateX(4px)}
+.cf .sc{display:inline-flex;align-items:center;flex-wrap:wrap;gap:6px 14px;min-height:44px;color:var(--ink)}
+.cf .sc b{font:400 22px/1.2 var(--display);font-variation-settings:'opsz' 20}
+.cf .sc span{font-size:14px;color:#833A22;font-variant-numeric:tabular-nums}
+.cf .sc:hover .ar{transform:translateX(4px)}
+@media (max-width:820px){.cf{padding:76px 0 84px}.cf .head{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}.cf .head h2{font-size:clamp(40px,11vw,52px)}.cf .head p{font-size:20px}}
+
+.va{background:radial-gradient(ellipse 60% 55% at 50% 38%,#FAF5EE 0%,rgba(250,245,238,0) 70%),var(--paper)}
+.va .shelf{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0 24px;margin:0;padding:0;list-style:none}
+.va li a{display:flex;flex-direction:column;color:var(--ink)}
+.va .pot{position:relative;display:flex;align-items:flex-end;justify-content:center;height:420px;border-bottom:1px solid rgba(58,42,32,.35)}
+.va .pot::after{content:"";position:absolute;left:12%;right:12%;bottom:-1px;height:18px;border-radius:50%;background:radial-gradient(closest-side,rgba(58,42,32,.28),rgba(58,42,32,0));transform:translateY(50%)}
+.va .v{position:relative;z-index:1;display:block;height:var(--h);width:auto;max-width:100%;overflow:visible;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.va .ol{fill:none;stroke:#9C472C;stroke-width:1.2px;vector-effect:non-scaling-stroke;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.va .ph{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.va li a:hover .v,.va li a:focus-visible .v{transform:translateY(-10px)}
+.va .tx{display:flex;flex-direction:column;padding-top:30px}
+.va .n{font:400 27px/1.1 var(--display);font-variation-settings:'opsz' 20;letter-spacing:-.01em}
+.va .l{margin-top:10px;color:var(--ink2);font-size:15.5px;line-height:1.55;text-wrap:pretty}
+.va .m{margin-top:10px;font-size:13.5px}
+.va .more{margin-top:8px;align-self:flex-start}
+.va .foot{margin-top:56px;padding-top:22px;border-top:1px solid rgba(58,42,32,.18)}
+@media (max-width:820px){.va .shelf{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:0 20px 8px;scrollbar-width:none}.va .shelf::-webkit-scrollbar{display:none}.va .shelf li{flex:0 0 68vw;scroll-snap-align:start}.va .pot{height:300px}.va .v{height:calc(var(--h) * .8)}}
+@media (prefers-reduced-motion:reduce){.va .v{transition:none}}
+</style>
+</helmet>
+<div class="pg">
+<section class="cf va" id="ce-facem" aria-labelledby="cf-h">
+<div class="wrap">
+<div class="head"><h2 class="disp" id="cf-h">Ce oferim</h2><p>Pentru tine sau pentru echipa ta.</p></div>
+<ul class="shelf"><li><a href="#grup"><span class="pot"><svg class="v" viewBox="0 0 100 76.9" style="--h:165px;--ar:1.3" aria-hidden="true"><defs><clipPath id="vc0" clipPathUnits="objectBoundingBox"><path d="M0 0H1C1 .52 .80 .90 .63 .97L.61 1H.39L.37 .97C.20 .90 0 .52 0 0Z"></path></clipPath></defs><path class="ol" d="M0 0H1C1 .52 .80 .90 .63 .97L.61 1H.39L.37 .97C.20 .90 0 .52 0 0Z" transform="translate(3.5 4.5) scale(100 76.9)"></path><g class="ph"><image href="/_blob/70ad22aacebcba3dbca6580a21b45332" width="100" height="76.9" preserveAspectRatio="xMidYMid slice" style="clip-path:url(#vc0)"></image></g></svg></span><span class="tx"><span class="n">Ateliere de grup</span><span class="l">O dată pe lună ne strângem în jurul lutului, cu o temă nouă de fiecare dată.</span><span class="m">3 ore · max. 8 persoane · de la 185 lei</span><span class="more">Vezi atelierele <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></span></span></a></li><li><a href="#privat"><span class="pot"><svg class="v" viewBox="0 0 100 142.9" style="--h:300px;--ar:0.7" aria-hidden="true"><defs><clipPath id="vc1" clipPathUnits="objectBoundingBox"><path d="M.20 0H.80C.78 .10 .78 .15 .83 .23C.93 .40 .93 .70 .85 .87C.80 .96 .72 1 .60 1H.40C.28 1 .20 .96 .15 .87C.07 .70 .07 .40 .17 .23C.22 .15 .22 .10 .20 0Z"></path></clipPath></defs><path class="ol" d="M.20 0H.80C.78 .10 .78 .15 .83 .23C.93 .40 .93 .70 .85 .87C.80 .96 .72 1 .60 1H.40C.28 1 .20 .96 .15 .87C.07 .70 .07 .40 .17 .23C.22 .15 .22 .10 .20 0Z" transform="translate(3.5 4.5) scale(100 142.9)"></path><g class="ph"><image href="/_blob/27d62de5381eeee8e9ab504567023c22" width="100" height="142.9" preserveAspectRatio="xMidYMid slice" style="clip-path:url(#vc1)"></image></g></svg></span><span class="tx"><span class="n">Atelier privat 1:1</span><span class="l">Lutul, tu și eu. Un atelier de modelaj, în ritmul tău, fără grup și fără grabă.</span><span class="m">pentru adulți și copii · de la 220 lei</span><span class="more">Rezervă <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></span></span></a></li><li><a href="#consiliere"><span class="pot"><svg class="v" viewBox="0 0 100 122.0" style="--h:250px;--ar:0.82" aria-hidden="true"><defs><clipPath id="vc2" clipPathUnits="objectBoundingBox"><path d="M.04 0H.96L.85 .93C.84 .98 .80 1 .75 1H.25C.20 1 .16 .98 .15 .93Z"></path></clipPath></defs><path class="ol" d="M.04 0H.96L.85 .93C.84 .98 .80 1 .75 1H.25C.20 1 .16 .98 .15 .93Z" transform="translate(3.5 4.5) scale(100 122.0)"></path><g class="ph"><image href="/_blob/f2f68570a5d5b88f15c8b0c9d18a7c34" width="100" height="122.0" preserveAspectRatio="xMidYMid slice" style="clip-path:url(#vc2)"></image></g></svg></span><span class="tx"><span class="n">Consiliere 1:1</span><span class="l">Te susțin în drumul tău și te ghidez spre versiunea ta autentică.</span><span class="m">60–90 min · online sau față în față · 180 lei / oră</span><span class="more">Programează <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></span></span></a></li><li><a href="#companii"><span class="pot"><svg class="v" viewBox="0 0 100 192.3" style="--h:400px;--ar:0.52" aria-hidden="true"><defs><clipPath id="vc3" clipPathUnits="objectBoundingBox"><path d="M.39 0H.61V.17C.61 .25 .79 .29 .88 .43C.97 .58 .95 .80 .85 .92C.79 .98 .71 1 .60 1H.40C.29 1 .21 .98 .15 .92C.05 .80 .03 .58 .12 .43C.21 .29 .39 .25 .39 .17Z"></path></clipPath></defs><path class="ol" d="M.39 0H.61V.17C.61 .25 .79 .29 .88 .43C.97 .58 .95 .80 .85 .92C.79 .98 .71 1 .60 1H.40C.29 1 .21 .98 .15 .92C.05 .80 .03 .58 .12 .43C.21 .29 .39 .25 .39 .17Z" transform="translate(3.5 4.5) scale(100 192.3)"></path><g class="ph"><image href="/_blob/18303291bcb407fd0b37b52607ecebba" width="100" height="192.3" preserveAspectRatio="xMidYMid slice" style="clip-path:url(#vc3)"></image></g></svg></span><span class="tx"><span class="n">Pentru companii</span><span class="l">Ateliere de autocunoaștere și conectare pentru echipe, în care lutul este unealta.</span><span class="m">4–16 persoane · la voi sau în locații partenere · ofertă personalizată</span><span class="more">Cere o ofertă <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></span></span></a></li><li><a href="#retreat"><span class="pot"><svg class="v" viewBox="0 0 100 172.4" style="--h:360px;--ar:0.58" aria-hidden="true"><defs><clipPath id="vc4" clipPathUnits="objectBoundingBox"><path d="M.40 0H.60V.06C.60 .10 .62 .12 .70 .16C.92 .26 .98 .42 .96 .58C.94 .76 .80 .90 .66 .96L.64 1H.36L.34 .96C.20 .90 .06 .76 .04 .58C.02 .42 .08 .26 .30 .16C.38 .12 .40 .10 .40 .06Z"></path></clipPath></defs><path class="ol" d="M.40 0H.60V.06C.60 .10 .62 .12 .70 .16C.92 .26 .98 .42 .96 .58C.94 .76 .80 .90 .66 .96L.64 1H.36L.34 .96C.20 .90 .06 .76 .04 .58C.02 .42 .08 .26 .30 .16C.38 .12 .40 .10 .40 .06Z" transform="translate(3.5 4.5) scale(100 172.4)"></path><g class="ph"><image href="/_blob/8485d5712a94ed66603aeb86f80c0aac" width="100" height="172.4" preserveAspectRatio="xMidYMid slice" style="clip-path:url(#vc4)"></image></g></svg></span><span class="tx"><span class="n">Retreaturi</span><span class="l">Câteva zile departe de oraș, cu lut, natură, liniște și oameni care caută același lucru ca tine.</span><span class="m">în curând</span><span class="more">Anunță-mă <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></span></span></a></li></ul>
+<div class="foot"><a class="sc" href="#scoli"><b>Pentru școli și copii</b><span>de la 6 ani · 60 min · 50 lei / copil</span><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a></div>
+</div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1800}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

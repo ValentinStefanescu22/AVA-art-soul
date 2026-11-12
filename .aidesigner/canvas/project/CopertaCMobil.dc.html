@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Coperta C: copertă curată, text dedesubt · mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.cv{position:relative;overflow:hidden;background:radial-gradient(ellipse 55% 60% at 50% 38%,#F6EEE3 0%,rgba(246,238,227,0) 70%),linear-gradient(180deg,#EFE4D4 0%,#E8D9C3 58%,#E2CDB0 100%)}
+.cv .name{position:absolute;left:50%;top:34px;z-index:0;transform:translateX(-50%);margin:0;font:400 clamp(112px,23vw,340px)/.82 var(--display);font-variation-settings:'opsz' 96;letter-spacing:-.04em;color:var(--terra);white-space:nowrap;pointer-events:none;user-select:none}
+.cv .stage{position:relative;z-index:1}
+.cv .fig{position:relative;margin:0;aspect-ratio:3/4}
+.cv .fig img{display:block;width:100%;height:100%;object-fit:contain;object-position:50% 100%}
+.cv h2{color:var(--ink)}
+.cv h2 em{color:var(--terra-d)}
+.cv .role{color:#833A22}
+.cv .body{color:#5E4838}
+.cv .more{color:var(--ink)}
+.fade{-webkit-mask-image:linear-gradient(180deg,#000 74%,transparent 99%);mask-image:linear-gradient(180deg,#000 74%,transparent 99%)}
+@media (max-width:980px){.cv .name{top:20px;font-size:27vw}.cv .fig{width:min(100%,420px);margin:9vw auto 0}}
+
+.c .stage{display:flex;flex-direction:column}
+.c .fig{width:520px;align-self:center;margin-top:150px}
+.c .band{position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:72px;align-items:end;padding:52px 0 120px;border-top:1px solid rgba(58,42,32,.2)}
+.c h2{font-size:clamp(32px,3.6vw,52px);line-height:1.12;max-width:20ch}
+.c .role{margin-bottom:12px}
+@media (max-width:980px){.c .fig{width:min(100%,420px);margin-top:9vw}.c .band{grid-template-columns:1fr;gap:22px;padding:30px 0 76px}.c h2{font-size:clamp(28px,7.6vw,36px)}}
+</style>
+</helmet>
+<div class="pg">
+<div class="heroend" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0 86C240 62 480 62 720 86C960 110 1200 110 1440 86L1440 120L0 120Z" style="fill:#EFE4D4"></path></svg></div><section class="cv c" id="despre" aria-labelledby="despre-h">
+<p class="name" aria-hidden="true">Alessia</p>
+<div class="wrap stage">
+<figure class="fig fade"><img src="/_blob/eea66386c5e507e37343fcb18e98611a" alt="Alessia Văideanu, fondatoarea AVA Art &amp; Soul"></figure>
+<div class="band"><h2 class="disp" id="despre-h">Sunt Alessia și cred că <em>mâinile știu</em> uneori lucruri pe care mintea încă nu le-a spus.</h2>
+<div><span class="role">Artist ceramist și consilier acreditat în dezvoltare personală</span><p class="body">Creez experiențe în care lutul e doar începutul: restul e despre tine, despre ce simți și despre oamenii cu care împarți masa.</p><a class="more" href="#povestea">Povestea mea <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a></div></div>
+</div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

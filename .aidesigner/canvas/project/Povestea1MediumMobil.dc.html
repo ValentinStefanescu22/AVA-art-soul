@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Povestea 1: coloana de lectură · mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.pv{position:relative;overflow:clip;--so:cubic-bezier(.22,1,.36,1)}
+/* reveals (Vali, 11 nov: more motion): blocks rise in as they reach the screen, words of a quote/question arrive one by one,
+   and the sentence Alessia bolded gets a clay-coloured marker stroke drawn under it. Nothing hidden without JS. */
+.js .rv:not(.in),.js .ws:not(.in) .w,.js .qa:not(.in) .a{opacity:0}
+.ws .w{display:inline-block}
+@media (prefers-reduced-motion:no-preference){
+  .js .rv.in{animation:pv-up .9s var(--so) backwards}
+  .js .ws.in .w{animation:pv-w .8s var(--so) backwards;animation-delay:calc(var(--k) * 45ms)}
+  .js .qa.in .a{animation:pv-up .9s var(--so) .5s backwards}
+}
+@keyframes pv-up{from{opacity:0;translate:0 26px}}
+@keyframes pv-w{from{opacity:0;translate:0 .5em;filter:blur(6px)}}
+.pv strong{background:linear-gradient(transparent 60%,rgba(192,122,78,.3) 60%) 0 0/0% 100% no-repeat;transition:background-size 1.3s var(--so) .35s}
+.pv:not(.js) strong,.js .in strong{background-size:100% 100%}
+.pv h2{font-size:clamp(44px,4.8vw,68px);line-height:1.04}
+.pv strong{font-weight:600;color:var(--ink)}
+.orn{display:block;width:84px;height:24px;fill:none;stroke-width:2.2px;stroke-linecap:round}
+
+.pm{background:#F4EDE4;padding:120px 0 128px}
+.pm .col{max-width:680px;margin:0 auto}
+.pm h2{margin-bottom:44px}
+.pm .t{margin:0 0 1.5em;font-size:19px;line-height:1.75;color:#4A382C;text-wrap:pretty}
+.pm .pq{margin:64px -110px 64px;text-align:center}
+.pm .pq .orn{margin:0 auto 22px}
+.pm .pq p{margin:0;font:italic 400 clamp(28px,2.9vw,40px)/1.3 var(--display);font-variation-settings:'opsz' 20;color:var(--terra-d);text-wrap:balance}
+.pm .wide{margin:72px -180px;border-radius:24px;corner-shape:squircle;overflow:hidden;aspect-ratio:16/9}
+.pm .wide img{display:block;width:100%;height:100%;object-fit:cover;scale:1.14;will-change:translate}
+.pm .prog{position:sticky;top:0;z-index:5;height:3px;background:var(--terra);transform-origin:0 50%;scale:var(--p,0) 1}
+.pm .pq .orn path{stroke-dasharray:130;stroke-dashoffset:0;transition:stroke-dashoffset 1.4s var(--so) .1s}
+.js .pm .pq:not(.in) .orn path{stroke-dashoffset:130}
+@media (max-width:980px){.pm{padding:72px 0 80px}.pm .t{font-size:18px}.pm .pq{margin:44px 0}.pm .pq p{font-size:clamp(25px,7vw,30px)}.pm .wide{margin:44px 0;border-radius:18px;aspect-ratio:4/3}}
+</style>
+</helmet>
+<div class="pg" data-src="medium.com: coloana de lectură și citatele scoase în evidență">
+<section class="pv pm" id="povestea" aria-labelledby="pv-h" ref="{{ secRef }}"><div class="prog" aria-hidden="true"></div><div class="wrap col">
+<h2 class="disp" id="pv-h">Povestea</h2>
+<p class="t rv">În primul an de facultate am simțit nevoia de o activitate care să mă ajute să mă reconectez cu latura mea creativă și ludică, pe care am reprimat-o din ce în ce mai mult pe măsură ce creșteam. <strong>Așa am ajuns la lut, fără să știu cât de mult avea să-mi schimbe drumul.</strong> Lucrând cu el, simțeam liniște și curiozitate, iar acum este modalitatea care mă ajută să mă apropii mai mult de copilul meu interior.</p>
+<blockquote class="pq rv" aria-hidden="true"><svg class="orn" viewBox="0 0 120 34" aria-hidden="true"><path d="M4 9C19 3 34 3 49 9S79 15 94 9S112 5 116 9" style="stroke:#3A2A20"></path><path d="M4 17C19 11 34 11 49 17S79 23 94 17S112 13 116 17" style="stroke:#B4583A"></path><path d="M4 25C19 19 34 19 49 25S79 31 94 25S112 21 116 25" style="stroke:#3A2A20"></path></svg><p class="ws"><span class="w" style="--k: 0">Așa</span> <span class="w" style="--k: 1">am</span> <span class="w" style="--k: 2">ajuns</span> <span class="w" style="--k: 3">la</span> <span class="w" style="--k: 4">lut,</span> <span class="w" style="--k: 5">fără</span> <span class="w" style="--k: 6">să</span> <span class="w" style="--k: 7">știu</span> <span class="w" style="--k: 8">cât</span> <span class="w" style="--k: 9">de</span> <span class="w" style="--k: 10">mult</span> <span class="w" style="--k: 11">avea</span> <span class="w" style="--k: 12">să-mi</span> <span class="w" style="--k: 13">schimbe</span> <span class="w" style="--k: 14">drumul.</span></p></blockquote>
+<p class="t rv">Cu timpul, mi-am dat seama că modelajul în lut nu este doar un prilej de conectare cu sinele, ci și cu ceilalți oameni cu care stai la masă. <strong>Când mâinile sunt ocupate, oamenii încep să vorbească altfel: mai sincer, mai blând, mai aproape unii de alții.</strong></p>
+<figure class="wide rv"><img src="/_blob/42c18be93cd80d91d6d1d16793e790c6" alt="Doi participanți își dau din mână în mână un bol de lut, la un atelier AVA"></figure>
+<blockquote class="pq rv" aria-hidden="true"><svg class="orn" viewBox="0 0 120 34" aria-hidden="true"><path d="M4 9C19 3 34 3 49 9S79 15 94 9S112 5 116 9" style="stroke:#3A2A20"></path><path d="M4 17C19 11 34 11 49 17S79 23 94 17S112 13 116 17" style="stroke:#B4583A"></path><path d="M4 25C19 19 34 19 49 25S79 31 94 25S112 21 116 25" style="stroke:#3A2A20"></path></svg><p class="ws"><span class="w" style="--k: 0">Când</span> <span class="w" style="--k: 1">mâinile</span> <span class="w" style="--k: 2">sunt</span> <span class="w" style="--k: 3">ocupate,</span> <span class="w" style="--k: 4">oamenii</span> <span class="w" style="--k: 5">încep</span> <span class="w" style="--k: 6">să</span> <span class="w" style="--k: 7">vorbească</span> <span class="w" style="--k: 8">altfel:</span> <span class="w" style="--k: 9">mai</span> <span class="w" style="--k: 10">sincer,</span> <span class="w" style="--k: 11">mai</span> <span class="w" style="--k: 12">blând,</span> <span class="w" style="--k: 13">mai</span> <span class="w" style="--k: 14">aproape</span> <span class="w" style="--k: 15">unii</span> <span class="w" style="--k: 16">de</span> <span class="w" style="--k: 17">alții.</span></p></blockquote>
+<p class="t rv">AVA a pornit dintr-o pasiune, însă pe parcurs am descoperit că, în timp ce mâinile lucrează, mintea se liniștește, oamenii își dau voie să se relaxeze. Așa a devenit AVA un loc de conectare, comunitate și prezență, unde creăm împreună conștient.</p>
+</div></section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1817}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this, s = this.sec; if (!s) return;
+    var reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    s.classList.add('js');
+    var els = s.querySelectorAll('.rv, .ws, .qa');
+    if (reduce || !window.IntersectionObserver) els.forEach(function (e) { e.classList.add('in'); });
+    else {
+      this.io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); self.io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+      els.forEach(function (e) { self.io.observe(e); });
+    }
+    
+    if (reduce) return;
+    // reading progress along the top, and the wide photo drifting inside its frame (parallax, eased)
+    var img = s.querySelector('.wide img'), raf = 0, cur = 0;
+    var tick = function () {
+      raf = 0;
+      var r = s.getBoundingClientRect(), p = Math.max(0, Math.min(1, (innerHeight * 0.6 - r.top) / r.height));
+      s.style.setProperty('--p', p.toFixed(4));
+      if (img) {
+        var fr = img.parentNode.getBoundingClientRect(), t = Math.max(-40, Math.min(40, (fr.top + fr.height / 2 - innerHeight / 2) * -0.08));
+        cur += (t - cur) * 0.15; img.style.translate = '0 ' + cur.toFixed(1) + 'px';
+        if (Math.abs(t - cur) > 0.2) raf = requestAnimationFrame(tick);
+      }
+    };
+    this.onScroll = function () { if (!raf) raf = requestAnimationFrame(tick); };
+    addEventListener('scroll', this.onScroll, { passive: true }); this.onScroll();
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); if (this.onScroll) removeEventListener('scroll', this.onScroll); }
+  renderVals() { var self = this; if (!this.cb) this.cb = { secRef: function (el) { self.sec = el; } }; return this.cb; }
+}
+</script>
+</body>
+</html>

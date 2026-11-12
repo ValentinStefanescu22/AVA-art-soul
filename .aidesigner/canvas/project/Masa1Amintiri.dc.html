@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Oamenii la masă 1: amintiri</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.ms{position:relative;overflow:hidden;--spring:cubic-bezier(.3,1.32,.5,1);--soft:cubic-bezier(.22,1,.36,1)}
+.ms h2{font-size:clamp(40px,4.4vw,64px);line-height:1.05;text-wrap:balance}
+.ms .lead{margin:22px 0 0;max-width:46ch;font-size:19px;line-height:1.7;color:#4A382C;text-wrap:pretty}
+.qt{margin:0;padding:26px 26px 24px;border-radius:24px;corner-shape:squircle;background:#FBF7F0;box-shadow:0 1px 0 rgba(58,42,32,.05),0 22px 44px -30px rgba(58,30,15,.45)}
+.qt .qm{width:26px;height:20px;color:var(--terra)}
+.qt blockquote{margin:14px 0 0;font:italic 400 21px/1.4 var(--display);font-variation-settings:'opsz' 20;color:var(--ink);text-wrap:pretty}
+.qt figcaption{margin-top:14px;font:600 15px/1 var(--text);color:var(--ink2)}
+.ms .ctl{display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:rgba(58,42,32,.08);color:var(--ink);cursor:pointer;transition:background-color .2s ease}
+.ms .ctl:hover{background:rgba(58,42,32,.14)}.ms .ctl:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.ms .ctl i{display:flex;gap:4px}.ms .ctl i::before,.ms .ctl i::after{content:"";width:3px;height:13px;border-radius:2px;background:currentColor}
+.ms .ctl[aria-pressed="true"] i::before{width:0;height:0;border-radius:0;background:none;border-left:11px solid currentColor;border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
+.ms .ctl[aria-pressed="true"] i::after{display:none}
+@media (max-width:980px){.ms .lead{font-size:18px}.qt blockquote{font-size:19px}}
+
+.ma{background:linear-gradient(180deg,#F4EDE4 0%,#EDE0CD 100%);padding:112px 0 120px}
+.ma .stage{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:0 72px;align-items:center}
+.ma .frame{position:relative;aspect-ratio:5/4;border-radius:32px;corner-shape:squircle;overflow:hidden;background:#2A140C;box-shadow:0 40px 70px -40px rgba(58,30,15,.6)}
+.ma .sl{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity 1.2s ease,visibility 0s linear 1.2s}
+.ma .sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ma .sl::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,14,8,0) 45%,rgba(30,14,8,.55) 100%)}
+.ma .qt{position:absolute;left:24px;bottom:24px;z-index:2;max-width:380px;background:rgba(251,247,240,.86);-webkit-backdrop-filter:blur(14px) saturate(150%);backdrop-filter:blur(14px) saturate(150%);
+  opacity:0;translate:0 14px;transition:opacity .6s ease,translate .7s var(--soft)}
+.ma .qt blockquote{font-size:19px}
+.ma .bars{position:absolute;top:16px;left:16px;right:16px;z-index:3;display:flex;gap:6px}
+.ma .bar{flex:1;height:28px;padding:12px 0;border:0;background:none;cursor:pointer}
+.ma .bar span{display:block;height:3px;border-radius:2px;background:rgba(255,248,238,.4);overflow:hidden}
+.ma .bar i{display:block;height:100%;background:#FFF8EE;transform-origin:left;scale:0 1}
+.ma .bar:focus-visible{outline:2px solid #FFF8EE;outline-offset:2px;border-radius:4px}
+@keyframes ma-run{from{scale:0 1}to{scale:1 1}}
+.ma:not([data-run="1"]) :is(.bar i,.sl img),.ma[data-p="1"] :is(.bar i,.sl img){animation-play-state:paused!important}
+.ma .side .ctl{margin-top:32px}
+.ma[data-i="0"] .sl:nth-of-type(1){opacity:1;visibility:visible;transition:opacity 1.2s ease,visibility 0s}.ma[data-i="0"] .sl:nth-of-type(1) img{animation:ma-kb0 8s linear both}.ma[data-i="0"] .sl:nth-of-type(1) .qt{opacity:1;translate:0 0;transition-delay:.5s}.ma[data-i="0"] .bar:nth-child(1) i{animation:ma-run 7s linear forwards}.ma[data-i="1"] .sl:nth-of-type(2){opacity:1;visibility:visible;transition:opacity 1.2s ease,visibility 0s}.ma[data-i="1"] .sl:nth-of-type(2) img{animation:ma-kb1 8s linear both}.ma[data-i="1"] .sl:nth-of-type(2) .qt{opacity:1;translate:0 0;transition-delay:.5s}.ma[data-i="1"] .bar:nth-child(1) i{scale:1 1}.ma[data-i="1"] .bar:nth-child(2) i{animation:ma-run 7s linear forwards}.ma[data-i="2"] .sl:nth-of-type(3){opacity:1;visibility:visible;transition:opacity 1.2s ease,visibility 0s}.ma[data-i="2"] .sl:nth-of-type(3) img{animation:ma-kb2 8s linear both}.ma[data-i="2"] .sl:nth-of-type(3) .qt{opacity:1;translate:0 0;transition-delay:.5s}.ma[data-i="2"] .bar:nth-child(1) i{scale:1 1}.ma[data-i="2"] .bar:nth-child(2) i{scale:1 1}.ma[data-i="2"] .bar:nth-child(3) i{animation:ma-run 7s linear forwards}@keyframes ma-kb0{from{scale:1.02;translate:-1.5% 1%}to{scale:1.14;translate:1.5% -1%}}@keyframes ma-kb1{from{scale:1.14;translate:1% 1%}to{scale:1.02;translate:-1% -1%}}@keyframes ma-kb2{from{scale:1.04;translate:0 -1.5%}to{scale:1.15;translate:0 1.5%}}
+@media (max-width:980px){.ma{padding:72px 0 80px}.ma .stage{grid-template-columns:1fr;gap:28px}.ma .frame{aspect-ratio:4/5;border-radius:26px}.ma .qt{left:14px;right:14px;bottom:14px;padding:18px}.ma .qt blockquote{font-size:17px}.ma .side .ctl{margin-top:20px}}
+@media (prefers-reduced-motion:reduce){.ma .sl,.ma .qt{transition:none!important}.ma .sl img,.ma .bar i{animation:none!important}.ma .side .ctl{display:none}}
+</style>
+</helmet>
+<div class="pg" data-src="Apple Photos: „Amintiri” (fotografiile se apropie încet, efectul Ken Burns)">
+<section class="ms ma" aria-labelledby="ms-h" data-i="0" ref="{{ secRef }}"><div class="wrap stage"><div class="side"><h2 class="disp" id="ms-h">Oamenii care vin la masă</h2><p class="lead">Fiecare atelier devine un prilej de a încetini, de a te reconecta cu tine și de a cunoaște oameni noi în jurul aceleiași mese. Unii oameni vin timizi și pleacă râzând, alții vin singuri și pleacă cu prieteni noi, iar împreună fac din AVA un loc al apartenenței, care se simte ca „acasă”.</p><button class="ctl" type="button" aria-label="Pauză" aria-pressed="false" onClick="{{ pause }}"><i></i></button></div><div class="frame"><div class="bars"><button class="bar" type="button" aria-label="Amintirea 1 din 3" data-i="0" onClick="{{ jump }}"><span><i></i></span></button><button class="bar" type="button" aria-label="Amintirea 2 din 3" data-i="1" onClick="{{ jump }}"><span><i></i></span></button><button class="bar" type="button" aria-label="Amintirea 3 din 3" data-i="2" onClick="{{ jump }}"><span><i></i></span></button></div><figure class="sl"><img src="/_blob/42c18be93cd80d91d6d1d16793e790c6" alt="Doi participanți își dau din mână în mână un bol de lut, la un atelier AVA"><figure class="qt"><svg class="qm" viewBox="0 0 32 24" aria-hidden="true"><path d="M0 24V14C0 6 4.5 1.5 12 0l1.4 3C9 4.6 7 7.4 7 11h6v13zm18 0V14C18 6 22.5 1.5 30 0l1.4 3C27 4.6 25 7.4 25 11h6v13z" style="fill:currentColor"></path></svg><blockquote>Foarte frumos și cozy, chiar am reușit să reflect asupra mea cât timp lucram cu lutul.</blockquote><figcaption>Costin</figcaption></figure></figure><figure class="sl"><img src="/_blob/988e3a505fd5ae1db56d481b3d1e33b1" alt="Participanți modelând lut în jurul mesei, la un atelier AVA"><figure class="qt"><svg class="qm" viewBox="0 0 32 24" aria-hidden="true"><path d="M0 24V14C0 6 4.5 1.5 12 0l1.4 3C9 4.6 7 7.4 7 11h6v13zm18 0V14C18 6 22.5 1.5 30 0l1.4 3C27 4.6 25 7.4 25 11h6v13z" style="fill:currentColor"></path></svg><blockquote>A fost o experiență foarte plăcută și relaxantă. Pauzele de socializare dintre activități au fost exact ce trebuia.</blockquote><figcaption>Mario</figcaption></figure></figure><figure class="sl"><img src="/_blob/74f239bfbd557a0a5a661ddd26484b66" alt="Boluri de lut terminate, așezate unul lângă altul"><figure class="qt"><svg class="qm" viewBox="0 0 32 24" aria-hidden="true"><path d="M0 24V14C0 6 4.5 1.5 12 0l1.4 3C9 4.6 7 7.4 7 11h6v13zm18 0V14C18 6 22.5 1.5 30 0l1.4 3C27 4.6 25 7.4 25 11h6v13z" style="fill:currentColor"></path></svg><blockquote>O activitate foarte relaxantă într-un cadru intim și frumos. Revin cu siguranță!</blockquote><figcaption>Adina</figcaption></figure></figure></div></div></section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":786}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this, s = this.sec; if (!s) return;
+    var reduce = this.reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    s.classList.add('js');
+    if (reduce || !window.IntersectionObserver) s.classList.add('in');
+    else { this.io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { s.classList.add('in'); self.io.disconnect(); } }, { threshold: 0.2 }); this.io.observe(s); }
+    this.onEnd = function (e) { if (e.animationName === 'ma-run') s.setAttribute('data-i', String((+s.getAttribute('data-i') + 1) % 3)); };
+    s.addEventListener('animationend', this.onEnd);
+    if (window.IntersectionObserver) { this.io2 = new IntersectionObserver(function (es) { s.setAttribute('data-run', es[0].isIntersecting ? '1' : '0'); }, { threshold: 0.3 }); this.io2.observe(s); }
+    else s.setAttribute('data-run', '1');
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); if (this.io2) this.io2.disconnect(); if (this.sec) this.sec.removeEventListener('animationend', this.onEnd); }
+  renderVals() {
+    var self = this;
+    if (!this.cb) this.cb = { secRef: function (el) { self.sec = el; },
+      jump: function (e) { self.sec.setAttribute('data-i', e.currentTarget.getAttribute('data-i')); },
+      pause: function (e) {
+        var on = self.sec.getAttribute('data-p') === '1';
+        self.sec.setAttribute('data-p', on ? '0' : '1');
+        e.currentTarget.setAttribute('aria-pressed', on ? 'false' : 'true');
+        e.currentTarget.setAttribute('aria-label', on ? 'Pauză' : 'Continuă');
+      } };
+    return this.cb;
+  }
+}
+</script>
+</body>
+</html>

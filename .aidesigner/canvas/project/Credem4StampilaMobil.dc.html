@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Ce credem 4: ștampila care se rotește · mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.cr{position:relative;overflow:hidden;--spring:cubic-bezier(.3,1.32,.5,1);--soft:cubic-bezier(.22,1,.36,1)}
+.cr h2{font-size:clamp(40px,4.4vw,64px);line-height:1.05}
+.cr .ph{color:inherit;opacity:.8;font-size:16px;letter-spacing:.02em}
+
+.ct{background:linear-gradient(180deg,#EDE0CD 0%,#F4EDE4 100%);padding:112px 0 120px}
+.ct .stage{display:grid;grid-template-columns:420px minmax(0,1fr);gap:0 96px;align-items:center}
+.ct .seal{position:relative;width:100%;aspect-ratio:1}
+.ct .ring{position:absolute;inset:0;width:100%;height:100%;will-change:transform}
+.ct .ring text{font:500 27px/1 var(--text);letter-spacing:.32em;fill:var(--ink);transition:fill .35s ease}
+.ct .ring .dots circle{fill:var(--terra)}
+.ct .disc{position:absolute;inset:23%;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle at 40% 35%,#F8EFE3,#E6D5BD);box-shadow:inset 0 -10px 22px rgba(58,30,15,.16),0 24px 40px -26px rgba(58,30,15,.5)}
+.ct .disc svg{width:34%;color:var(--ink)}
+.ct[data-on="0"] .wd[data-i="0"]{fill:var(--terra-d)}.ct[data-on="0"] .val[data-i="0"] h3{color:var(--terra-d)}.ct[data-on="1"] .wd[data-i="1"]{fill:var(--terra-d)}.ct[data-on="1"] .val[data-i="1"] h3{color:var(--terra-d)}.ct[data-on="2"] .wd[data-i="2"]{fill:var(--terra-d)}.ct[data-on="2"] .val[data-i="2"] h3{color:var(--terra-d)}
+.ct ul{margin:28px 0 0;padding:0;list-style:none}
+.ct .val{padding:22px 0;border-top:1px solid rgba(58,42,32,.14);transition:translate .45s var(--spring)}
+.ct[data-on] .val{opacity:.5;transition:opacity .35s ease,translate .45s var(--spring)}
+.ct[data-on="0"] .val[data-i="0"]{opacity:1;translate:12px 0}.ct[data-on="1"] .val[data-i="1"]{opacity:1;translate:12px 0}.ct[data-on="2"] .val[data-i="2"]{opacity:1;translate:12px 0}
+.ct h3{margin:0;font:400 clamp(34px,3.2vw,46px)/1.1 var(--display);font-variation-settings:'opsz' 40;transition:color .35s ease}
+.ct .ph{margin:6px 0 0;color:var(--ink2)}
+@keyframes ct-in{from{scale:.7;rotate:-40deg;opacity:0}}
+.ct.js:not(.in) .seal{opacity:0}
+.ct.js.in .seal{animation:ct-in 1.2s var(--spring) backwards}
+@media (max-width:980px){.ct{padding:72px 0 80px}.ct .stage{grid-template-columns:1fr;gap:32px}.ct .seal{width:min(100%,320px);justify-self:center}.ct h3{font-size:34px}}
+@media (prefers-reduced-motion:reduce){.ct *{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<div class="pg" data-src="Awwwards: insigne cu text circular care se rotește">
+<section class="cr ct" aria-labelledby="cr-h" ref="{{ secRef }}"><div class="wrap stage"><div class="seal" aria-hidden="true"><svg class="ring" viewBox="0 0 400 400"><defs><path id="cr-circ" d="M200 50A150 150 0 1 1 199.99 50"></path></defs><g class="dots"><circle cx="200.0" cy="50.0" r="4"></circle><circle cx="329.9" cy="275.0" r="4"></circle><circle cx="70.1" cy="275.0" r="4"></circle></g><text class="wd" data-i="0"><textPath href="#cr-circ" startOffset="16.67%" text-anchor="middle">PREZENȚĂ</textPath></text><text class="wd" data-i="1"><textPath href="#cr-circ" startOffset="50.00%" text-anchor="middle">COMUNITATE</textPath></text><text class="wd" data-i="2"><textPath href="#cr-circ" startOffset="83.33%" text-anchor="middle">CREATIVITATE</textPath></text></svg><div class="disc"><svg viewBox="0 0 64 80" aria-hidden="true"><g fill="none" stroke="currentColor" style="stroke-linecap:round;stroke-linejoin:round"><path d="M22 6H42" style="stroke-width:5"></path><path d="M26 7C26 13 27 15 25 18C17 24 12 31 12 43C12 55 19 64 24 72H40C45 64 52 55 52 43C52 31 47 24 39 18C37 15 38 13 38 7" style="stroke-width:3.6"></path><path d="M14.5 35Q32 40 49.5 35M12.6 48Q32 53 51.4 48" style="stroke-width:3.2"></path></g></svg></div></div><div><h2 class="disp" id="cr-h">Ce credem</h2><ul><li class="val" data-i="0"><h3>Prezență</h3><p class="ph">[FRAZA PENTRU PREZENȚĂ]</p></li><li class="val" data-i="1"><h3>Comunitate</h3><p class="ph">[FRAZA PENTRU COMUNITATE]</p></li><li class="val" data-i="2"><h3>Creativitate</h3><p class="ph">[FRAZA PENTRU CREATIVITATE]</p></li></ul></div></div></section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":916}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this, s = this.sec; if (!s) return;
+    var reduce = this.reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    s.classList.add('js');
+    if (reduce || !window.IntersectionObserver) s.classList.add('in');
+    else { this.io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { s.classList.add('in'); self.io.disconnect(); } }, { threshold: 0.25 }); this.io.observe(s); }
+    var ring = s.querySelector('.ring'), a = 0, v = 9, target = null, last = performance.now(), raf = 0, vis = true;
+    var tick = function (now) {
+      var dt = Math.min(0.05, (now - last) / 1000); last = now;
+      if (target === null) { v += (9 - v) * Math.min(1, dt * 2); a += v * dt; }            // 9°/s drift
+      else { var d = ((target - a) % 360 + 540) % 360 - 180; a += d * Math.min(1, dt * 4); v = 0; }   // ease the chosen word to the top
+      ring.style.transform = 'rotate(' + a.toFixed(2) + 'deg)';
+      raf = vis ? requestAnimationFrame(tick) : 0;
+    };
+    if (!reduce) raf = requestAnimationFrame(tick);
+    this.over = function (e) {
+      var el = e.target.closest && e.target.closest('.val'); if (!el) { s.removeAttribute('data-on'); target = null; return; }
+      var i = +el.getAttribute('data-i'); s.setAttribute('data-on', i); target = -i * 120 - 60;
+    };
+    this.out = function () { s.removeAttribute('data-on'); target = null; };
+    s.addEventListener('pointerover', this.over); s.addEventListener('pointerleave', this.out);
+    if (window.IntersectionObserver && !reduce) { this.io2 = new IntersectionObserver(function (es) { vis = es[0].isIntersecting; if (vis && !raf) { last = performance.now(); raf = requestAnimationFrame(tick); } }); this.io2.observe(s); }
+    this.stop = function () { cancelAnimationFrame(raf); };
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); if (this.stop) this.stop(); if (this.io2) this.io2.disconnect(); if (this.sec && this.over) { this.sec.removeEventListener('pointerover', this.over); this.sec.removeEventListener('pointerleave', this.out); } }
+  renderVals() {
+    var self = this;
+    if (!this.cb) this.cb = { secRef: function (el) { self.sec = el; } };
+    return this.cb;
+  }
+}
+</script>
+</body>
+</html>

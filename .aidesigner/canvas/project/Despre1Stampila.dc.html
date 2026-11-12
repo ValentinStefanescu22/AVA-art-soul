@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Despre 1: ștampila cu portret</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra-d:#9C472C;--clay:#C07A4E;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid var(--terra-d);outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.01em;text-wrap:balance}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+/* the bottom of the hero, for context */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+.sec{padding:96px 0 120px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.kicker{display:flex;align-items:center;gap:14px;margin:0;font:500 12px/1 var(--text);letter-spacing:.24em;text-transform:uppercase;color:var(--terra-d)}
+.kicker::before{content:"";width:34px;height:1px;background:currentColor}
+.lead{margin:22px 0 0;font-size:clamp(30px,2.9vw,42px);line-height:1.25}
+.body{margin:22px 0 0;max-width:50ch;color:var(--ink2);text-wrap:pretty}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:22px;font-weight:500;text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.spin{animation:spin 80s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ring-t{font:500 12.5px var(--text);letter-spacing:.34em;fill:var(--ink)}
+@media (max-width:820px){.wrap{padding:0 20px}.sec{padding:64px 0 84px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}.pg *{transition:none!important}}
+
+.grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:96px;align-items:center}
+.seal{position:relative;width:100%;max-width:440px;aspect-ratio:1;justify-self:center;margin:0}
+.seal .spin{position:absolute;inset:0;width:100%;height:100%}
+.seal::before{content:"";position:absolute;inset:3%;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(58,42,32,.22)}
+.seal .ph{position:absolute;inset:15%;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 50% 30%,#EFE1CC,#DCC2A0 55%,#C9A47E);box-shadow:0 30px 60px -30px rgba(58,42,32,.45),inset 0 0 0 1px rgba(58,42,32,.25)}
+.seal img{width:100%;height:100%;object-fit:cover}
+.creds{margin:34px 0 0;padding:0;list-style:none;border-top:1px solid rgba(58,42,32,.16)}
+.creds li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:24px;padding:14px 0;border-bottom:1px solid rgba(58,42,32,.16);font-size:15px}
+.creds b{font-weight:500}
+.creds span{color:var(--ink2)}
+@media (max-width:820px){.grid{grid-template-columns:1fr;gap:44px}.seal{max-width:300px}.creds li{grid-template-columns:1fr;gap:2px}}
+</style>
+</helmet>
+<div class="pg">
+<div class="heroend" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0 86C240 62 480 62 720 86C960 110 1200 110 1440 86L1440 120L0 120Z" style="fill:#F4EDE4"></path></svg></div>
+<section class="sec" id="despre" aria-label="Despre noi">
+<div class="wrap grid">
+<figure class="seal"><svg class="spin" viewBox="0 0 440 440" aria-hidden="true"><defs><path id="r1" d="M220.0 220.0m-196 0a196 196 0 1 1 392 0a196 196 0 1 1 -392 0"></path></defs><text class="ring-t"><textPath href="#r1">AVA · ART &amp; SOUL · AUTOCUNOAȘTERE PRIN CREAȚIE · AVA · ART &amp; SOUL · AUTOCUNOAȘTERE PRIN CREAȚIE ·</textPath></text></svg><div class="ph"><img src="/_blob/61696ece195f787b8ccb139b396a6450" alt="Alessia Văideanu, fondatoarea AVA Art &amp; Soul"></div></figure>
+<div>
+<p class="kicker">Despre noi</p>
+<h2 class="lead disp">Sunt Alessia și cred că mâinile știu uneori lucruri pe care mintea încă nu le-a spus.</h2>
+<p class="body">Fac ateliere în care lutul e doar începutul: restul e despre tine, despre ce simți și despre oamenii cu care împarți masa.</p>
+<ul class="creds"><li><b>Consilier pentru dezvoltare personală</b><span>curs acreditat Sandonia Institute, 2026</span></li><li><b>Licență în Psihologie</b><span>Universitatea Transilvania Brașov, 2026</span></li><li><b>Masterat în curs</b><span>FPSE, Universitatea din București</span></li><li><b>Ceramică</b><span>3+ ani de experiență, cursuri de specializare la Brașov</span></li></ul>
+<a class="more" href="#povestea">Povestea mea <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a>
+</div>
+</div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

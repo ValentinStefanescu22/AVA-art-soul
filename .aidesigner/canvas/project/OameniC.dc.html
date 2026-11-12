@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Ce spun oamenii C: postare</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.og{position:relative;padding:120px 0 128px;overflow:hidden}
+.og .head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:52px}
+.og h2{font-size:clamp(44px,5vw,72px);line-height:1}
+.og .links{display:flex;flex-wrap:wrap;gap:4px 28px}
+.og .links .more{margin-top:0;color:var(--ink)}
+.og img{display:block}
+.og .q{margin:0}
+.og .q .qm{flex:none;width:30px;height:22px;color:#B4583A;margin-bottom:16px}
+.og .q blockquote{margin:0;font:400 22px/1.35 var(--display);font-variation-settings:'opsz' 20;letter-spacing:-.005em;text-wrap:pretty}
+.og .q figcaption{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline;margin-top:18px;font-size:15px}
+.og .q figcaption b{font-weight:600}
+.og .q figcaption span{color:var(--ink2)}
+.og button{appearance:none;font:inherit;color:inherit;cursor:pointer}
+.og .rd{display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:#FBF7F0;color:#262626;box-shadow:0 1px 3px rgba(0,0,0,.14),0 6px 16px -6px rgba(0,0,0,.22);transition:transform .2s cubic-bezier(.2,.7,.2,1)}
+.og .rd:hover{transform:scale(1.06)}.og .rd svg{width:18px;height:18px}.og .rd.pv svg{transform:rotate(180deg)}
+.og .rd:focus-visible,.og .tab:focus-visible{outline:2px solid #9C472C;outline-offset:3px}
+@media (max-width:820px){.og{padding:76px 0 84px}.og .head{flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:32px}.og h2{font-size:clamp(40px,11vw,52px)}.og .q blockquote{font-size:20px}}
+
+.oc{background:linear-gradient(180deg,#F4EDE4 0%,#EDE0CD 100%)}
+.oc .grid{display:grid;grid-template-columns:480px minmax(0,1fr);gap:96px;align-items:start}
+.oc .post{background:#FFFDF9;border:1px solid rgba(58,42,32,.12);border-radius:22px;corner-shape:squircle;overflow:hidden;box-shadow:0 30px 60px -40px rgba(70,35,15,.45)}
+.oc .ph{display:flex;align-items:center;gap:12px;padding:14px 16px;font-size:14px}
+.oc .ph img{width:34px;height:34px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px #F2C79C}
+.oc .ph b{display:block;font-weight:600}.oc .ph span{color:var(--ink2);font-size:13px}
+.oc .car{position:relative;aspect-ratio:1;overflow:hidden;background:#2A170E}
+.oc .car ul{list-style:none;margin:0;padding:0;display:flex;height:100%;transition:transform .55s cubic-bezier(.22,.8,.2,1)}
+.oc .car li{flex:none;width:100%;height:100%}
+.oc .car img{width:100%;height:100%;object-fit:cover}
+.oc .car .rd{position:absolute;top:50%;margin-top:-16px;width:32px;height:32px}
+.oc .car .rd svg{width:16px;height:16px}
+.oc .car .rd::before{content:"";position:absolute;inset:-6px}
+.oc .car .pv{left:12px}.oc .car .nx{right:12px}
+.oc .acts{display:flex;align-items:center;gap:16px;padding:12px 16px 4px}
+.oc .acts svg{width:24px;height:24px}.oc .acts .sv{margin-left:auto}
+.oc .dts{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);pointer-events:none;display:flex;justify-content:center;gap:4px}
+.oc .acts{position:relative}
+.oc .dts span{width:6px;height:6px;border-radius:50%;background:#CDB79C}
+.oc .cap{margin:14px 16px 0;font-size:15px;line-height:1.5}
+.oc .cap b{font-weight:600}
+.oc .cms{list-style:none;margin:14px 0 0;padding:0 16px 20px;display:flex;flex-direction:column;gap:14px}
+.oc .cm{display:flex;gap:12px;font-size:15px;line-height:1.5}
+.oc .cm p{margin:0;font-family:var(--display);font-variation-settings:'opsz' 20;font-size:18px;line-height:1.35}
+.oc .cm p b{font-family:var(--text);font-size:15px;font-weight:600;margin-right:4px}
+.oc .cm .w{display:block;margin-top:4px;font-size:13px;color:var(--ink2)}
+.oc .av{flex:none;width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#E9D2B5,#C9A27E)}
+.oc .r h2{margin-bottom:22px}
+.oc .lead{margin:0 0 36px;color:var(--ink2);font:400 italic 22px/1.35 var(--display);font-variation-settings:'opsz' 20}
+.oc .pg3{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;border-radius:16px;overflow:hidden}
+.oc .pg3 li{aspect-ratio:1;overflow:hidden}
+.oc .pg3 img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .3s}
+.oc .pg3 li:hover img{transform:scale(1.05);opacity:.9}
+.oc .links{margin-top:28px}
+.oc[data-a="0"] .car ul{transform:translateX(-0%)}.oc[data-a="0"] .dts .d0{background:#9C472C}.oc[data-a="1"] .car ul{transform:translateX(-100%)}.oc[data-a="1"] .dts .d1{background:#9C472C}.oc[data-a="2"] .car ul{transform:translateX(-200%)}.oc[data-a="2"] .dts .d2{background:#9C472C}.oc[data-a="3"] .car ul{transform:translateX(-300%)}.oc[data-a="3"] .dts .d3{background:#9C472C}
+.oc[data-a="0"] .car .pv,.oc[data-a="3"] .car .nx{opacity:0;pointer-events:none}
+@media (max-width:820px){.oc .grid{grid-template-columns:1fr;gap:40px}.oc .r{display:contents}.oc .r h2{order:-2;margin:0}.oc .lead{order:-1;margin:-24px 0 0;font-size:20px}.oc .cm p{font-size:17px}}
+</style>
+</helmet>
+<div class="pg">
+<section class="og oc" id="oameni" aria-labelledby="og-h" data-a="0" data-n="4" ref="{{ rootRef }}">
+<div class="wrap grid">
+<article class="post" aria-label="Postare: atelierul din octombrie">
+<div class="ph"><img src="/_blob/61696ece195f787b8ccb139b396a6450" alt=""><div><b>ava.art.soul</b><span>București</span></div></div>
+<div class="car"><ul><li class="s0"><img src="/_blob/988e3a505fd5ae1db56d481b3d1e33b1" alt="Atelierul din octombrie: opt oameni în jurul unei mese cu lut, ceai și prăjitură" style="object-position:50% 55%" loading="lazy"></li><li class="s1"><img src="/_blob/42c18be93cd80d91d6d1d16793e790c6" alt="Doi participanți își dau din mână în mână un bol de lut, la atelierul din octombrie" style="object-position:40% 50%" loading="lazy"></li><li class="s2"><img src="/_blob/dad600a42f9bdc35b94ba47b4a49fc4a" alt="O femeie pictează un bol de ceramică (fotografie provizorie)" style="object-position:40% 50%" loading="lazy"></li><li class="s3"><img src="/_blob/74f239bfbd557a0a5a661ddd26484b66" alt="Boluri de ceramică arse, în culori diferite (fotografie provizorie)" style="object-position:50% 40%" loading="lazy"></li></ul>
+<button class="rd pv" type="button" aria-label="Fotografia anterioară" data-d="-1" onClick="{{ step }}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8L6 12.5" fill="none" stroke="currentColor" style="stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"></path></svg></button>
+<button class="rd nx" type="button" aria-label="Fotografia următoare" data-d="1" onClick="{{ step }}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8L6 12.5" fill="none" stroke="currentColor" style="stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"></path></svg></button></div>
+<div class="acts" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:round;stroke-linecap:round"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"></path></svg><svg viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:round;stroke-linecap:round"><path d="M20 11.5a8 8 0 01-11.6 7.1L4 20l1.4-4.2A8 8 0 1120 11.5z"></path></svg><svg viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:round;stroke-linecap:round"><path d="M21 4L10 14M21 4l-7 17-4-7-7-4 18-6z"></path></svg><span class="sv"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:round;stroke-linecap:round"><path d="M6 3h12v18l-6-4.5L6 21z"></path></svg></span><div class="dts"><span class="d0"></span><span class="d1"></span><span class="d2"></span><span class="d3"></span></div></div>
+<p class="cap"><b>ava.art.soul</b> [Descrierea postării: câteva cuvinte despre atelierul din octombrie]</p>
+<ul class="cms" aria-label="Ce spun oamenii"><li class="cm"><span class="av" aria-hidden="true"></span><div><p><b>Costin</b> Foarte frumos și cozy, chiar am reușit să reflect asupra mea cât timp lucram cu lutul.</p><span class="w"></span></div></li><li class="cm"><span class="av" aria-hidden="true"></span><div><p><b>Mario</b> A fost o experiență foarte plăcută și relaxantă. Pauzele de socializare dintre activități au fost exact ce trebuia.</p><span class="w"></span></div></li><li class="cm"><span class="av" aria-hidden="true"></span><div><p><b>Mădălina</b> Mi-a plăcut «intenția» cu care am pornit atelierul și faptul că acum obiectul semnifică ceva cu adevărat deosebit pentru fiecare.</p><span class="w"></span></div></li></ul>
+</article>
+<div class="r"><h2 class="disp" id="og-h">Ce spun oamenii</h2><p class="lead">Din ateliere, pe Instagram.</p>
+<ul class="pg3"><li><img src="/_blob/af69ff19bcdcf8c0410f4609e748d3a2" alt="Masa atelierului din octombrie văzută de sus, cu lut, căni și pensule" style="object-position:50% 50%" loading="lazy"></li><li><img src="/_blob/dad600a42f9bdc35b94ba47b4a49fc4a" alt="O femeie pictează un bol de ceramică (fotografie provizorie)" style="object-position:40% 50%" loading="lazy"></li><li><img src="/_blob/f2f68570a5d5b88f15c8b0c9d18a7c34" alt="Două persoane stau la masă, cu câte o cană în mâini (fotografie provizorie)" style="object-position:50% 50%" loading="lazy"></li><li><img src="/_blob/27d62de5381eeee8e9ab504567023c22" alt="Mâini care modelează un bol de lut (fotografie provizorie)" style="object-position:50% 40%" loading="lazy"></li><li><img src="/_blob/988e3a505fd5ae1db56d481b3d1e33b1" alt="Atelierul din octombrie: opt oameni în jurul unei mese cu lut, ceai și prăjitură" style="object-position:50% 55%" loading="lazy"></li><li><img src="/_blob/74f239bfbd557a0a5a661ddd26484b66" alt="Boluri de ceramică arse, în culori diferite (fotografie provizorie)" style="object-position:50% 40%" loading="lazy"></li><li><img src="/_blob/70ad22aacebcba3dbca6580a21b45332" alt="Un grup lucrează lutul într-un atelier de ceramică (fotografie provizorie)" style="object-position:50% 45%" loading="lazy"></li><li><img src="/_blob/18303291bcb407fd0b37b52607ecebba" alt="Mâini care își dau din mână în mână un vas de lut (fotografie provizorie)" style="object-position:50% 45%" loading="lazy"></li><li><img src="/_blob/4b9ba5277b8dd3fad28a1395c891c1d1" alt="Un copil zâmbește, cu un vas de lut în mâini (fotografie provizorie)" style="object-position:60% 35%" loading="lazy"></li></ul><div class="links"><a class="more" href="#galerie">Vezi toată galeria <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a><a class="more" href="https://www.instagram.com/ava.art.soul/">@ava.art.soul pe Instagram <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a></div></div>
+</div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1200}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this, r = this.root, reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (r) {
+      var tabs = r.querySelectorAll('.tab');
+      for (var i = 0; i < tabs.length; i++) tabs[i].setAttribute('aria-pressed', String(tabs[i].getAttribute('data-f') === r.getAttribute('data-f')));
+    }
+    if (!r || reduce || !r.hasAttribute('data-rotate')) return;
+    r.addEventListener('pointerenter', function () { self.hold = true; });
+    r.addEventListener('pointerleave', function () { self.hold = false; });
+    this.timer = setInterval(function () {
+      if (self.hold || Date.now() - (self.last || 0) < 12000) return;
+      r.setAttribute('data-a', String((parseInt(r.getAttribute('data-a'), 10) + 1) % 3));
+    }, 7000);
+  }
+  componentWillUnmount() { clearInterval(this.timer); }
+  renderVals() {
+    var self = this;
+    if (!this.cb) this.cb = {
+      rootRef: function (el) { self.root = el; }, trackRef: function (el) { self.track = el; },
+      pick: function (e) { self.last = Date.now(); self.root.setAttribute('data-a', e.currentTarget.getAttribute('data-i')); },
+      step: function (e) {
+        var n = parseInt(self.root.getAttribute('data-n'), 10), a = parseInt(self.root.getAttribute('data-a'), 10) + parseInt(e.currentTarget.getAttribute('data-d'), 10);
+        self.root.setAttribute('data-a', String(Math.max(0, Math.min(n - 1, a))));
+      },
+      filter: function (e) {
+        var f = e.currentTarget.getAttribute('data-f'); self.root.setAttribute('data-f', f);
+        var tabs = self.root.querySelectorAll('.tab');
+        for (var i = 0; i < tabs.length; i++) tabs[i].setAttribute('aria-pressed', String(tabs[i] === e.currentTarget));
+        if (self.track) self.track.scrollLeft = 0;
+      },
+      scroll: function (e) { if (self.track) self.track.scrollBy({ left: 420 * parseInt(e.currentTarget.getAttribute('data-d'), 10), behavior: 'smooth' }); }
+    };
+    return this.cb;
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Oamenii la masă 3: masa de lucru · mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.ms{position:relative;overflow:hidden;--spring:cubic-bezier(.3,1.32,.5,1);--soft:cubic-bezier(.22,1,.36,1)}
+.ms h2{font-size:clamp(40px,4.4vw,64px);line-height:1.05;text-wrap:balance}
+.ms .lead{margin:22px 0 0;max-width:46ch;font-size:19px;line-height:1.7;color:#4A382C;text-wrap:pretty}
+.qt{margin:0;padding:26px 26px 24px;border-radius:24px;corner-shape:squircle;background:#FBF7F0;box-shadow:0 1px 0 rgba(58,42,32,.05),0 22px 44px -30px rgba(58,30,15,.45)}
+.qt .qm{width:26px;height:20px;color:var(--terra)}
+.qt blockquote{margin:14px 0 0;font:italic 400 21px/1.4 var(--display);font-variation-settings:'opsz' 20;color:var(--ink);text-wrap:pretty}
+.qt figcaption{margin-top:14px;font:600 15px/1 var(--text);color:var(--ink2)}
+.ms .ctl{display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:rgba(58,42,32,.08);color:var(--ink);cursor:pointer;transition:background-color .2s ease}
+.ms .ctl:hover{background:rgba(58,42,32,.14)}.ms .ctl:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.ms .ctl i{display:flex;gap:4px}.ms .ctl i::before,.ms .ctl i::after{content:"";width:3px;height:13px;border-radius:2px;background:currentColor}
+.ms .ctl[aria-pressed="true"] i::before{width:0;height:0;border-radius:0;background:none;border-left:11px solid currentColor;border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
+.ms .ctl[aria-pressed="true"] i::after{display:none}
+@media (max-width:980px){.ms .lead{font-size:18px}.qt blockquote{font-size:19px}}
+
+.mt{background:linear-gradient(180deg,#F4EDE4 0%,#EDE0CD 100%);padding:112px 0 120px}
+.mt .head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 72px;align-items:end;margin-bottom:44px}
+.mt .head .lead{margin:0}
+.mt .table{position:relative;height:640px;border-radius:40px;corner-shape:squircle;
+  background:radial-gradient(ellipse 60% 50% at 50% 40%,rgba(255,236,210,.35),rgba(255,236,210,0) 70%),repeating-linear-gradient(92deg,rgba(90,50,25,.05) 0 2px,transparent 2px 22px),linear-gradient(180deg,#C99A72 0%,#B9875F 100%);
+  box-shadow:inset 0 2px 0 rgba(255,236,210,.35),inset 0 -20px 40px rgba(70,35,15,.25),0 40px 70px -46px rgba(58,30,15,.7)}
+.mt .it{position:absolute;left:var(--x);top:var(--y);margin:0;box-sizing:border-box;touch-action:none;cursor:grab;user-select:none;rotate:var(--r);transition:box-shadow .3s ease}
+.mt .it.drag{cursor:grabbing;z-index:20;box-shadow:0 40px 50px -26px rgba(40,20,8,.6)}
+.mt .pol{width:240px;padding:12px 12px 44px;background:#FBF7F0;box-shadow:0 22px 30px -18px rgba(40,20,8,.55),0 2px 4px rgba(40,20,8,.2)}
+.mt .pol img{display:block;width:100%;aspect-ratio:1;object-fit:cover;pointer-events:none}
+.mt .note{width:280px;border-radius:6px;background:#F6EBD3;box-shadow:0 22px 30px -18px rgba(40,20,8,.5),0 2px 4px rgba(40,20,8,.18)}
+.mt .note::before{content:"";position:absolute;left:50%;top:-12px;width:84px;height:24px;margin-left:-42px;rotate:-3deg;background:rgba(244,237,228,.7);box-shadow:0 1px 2px rgba(40,20,8,.15)}
+.mt .note blockquote{font-size:19px}
+@keyframes mt-drop{from{opacity:0;scale:1.25;translate:0 -30px;rotate:calc(var(--r) * -2)}60%{opacity:1}}
+.mt.js:not(.in) .it{opacity:0}
+.mt.js.in .it{animation:mt-drop .9s var(--spring) backwards;animation-delay:calc(var(--k) * 120ms)}
+@media (hover:none),(max-width:980px){.mt .it{cursor:default;touch-action:auto}}
+@media (max-width:980px){.mt{padding:72px 0 80px}.mt .head{grid-template-columns:1fr;gap:18px;margin-bottom:28px}.mt .table{height:1180px;border-radius:30px}
+  .mt .it{left:var(--xm);top:var(--ym);rotate:var(--rm)}.mt .pol{width:62%;padding:9px 9px 30px}.mt .note{width:76%}.mt .note blockquote{font-size:17px}}
+@media (prefers-reduced-motion:reduce){.mt .it{animation:none!important}}
+</style>
+</helmet>
+<div class="pg" data-src="Apple Freeform: tabla pe care muți pozele și bilețelele cu degetul">
+<section class="ms mt" aria-labelledby="ms-h" ref="{{ secRef }}"><div class="wrap"><div class="head"><h2 class="disp" id="ms-h">Oamenii care vin la masă</h2><p class="lead">Fiecare atelier devine un prilej de a încetini, de a te reconecta cu tine și de a cunoaște oameni noi în jurul aceleiași mese. Unii oameni vin timizi și pleacă râzând, alții vin singuri și pleacă cu prieteni noi, iar împreună fac din AVA un loc al apartenenței, care se simte ca „acasă”.</p></div><div class="table"><figure class="it pol" style="--k: 0; --x: 6%; --y: 8%; --r: -6deg; --xm: 6%; --ym: 2%; --rm: -5deg"><img src="/_blob/42c18be93cd80d91d6d1d16793e790c6" alt="Doi participanți își dau din mână în mână un bol de lut, la un atelier AVA" draggable="false"></figure><figure class="it note qt" style="--k: 1; --x: 34%; --y: 4%; --r: 3deg; --xm: 19%; --ym: 18%; --rm: 3deg"><svg class="qm" viewBox="0 0 32 24" aria-hidden="true"><path d="M0 24V14C0 6 4.5 1.5 12 0l1.4 3C9 4.6 7 7.4 7 11h6v13zm18 0V14C18 6 22.5 1.5 30 0l1.4 3C27 4.6 25 7.4 25 11h6v13z" style="fill:currentColor"></path></svg><blockquote>Foarte frumos și cozy, chiar am reușit să reflect asupra mea cât timp lucram cu lutul.</blockquote><figcaption>Costin</figcaption></figure><figure class="it pol" style="--k: 2; --x: 62%; --y: 10%; --r: 4deg; --xm: 8%; --ym: 33%; --rm: 4deg"><img src="/_blob/988e3a505fd5ae1db56d481b3d1e33b1" alt="Participanți modelând lut în jurul mesei, la un atelier AVA" draggable="false"></figure><figure class="it note qt" style="--k: 3; --x: 70%; --y: 52%; --r: -3deg; --xm: 18%; --ym: 51%; --rm: -3deg"><svg class="qm" viewBox="0 0 32 24" aria-hidden="true"><path d="M0 24V14C0 6 4.5 1.5 12 0l1.4 3C9 4.6 7 7.4 7 11h6v13zm18 0V14C18 6 22.5 1.5 30 0l1.4 3C27 4.6 25 7.4 25 11h6v13z" style="fill:currentColor"></path></svg><blockquote>A fost o experiență foarte plăcută și relaxantă. Pauzele de socializare dintre activități au fost exact ce trebuia.</blockquote><figcaption>Mario</figcaption></figure><figure class="it pol" style="--k: 4; --x: 38%; --y: 46%; --r: -2deg; --xm: 4%; --ym: 66%; --rm: -2deg"><img src="/_blob/74f239bfbd557a0a5a661ddd26484b66" alt="Boluri de lut terminate, așezate unul lângă altul" draggable="false"></figure><figure class="it note qt" style="--k: 5; --x: 4%; --y: 58%; --r: 2deg; --xm: 17%; --ym: 81%; --rm: 2deg"><svg class="qm" viewBox="0 0 32 24" aria-hidden="true"><path d="M0 24V14C0 6 4.5 1.5 12 0l1.4 3C9 4.6 7 7.4 7 11h6v13zm18 0V14C18 6 22.5 1.5 30 0l1.4 3C27 4.6 25 7.4 25 11h6v13z" style="fill:currentColor"></path></svg><blockquote>O activitate foarte relaxantă într-un cadru intim și frumos. Revin cu siguranță!</blockquote><figcaption>Adina</figcaption></figure></div></div></section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1677}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this, s = this.sec; if (!s) return;
+    var reduce = this.reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    s.classList.add('js');
+    if (reduce || !window.IntersectionObserver) s.classList.add('in');
+    else { this.io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { s.classList.add('in'); self.io.disconnect(); } }, { threshold: 0.2 }); this.io.observe(s); }
+    if (reduce) return;
+    var table = s.querySelector('.table'), z = 10;
+    // each item keeps its own offset (dx, dy) and angle; a drag moves it, release keeps the throw's speed and lets it glide to a stop
+    this.down = function (e) {
+      if (e.pointerType !== 'mouse' || innerWidth <= 980) return;
+      var it = e.target.closest && e.target.closest('.it'); if (!it) return;
+      e.preventDefault();
+      var q = it._q || (it._q = { dx: 0, dy: 0, vx: 0, vy: 0, a: parseFloat(getComputedStyle(it).rotate) || 0, raf: 0 });
+      cancelAnimationFrame(q.raf); it.style.animation = 'none'; it.style.zIndex = ++z; it.classList.add('drag');
+      var x0 = e.clientX, y0 = e.clientY, ox = q.dx, oy = q.dy, lx = x0, ly = y0, lt = performance.now();
+      var tb = table.getBoundingClientRect(), ib = it.getBoundingClientRect();
+      var minX = tb.left - ib.left + ox + 8, maxX = tb.right - ib.right + ox - 8, minY = tb.top - ib.top + oy + 8, maxY = tb.bottom - ib.bottom + oy - 8;
+      var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
+      var put = function () { it.style.translate = q.dx.toFixed(1) + 'px ' + q.dy.toFixed(1) + 'px'; it.style.rotate = q.a.toFixed(2) + 'deg'; };
+      var mv = function (ev) {
+        var now = performance.now(), dt = Math.max(1, now - lt);
+        q.vx = (ev.clientX - lx) / dt * 16; q.vy = (ev.clientY - ly) / dt * 16; lx = ev.clientX; ly = ev.clientY; lt = now;
+        q.dx = clamp(ox + ev.clientX - x0, minX, maxX); q.dy = clamp(oy + ev.clientY - y0, minY, maxY);
+        q.a += (q.vx * 0.6 - q.a) * 0.08;   // swings a little in the direction it is dragged
+        put();
+      };
+      var up = function () {
+        removeEventListener('pointermove', mv); removeEventListener('pointerup', up); it.classList.remove('drag');
+        var rest = (Math.random() * 8 - 4);
+        var glide = function () {
+          q.vx *= 0.9; q.vy *= 0.9; q.dx = clamp(q.dx + q.vx, minX, maxX); q.dy = clamp(q.dy + q.vy, minY, maxY); q.a += (rest - q.a) * 0.1; put();
+          if (Math.abs(q.vx) + Math.abs(q.vy) + Math.abs(rest - q.a) > 0.05) q.raf = requestAnimationFrame(glide);
+        };
+        q.raf = requestAnimationFrame(glide);
+      };
+      addEventListener('pointermove', mv); addEventListener('pointerup', up);
+    };
+    table.addEventListener('pointerdown', this.down);
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); if (this.sec && this.down) this.sec.querySelector('.table').removeEventListener('pointerdown', this.down); }
+  renderVals() {
+    var self = this;
+    if (!this.cb) this.cb = { secRef: function (el) { self.sec = el; } };
+    return this.cb;
+  }
+}
+</script>
+</body>
+</html>

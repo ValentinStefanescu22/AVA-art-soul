@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ștampila în lut (preview)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Commissioner:wght,FLAR@300..600,0..100&family=Pinyon+Script&display=swap">
+<style>
+body{margin:0;background:#CFAD87}
+.hero{--ink:#3A2A20;--ink2:#3C2C22;--paper:#F4EDE4;--terra-d:#8E3F26;position:relative;min-height:860px;overflow:hidden;display:flex;flex-direction:column;color:var(--ink);font:400 17px/1.6 'Commissioner',system-ui,sans-serif;font-variation-settings:'FLAR' 40;-webkit-font-smoothing:antialiased;background:radial-gradient(120% 110% at 30% 25%,#EBDAC2 0%,#DEC3A2 38%,#CFAD87 70%,#BF9870 100%);isolation:isolate}
+.grain{position:absolute;inset:0;width:100%;height:100%;z-index:0;mix-blend-mode:overlay;opacity:.9;pointer-events:none}
+.nav{position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;max-width:1280px;margin:0 auto;padding:22px 40px;box-sizing:border-box}
+.brand{display:inline-flex;align-items:center;gap:12px;color:inherit;text-decoration:none;min-height:44px}
+.brand svg{width:24px;height:30px}
+.brand-word{display:flex;flex-direction:column;line-height:1}
+.brand-ava{font:400 21px/1 'Gloock',Georgia,serif;letter-spacing:.16em}
+.brand-sub{font:500 11px/1 'Commissioner',sans-serif;letter-spacing:.24em;margin-top:5px}
+.links{display:flex;gap:2px;margin:0;padding:4px;list-style:none;border-radius:999px;background:rgba(244,237,228,.38);box-shadow:inset 0 1px 0 rgba(255,250,242,.55),0 1px 2px rgba(58,42,32,.06);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%)}
+.links a{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;font-size:15px;font-weight:500;color:var(--ink);text-decoration:none;transition:background-color .2s ease}
+.links a:hover{background:rgba(244,237,228,.7)}
+.links a[aria-current]{background:var(--paper)}
+.nav-end{display:flex;align-items:center;gap:8px}
+.lang{display:flex;font-size:13px;font-weight:500;letter-spacing:.06em}
+.lang a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:var(--ink2);text-decoration:none}
+.lang a[aria-current]{color:var(--ink)}
+.menu-btn{display:none;width:44px;height:44px;border:0;border-radius:999px;background:rgba(244,237,228,.5);color:var(--ink);align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(12px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 28px;border:0;border-radius:999px;background:var(--ink);color:var(--paper);font:500 15px/1 'Commissioner',sans-serif;letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:transform .12s ease-out,background-color .25s ease}
+.btn:hover{background:var(--terra-d)}
+.btn:active{transform:scale(.97)}
+.btn-sm{min-height:44px;padding:0 20px;font-size:14px}
+.btn-line{background:rgba(244,237,228,.4);color:var(--ink);box-shadow:inset 0 0 0 1px rgba(58,42,32,.4);backdrop-filter:blur(10px)}
+.btn-line:hover{background:rgba(244,237,228,.75)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.stage{position:relative;z-index:2;flex:1;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,6vw,96px);align-items:center;width:100%;max-width:1280px;margin:0 auto;padding:24px 40px 72px;box-sizing:border-box}
+.stamp{position:relative;width:min(100%,460px);aspect-ratio:1;justify-self:center}
+.stamp svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.ao{opacity:.16}
+.stamp-press{animation:press 1.3s cubic-bezier(.25,1,.5,1) .15s both}
+@keyframes press{from{transform:scale(1.035)}to{transform:none}}
+.stamp-text{font:500 21px 'Commissioner',sans-serif;letter-spacing:.28em}
+.copy{max-width:540px}
+.ava{display:block;font:400 clamp(26px,2.4vw,34px)/1 'Gloock',Georgia,serif;letter-spacing:.28em}
+.soul{display:block;margin-top:2px;font:400 clamp(38px,3.6vw,52px)/1.05 'Pinyon Script',cursive;color:#7A3520}
+h1{margin:18px 0 0;font:400 clamp(44px,5.2vw,78px)/1.02 'Gloock',Georgia,serif;letter-spacing:-.015em;text-wrap:balance}
+.lede{margin:22px 0 0;max-width:38ch;color:var(--ink2);font-size:clamp(17px,1.35vw,19px);text-wrap:pretty}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.next{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;color:var(--ink2);font-size:15px;text-decoration:none}
+.next b{font-weight:500;color:var(--ink);text-decoration:underline;text-decoration-color:rgba(58,42,32,.3);text-underline-offset:5px;transition:text-decoration-color .2s ease}
+.next:hover b{text-decoration-color:var(--ink)}
+.dot{width:7px;height:7px;border-radius:50%;background:#5E6B4A;box-shadow:0 0 0 4px rgba(94,107,74,.18)}
+.num{font-variant-numeric:tabular-nums lining-nums}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;opacity:0;transition:opacity .6s ease;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.45);will-change:transform}
+.sprite.on{opacity:1}
+.rise{animation:rise .9s cubic-bezier(.25,1,.5,1) both}
+.d1{animation-delay:.55s}.d2{animation-delay:.65s}.d3{animation-delay:.75s}.d4{animation-delay:.85s}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (max-width:1040px){.links{display:none}.menu-btn{display:inline-flex}}
+@media (max-width:820px){.nav{padding:14px 16px}.nav .btn-sm,.lang{display:none}.stage{grid-template-columns:1fr;gap:28px;padding:8px 20px 56px}.stamp{width:min(64vw,250px)}.copy{max-width:none}}
+@media (prefers-reduced-motion:reduce){.stamp-press,.rise{animation:none}.sprite{display:none}.btn,.links a{transition:none}}
+@media (prefers-reduced-transparency:reduce){.links,.btn-line,.menu-btn{backdrop-filter:none;background:rgba(244,237,228,.92)}}
+</style>
+</head>
+<body>
+<section class="hero" id="hero">
+<svg class="grain" aria-hidden="true">
+<filter id="clayGrain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+<feTurbulence type="fractalNoise" baseFrequency="0.011 0.016" numOctaves="4" seed="9" result="n"></feTurbulence>
+<feDiffuseLighting in="n" surfaceScale="2.4" diffuseConstant="1" lighting-color="#fff" result="lit"><feDistantLight azimuth="225" elevation="30"></feDistantLight></feDiffuseLighting>
+<feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="3" result="fine"></feTurbulence>
+<feColorMatrix in="fine" type="matrix" values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 -2.2 1.35" result="specks"></feColorMatrix>
+<feComposite in="specks" in2="lit" operator="over"></feComposite>
+</filter>
+<rect width="100%" height="100%" filter="url(#clayGrain)"></rect>
+</svg>
+<span class="sprite" id="sprite" aria-hidden="true"></span>
+
+<header class="nav">
+<a class="brand" href="#top" aria-label="AVA Art &amp; Soul, pagina principală"><svg viewBox="0 0 64 80" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6H42" stroke-width="5"></path><path d="M26 7C26 13 27 15 25 18C17 24 12 31 12 43C12 55 19 64 24 72H40C45 64 52 55 52 43C52 31 47 24 39 18C37 15 38 13 38 7" stroke-width="3.6"></path><path d="M14.5 35Q32 40 49.5 35M12.6 48Q32 53 51.4 48" stroke-width="3.2"></path></g></svg><span class="brand-word"><span class="brand-ava">AVA</span><span class="brand-sub">ART &amp; SOUL</span></span></a>
+<nav aria-label="Meniu principal"><ul class="links"><li><a href="#top" aria-current="page">Acasă</a></li><li><a href="#despre">Despre noi</a></li><li><a href="#ce-facem">Ce facem</a></li><li><a href="#evenimente">Evenimente</a></li><li><a href="#galerie">Galerie</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<div class="nav-end"><div class="lang" role="group" aria-label="Limba site-ului"><a href="#ro" aria-current="true">RO</a><a href="#en" lang="en">EN</a></div><a class="btn btn-sm" href="#evenimente">Mă înscriu</a><button class="menu-btn" type="button" aria-label="Deschide meniul"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 7H17M3 13H17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg></button></div>
+</header>
+
+<div class="stage">
+<div class="stamp stamp-press" id="stamp" aria-hidden="true">
+<svg class="ao" viewBox="0 0 480 480">
+<filter id="aoBlur" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="2.4"></feGaussianBlur></filter>
+<g filter="url(#aoBlur)" fill="none" stroke="#7A5236" color="#7A5236">
+<use href="#stampShapes"></use>
+</g>
+</svg>
+<svg class="relief" viewBox="0 0 960 960">
+<defs>
+<path id="ringPath" d="M240 240m-166 0a166 166 0 1 1 332 0a166 166 0 1 1 -332 0"></path>
+<g id="stampShapes">
+<circle cx="240" cy="240" r="214" stroke-width="7"></circle>
+<circle cx="240" cy="240" r="198" stroke-width="2.4"></circle>
+<circle cx="240" cy="240" r="132" stroke-width="4"></circle>
+<text class="stamp-text" stroke="none" fill="currentColor"><textPath href="#ringPath" startOffset="0">AVA · ART &amp; SOUL · AUTOCUNOAȘTERE PRIN CREAȚIE ·</textPath></text>
+<g transform="translate(176 156) scale(2)" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6H42" stroke-width="5"></path><path d="M26 7C26 13 27 15 25 18C17 24 12 31 12 43C12 55 19 64 24 72H40C45 64 52 55 52 43C52 31 47 24 39 18C37 15 38 13 38 7" stroke-width="3.4"></path><path d="M14.5 35Q32 40 49.5 35M12.6 48Q32 53 51.4 48" stroke-width="3"></path></g>
+</g>
+<filter id="relief" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB">
+<feColorMatrix in="SourceGraphic" type="luminanceToAlpha" result="mask"></feColorMatrix>
+<feGaussianBlur in="mask" stdDeviation="2.6" result="soft"></feGaussianBlur>
+<feDiffuseLighting id="lighting" in="soft" surfaceScale="0" diffuseConstant="1" lighting-color="#fff" result="lit"><feDistantLight id="sun" azimuth="225" elevation="30"></feDistantLight></feDiffuseLighting>
+<feColorMatrix in="lit" type="matrix" values="0 0 0 0 1  0 0 0 0 .96  0 0 0 0 .88  2.2 0 0 0 -1.1" result="hi"></feColorMatrix>
+<feColorMatrix in="lit" type="matrix" values="0 0 0 0 .30  0 0 0 0 .20  0 0 0 0 .13  -1.9 0 0 0 .95" result="lo"></feColorMatrix>
+<feMerge><feMergeNode in="lo"></feMergeNode><feMergeNode in="hi"></feMergeNode></feMerge>
+</filter>
+</defs>
+<g filter="url(#relief)" fill="none" stroke="#fff" color="#fff"><use href="#stampShapes" transform="scale(2)"></use></g>
+</svg>
+</div>
+
+<div class="copy">
+<p class="rise d1" style="margin:0" aria-hidden="true"><span class="ava">AVA</span><span class="soul">Art &amp; Soul</span></p>
+<h1 class="rise d2"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">AVA Art &amp; Soul: </span>autocunoaștere prin creație</h1>
+<p class="lede rise d3">Ateliere cu lut, consiliere și retreaturi pentru momentele în care ai nevoie să te auzi din nou. Pentru tine sau pentru echipa ta.</p>
+<div class="ctas rise d4"><a class="btn" href="#pentru-tine">Pentru tine</a><a class="btn btn-line" href="#pentru-companii">Pentru companii</a></div>
+<a class="next rise d4" href="#evenimente"><span class="dot" aria-hidden="true"></span>Următorul atelier:<b class="num">15 noiembrie</b></a>
+</div>
+</div>
+</section>
+<script>
+(function () {
+  var hero = document.getElementById('hero'), stamp = document.getElementById('stamp');
+  var sun = document.getElementById('sun'), lighting = document.getElementById('lighting'), sprite = document.getElementById('sprite');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // critically damped springs (damping 1.0, response 0.45s), one per axis
+  var W = 2 * Math.PI / 0.45;
+  var P = { x: 0, y: 0, vx: 0, vy: 0 }, T = { x: 0, y: 0 }, pointer = false, started = false, t0 = performance.now(), last = t0;
+  sprite.classList.add('on');
+  function center() { var h = hero.getBoundingClientRect(), s = stamp.getBoundingClientRect(); return { x: s.left - h.left + s.width / 2, y: s.top - h.top + s.height / 2, r: s.width / 2 }; }
+  hero.addEventListener('pointermove', function (e) {
+    if (e.pointerType !== 'mouse') return;
+    var h = hero.getBoundingClientRect(); T.x = e.clientX - h.left; T.y = e.clientY - h.top; pointer = true; sprite.classList.add('on');
+  });
+  hero.addEventListener('pointerleave', function () { pointer = false; });
+  function frame(now) {
+    var dt = Math.min(0.05, (now - last) / 1000); last = now;
+    var c = center(), s = (now - t0) / 1000;
+    if (!pointer) { var a = -2.35 + s * 0.12; T.x = c.x + Math.cos(a) * c.r * 1.25; T.y = c.y + Math.sin(a) * c.r * 1.25; }
+    if (!started) { P.x = T.x; P.y = T.y; started = true; }
+    P.vx += (W * W * (T.x - P.x) - 2 * W * P.vx) * dt; P.x += P.vx * dt;
+    P.vy += (W * W * (T.y - P.y) - 2 * W * P.vy) * dt; P.y += P.vy * dt;
+    sprite.style.transform = 'translate3d(' + P.x.toFixed(1) + 'px,' + P.y.toFixed(1) + 'px,0)';
+    var dx = P.x - c.x, dy = P.y - c.y, dist = Math.sqrt(dx * dx + dy * dy);
+    var az = Math.atan2(dy, dx) * 180 / Math.PI;
+    var el = Math.max(16, Math.min(58, 62 - (dist / c.r) * 22));
+    var press = reduce ? 1 : Math.min(1, (now - t0) / 1300); press = 1 - Math.pow(1 - press, 3);
+    sun.setAttribute('azimuth', az.toFixed(1));
+    sun.setAttribute('elevation', el.toFixed(1));
+    lighting.setAttribute('diffuseConstant', (0.5 / Math.sin(el * Math.PI / 180)).toFixed(3));
+    lighting.setAttribute('surfaceScale', (-11 * press).toFixed(2));
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
