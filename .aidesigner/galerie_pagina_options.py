@@ -103,17 +103,18 @@ def stack(ps):
     return "".join(f'<img src="{p["src"]}" alt="" style="object-position: {p["pos"]}">' for p in ps[:3])
 
 
-ALBUMS = [("oct", "Atelierul din octombrie", "octombrie 2026", [p for p in PH if p["k"] in REAL]),
+ALBUMS = [("toate", "Toate fotografiile", "din toate albumele", PH),   # Vali (13 nov): one more album, first; the grouping comes later
+          ("oct", "Atelierul din octombrie", "octombrie 2026", [p for p in PH if p["k"] in REAL]),
           ("piese", "Piese", "ce a prins formă", [p for p in PH if p["cat"] == "piese"]),
           ("altele", "Din alte ateliere", "fotografii provizorii", [p for p in PH if p["cat"] == "ateliere" and p["k"] not in REAL])]   # MINE
 OPTS["Galerie2Albume"] = ("Galerie 2: albume", """
-.g2x .albs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:48px}
+.g2x .albs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;margin-top:48px}
 .g2x .alb{display:flex;flex-direction:column;gap:12px;padding:0;border:0;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer}
 .g2x .stack{position:relative;aspect-ratio:1;isolation:isolate}
 .g2x .stack img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:18px;box-shadow:0 18px 30px -22px rgba(58,30,15,.6);transition:rotate .5s var(--so),translate .5s var(--so)}
 .g2x .stack img:nth-child(2){z-index:-1;rotate:4deg;translate:6px 2px}.g2x .stack img:nth-child(3){z-index:-2;rotate:-5deg;translate:-6px 4px}
 @media (hover:hover){.g2x .alb:hover .stack img:nth-child(2){rotate:8deg;translate:14px 0}.g2x .alb:hover .stack img:nth-child(3){rotate:-9deg;translate:-14px 4px}}
-.g2x .alb b{font:400 24px/1.2 var(--display);font-variation-settings:'opsz' 20}
+.g2x .alb b{font:400 22px/1.2 var(--display);font-variation-settings:'opsz' 20}
 .g2x .alb small{font-size:14px;color:var(--ink2)}
 .g2x .alb[aria-pressed="true"] b{color:var(--terra-d)}
 .g2x .alb:focus-visible{outline:2px solid #9C472C;outline-offset:6px;border-radius:18px}
@@ -126,9 +127,9 @@ OPTS["Galerie2Albume"] = ("Galerie 2: albume", """
 @media (max-width:980px){.g2x .albs{grid-template-columns:1fr 1fr;gap:20px 14px;margin-top:32px}.g2x .alb b{font-size:19px}.g2x .grid{grid-template-columns:1fr 1fr;gap:8px}.g2x .open{margin-top:40px}}
 """, '<section class="gp gl g2x" data-f="toate" aria-labelledby="gh-h" ref="{{ secRef }}"><div class="wrap">' + HEAD + '<div class="albs">'
     + "".join(f'<button type="button" class="alb ri" style="--i: {n}" data-a="{k}" aria-pressed="{"true" if n == 0 else "false"}" onClick="{{{{ album }}}}">'
-              f'<span class="stack" aria-hidden="true">{stack(ps)}</span>'
+              f'<span class="stack" aria-hidden="true">{stack(ps[3:] if k == "toate" else ps)}</span>'
               f'<b>{t}</b><small>{d} · {len(ps)} fotografii</small></button>' for n, (k, t, d, ps) in enumerate(ALBUMS))
-    + f'<div class="alb ri" style="--i: 3"><span class="soon">{EMPTY}</span><b>Retreaturi</b><small>în curând</small></div></div>'
+    + f'<div class="alb ri" style="--i: {len(ALBUMS)}"><span class="soon">{EMPTY}</span><b>Retreaturi</b><small>în curând</small></div></div>'
     + '<div class="open">' + "".join(
         f'<div class="grid{" on" if n == 0 else ""}" data-a="{k}"><h2 class="disp" style="grid-column: 1 / -1">{t}</h2>'
         + "".join(img(p, PH.index(p)) for p in ps) + "</div>" for n, (k, t, d, ps) in enumerate(ALBUMS))
@@ -228,7 +229,7 @@ def script():
             "  renderVals() { var self = this; if (!this.cb) this.cb = {" + HANDLERS + " secRef: function (el) { self.sec = el; } }; return this.cb; }\n}")
 
 
-H = {"Galerie1Zid": (2284, 1725), "Galerie2Albume": (1440, 1553), "Galerie3Eseu": (3411, 3090), "Galerie4Profil": (2147, 1106)}
+H = {"Galerie1Zid": (2284, 1725), "Galerie2Albume": (1991, 2526), "Galerie3Eseu": (3411, 3090), "Galerie4Profil": (2147, 1106)}
 
 if __name__ == "__main__":
     gh.SOURCES.update(SOURCES)

@@ -37,7 +37,7 @@ NEXT = '<a class="next rise d4" href="#evenimente"><span class="dot" aria-hidden
 BASE_COPY = LOCK + H1 + LEDE + CTAS + NEXT
 
 BASE_CSS = """body{margin:0;background:#F4EDE4}
-.pg{--ink:#3A2A20;--paper:#F4EDE4;--cream:#F4EDE4;--cream2:#E3D3BE;--terra-d:#9C472C;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;position:relative;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg{--ink:#3A2A20;--paper:#F4EDE4;--cream:#F4EDE4;--cream2:#E3D3BE;--terra-d:#9C472C;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Literata',Georgia,serif;--script:'Pinyon Script',cursive;position:relative;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
 .pg a{color:inherit}
 .pg a:focus-visible,.pg button:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
 .num{font-variant-numeric:tabular-nums lining-nums}

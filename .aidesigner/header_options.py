@@ -52,7 +52,7 @@ DEMO_CSS = """body{margin:0;background:#2A140C}
 .sc{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin}
 .s-despre .heroend{display:none}.pg.s-despre{padding-top:40px}
 """
-HX_CSS = """.hxv{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--cream:#F4EDE4;--terra-d:#9C472C;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif}
+HX_CSS = """.hxv{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--cream:#F4EDE4;--terra-d:#9C472C;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Literata',Georgia,serif}
 .s-hero .hn .row{display:none}
 /* the dock: zero height, sticks to the top of the scroll; the bar inside starts under the strip (42px) and rises to 0 */
 .hx-dock{position:sticky;top:0;z-index:50;height:0}

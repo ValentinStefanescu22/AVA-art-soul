@@ -185,7 +185,7 @@ HX_CSS += "html{scroll-padding-top:88px}"   # anchors land below the pill
 if __name__ == "__main__":
     for name, sc, _, _ in SECTIONS:
         print(("scoped " if scope_file(name, sc) else "already scoped ") + name)
-    dh, mh = 7030, 8130   # measured in the browser (section boards' own heights differ a little once stacked)
+    dh, mh = 7021, 8193   # measured in the browser (Literata, 13 nov) (section boards' own heights differ a little once stacked)
     imports = "\n".join(
         f'<dc-import name="Popup3Plic" embed="1" delay="8000" hint-size="100%,0px"></dc-import>' if n == "Popup3Plic"
         else f'<dc-import name="{n}" hint-size="100%,{d}px"></dc-import>' for n, _, d, _ in SECTIONS)

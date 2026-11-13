@@ -77,10 +77,15 @@ SOURCES = {
     "ConsIntrebari3Mesaje": "Mesaje (Apple): Alessia te întreabă, bulă cu bulă, ca într-o conversație",
     "ConsIntrebari4Portret": "Cereal Magazine: portretul lângă o listă liniștită, cu linii subțiri",
     "ConsDetalii": "șablonul paginilor de serviciu: „Cum funcționează” de pe Ateliere de grup",
+    "ConsIntrebari5Coloane": "aesop.com: titlul într-o coloană îngustă, întrebările în cea lată, între linii subțiri",
+    "ConsIntrebari6Grila": "muji.com: o grilă egală 2×2, cu un număr mic deasupra fiecărei întrebări",
+    "ConsIntrebari7Centrat": "Kinfolk: o coloană îngustă, centrată, întrebările în italic, despărțite de o liniuță",
+    "ConsIntrebari8Mari": "apple.com/privacy: propoziții mari, aliniate pe rând stânga–dreapta, fără linii, doar spațiu",
     "ConsProgramare1Luna": "cal.com, vederea pe lună: detaliile în stânga, calendarul la mijloc, orele în dreapta",
     "ConsProgramare2Saptamana": "Google Calendar, vederea pe săptămână (cal.com o are ca „week view”)",
     "ConsProgramare3Coloane": "doctolib.fr: zilele pe coloane, fiecare cu orele ei (cal.com o are ca „column view”)",
     "ConsProgramare4Alegi": "calendly.com: întâi alegi tipul de ședință din două carduri, apoi ziua și ora",
+    "PrivProgramare": "aceeași programare ca la Consiliere (cal.com, vederea pe lună), cu cele două ateliere private",
     "ConsFaq": "șablonul paginilor de serviciu: FAQ 3, carduri (ales pe Acasă)",
 }
 
@@ -187,6 +192,62 @@ OPTS["ConsIntrebari4Portret"] = ("Consiliere, te regăsești aici? 4: portret", 
     f'<figure class="fig"><img src="{DUO}" alt="Alessia Văideanu"></figure><div><h2 class="disp ri" id="cq-h">{Q_H}</h2><ol>'
     + "".join(f'<li class="ri" style="--i: {i + 1}">{q}</li>' for i, q in enumerate(QS)) + f'</ol><div class="ri" style="--i: 5">{MORE}</div></div></div></section>')
 
+# Vali (13 nov): 1 was the closest but goes; four more with no photos and nothing extra, only type, placement and space.
+# 5. Aesop: the title in a narrow column, the questions in the wide one, in the text face, between hairlines.
+OPTS["ConsIntrebari5Coloane"] = ("Consiliere, te regăsești aici? 5: două coloane", """
+.q5{background:linear-gradient(180deg,#F4EDE4 0%,#EDE0CD 100%)}
+.q5 .stage{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:64px;align-items:start}
+.q5 h2{margin:0}
+.q5 ul{margin:0;padding:0;list-style:none}
+.q5 li{padding:24px 0;border-top:1px solid rgba(58,42,32,.16);font-size:21px;line-height:1.5;color:#3F2F25;text-wrap:pretty}
+.q5 li:first-child{padding-top:6px;border-top:0}
+.q5 .go1{margin-top:32px}   /* Vali (13 nov): this one, with a solid button */
+@media (max-width:980px){.q5 .stage{grid-template-columns:minmax(0,1fr);gap:20px}.q5 li{padding:18px 0;font-size:18px}.q5 li:first-child{padding-top:4px}}
+""", '<section class="cs q5" aria-labelledby="cq-h" ref="{{ secRef }}"><div class="wrap stage">'
+    f'<div><h2 class="disp ri" id="cq-h">{Q_H}</h2></div><div><ul>'
+    + "".join(f'<li class="ri" style="--i: {i + 1}">{q}</li>' for i, q in enumerate(QS)) + f'</ul><div class="ri go1" style="--i: 5"><a class="btn" href="#programare">{CTA}</a></div></div></div></section>')
+
+# 6. Muji: an even 2×2 grid, a small number over each question, hairlines above.
+OPTS["ConsIntrebari6Grila"] = ("Consiliere, te regăsești aici? 6: grilă 2×2", """
+.q6{background:linear-gradient(180deg,#F4EDE4 0%,#EDE0CD 100%)}
+.q6 h2{margin:0 0 48px}
+.q6 ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:64px;margin:0;padding:0;list-style:none;counter-reset:q}
+.q6 li{padding:26px 0 40px;border-top:1px solid rgba(58,42,32,.2);counter-increment:q;font:400 28px/1.3 var(--display);font-variation-settings:'opsz' 20;text-wrap:pretty}
+.q6 li::before{content:"0" counter(q);display:block;margin-bottom:14px;font:500 14px/1 var(--text);color:var(--terra-d);font-variant-numeric:tabular-nums}
+.q6 .more{margin-top:12px}
+@media (max-width:980px){.q6 h2{margin-bottom:24px}.q6 ol{grid-template-columns:minmax(0,1fr)}.q6 li{padding:20px 0 28px;font-size:22px}.q6 li::before{margin-bottom:10px}}
+""", '<section class="cs q6" aria-labelledby="cq-h" ref="{{ secRef }}"><div class="wrap">'
+    f'<h2 class="disp ri" id="cq-h">{Q_H}</h2><ol>'
+    + "".join(f'<li class="ri" style="--i: {i + 1}">{q}</li>' for i, q in enumerate(QS)) + f'</ol><div class="ri" style="--i: 5">{MORE}</div></div></section>')
+
+# 7. Kinfolk: one narrow centred column, the questions in italic, a short terracotta rule between them.
+OPTS["ConsIntrebari7Centrat"] = ("Consiliere, te regăsești aici? 7: coloană centrată", """
+.q7{background:linear-gradient(180deg,#F4EDE4 0%,#EDE0CD 100%);text-align:center}
+.q7 .col{max-width:680px;margin:0 auto}
+.q7 h2{margin:0 0 48px}
+.q7 ul{margin:0;padding:0;list-style:none}
+.q7 li{margin:0;font:400 italic 30px/1.35 var(--display);font-variation-settings:'opsz' 20;text-wrap:balance}
+.q7 li+li::before{content:"";display:block;width:28px;height:1px;margin:30px auto;background:#B4583A}
+.q7 .more{margin-top:52px}
+@media (max-width:980px){.q7 h2{margin-bottom:32px}.q7 li{font-size:23px}.q7 li+li::before{margin:22px auto}.q7 .more{margin-top:36px}}
+""", '<section class="cs q7" aria-labelledby="cq-h" ref="{{ secRef }}"><div class="wrap"><div class="col">'
+    f'<h2 class="disp ri" id="cq-h">{Q_H}</h2><ul>'
+    + "".join(f'<li class="ri" style="--i: {i + 1}">{q}</li>' for i, q in enumerate(QS)) + f'</ul><div class="ri" style="--i: 5">{MORE}</div></div></div></section>')
+
+# 8. Apple, the Privacy page: large statements, left-aligned, one per line of thought, no lines or numbers, only space.
+OPTS["ConsIntrebari8Mari"] = ("Consiliere, te regăsești aici? 8: rânduri mari", """
+.q8{background:linear-gradient(180deg,#F4EDE4 0%,#EDE0CD 100%)}
+.q8 h2{margin:0 0 56px;font-size:clamp(22px,2vw,28px);font-style:italic;color:var(--terra-d)}
+.q8 ul{margin:0;padding:0;list-style:none}
+.q8 li{max-width:24ch;margin:0;font:400 clamp(30px,3.3vw,46px)/1.18 var(--display);font-variation-settings:'opsz' 20;letter-spacing:-.01em;text-wrap:balance}
+.q8 li+li{margin-top:44px}
+.q8 li:nth-child(even){margin-left:auto;text-align:right}
+.q8 .more{margin-top:56px}
+@media (max-width:980px){.q8 h2{margin-bottom:28px}.q8 li{font-size:26px}.q8 li+li{margin-top:28px}.q8 li:nth-child(even){margin-left:0;text-align:left}.q8 .more{margin-top:36px}}
+""", '<section class="cs q8" aria-labelledby="cq-h" ref="{{ secRef }}"><div class="wrap">'
+    f'<h2 class="disp ri" id="cq-h">{Q_H}</h2><ul>'
+    + "".join(f'<li class="ri" style="--i: {i + 1}">{q}</li>' for i, q in enumerate(QS)) + f'</ul><div class="ri" style="--i: 5">{MORE}</div></div></section>')
+
 # ---- details: the template; dark card = the free first meeting; then the delimitation, quiet ----
 DET_CSS = gp.DET_CSS + """
 .gd .co .btn-c{min-width:0}
@@ -203,10 +264,10 @@ DET_HTML = ('<section class="gd" aria-labelledby="gd-h" ref="{{ secRef }}"><div 
             f'<div class="dl2 ri" style="--i: 3"><h3>{DELIM_H}</h3><p>{DELIM}</p></div></div></section>')
 
 # ---- booking: shared pieces ----
-def types_html(cls="types", big=False):
-    return (f'<div class="{cls}" role="group" aria-label="{TYPE_H}">'
+def types_html(cls="types", big=False, types=None, label=None):
+    return (f'<div class="{cls}" role="group" aria-label="{label or TYPE_H}">'
             + "".join(f'<button type="button" class="type" data-k="{k}" aria-pressed="{"true" if k == "free" else "false"}" onClick="{{{{ pickType }}}}">'
-                      f'<b>{n}</b><span>{d}</span></button>' for k, n, d in TYPES) + "</div>")
+                      f'<b>{n}</b><span>{d}</span></button>' for k, n, d in (types or TYPES)) + "</div>")
 
 
 def slot_list(d, cls="slots"):
@@ -216,7 +277,7 @@ def slot_list(d, cls="slots"):
 
 
 SUM = (f'<div class="sum"><p aria-live="polite"><span class="pk">{PICKED}</span> <b class="lab">alege o oră</b></p>'
-       f'<button type="button" class="btn go" aria-disabled="true" onClick="{{{{ goOn }}}}">{GO}</button></div>')
+       f'<a class="btn go" href="#programare-facuta" aria-disabled="true" onClick="{{{{ goOn }}}}">{GO}</a></div>')
 SAMPLE = '<p class="smp">Zilele și orele de aici sunt exemple; în site vin din calendarul Alessiei.</p>'
 
 
@@ -292,6 +353,16 @@ OPTS["ConsProgramare1Luna"] = ("Consiliere, programare 1: luna (cal.com)", BOOK_
 @media (max-width:980px){.b1 .box{grid-template-columns:1fr;margin-top:32px}.b1 .box>div{padding:20px 16px}.b1 .info,.b1 .times{border:0}.b1 .times{border-top:1px solid rgba(58,42,32,.1)}.b1 .slots{grid-template-columns:repeat(3,1fr)}.b1 .sum{flex-direction:column;align-items:stretch}}
 """, sec("b1", HEAD + '<div class="box ri" style="--i: 2">'
     f'<div class="info"><div class="who"><span class="av"><img src="{DUO}" alt=""></span>Alessia Văideanu</div>{types_html()}</div>'
+    f'<div class="cal">{MHEAD}{month(2026, 11)}{month(2026, 12)}</div>'
+    f'<div class="times"><p class="dn">{dlabel(DAYS[0])}</p>' + "".join(slot_list(d) for d in DAYS) + '</div></div>'
+    f'<div class="ri" style="--i: 3;margin-top:20px">{SUM}{SAMPLE}</div>'))
+
+# Atelier privat 1:1 (Vali, 13 nov: the same booking as Consiliere, month view): the two workshops are the types.
+PRIV_TYPES = [("free", "Stagiul de modelaj 1:1", "60 de minute · 4 ședințe pe lună"),
+              ("full", "Autocunoaștere prin lut și joacă", "90 de minute · pentru adult sau pentru copilul tău")]   # from servicii_options.OFFERS
+PRIV_HEAD = '<h2 class="disp ri" id="bk-h">Programează atelierul</h2><p class="intro ri" style="--i: 1">Alege atelierul, apoi ziua și ora.</p>'   # MINE
+PRIV_BOOK = ("Atelier privat 1:1: programare (luna, ca la Consiliere)", OPTS["ConsProgramare1Luna"][1], sec("b1", PRIV_HEAD + '<div class="box ri" style="--i: 2">'
+    f'<div class="info"><div class="who"><span class="av"><img src="{DUO}" alt=""></span>Alessia Văideanu</div>{types_html(types=PRIV_TYPES, label="Alege atelierul")}</div>'
     f'<div class="cal">{MHEAD}{month(2026, 11)}{month(2026, 12)}</div>'
     f'<div class="times"><p class="dn">{dlabel(DAYS[0])}</p>' + "".join(slot_list(d) for d in DAYS) + '</div></div>'
     f'<div class="ri" style="--i: 3;margin-top:20px">{SUM}{SAMPLE}</div>'))
@@ -404,7 +475,7 @@ HANDLERS = """
     pickSlot: function (e) { var b = e.currentTarget, s = self.sec;
       s.querySelectorAll('.slot').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
       s.querySelector('.sum .lab').textContent = b.getAttribute('data-l'); s.querySelector('.go').setAttribute('aria-disabled', 'false'); },
-    goOn: function (e) { },
+    goOn: function (e) { if (e.currentTarget.getAttribute('aria-disabled') === 'true') e.preventDefault(); },
     prevM: function () { self.month(-1); }, nextM: function () { self.month(1); },
     prevW: function () { self.weekGo(-1); }, nextW: function () { self.weekGo(1); },"""
 METHODS = """
@@ -460,10 +531,12 @@ def page(name, title, css, html, w, h):
 ALL_OPTS = {k: (t, co.SEC + css, html) for k, (t, css, html) in OPTS.items()}
 ALL_OPTS["ConsDetalii"] = ("Consiliere: cum funcționează + prima întâlnire", DET_CSS, DET_HTML)
 ALL_OPTS["ConsFaq"] = ("Consiliere: întrebări frecvente", gp.FAQ_CSS, FAQ_HTML)
+ALL_OPTS["PrivProgramare"] = (PRIV_BOOK[0], co.SEC + PRIV_BOOK[1], PRIV_BOOK[2])
 H = {"ConsHero": (905, 789)}
 H.update({"ConsIntrebari1Calm": (1042, 757), "ConsIntrebari2Carduri": (695, 606), "ConsIntrebari3Mesaje": (784, 975),
-          "ConsIntrebari4Portret": (824, 1150), "ConsDetalii": (917, 1166), "ConsProgramare1Luna": (1043, 1407),
-          "ConsProgramare2Saptamana": (1272, 1416), "ConsProgramare3Coloane": (709, 1100), "ConsProgramare4Alegi": (905, 1018), "ConsFaq": (1092, 1357)})
+          "ConsIntrebari4Portret": (824, 1150),
+          "ConsIntrebari5Coloane": (619, 647), "ConsIntrebari6Grila": (739, 824), "ConsIntrebari7Centrat": (950, 721), "ConsIntrebari8Mari": (1093, 736), "ConsDetalii": (917, 1166), "ConsProgramare1Luna": (1043, 1407),
+          "ConsProgramare2Saptamana": (1272, 1416), "ConsProgramare3Coloane": (709, 1100), "ConsProgramare4Alegi": (905, 1018), "ConsFaq": (1092, 1357), "PrivProgramare": (1008, 1373)})
 
 if __name__ == "__main__":
     gh.SOURCES["ConsHero"] = SOURCES["ConsHero"]

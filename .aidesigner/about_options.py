@@ -39,7 +39,7 @@ def ring(id_, r, size, text, cls="ring-t", fit=False):
 RING_TXT = "AVA · ART &amp; SOUL · AUTOCUNOAȘTERE PRIN CREAȚIE · AVA · ART &amp; SOUL · AUTOCUNOAȘTERE PRIN CREAȚIE ·"
 
 BASE_CSS = f"""body{{margin:0;background:#F4EDE4}}
-.pg{{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra-d:#9C472C;--clay:#C07A4E;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}}
+.pg{{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra-d:#9C472C;--clay:#C07A4E;--display:'Bodoni Moda',Georgia,serif;--text:'Literata',Georgia,serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}}
 .pg a{{color:inherit}}
 .pg a:focus-visible{{outline:2px solid var(--terra-d);outline-offset:4px;border-radius:4px}}
 .disp{{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.01em;text-wrap:balance}}

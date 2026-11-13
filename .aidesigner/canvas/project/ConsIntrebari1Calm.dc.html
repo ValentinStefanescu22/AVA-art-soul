@@ -100,7 +100,7 @@ class Component extends DCLogic {
     pickSlot: function (e) { var b = e.currentTarget, s = self.sec;
       s.querySelectorAll('.slot').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
       s.querySelector('.sum .lab').textContent = b.getAttribute('data-l'); s.querySelector('.go').setAttribute('aria-disabled', 'false'); },
-    goOn: function (e) { },
+    goOn: function (e) { if (e.currentTarget.getAttribute('aria-disabled') === 'true') e.preventDefault(); },
     prevM: function () { self.month(-1); }, nextM: function () { self.month(1); },
     prevW: function () { self.weekGo(-1); }, nextW: function () { self.weekGo(1); }, secRef: function (el) { self.sec = el; } }; return this.cb; }
 }

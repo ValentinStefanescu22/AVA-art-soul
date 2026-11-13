@@ -1,6 +1,5 @@
 """The legal pages on the canvas, read straight from docs/texte-legale.md (Vali, 12 nov: „Da, pe canvas”), so the text
-lives in one place: edit the doc, re-run this. Laid out in reading template 1 (table of contents on the left) until a
-template is chosen; text_options.py takes the „Înscriere” page from here too, so its four variants stay in sync.
+lives in one place: edit the doc, re-run this. Laid out in reading template 4 (tabs on top, no „Pe scurt”; Vali, 13 nov); text_options.py takes the „Înscriere” page from here too, so its four variants stay in sync.
 
 usage: python3 .aidesigner/legal_pages.py
 writes .aidesigner/canvas/project/Legal{Inscriere,Termeni,Confidentialitate,Cookies}(Mobil).dc.html + opt-Legal*.html
@@ -81,7 +80,7 @@ def parse():
 
 PAGES = parse()
 # preview heights, measured in the browser (desktop 1440, phone 390); re-measure after big text changes
-H = {"LegalInscriere": (2426, 2878), "LegalTermeni": (4570, 5967), "LegalConfidentialitate": (3640, 5423), "LegalCookies": (1961, 2429)}
+H = {"LegalInscriere": (2000, 2092), "LegalTermeni": (3898, 4687), "LegalConfidentialitate": (3239, 4612), "LegalCookies": (1616, 1758)}
 
 LEGAL_CSS = """
 .tx .s ul{margin:0 0 14px;padding:0 0 0 2px;list-style:none;max-width:66ch}
@@ -104,16 +103,13 @@ if __name__ == "__main__":
     import grup_hero_options as gh
     import text_options as to
     gh.script = lambda *a, **k: to.script()
-    css1 = to.TEXT_CSS + to.LECT["Lectura1Cuprins"][1] + LEGAL_CSS
+    css1 = to.TEXT_CSS + LEGAL_CSS + to.LECT["Lectura4File"][1]   # Vali (13 nov): template 4, without „Pe scurt”
+    tab = {v: k for k, v in to.PAGES}
     for title, key in KEYS.items():
         pg = PAGES[title]
-        sec = pg["sections"]
-        html = (f'<section class="gp tx l1" aria-labelledby="gh-h" ref="{{{{ secRef }}}}"><div class="wrap"><h1 class="disp gh" id="gh-h">{title}</h1><p class="upd">{pg["updated"]}</p>'
-                f'<div class="stage">{to.toc([(k, t, None, None) for k, t, _ in sec])}<article class="art">'
-                + (f'<div class="sum"><p class="tl">Pe scurt</p><ul>{"".join(f"<li>{x}</li>" for x in pg["summary"])}</ul></div>' if pg["summary"] else "")
-                + "".join(f'<section class="s" id="{k}"><h2><span class="nm">{i + 1:02d}</span>{t}</h2>{h}</section>' for i, (k, t, h) in enumerate(sec))
-                + "</article></div></div></section>")
-        gh.SOURCES[key] = "docs/texte-legale.md, în șablonul de lectură 1 (cuprins alături) până alegi șablonul"
+        html = (f'<section class="gp tx l4" aria-labelledby="gh-h" ref="{{{{ secRef }}}}">'
+                + to.lect4(title, pg["updated"], [(k, t, [h], "") for k, t, h in pg["sections"]], tab[title]) + "</section>")
+        gh.SOURCES[key] = "docs/texte-legale.md, în șablonul de lectură 4 (file între pagini, fără „Pe scurt”), ales de Vali pe 13 nov"
         for suffix, w, h in (("", 1440, H[key][0]), ("Mobil", 390, H[key][1])):
             f = os.path.join(P, f"{key}{suffix}.dc.html")
             doc = gh.page(key, title + (" · mobil" if suffix else ""), "light", css1, html, w, h)
@@ -121,4 +117,4 @@ if __name__ == "__main__":
             open(f, "w", encoding="utf-8").write(doc)
             if not suffix:
                 subprocess.run([sys.executable, os.path.join(HERE, "dc2html.py"), f, os.path.join(HERE, f"opt-{key}.html")], check=True, capture_output=True)
-        print("wrote", key, len(sec), "sections")
+        print("wrote", key, len(pg["sections"]), "sections")

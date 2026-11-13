@@ -8,10 +8,10 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
 <style>
 body{margin:0;background:#F4EDE4}
-.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Literata',Georgia,serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
 .pg ::selection{background:#B4583A;color:#F4EDE4}
 .pg a{color:inherit}
 .pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
@@ -68,7 +68,7 @@ body{margin:0;background:#F4EDE4}
 <section class="gd" aria-labelledby="gd-h" ref="{{ secRef }}"><div class="wrap"><h2 class="disp ri" id="gd-h">Cum funcționează</h2><p class="how ri" style="--i: 1">Tot ce îmi spui rămâne confidențial.</p><dl><div class="ri" style="--i: 2"><dt>Durată</dt><dd>60–90 de minute.</dd></div><div class="ri" style="--i: 3"><dt>Unde</dt><dd>Online sau față în față, cum îți e mai bine.</dd></div><div class="ri" style="--i: 4"><dt>Ritm</dt><dd>Săptămânal, apoi bilunar sau lunar, în funcție de nevoia ta.</dd></div><div class="ri" style="--i: 5"><dt>Preț</dt><dd>180 lei / oră.</dd></div></dl><aside class="co ri" style="--i: 2" aria-label="Prima întâlnire"><div><p class="q">Prima întâlnire</p><p>Programează o discuție de cunoaștere de 15 minute, gratuită, online.</p></div><a class="btn-c" href="#programare">Programează discuția</a></aside><div class="dl2 ri" style="--i: 3"><h3>Consiliere sau psihoterapie?</h3><p>Consilierea în dezvoltare personală nu înlocuiește psihoterapia sau tratamentul medical. Consilierea în dezvoltare personală se adresează persoanelor fără tulburări psihice.</p></div></div></section>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1166}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1193}}'>
 var WEEKS = ["16 – 20 noiembrie", "23 – 27 noiembrie", "30 nov – 4 dec", "7 – 11 decembrie"];
 class Component extends DCLogic {
   componentDidMount() {
@@ -101,7 +101,7 @@ class Component extends DCLogic {
     pickSlot: function (e) { var b = e.currentTarget, s = self.sec;
       s.querySelectorAll('.slot').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
       s.querySelector('.sum .lab').textContent = b.getAttribute('data-l'); s.querySelector('.go').setAttribute('aria-disabled', 'false'); },
-    goOn: function (e) { },
+    goOn: function (e) { if (e.currentTarget.getAttribute('aria-disabled') === 'true') e.preventDefault(); },
     prevM: function () { self.month(-1); }, nextM: function () { self.month(1); },
     prevW: function () { self.weekGo(-1); }, nextW: function () { self.weekGo(1); }, secRef: function (el) { self.sec = el; } }; return this.cb; }
 }

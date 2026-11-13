@@ -77,7 +77,7 @@ Conținutul (texte, prețuri, FAQ) nu stă aici, ci în `docs/continut-site.md`.
 
 Fonturile, alese de Vali pe 5 nov:
 - **Bodoni Moda** pentru titluri: greutate 400, întotdeauna cu `font-variation-settings: 'opsz' 20`, altfel liniile subțiri dispar pe ecran. Titlurile foarte mari folosesc `opsz` 72–96.
-- **Hanken Grotesk** pentru text.
+- **Literata** pentru text (Vali, 13 nov: înlocuiește Hanken Grotesk; serif de carte, cu axă de mărime optică, deci se ajustează singur la text mic și mare).
 - **Pinyon Script** doar pentru „Art & Soul” și momente rare; niciodată text lung.
 
 Toate trebuie să aibă subsetul latin-ext (ș, ț cu virgulă). În cod se încarcă local, prin `next/font`.
@@ -89,11 +89,11 @@ Toate trebuie să aibă subsetul latin-ext (ș, ț cu virgulă). În cod se înc
 | Titlu de card / subtitlu | Bodoni 400 | 22–28px, `line-height 1.2` |
 | Lede | Bodoni 400 | `clamp(20px, 1.7vw, 24px)`, `line-height 1.4` |
 | Italic de accent (roluri, întrebări, date) | Bodoni italic | 17–36px, de obicei `--terra-d` sau `--ink2` |
-| Corp | Hanken 400 | 17px / 1.6 |
-| Lectură lungă | Hanken 400 | 19px / 1.75 (mobil 18px) |
-| Mic / meta | Hanken 400–500 | 14–15px |
-| Etichete de coloană (doar footer) | Hanken 500 | 12px, `uppercase`, `letter-spacing .14em` |
-| Butoane | Hanken 500 | 15px, `letter-spacing .02em` |
+| Corp | Literata 400 | 17px / 1.6 |
+| Lectură lungă | Literata 400 | 19px / 1.75 (mobil 18px) |
+| Mic / meta | Literata 400–500 | 14–15px |
+| Etichete de coloană (doar footer) | Literata 500 | 12px, `uppercase`, `letter-spacing .14em` |
+| Butoane | Literata 500 | 15px, `letter-spacing .02em` |
 
 **Reguli:**
 - `text-wrap: balance` pe titluri, `pretty` pe paragrafe.
@@ -272,7 +272,7 @@ Textele butoanelor sunt verbe clare, cele din document sau cele aprobate în com
 
 ---
 
-## 10. Paginile alese (12 nov 2026)
+## 10. Paginile alese (12–13 nov 2026)
 
 | Pagină | Secțiuni, în ordine (planșa de pe canvas) |
 |---|---|
@@ -280,6 +280,18 @@ Textele butoanelor sunt verbe clare, cele din document sau cele aprobate în com
 | **Despre noi** (`DespreNoi`) | Deschiderea maro cu portretul (`DespreNoiDeschidere`) · Povestea, interviu (`Povestea4Interviu`) · Formări, centrat (`Formari3DCentrat`) · Comunitatea AVA, intro + carduri (`Comunitate5Carduri`) · Footer 3 |
 | **Ce oferim** (`CeFacem`) | Comutatorul cu degradeu (`CFPagina1Comutator`) · De ce să alegi AVA Art & Soul? (`CFDeCe`, textul vine de la Vali) · Footer 3 |
 | **Ateliere de grup** (`AteliereDeGrup`) | Fotografie pe tot ecranul (`GrupHero2Aman`) · Atelierele care urmează, bilete cu ștampila „Sold out”; cele de Crăciun au o ghirlandă de beculețe care sclipește pe marginea de sus (`GrupCraciun2Beculete`, construit din `GrupAteliere3Bilete`) · Ai deja un grup? (`GrupSolicita`) · Cum funcționează + colaborări (`GrupDetalii`) · Întrebări frecvente în carduri (`GrupFaq`) · Footer 3 |
+| **Pentru companii** (`PentruCompanii`) | Deschiderea (`CompHero`) · Formate, planuri (`CompFormate1Planuri`) · Cum funcționează (`CompDetalii`) · Cere o ofertă, pas cu pas (`CompOferta4Pasi`) · Întrebări frecvente (`CompFaq`) · Footer 3 |
+| **Consiliere 1:1** (`Consiliere`, 13 nov) | Deschiderea (`ConsHero`) · Te regăsești aici?, două coloane, buton plin (`ConsIntrebari5Coloane`) · Cum funcționează + prima întâlnire + delimitarea de psihoterapie (`ConsDetalii`) · Programarea pe lună, ca în Cal.com (`ConsProgramare1Luna`) · Întrebări frecvente (`ConsFaq`) · Footer 3 |
+| **Atelier privat 1:1** (`AtelierPrivat`, 13 nov) | Deschiderea (`PrivHero`) · Cele două ateliere, acordeon (`PrivAteliere4Acordeon`) · Cum funcționează + voucher (`PrivDetalii`) · Programarea pe lună, cu cele două ateliere (`PrivProgramare`) · Întrebări frecvente (`PrivFaq`) · Footer 3 |
+| **Pentru școli și copii** (`ScoliCopii`) | Deschiderea (`ScoliHero`) · Cum funcționează (`ScoliDetalii`) · Întrebări frecvente (`ScoliFaq`) · Footer 3 |
+| **Retreaturi** / **Evenimente** (`Retreaturi`, `Evenimente`) | „În curând” pe tot ecranul, cu abonarea la newsletter (`Retreat1Ecran`, `Evenimente1Ecran`) · Footer 3 |
+| **Galerie** (`Galerie`) | Albume, primul „Toate fotografiile”; gruparea pe albume se reface mai târziu (`Galerie2Albume`) · Footer 3 |
+| **Contact** (`Contact`) | Formularul pas cu pas, alegere multiplă la „Ce te interesează?”, mesaj opțional (`Contact5Pasi`) · Footer 3 |
+| **Paginile legale** (`Inscrieri`, `Termeni`, `Confidentialitate`, `Cookies`) | Șablonul 4: file între paginile de text, fără „Pe scurt” (`Legal…`, textul din `docs/texte-legale.md`) · Footer 3 |
+| **Întrebări frecvente** (`IntrebariFrecvente`, 13 nov) | Categoriile într-o listă alături, toate întrebările una sub alta (`Faq2Lista`) · Footer 3 |
+| **După plată / programare / 404** (`Multumim`, `ProgramareFacuta`, `Eroare404`) | Biletul cu ștampilă (`Confirmare2Bilet`, `ConfirmareProgramare`, `Pagina404`) · Footer 3 |
+
+Toate paginile sunt legate între ele pe canvas (Play pe Acasă): meniul, submeniul „Ce oferim”, butoanele și footerul duc la pagina potrivită; „Mă înscriu” deschide „Mulțumim”, iar „Continuă” din calendar „Programarea e făcută” (în cod: Stripe și Cal.com). Legăturile le scrie `pages_combine.py` (`PAGE_OF`), la final.
 
 Numele fișierelor `CeFacem…` / `CF…` au rămas așa din motive tehnice; pe site scrie peste tot „Ce oferim”.
 
@@ -292,11 +304,5 @@ Procesul pe canvas:
 - variantele respinse merg în arhivă, nu se șterg;
 - textele vin doar din `docs/continut-site.md`; ce propun eu e marcat „de aprobat”.
 
-**Pagini de completat:**
-- **Șablonul paginilor de serviciu**, unul pentru toate 6, cu 4 variante pe secțiune. Structura: pentru cine e · ce se întâmplă concret · ce primești · cine facilitează · durată / preț / locație · întrebări frecvente · buton de înscriere sau contact (Stripe / Cal.com / formular). Consilierea păstrează delimitarea față de psihoterapie; atelierele pentru copii, precizarea despre terapii.
-- **Retreaturi** (decizia lui Vali, 12 nov): pagina arată doar „În curând”, pentru că nu e încă nimic concret. Fără program, preț sau FAQ până nu există.
-- **Evenimente** (decizia lui Vali, 12 nov): nu are legătură cu atelierele; sunt evenimentele pe care le pregătește Alessia. Acum nu e niciunul, deci pagina arată doar „În curând” + newsletter, în aceleași 4 variante ca Retreaturi (o singură alegere poate servi ambele pagini). Lista de evenimente se proiectează când apare primul.
-- **Galerie.**
-- **Contact**, cu formularul Web3Forms și bifa GDPR. Propunere: 2 variante.
-- **Paginile legale**, doar text lung, cu un singur șablon de lectură. Propunere: 2 variante.
+**De ales / de completat:**
 - **Întrebări frecvente la finalul fiecărei pagini**, cum cere `CLAUDE.md`. Pe Despre noi și Ce oferim nu sunt încă puse.

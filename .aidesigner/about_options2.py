@@ -25,7 +25,7 @@ LINK = f'<a class="more" href="#povestea">Povestea mea {ARROW}</a>'
 ALT = "Alessia Văideanu, fondatoarea AVA Art &amp; Soul"
 
 BASE_CSS = """body{margin:0;background:#F4EDE4}
-.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Literata',Georgia,serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
 .pg ::selection{background:#B4583A;color:#F4EDE4}
 .pg a{color:inherit}
 .pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}

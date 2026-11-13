@@ -1,8 +1,8 @@
 """The small pages after an action (Vali, 12 nov). Only three are needed:
   after paying for a workshop   Stripe sends people back here (the Payment Link's „after payment” redirect,
                                 /ro/multumim?atelier=<slug>, so the page knows which workshop): four variants.
-  after booking a session       Cal.com's „redirect on booking” lands here: shown in variant 1's layout.
-  404                           a wrong address: shown in variant 1's layout.
+  after booking a session       Cal.com's „redirect on booking” lands here: in the ticket layout (2, chosen 13 nov).
+  404                           a wrong address: in the ticket layout too.
 The contact / offer forms and the newsletter thank people in place, so they need no page.
 No exact address on these pages (CLAUDE.md: it goes in the confirmation email). All copy is MINE, to approve, except the
 24h rule (doc) and „Vino doar cu curiozitate” (Ateliere de grup FAQ). The sample workshop is 6 decembrie.
@@ -88,7 +88,8 @@ OPTS["Confirmare1Bifa"] = ("După plată 1: o bifă și pașii", V1_CSS, v1(TITL
     cal_btn() + HOME))
 
 # 2. dice.fm, the ticket after you buy: the same ticket as on Ateliere de grup, now stamped „Confirmat”.
-OPTS["Confirmare2Bilet"] = ("După plată 2: biletul tău", """
+# Vali (13 nov): this one; the booking page and the 404 use the same layout (v2 below).
+C2_CSS = """
 .c2c .stage{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
 .c2c .tk{position:relative;display:grid;grid-template-columns:150px minmax(0,1fr);border-radius:20px;corner-shape:squircle;background:#FBF7F1;box-shadow:0 0 0 1px rgba(58,42,32,.06),0 40px 70px -46px rgba(70,35,15,.6);rotate:-1.5deg}
 @keyframes c2-in{from{opacity:0;rotate:-6deg;translate:0 40px}}
@@ -111,11 +112,24 @@ OPTS["Confirmare2Bilet"] = ("După plată 2: biletul tău", """
 .c2c .nx{margin-top:32px}
 @media (max-width:980px){.c2c .stage{grid-template-columns:1fr;gap:48px}.c2c .tk{grid-template-columns:96px minmax(0,1fr);rotate:0deg}.c2c .stub b{font-size:40px}.c2c .bd{padding:20px 18px}.c2c .bd h2{font-size:21px}
   .c2c .stamp{width:84px;height:84px;font-size:16px;right:12px;bottom:-30px}.c2c .act{flex-direction:column;align-items:stretch;text-align:center}}
-""", f'<section class="gp cf2 c2c" aria-labelledby="gh-h" ref="{{{{ secRef }}}}"><div class="wrap stage"><div>'
-    f'<h1 class="disp" id="gh-h">{TITLE}</h1><p class="lead up" style="--d: .3s">{LEAD}</p><div class="up" style="--d: .5s">{steps()}</div></div>'
-    f'<div><div class="tk"><p class="stub" style="margin:0"><small>{E["wd"]}</small><b>{E["day"]}</b><i>{E["mon"]}</i></p>'
-    f'<div class="bd"><h2>{E["title"]}</h2><p>{ph(E["time"])} · {WHERE}</p><p class="who">1 loc · {E["price"]} · plătit</p></div>'
-    f'<span class="stamp" aria-label="Confirmat">Confirmat</span></div><div class="act up" style="--d: .8s">{cal_btn()}{HOME}</div></div></div></section>')
+.c2c .stamp.red{color:#9C472C;box-shadow:inset 0 0 0 2px rgba(156,71,44,.85),inset 0 0 0 6px #FBF7F1,inset 0 0 0 7px rgba(156,71,44,.6)}
+.c2c .stub b.sm{font-size:44px}@media (max-width:980px){.c2c .stub b.sm{font-size:28px}}
+.c2c .go{display:flex;flex-wrap:wrap;gap:8px;margin:32px 0 0;padding:0;list-style:none}
+.c2c .go a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:#E9DCCA;font-size:15px;font-weight:500;color:#3A2A20;transition:background-color .2s}
+.c2c .go a:hover{background:#E0D0BB}
+"""
+
+
+def v2(title, lead, left, stub, h2, line, who, stamp, act, red=False):
+    return (f'<section class="gp cf2 c2c" aria-labelledby="gh-h" ref="{{{{ secRef }}}}"><div class="wrap stage"><div>'
+            f'<h1 class="disp" id="gh-h">{title}</h1><p class="lead up" style="--d: .3s">{lead}</p><div class="up" style="--d: .5s">{left}</div></div>'
+            f'<div><div class="tk"><p class="stub" style="margin:0"><small>{stub[0]}</small><b{" class=" + chr(34) + "sm" + chr(34) if len(stub[1]) > 2 else ""}>{stub[1]}</b><i>{stub[2]}</i></p>'
+            f'<div class="bd"><h2>{h2}</h2><p>{line}</p><p class="who">{who}</p></div>'
+            f'<span class="stamp{" red" if red else ""}" aria-label="{stamp}">{stamp}</span></div><div class="act up" style="--d: .8s">{act}</div></div></div></section>')
+
+
+OPTS["Confirmare2Bilet"] = ("După plată 2: biletul tău", C2_CSS, v2(TITLE, LEAD, steps(), (E["wd"], E["day"], E["mon"]), E["title"],
+    f'{ph(E["time"])} · {WHERE}', f'1 loc · {E["price"]} · plătit', "Confirmat", cal_btn() + HOME))
 
 # 3. Airbnb's booking confirmation: a photo of the place beside the words, the details in a short list.
 OPTS["Confirmare3Poza"] = ("După plată 3: cu poză", """
@@ -164,26 +178,24 @@ BOOK_L = "Ți-am trimis pe email confirmarea și invitația în calendar, cu toa
 BOOK_NEXT = [("Verifică emailul", "Dacă e o ședință online, linkul e în invitație."),
              ("Prima discuție e gratuită", "Dacă ai programat discuția de cunoaștere de 15 minute, nu ai nimic de plătit."),
              ("Dacă nu mai poți ajunge", "Anulează sau reprogramează din emailul de confirmare, cu cel puțin 24 de ore înainte.")]
-OPTS["ConfirmareProgramare"] = ("După programare (consiliere, atelier privat)", V1_CSS, v1(BOOK_T, BOOK_L,
-    '<div class="card up" style="--d: .45s"><ol class="nx">' + "".join(f"<li><b>{a}</b><span>{b}</span></li>" for a, b in BOOK_NEXT) + "</ol></div>", HOME))
+BOOK_DAY = ("luni", "16", "nov")   # the sample: the first free day in the Consiliere calendar
+OPTS["ConfirmareProgramare"] = ("După programare (consiliere, atelier privat)", C2_CSS, v2(BOOK_T, BOOK_L,
+    '<ol class="nx">' + "".join(f"<li><b>{a}</b><span>{b}</span></li>" for a, b in BOOK_NEXT) + "</ol>", BOOK_DAY,
+    "Discuție de cunoaștere", "ora 10:00 · online · 15 minute", "Alessia Văideanu · gratuită", "Programat", HOME))
 
 LOST = '<svg class="ck lost" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 50c-4-6-4-20 4-26 4-3 6-8 6-12h16c0 4 2 9 6 12 8 6 8 20 4 26z"></path><path d="M24 12h16M30 30l-5 8 7 3-4 9"></path></svg>'
-OPTS["Pagina404"] = ("404: pagina nu există", V1_CSS + """
-.c1c .lost{stroke:#B4583A}
-.c1c .go{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:36px 0 0;padding:0;list-style:none}
-.c1c .go a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:#E9DCCA;font-size:15px;font-weight:500;color:#3A2A20;transition:background-color .2s}
-.c1c .go a:hover{background:#E0D0BB}
-""", v1("Pagina asta s-a crăpat la ardere.", "Adresa nu mai există sau s-a schimbat. Te ajutăm să găsești ce cauți:",
-        '<ul class="go up" style="--d: .45s">' + "".join(f'<li><a href="{h}">{t}</a></li>' for t, h in [("Acasă", "#acasa"), ("Ateliere de grup", "#ateliere-de-grup"), ("Ce oferim", "#ce-facem"), ("Contact", "#contact")]) + "</ul>",
-        "").replace(CHECK, LOST))
+GO404 = [("Acasă", "#acasa"), ("Ateliere de grup", "#ateliere-de-grup"), ("Ce oferim", "#ce-facem"), ("Contact", "#contact")]
+OPTS["Pagina404"] = ("404: pagina nu există", C2_CSS, v2("Pagina asta s-a crăpat la ardere.", "Adresa nu mai există sau s-a schimbat. Te ajutăm să găsești ce cauți:",
+    '<ul class="go">' + "".join(f'<li><a href="{h}">{t}</a></li>' for t, h in GO404) + "</ul>", ("eroare", "404", "pagină"),
+    "Pagina nu există", "Poate s-a mutat sau linkul s-a scris greșit.", "AVA Art &amp; Soul", "Crăpat", "", red=True))   # MINE
 
 SOURCES = {
     "Confirmare1Bifa": "pagina de succes Stripe Checkout: o bifă care se desenează, fraza, apoi pașii următori",
     "Confirmare2Bilet": "dice.fm, biletul după cumpărare: același bilet ca pe Ateliere de grup, cu ștampila „Confirmat”",
     "Confirmare3Poza": "airbnb.com, confirmarea rezervării: poza locului lângă text, detaliile într-o listă scurtă",
     "Confirmare4Bilet": "bilețelele scrise de mână pe care meșterii de pe Etsy le pun în colet: câteva rânduri de la Alessia",
-    "ConfirmareProgramare": "în așezarea variantei 1, până alegi; o deschide Cal.com după programare",
-    "Pagina404": "în așezarea variantei 1, până alegi",
+    "ConfirmareProgramare": "în așezarea biletului (varianta 2, aleasă de Vali pe 13 nov); o deschide Cal.com după programare",
+    "Pagina404": "în așezarea biletului (varianta 2), cu ștampila „Crăpat”",
 }
 
 
@@ -193,7 +205,7 @@ def script():
             "  renderVals() { var self = this; if (!this.cb) this.cb = { secRef: function (el) { self.sec = el; } }; return this.cb; }\n}")
 
 
-H = {"Confirmare1Bifa": (1132, 1152), "Confirmare2Bilet": (825, 1182), "Confirmare3Poza": (1124, 1434), "Confirmare4Bilet": (946, 1259), "ConfirmareProgramare": (964, 1002), "Pagina404": (710, 614)}
+H = {"Confirmare1Bifa": (1132, 1152), "Confirmare2Bilet": (825, 1182), "Confirmare3Poza": (1124, 1434), "Confirmare4Bilet": (946, 1259), "ConfirmareProgramare": (825, 1045), "Pagina404": (720, 726)}
 
 if __name__ == "__main__":
     gh.SOURCES.update(SOURCES)

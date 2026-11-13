@@ -1,6 +1,6 @@
 """Contact, the page (Vali, 12 nov). Four variants of the whole page (header + contact); the footer comes at assembly.
 Copy: docs/continut-site.md, „Contact”: the form (nume, email, telefon opțional, „Ce te interesează?”, mesaj, bifă GDPR),
-email / telefon-WhatsApp / Instagram, the area (București, Cotroceni; no exact address, CLAUDE.md), „Îți răspundem în maxim
+email / telefon-WhatsApp / Instagram, the area (București only, Vali 13 nov; no exact address, CLAUDE.md), „Îți răspundem în maxim
 24 de ore.”. The form posts to Web3Forms in code; here sending shows the thank-you state. Other pages link here with the
 topic preselected (#contact?subiect=companii), noted for the build.
 Mine, to approve (MINE): the GDPR line, „Trimite mesajul”, the thank-you line, the chat lines in variant 4, „Dragă Alessia,”.
@@ -14,7 +14,7 @@ from cf_pagina_options import ENTER
 TITLE = "Contact"
 REPLY = "Îți răspundem în maxim 24 de ore."
 EMAIL, PHONE, PHONE_TXT, IG = "ava.events.26@gmail.com", "+40730301996", "0730 301 996", "@ava.art.soul"
-WHERE = "București, zona Cotroceni"
+WHERE = "București"   # Vali (13 nov): without the area
 TOPICS = ["Atelier de grup", "Pentru companii", "Consiliere", "Atelier privat", "Retreat", "Colaborare", "Altceva"]
 TOPIC_Q = "Ce te interesează?"
 GDPR = 'Sunt de acord ca datele mele să fie folosite ca să primesc un răspuns, conform <a href="#confidentialitate">Politicii de confidențialitate</a>.'   # MINE
@@ -45,12 +45,15 @@ def field(name, label, kind="text", extra=""):
 F = {"nume": field("nume", "Nume", extra=' autocomplete="name" required'),
      "email": field("email", "Email", "email", ' autocomplete="email" required'),
      "tel": field("telefon", 'Telefon <small>(opțional)</small>', "tel", ' autocomplete="tel"'),
-     "msg": field("mesaj", "Mesaj", "area", " required")}
+     "msg": field("mesaj", "Mesaj", "area", " required"),
+     "msg_opt": field("mesaj", 'Mesaj <small>(opțional)</small>', "area")}   # Contact 5 (Vali, 13 nov)
 
 
-def topics(cls="topics"):
-    return (f'<fieldset class="{cls}"><legend class="fl">{TOPIC_Q}</legend><div class="opts">'
-            + "".join(f'<label class="ch"><input type="radio" name="subiect" value="{t}"{" required" if i == 0 else ""}><span>{t}</span></label>' for i, t in enumerate(TOPICS))
+def topics(cls="topics", multi=False):
+    """multi (Vali, 13 nov, on Contact 5): checkboxes, pick several; at least one is checked in go()"""
+    kind = "checkbox" if multi else "radio"
+    return (f'<fieldset class="{cls}"><legend class="fl">{TOPIC_Q}{" <small>(poți alege mai multe)</small>" if multi else ""}</legend><div class="opts">'
+            + "".join(f'<label class="ch"><input type="{kind}" name="subiect" value="{t}"{" required" if i == 0 and not multi else ""}><span>{t}</span></label>' for i, t in enumerate(TOPICS))
             + "</div></fieldset>")
 
 
@@ -195,7 +198,8 @@ OPTS["Contact5Pasi"] = ("Contact 5: pas cu pas (ca la Pentru companii)", O4_CSS 
 .c5x .stage{align-items:start}
 .c5x .side .chl{margin-top:36px}
 .c5x textarea{min-height:180px}
-.c5x .st .fi+.fi{margin-top:16px}
+.c5x .hint{margin:8px 0 0;font-size:15px;color:rgba(244,237,228,.72)}   /* MINE */
+.c5x .st .fi+.fi{margin-top:16px}.c5x .st .grid .fi{margin-top:0}
 .c5x .st[data-s="1"] .back{display:none}.c5x .st[data-s="1"] .nav{justify-content:flex-end}
 .c5x form.sent .st{display:none!important}
 .c5x form.sent .done{background:rgba(244,237,228,.1);color:#F4EDE4}
@@ -204,8 +208,8 @@ OPTS["Contact5Pasi"] = ("Contact 5: pas cu pas (ca la Pentru companii)", O4_CSS 
 """, '<section class="gp ct c5x" aria-labelledby="gh-h" ref="{{ secRef }}"><div class="wrap stage"><div class="side">' + HEAD
     + f'<div class="up" style="--d: .5s">{channel_list()}</div></div>'
     + '<div class="card up" style="--d: .4s; --s: 1"><div class="bar"><i></i></div><p class="cnt" aria-live="polite">Pasul <b class="n">1</b> din 3</p>'
-    + form(f'<div class="st on" data-s="1"><h3>{STEPS5[0]}</h3>{topics()}{NAV}</div>',
-           f'<div class="st" data-s="2"><h3>{STEPS5[1]}</h3>{F["msg"]}{NAV}</div>',
+    + form(f'<div class="st on" data-s="1"><h3>{STEPS5[0]}</h3><p class="hint">Poți alege mai multe.</p>{topics(multi=True)}{NAV}</div>',
+           f'<div class="st" data-s="2"><h3>{STEPS5[1]}</h3>{F["msg_opt"]}{NAV}</div>',
            f'<div class="st" data-s="3"><h3>{STEPS5[2]}</h3><div class="grid">{F["nume"]}{F["email"]}</div>{F["tel"]}{OK}'
            f'<div class="nav"><button type="button" class="back" onClick="{{{{ back }}}}">Înapoi</button><button class="btn" type="submit">{SEND}</button></div></div>')
     + "</div></div></section>")
@@ -228,6 +232,8 @@ SEND_JS = """
 GO = """
   go(d) {
     var s = this.sec, c = s.querySelector('.card'), cur = +(c.style.getPropertyValue('--s') || 1), st = s.querySelector('.st.on');
+    var cb = st && st.querySelectorAll('input[type=checkbox][name=subiect]');
+    if (cb && cb.length) cb[0].setCustomValidity(Array.prototype.some.call(cb, function (x) { return x.checked; }) ? '' : 'Alege cel puțin o variantă.');
     if (d > 0 && st) { var bad = Array.prototype.find.call(st.querySelectorAll('input,textarea'), function (x) { return !x.checkValidity(); });
       if (bad) { bad.reportValidity(); return; } }
     var n = Math.max(1, Math.min(3, cur + d)); c.style.setProperty('--s', n);
@@ -243,7 +249,7 @@ def script():
             "  renderVals() { var self = this; if (!this.cb) this.cb = {" + SEND_JS + " secRef: function (el) { self.sec = el; } }; return this.cb; }\n}")
 
 
-H = {"Contact1Coloane": (1091, 1570), "Contact2Canale": (1293, 1704), "Contact3Scrisoare": (1047, 1717), "Contact4Chat": (1258, 1896), "Contact5Pasi": (789, 1053)}
+H = {"Contact1Coloane": (1091, 1570), "Contact2Canale": (1293, 1704), "Contact3Scrisoare": (1047, 1717), "Contact4Chat": (1258, 1896), "Contact5Pasi": (789, 1085)}
 
 if __name__ == "__main__":
     gh.SOURCES.update(SOURCES)

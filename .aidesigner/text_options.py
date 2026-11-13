@@ -139,19 +139,33 @@ LECT["Lectura3Margine"] = ("Paginile de text 3: rezumat pe margine", """
     f'<p class="lead">Regulile, scrise clar. Lângă fiecare parte găsești și varianta pe scurt.</p>'   # MINE
     f'<article class="art">{body(SECTIONS, margin=True)}</article></div>')
 
-# 4. apple.com/legal: tabs across all the text pages on top, quiet small text, the page you're on underlined.
-LECT["Lectura4File"] = ("Paginile de text 4: file între pagini", """
+# 4. apple.com/legal: tabs across all the text pages on top, quiet text, the page you're on underlined.
+# Vali (13 nov): this one, without „Pe scurt”; the legal pages use it too (legal_pages.py, through lect4).
+def tabs(cur):
+    return '<ul class="tabs">' + "".join(f'<li><a href="#{k}"{" aria-current=" + chr(34) + "page" + chr(34) if k == cur else ""}>{t}</a></li>' for k, t in PAGES) + "</ul>"
+
+
+def tabs_css(root):
+    return TABS_CSS.replace(".l4", root)
+
+
+def lect4(title, upd, sec, cur):
+    return ('<div class="wrap">' + tabs(cur)
+            + f'<h1 class="disp gh" id="gh-h">{title}</h1><p class="upd">{upd}</p><article class="art">{body(sec, num=False)}</article></div>')
+
+
+TABS_CSS = """
 .l4 .tabs{display:flex;gap:4px;margin:0 0 44px;padding:0;list-style:none;border-bottom:1px solid rgba(58,42,32,.16);overflow-x:auto;scrollbar-width:none}
 .l4 .tabs a{display:flex;align-items:center;min-height:48px;padding:0 16px;font-size:14.5px;font-weight:500;color:var(--ink2);white-space:nowrap;box-shadow:inset 0 -2px 0 transparent;transition:color .2s}
 .l4 .tabs a:hover{color:var(--ink)}
 .l4 .tabs a[aria-current="page"]{color:var(--ink);box-shadow:inset 0 -2px 0 #3A2A20}
-.l4 .stage{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:72px;align-items:start;margin-top:40px}
+@media (max-width:980px){.l4 .tabs{margin:0 -20px 28px;padding:0 20px}}
+"""
+LECT["Lectura4File"] = ("Paginile de text 4: file între pagini", TABS_CSS + """
+.l4 .art{max-width:760px;margin-top:48px}
 .l4 .s+.s{margin-top:40px}
-.l4 .sum{position:sticky;top:110px}
-@media (max-width:980px){.l4 .stage{grid-template-columns:minmax(0,1fr)!important}.l4 .tabs{margin:0 -20px 28px;padding:0 20px}.l4 .stage{grid-template-columns:1fr;gap:32px;margin-top:24px}.l4 .sum{position:static;order:-1}}
-""", lambda: '<div class="wrap"><ul class="tabs">' + "".join(f'<li><a href="#{k}"{" aria-current=" + chr(34) + "page" + chr(34) if k == "inscrieri" else ""}>{t}</a></li>' for k, t in PAGES)
-    + f'</ul><h1 class="disp gh" id="gh-h">{DOC_T}</h1><p class="upd">{ph(UPDATED)}</p><div class="stage"><article class="art">{body(SECTIONS, num=False)}</article>'
-    f'<div class="sum"><p class="tl">Pe scurt</p><ul>{"".join(f"<li>{x}</li>" for x in SUMMARY)}</ul></div></div></div>')
+@media (max-width:980px){.l4 .art{margin-top:28px}.l4 .s+.s{margin-top:32px}}
+""", lambda: lect4(DOC_T, ph(UPDATED), SECTIONS, "inscrieri"))
 
 # ---------------- the FAQ page: every question, by category ----------------
 FAQ_GEN = [  # docs/continut-site.md, „FAQ”, word for word (the first one from its note: „Trebuie să știu să lucrez cu lutul? (Nu.)”)
@@ -230,7 +244,14 @@ FAQ["Faq1Categorii"] = ("Întrebări frecvente 1: pe categorii", """
     + "".join(qa_list(q, k, True) for k, _, q in CATS) + f'{ASK}</div>')
 
 # 2. Stripe docs / Notion help: the categories in a sticky side list, all the questions below each other.
-FAQ["Faq2Lista"] = ("Întrebări frecvente 2: toate, cu listă alături", """
+FAQ["Faq2Lista"] = ("Întrebări frecvente 2: toate, cu listă alături", tabs_css(".f2z") + """
+.f2z .gh{font-size:clamp(44px,5vw,72px);line-height:1.05}
+.f2z .q,.f2z .q[open]{border-radius:0;background:none;box-shadow:none;border-top:1px solid rgba(58,42,32,.14)}
+.f2z .q+.q{margin-top:0}.f2z .cat .q:last-child{border-bottom:1px solid rgba(58,42,32,.14)}
+.f2z summary{min-height:44px;padding:14px 0;font-size:21px}.f2z summary:focus-visible{border-radius:4px}
+.f2z .a{padding:0 0 20px}.f2z .a p{font-size:17px;line-height:1.7;color:#3F2F25}
+.f2z .cat h2{margin-bottom:8px}
+@media (max-width:980px){.f2z summary{padding:14px 0;font-size:18px}.f2z .a{padding:0 0 16px}}
 .f2z .stage{display:grid;grid-template-columns:240px minmax(0,1fr);gap:64px;align-items:start;margin-top:52px}
 .f2z .side{position:sticky;top:110px}
 .f2z .side ol{margin:0;padding:0;list-style:none}
@@ -239,7 +260,7 @@ FAQ["Faq2Lista"] = ("Întrebări frecvente 2: toate, cu listă alături", """
 .f2z .side a:hover{color:var(--terra-d)}
 @media (max-width:980px){.f2z .stage{grid-template-columns:minmax(0,1fr);gap:24px;margin-top:28px}.f2z .side{position:static}
   .f2z .side ol{display:flex;gap:8px;overflow-x:auto;margin:0 -20px;padding:0 20px 4px;scrollbar-width:none}.f2z .side a{white-space:nowrap;border:0;padding:0 16px;min-height:44px;align-items:center;border-radius:999px;background:#E9DCCA}.f2z .side a small{display:none}}
-""", lambda: f'<div class="wrap">{HEADF}<div class="stage"><nav class="side up" style="--d: .45s" aria-label="Categorii"><ol>'
+""", lambda: f'<div class="wrap">{tabs("faq")}{HEADF}<div class="stage"><nav class="side up" style="--d: .45s" aria-label="Categorii"><ol>'
     + "".join(f'<li><a href="#fq-{k}">{n}<small>{len(q)}</small></a></li>' for k, n, q in CATS) + '</ol></nav><div>'
     + "".join(f'<section class="cat" id="fq-{k}"><h2>{n}</h2>{qa_list(q, k)}</section>' for k, n, q in CATS) + f'{ASK}</div></div></div>')
 
@@ -290,9 +311,9 @@ SOURCES = {
     "Lectura1Cuprins": "stripe.com/legal: cuprinsul lipit în stânga, textul numerotat în dreapta, „Pe scurt” deasupra",
     "Lectura2Coloana": "basecamp.com/about/policies: o singură coloană centrată, cuvinte simple, rezumatul întâi",
     "Lectura3Margine": "termenii Tumblr: textul întreg și, lângă fiecare parte, varianta pe scurt pe margine",
-    "Lectura4File": "apple.com/legal: file între toate paginile de text, sus; textul liniștit, rezumatul alături",
+    "Lectura4File": "apple.com/legal: file între toate paginile de text, sus; textul liniștit, fără „Pe scurt” (Vali, 13 nov)",
     "Faq1Categorii": "airbnb.com/help: categoriile ca pastile sus, câte o categorie pe rând",
-    "Faq2Lista": "documentația Stripe / Notion Help: categoriile într-o listă alături, toate întrebările una sub alta",
+    "Faq2Lista": "documentația Stripe / Notion Help: categoriile într-o listă alături, toate întrebările una sub alta; cu filele și titlul paginilor de text (apple.com/legal), ales de Vali pe 13 nov",
     "Faq3Cautare": "intercom.com/help: un câmp mare de căutare care filtrează întrebările pe loc",
     "Faq4Carduri": "help.shopify.com: carduri mari de categorii, cu câte un desen; alegi una și se deschid întrebările ei",
 }
@@ -309,7 +330,10 @@ HANDLERS = """
 
 
 def script():
-    return ("class Component extends DCLogic {\n  componentDidMount() {" + ENTER + "\n  }\n"
+    # the tabs scroll sideways on phones: bring the current page's tab into view
+    tabs = ("\n    var tb = s.querySelector('.tabs'), cur = tb && tb.querySelector('[aria-current]');"
+            "\n    if (cur && tb.scrollWidth > tb.clientWidth) tb.scrollLeft = cur.parentNode.offsetLeft - 20;")
+    return ("class Component extends DCLogic {\n  componentDidMount() {" + ENTER + tabs + "\n  }\n"
             "  componentWillUnmount() { if (this.io) this.io.disconnect(); }\n"
             "  renderVals() { var self = this; if (!this.cb) this.cb = {" + HANDLERS + " secRef: function (el) { self.sec = el; } }; return this.cb; }\n}")
 
@@ -319,7 +343,7 @@ for k, (t, css, fn) in LECT.items():
     ALL[k] = (t, TEXT_CSS + lp.LEGAL_CSS + css, f'<section class="gp tx l{k[7]}" aria-labelledby="gh-h" ref="{{{{ secRef }}}}">{fn()}</section>')
 for k, (t, css, fn) in FAQ.items():
     ALL[k] = (t, FAQ_CSS + css, f'<section class="gp fz f{k[3]}z" data-f="generale" aria-labelledby="gh-h" ref="{{{{ secRef }}}}">{fn()}</section>')
-H = {"Lectura1Cuprins": (2426, 2878), "Lectura2Coloana": (2337, 2391), "Lectura3Margine": (2322, 2971), "Lectura4File": (1992, 2459), "Faq1Categorii": (1665, 1480), "Faq2Lista": (4339, 4221), "Faq3Cautare": (4455, 4177), "Faq4Carduri": (1854, 1850)}
+H = {"Lectura1Cuprins": (2426, 2878), "Lectura2Coloana": (2337, 2391), "Lectura3Margine": (2322, 2971), "Lectura4File": (2000, 2092), "Faq1Categorii": (1665, 1480), "Faq2Lista": (3650, 3689), "Faq3Cautare": (4455, 4177), "Faq4Carduri": (1854, 1850)}
 
 if __name__ == "__main__":
     gh.SOURCES.update(SOURCES)

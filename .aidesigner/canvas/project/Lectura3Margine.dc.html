@@ -215,6 +215,8 @@ class Component extends DCLogic {
     s.classList.add('js');
     if (reduce || !window.IntersectionObserver) s.classList.add('in');
     else { this.io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { s.classList.add('in'); self.io.disconnect(); } }, { threshold: 0.1 }); this.io.observe(s); }
+    var tb = s.querySelector('.tabs'), cur = tb && tb.querySelector('[aria-current]');
+    if (cur && tb.scrollWidth > tb.clientWidth) tb.scrollLeft = cur.parentNode.offsetLeft - 20;
   }
   componentWillUnmount() { if (this.io) this.io.disconnect(); }
   renderVals() { var self = this; if (!this.cb) this.cb = {
