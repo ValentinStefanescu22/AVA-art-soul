@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Pentru companii, oferta 4: pas cu pas · mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.cs{position:relative;padding:112px 0 120px;--so:cubic-bezier(.22,1,.36,1)}
+.cs a{text-decoration:none}
+.cs h2{font-size:clamp(40px,4.4vw,64px);line-height:1.05}
+.cs h3{margin:0;font:400 26px/1.15 var(--display);font-variation-settings:'opsz' 20;letter-spacing:-.01em;text-wrap:balance}
+.cs .intro{margin:20px 0 0;max-width:44ch;font:400 clamp(20px,1.7vw,24px)/1.45 var(--display);font-variation-settings:'opsz' 20;color:#4A382C;text-wrap:pretty}
+.cs .lab{margin:0;font:400 italic 21px/1.3 var(--display);font-variation-settings:'opsz' 20;color:var(--terra-d)}
+.cs .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;border-radius:999px;background:#9C472C;color:#F8F1E8;font:500 15px/1 var(--text);letter-spacing:.02em;white-space:nowrap;border:0;cursor:pointer;transition:background-color .25s ease}
+.cs .btn:hover{background:#833A22}.cs .btn:focus-visible{outline:2px solid #9C472C;outline-offset:3px}
+.cs .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.cs .chips li{display:inline-flex;align-items:center;min-height:38px;padding:0 16px;border-radius:999px;background:#F1E7DA;font-size:15px;color:#3A2A20}
+@keyframes cs-up{from{opacity:0;translate:0 16px}}
+.cs.js:not(.in) .ri{opacity:0}
+.cs.js.in .ri{animation:cs-up .8s var(--so) backwards;animation-delay:calc(var(--i,0) * 80ms)}
+@media (max-width:980px){.cs{padding:72px 0 80px}.cs h3{font-size:23px}.cs .btn{width:100%;box-sizing:border-box}}
+@media (prefers-reduced-motion:reduce){.cs *{animation:none!important;transition:none!important}}
+
+.of form{margin:0}
+.of .fi{display:flex;flex-direction:column;gap:7px;min-width:0}
+.of .fl{font-size:14px;font-weight:500;color:#4A382C;padding:0}
+.of .fl small{font-weight:400;color:var(--ink2);font-size:13px}
+.of input:not([type=checkbox]),.of textarea{box-sizing:border-box;width:100%;min-height:50px;padding:12px 14px;border:1px solid rgba(58,42,32,.22);border-radius:12px;background:#FFFCF7;font:400 16px/1.4 var(--text);color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.of textarea{resize:vertical;min-height:96px}
+.of input::placeholder{color:#9A8676}
+.of input:not([type=checkbox]):focus,.of textarea:focus{outline:0;border-color:#9C472C;box-shadow:0 0 0 3px rgba(156,71,44,.18)}
+.of fieldset{margin:0;padding:0;border:0;min-width:0}
+.of legend{margin-bottom:10px}
+.of .opts{display:flex;flex-wrap:wrap;gap:8px}
+.of .ch{position:relative;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;border-radius:999px;background:#F1E7DA;font-size:15px;color:#3A2A20;cursor:pointer;transition:background-color .2s,color .2s}
+.of .ch input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.of .ch:hover{background:#E9DCCA}
+.of .ch:has(input:checked){background:#3A2A20;color:#F4EDE4}
+.of .ch:has(input:focus-visible){outline:2px solid #9C472C;outline-offset:2px}
+.of .altx{display:none;margin-top:12px}
+.of form:has(.alt input:checked) .altx{display:flex}
+.of .ok{display:flex;align-items:flex-start;gap:12px;font-size:14px;line-height:1.5;color:#4A382C;cursor:pointer}
+.of .ok input{flex:none;width:20px;height:20px;margin:1px 0 0;accent-color:#9C472C}
+.of .ok a{color:var(--terra-d);text-decoration:underline;text-underline-offset:3px}
+.of .note{margin:12px 0 0;font-size:14px;color:var(--ink2)}
+.of .send{display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px}
+.of .send .note{margin:0}
+
+.o4{background:#EDE0CD}
+.o4 .stage{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:64px;align-items:center}
+.o4 .card{position:relative;padding:40px 44px 36px;border-radius:26px;corner-shape:squircle;background:#3A2A20;color:#F4EDE4;box-shadow:0 40px 80px -50px rgba(46,28,19,.8)}
+.o4 .bar{height:3px;border-radius:3px;background:rgba(244,237,228,.16);overflow:hidden}
+.o4 .bar i{display:block;height:100%;width:calc(var(--s,1) * 33.34%);background:#F2C79C;transition:width .5s var(--so)}
+.o4 .cnt{margin:14px 0 0;font-size:13.5px;color:#D8C6B2;font-variant-numeric:tabular-nums}
+.o4 .st{display:none;min-height:300px;flex-direction:column}
+.o4 .st.on{display:flex}
+@keyframes o4-in{from{opacity:0;translate:24px 0}}
+@media (prefers-reduced-motion:no-preference){.o4 .st.on{animation:o4-in .45s var(--so)}}
+.o4 .st h3{margin:18px 0 24px;font-size:32px;color:#F4EDE4}
+.o4 .fl{color:#EFE3D3}.o4 .fl small{color:#BFA994}
+.o4 legend{display:none}
+.o4 input:not([type=checkbox]),.o4 textarea{background:rgba(244,237,228,.06);border-color:rgba(244,237,228,.24);color:#F4EDE4;color-scheme:dark}
+.o4 input::placeholder{color:#A8917D}
+.o4 input:not([type=checkbox]):focus,.o4 textarea:focus{border-color:#F2C79C;box-shadow:0 0 0 3px rgba(242,199,156,.2)}
+.o4 .ch{background:rgba(244,237,228,.08);color:#F4EDE4;box-shadow:inset 0 0 0 1px rgba(244,237,228,.2)}
+.o4 .ch:hover{background:rgba(244,237,228,.14)}
+.o4 .ch:has(input:checked){background:#F4EDE4;color:#2E1D14}
+.o4 .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px}
+.o4 .ok{margin-top:20px;color:#D8C6B2}.o4 .ok a{color:#F2C79C}
+.o4 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:auto;padding-top:28px}
+.o4 .back{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;border:0;background:none;color:#EFE3D3;font:500 15px var(--text);cursor:pointer;text-decoration:underline;text-underline-offset:5px}
+.o4 .back[hidden]{display:inline-flex;visibility:hidden}
+.o4 .btn{background:#F4EDE4;color:#2E1D14}.o4 .btn:hover{background:#FFF8EE}.o4 .btn:focus-visible{outline-color:#F2C79C}
+.o4 .card .note{color:#BFA994}
+@media (max-width:980px){
+  .o4 .stage{grid-template-columns:1fr;gap:32px}.o4 .card{padding:26px 20px 24px}
+  .o4 .st{min-height:0}.o4 .st h3{font-size:26px}.o4 .grid{grid-template-columns:1fr}
+  .o4 .nav{flex-direction:column-reverse;align-items:stretch}.o4 .nav .btn{width:100%}
+}
+</style>
+</helmet>
+<div class="pg" data-src="typeform.com: câte o întrebare pe rând, cu bara de progres">
+<section class="cs of o4" id="oferta" aria-labelledby="of-h" ref="{{ secRef }}"><div class="wrap stage"><div><h2 class="disp ri" id="of-h">Cere o ofertă</h2><p class="intro ri" style="--i: 1">Fiecare atelier e gândit pentru echipa voastră, așa că îți trimitem o ofertă personalizată după ce aflăm de ce are nevoie echipa ta și formatul ales.</p><p class="note ri" style="--i: 2">Îți răspundem în maxim 24 de ore.</p></div><div class="card ri" style="--i: 2; --s: 1"><div class="bar"><i></i></div><p class="cnt" aria-live="polite">Pasul <b class="n">1</b> din 3</p><form class="" action="#" onSubmit="{{ noop }}"><div class="st on" data-s="1"><h3>Ce vă doriți?</h3><fieldset class="goals"><legend class="fl">Ce vă doriți să obțină echipa?</legend><div class="opts"><label class="ch"><input type="checkbox" name="scop" value="Mai puțin stres și oboseală"><span>Mai puțin stres și oboseală</span></label><label class="ch"><input type="checkbox" name="scop" value="Comunicare și încredere"><span>Comunicare și încredere</span></label><label class="ch"><input type="checkbox" name="scop" value="Să se cunoască mai bine"><span>Să se cunoască mai bine</span></label><label class="ch"><input type="checkbox" name="scop" value="O pauză reală"><span>O pauză reală</span></label><label class="ch"><input type="checkbox" name="scop" value="Să afle ce îi motivează"><span>Să afle ce îi motivează</span></label><label class="ch alt"><input type="checkbox" name="scop" value="altceva"><span>Altceva</span></label></div><label class="fi altx"><span class="fl">Spune-ne ce</span><textarea name="altceva" rows="3"></textarea></label></fieldset><div class="nav"><button type="button" class="back" hidden>Înapoi</button><button type="button" class="btn" onClick="{{ next }}">Mai departe</button></div></div><div class="st" data-s="2"><h3>Despre echipă</h3><div class="grid"><label class="fi "><span class="fl">Număr de persoane</span><input type="number" name="persoane" min="1" inputmode="numeric" required></label><label class="fi "><span class="fl">Dată orientativă</span><input type="date" name="data"></label><label class="fi" style="grid-column: 1 / -1"><span class="fl">Locație</span><input type="text" name="locatie" placeholder="la birou, în București…"></label></div><div class="nav"><button type="button" class="back" onClick="{{ back }}">Înapoi</button><button type="button" class="btn" onClick="{{ next }}">Mai departe</button></div></div><div class="st" data-s="3"><h3>Cum vă contactăm</h3><div class="grid"><label class="fi "><span class="fl">Nume</span><input type="text" name="nume" autocomplete="name" required></label><label class="fi "><span class="fl">Firmă</span><input type="text" name="firma" autocomplete="organization" required></label><label class="fi "><span class="fl">Email</span><input type="email" name="email" autocomplete="email" required></label><label class="fi "><span class="fl">Telefon <small>(opțional)</small></span><input type="tel" name="telefon" autocomplete="tel"></label></div><label class="ok"><input type="checkbox" name="gdpr" required><span>Sunt de acord ca datele mele să fie folosite pentru a primi oferta, conform <a href="#confidentialitate">Politicii de confidențialitate</a>.</span></label><div class="nav"><button type="button" class="back" onClick="{{ back }}">Înapoi</button><button class="btn" type="submit">Trimite cererea</button></div></div></form></div></div></section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":949}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this, s = this.sec; if (!s) return;
+    var reduce = this.reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    s.classList.add('js');
+    if (reduce || !window.IntersectionObserver) s.classList.add('in');
+    else { this.io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { s.classList.add('in'); self.io.disconnect(); } }, { threshold: 0.1 }); this.io.observe(s); }
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); }
+
+  go(d) {
+    var s = this.sec, c = s.querySelector('.card'), cur = +(c.style.getPropertyValue('--s') || 1), n = Math.max(1, Math.min(3, cur + d));
+    c.style.setProperty('--s', n);
+    s.querySelectorAll('.st').forEach(function (x) { x.classList.toggle('on', +x.getAttribute('data-s') === n); });
+    s.querySelector('.cnt .n').textContent = n;
+    var f = s.querySelector('.st.on input, .st.on button.btn'); if (f) f.focus({ preventScroll: true });
+  }
+  renderVals() { var self = this; if (!this.cb) this.cb = {
+    next: function (e) { self.go(1); },
+    back: function (e) { self.go(-1); },
+    noop: function (e) { e.preventDefault(); }, secRef: function (el) { self.sec = el; } }; return this.cb; }
+}
+</script>
+</body>
+</html>

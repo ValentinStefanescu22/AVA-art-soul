@@ -35,6 +35,50 @@
    "name": "Arhivă: Ateliere de grup"
   },
   {
+   "id": "companii",
+   "name": "Ce oferim › Pentru companii: lucru"
+  },
+  {
+   "id": "companii-arh",
+   "name": "Arhivă: Pentru companii"
+  },
+  {
+   "id": "consiliere",
+   "name": "Ce oferim › Consiliere 1:1: lucru"
+  },
+  {
+   "id": "privat",
+   "name": "Ce oferim › Atelier privat 1:1: lucru"
+  },
+  {
+   "id": "scoli",
+   "name": "Ce oferim › Pentru școli și copii: lucru"
+  },
+  {
+   "id": "retreat",
+   "name": "Ce oferim › Retreaturi (În curând): lucru"
+  },
+  {
+   "id": "evenimente",
+   "name": "Evenimente (În curând): lucru"
+  },
+  {
+   "id": "galerie",
+   "name": "Galerie: lucru"
+  },
+  {
+   "id": "contact",
+   "name": "Contact: lucru"
+  },
+  {
+   "id": "text",
+   "name": "Paginile de text + FAQ: lucru"
+  },
+  {
+   "id": "confirmari",
+   "name": "Confirmări și 404: lucru"
+  },
+  {
    "id": "header",
    "name": "Arhivă: Header"
   },
@@ -2496,6 +2540,1298 @@
    "title": "Biletele de Crăciun 4: glob de lut · mobil",
    "page": "grup-arh",
    "is_interactive": true
+  },
+  "CompHero.dc.html": {
+   "x": 2100,
+   "y": 0,
+   "w": 1440,
+   "h": 905,
+   "title": "Pentru companii: deschiderea (șablonul, ca pe Ateliere de grup) · inspirație: șablonul paginilor de serviciu: deschiderea aleasă pe Ateliere de grup (aman.com)",
+   "page": "companii",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CompHeroMobil.dc.html": {
+   "x": 3620,
+   "y": 0,
+   "w": 390,
+   "h": 789,
+   "title": "Pentru companii: deschiderea (șablonul, ca pe Ateliere de grup) · mobil",
+   "page": "companii",
+   "is_interactive": true
+  },
+  "CompFormate1Planuri.dc.html": {
+   "x": 2100,
+   "y": 1105,
+   "w": 1440,
+   "h": 892,
+   "title": "Pentru companii, formate 1: ca planurile · inspirație: notion.com/pricing: formatele una lângă alta, ca planurile, iar temele dedesubt",
+   "page": "companii",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CompFormate1PlanuriMobil.dc.html": {
+   "x": 3620,
+   "y": 1105,
+   "w": 390,
+   "h": 1188,
+   "title": "Pentru companii, formate 1: ca planurile · mobil",
+   "page": "companii",
+   "is_interactive": true
+  },
+  "CompFormate2Nevoi.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 1047,
+   "title": "Pentru companii, formate 2: întâi nevoile · inspirație: headspace.com/work: întâi problemele echipei, mari, cu câte un desen, apoi formatele",
+   "page": "companii-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CompFormate2NevoiMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 1228,
+   "title": "Pentru companii, formate 2: întâi nevoile · mobil",
+   "page": "companii-arh",
+   "is_interactive": true
+  },
+  "CompFormate3Editorial.dc.html": {
+   "x": 2070,
+   "y": 0,
+   "w": 1440,
+   "h": 1015,
+   "title": "Pentru companii, formate 3: editorial · inspirație: Kinfolk, revista: o fotografie mare lângă text, formatele ca un cuprins numerotat",
+   "page": "companii-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CompFormate3EditorialMobil.dc.html": {
+   "x": 3590,
+   "y": 0,
+   "w": 390,
+   "h": 1298,
+   "title": "Pentru companii, formate 3: editorial · mobil",
+   "page": "companii-arh",
+   "is_interactive": true
+  },
+  "CompFormate4Fisa.dc.html": {
+   "x": 4140,
+   "y": 0,
+   "w": 1440,
+   "h": 1063,
+   "title": "Pentru companii, formate 4: fișă · inspirație: aesop.com, fișa produsului: rânduri cu linie subțire, eticheta în stânga și răspunsul în dreapta",
+   "page": "companii-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CompFormate4FisaMobil.dc.html": {
+   "x": 5660,
+   "y": 0,
+   "w": 390,
+   "h": 1346,
+   "title": "Pentru companii, formate 4: fișă · mobil",
+   "page": "companii-arh",
+   "is_interactive": true
+  },
+  "CompDetalii.dc.html": {
+   "x": 2100,
+   "y": 2493,
+   "w": 1440,
+   "h": 932,
+   "title": "Pentru companii: cum funcționează + cine facilitează · inspirație: șablonul paginilor de serviciu: „Cum funcționează” de pe Ateliere de grup",
+   "page": "companii",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CompDetaliiMobil.dc.html": {
+   "x": 3620,
+   "y": 2493,
+   "w": 390,
+   "h": 1301,
+   "title": "Pentru companii: cum funcționează + cine facilitează · mobil",
+   "page": "companii",
+   "is_interactive": true
+  },
+  "CompOferta1Vanzari.dc.html": {
+   "x": 0,
+   "y": 1960,
+   "w": 1440,
+   "h": 1023,
+   "title": "Pentru companii, oferta 1: ca la Stripe · inspirație: stripe.com/contact/sales: textul și pașii în stânga, formularul într-un card în dreapta",
+   "page": "companii-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CompOferta1VanzariMobil.dc.html": {
+   "x": 1520,
+   "y": 1960,
+   "w": 390,
+   "h": 1749,
+   "title": "Pentru companii, oferta 1: ca la Stripe · mobil",
+   "page": "companii-arh",
+   "is_interactive": true
+  },
+  "CompOferta2Alegeri.dc.html": {
+   "x": 2070,
+   "y": 1960,
+   "w": 1440,
+   "h": 1220,
+   "title": "Pentru companii, oferta 2: întâi alegi · inspirație: airbnb.com, înscrierea gazdelor: întâi alegi din plăci mari, apoi completezi restul",
+   "page": "companii-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CompOferta2AlegeriMobil.dc.html": {
+   "x": 3590,
+   "y": 1960,
+   "w": 390,
+   "h": 1769,
+   "title": "Pentru companii, oferta 2: întâi alegi · mobil",
+   "page": "companii-arh",
+   "is_interactive": true
+  },
+  "CompOferta3Liniste.dc.html": {
+   "x": 4140,
+   "y": 1960,
+   "w": 1440,
+   "h": 1213,
+   "title": "Pentru companii, oferta 3: liniștit · inspirație: aman.com, formularul de rezervare: centrat, câmpuri doar cu linie dedesubt, etichete cu serif",
+   "page": "companii-arh",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CompOferta3LinisteMobil.dc.html": {
+   "x": 5660,
+   "y": 1960,
+   "w": 390,
+   "h": 1494,
+   "title": "Pentru companii, oferta 3: liniștit · mobil",
+   "page": "companii-arh",
+   "is_interactive": true
+  },
+  "CompOferta4Pasi.dc.html": {
+   "x": 2100,
+   "y": 3994,
+   "w": 1440,
+   "h": 647,
+   "title": "Pentru companii, oferta 4: pas cu pas · inspirație: typeform.com: câte o întrebare pe rând, cu bara de progres",
+   "page": "companii",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CompOferta4PasiMobil.dc.html": {
+   "x": 3620,
+   "y": 3994,
+   "w": 390,
+   "h": 949,
+   "title": "Pentru companii, oferta 4: pas cu pas · mobil",
+   "page": "companii",
+   "is_interactive": true
+  },
+  "CompFaq.dc.html": {
+   "x": 2100,
+   "y": 5143,
+   "w": 1440,
+   "h": 961,
+   "title": "Pentru companii: întrebări frecvente · inspirație: șablonul paginilor de serviciu: FAQ 3, carduri (ales pe Acasă)",
+   "page": "companii",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "CompFaqMobil.dc.html": {
+   "x": 3620,
+   "y": 5143,
+   "w": 390,
+   "h": 1178,
+   "title": "Pentru companii: întrebări frecvente · mobil",
+   "page": "companii",
+   "is_interactive": true
+  },
+  "PentruCompanii.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 5150,
+   "title": "Pentru companii: toate secțiunile alese, în ordine",
+   "page": "companii",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "PentruCompaniiMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 7080,
+   "title": "Pentru companii · mobil",
+   "page": "companii",
+   "is_interactive": true
+  },
+  "ConsHero.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 905,
+   "title": "Consiliere 1:1: deschiderea (șablonul, ca pe Ateliere de grup) · inspirație: șablonul paginilor de serviciu: deschiderea aleasă pe Ateliere de grup (aman.com)",
+   "page": "consiliere",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ConsHeroMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 789,
+   "title": "Consiliere 1:1: deschiderea (șablonul, ca pe Ateliere de grup) · mobil",
+   "page": "consiliere",
+   "is_interactive": true
+  },
+  "ConsIntrebari1Calm.dc.html": {
+   "x": 0,
+   "y": 1165,
+   "w": 1440,
+   "h": 1042,
+   "title": "Consiliere, te regăsești aici? 1: rânduri care se aprind · inspirație: calm.com: rânduri mari, centrate, care se aprind pe rând pe măsură ce derulezi",
+   "page": "consiliere",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ConsIntrebari1CalmMobil.dc.html": {
+   "x": 1520,
+   "y": 1165,
+   "w": 390,
+   "h": 757,
+   "title": "Consiliere, te regăsești aici? 1: rânduri care se aprind · mobil",
+   "page": "consiliere",
+   "is_interactive": true
+  },
+  "ConsIntrebari2Carduri.dc.html": {
+   "x": 2070,
+   "y": 1165,
+   "w": 1440,
+   "h": 695,
+   "title": "Consiliere, te regăsești aici? 2: cartonașe · inspirație: theschooloflife.com: întrebările ca niște cartonașe numerotate, în culori calde",
+   "page": "consiliere",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ConsIntrebari2CarduriMobil.dc.html": {
+   "x": 3590,
+   "y": 1165,
+   "w": 390,
+   "h": 606,
+   "title": "Consiliere, te regăsești aici? 2: cartonașe · mobil",
+   "page": "consiliere",
+   "is_interactive": true
+  },
+  "ConsIntrebari3Mesaje.dc.html": {
+   "x": 4140,
+   "y": 1165,
+   "w": 1440,
+   "h": 784,
+   "title": "Consiliere, te regăsești aici? 3: mesaje · inspirație: Mesaje (Apple): Alessia te întreabă, bulă cu bulă, ca într-o conversație",
+   "page": "consiliere",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ConsIntrebari3MesajeMobil.dc.html": {
+   "x": 5660,
+   "y": 1165,
+   "w": 390,
+   "h": 975,
+   "title": "Consiliere, te regăsești aici? 3: mesaje · mobil",
+   "page": "consiliere",
+   "is_interactive": true
+  },
+  "ConsIntrebari4Portret.dc.html": {
+   "x": 6210,
+   "y": 1165,
+   "w": 1440,
+   "h": 824,
+   "title": "Consiliere, te regăsești aici? 4: portret · inspirație: Cereal Magazine: portretul lângă o listă liniștită, cu linii subțiri",
+   "page": "consiliere",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ConsIntrebari4PortretMobil.dc.html": {
+   "x": 7730,
+   "y": 1165,
+   "w": 390,
+   "h": 1150,
+   "title": "Consiliere, te regăsești aici? 4: portret · mobil",
+   "page": "consiliere",
+   "is_interactive": true
+  },
+  "ConsDetalii.dc.html": {
+   "x": 0,
+   "y": 2575,
+   "w": 1440,
+   "h": 917,
+   "title": "Consiliere: cum funcționează + prima întâlnire · inspirație: șablonul paginilor de serviciu: „Cum funcționează” de pe Ateliere de grup",
+   "page": "consiliere",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ConsDetaliiMobil.dc.html": {
+   "x": 1520,
+   "y": 2575,
+   "w": 390,
+   "h": 1166,
+   "title": "Consiliere: cum funcționează + prima întâlnire · mobil",
+   "page": "consiliere",
+   "is_interactive": true
+  },
+  "ConsProgramare1Luna.dc.html": {
+   "x": 0,
+   "y": 4001,
+   "w": 1440,
+   "h": 1043,
+   "title": "Consiliere, programare 1: luna (cal.com) · inspirație: cal.com, vederea pe lună: detaliile în stânga, calendarul la mijloc, orele în dreapta",
+   "page": "consiliere",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ConsProgramare1LunaMobil.dc.html": {
+   "x": 1520,
+   "y": 4001,
+   "w": 390,
+   "h": 1407,
+   "title": "Consiliere, programare 1: luna (cal.com) · mobil",
+   "page": "consiliere",
+   "is_interactive": true
+  },
+  "ConsProgramare2Saptamana.dc.html": {
+   "x": 2070,
+   "y": 4001,
+   "w": 1440,
+   "h": 1272,
+   "title": "Consiliere, programare 2: săptămâna · inspirație: Google Calendar, vederea pe săptămână (cal.com o are ca „week view”)",
+   "page": "consiliere",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ConsProgramare2SaptamanaMobil.dc.html": {
+   "x": 3590,
+   "y": 4001,
+   "w": 390,
+   "h": 1416,
+   "title": "Consiliere, programare 2: săptămâna · mobil",
+   "page": "consiliere",
+   "is_interactive": true
+  },
+  "ConsProgramare3Coloane.dc.html": {
+   "x": 4140,
+   "y": 4001,
+   "w": 1440,
+   "h": 709,
+   "title": "Consiliere, programare 3: coloane · inspirație: doctolib.fr: zilele pe coloane, fiecare cu orele ei (cal.com o are ca „column view”)",
+   "page": "consiliere",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ConsProgramare3ColoaneMobil.dc.html": {
+   "x": 5660,
+   "y": 4001,
+   "w": 390,
+   "h": 1100,
+   "title": "Consiliere, programare 3: coloane · mobil",
+   "page": "consiliere",
+   "is_interactive": true
+  },
+  "ConsProgramare4Alegi.dc.html": {
+   "x": 6210,
+   "y": 4001,
+   "w": 1440,
+   "h": 905,
+   "title": "Consiliere, programare 4: întâi alegi ședința · inspirație: calendly.com: întâi alegi tipul de ședință din două carduri, apoi ziua și ora",
+   "page": "consiliere",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ConsProgramare4AlegiMobil.dc.html": {
+   "x": 7730,
+   "y": 4001,
+   "w": 390,
+   "h": 1018,
+   "title": "Consiliere, programare 4: întâi alegi ședința · mobil",
+   "page": "consiliere",
+   "is_interactive": true
+  },
+  "ConsFaq.dc.html": {
+   "x": 0,
+   "y": 5677,
+   "w": 1440,
+   "h": 1092,
+   "title": "Consiliere: întrebări frecvente · inspirație: șablonul paginilor de serviciu: FAQ 3, carduri (ales pe Acasă)",
+   "page": "consiliere",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ConsFaqMobil.dc.html": {
+   "x": 1520,
+   "y": 5677,
+   "w": 390,
+   "h": 1357,
+   "title": "Consiliere: întrebări frecvente · mobil",
+   "page": "consiliere",
+   "is_interactive": true
+  },
+  "PrivHero.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 905,
+   "title": "Atelier privat 1:1: deschiderea · inspirație: șablonul paginilor de serviciu: deschiderea aleasă pe Ateliere de grup (aman.com)",
+   "page": "privat",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "PrivHeroMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 789,
+   "title": "Atelier privat 1:1: deschiderea · mobil",
+   "page": "privat",
+   "is_interactive": true
+  },
+  "PrivAteliere1Comparat.dc.html": {
+   "x": 0,
+   "y": 1165,
+   "w": 1440,
+   "h": 1662,
+   "title": "Atelier privat, cele două ateliere 1: comparate · inspirație: apple.com/iphone/compare: cele două una lângă alta, cu aceleași rânduri aliniate",
+   "page": "privat",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "PrivAteliere1ComparatMobil.dc.html": {
+   "x": 1520,
+   "y": 1165,
+   "w": 390,
+   "h": 2736,
+   "title": "Atelier privat, cele două ateliere 1: comparate · mobil",
+   "page": "privat",
+   "is_interactive": true
+  },
+  "PrivAteliere2Comutator.dc.html": {
+   "x": 2070,
+   "y": 1165,
+   "w": 1440,
+   "h": 922,
+   "title": "Atelier privat, cele două ateliere 2: comutator · inspirație: apple.com/shop/buy: un comutator alege atelierul, iar prețul și butonul stau într-un card",
+   "page": "privat",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "PrivAteliere2ComutatorMobil.dc.html": {
+   "x": 3590,
+   "y": 1165,
+   "w": 390,
+   "h": 1236,
+   "title": "Atelier privat, cele două ateliere 2: comutator · mobil",
+   "page": "privat",
+   "is_interactive": true
+  },
+  "PrivAteliere3Alternat.dc.html": {
+   "x": 4140,
+   "y": 1165,
+   "w": 1440,
+   "h": 2058,
+   "title": "Atelier privat, cele două ateliere 3: alternat · inspirație: Monocle: articole lungi, cu poza o dată în stânga, o dată în dreapta",
+   "page": "privat",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "PrivAteliere3AlternatMobil.dc.html": {
+   "x": 5660,
+   "y": 1165,
+   "w": 390,
+   "h": 2781,
+   "title": "Atelier privat, cele două ateliere 3: alternat · mobil",
+   "page": "privat",
+   "is_interactive": true
+  },
+  "PrivAteliere4Acordeon.dc.html": {
+   "x": 6210,
+   "y": 1165,
+   "w": 1440,
+   "h": 933,
+   "title": "Atelier privat, cele două ateliere 4: acordeon · inspirație: acordeonul de poze ales pe Acasă, la „Ce oferim”: două rânduri mari, unul deschis",
+   "page": "privat",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "PrivAteliere4AcordeonMobil.dc.html": {
+   "x": 7730,
+   "y": 1165,
+   "w": 390,
+   "h": 1160,
+   "title": "Atelier privat, cele două ateliere 4: acordeon · mobil",
+   "page": "privat",
+   "is_interactive": true
+  },
+  "PrivDetalii.dc.html": {
+   "x": 0,
+   "y": 4206,
+   "w": 1440,
+   "h": 807,
+   "title": "Atelier privat: cum funcționează + cadou · inspirație: șablonul paginilor de serviciu: „Cum funcționează” de pe Ateliere de grup",
+   "page": "privat",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "PrivDetaliiMobil.dc.html": {
+   "x": 1520,
+   "y": 4206,
+   "w": 390,
+   "h": 1011,
+   "title": "Atelier privat: cum funcționează + cadou · mobil",
+   "page": "privat",
+   "is_interactive": true
+  },
+  "PrivFaq.dc.html": {
+   "x": 0,
+   "y": 5477,
+   "w": 1440,
+   "h": 1038,
+   "title": "Atelier privat: întrebări frecvente · inspirație: șablonul paginilor de serviciu: FAQ 3, carduri (ales pe Acasă)",
+   "page": "privat",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "PrivFaqMobil.dc.html": {
+   "x": 1520,
+   "y": 5477,
+   "w": 390,
+   "h": 1286,
+   "title": "Atelier privat: întrebări frecvente · mobil",
+   "page": "privat",
+   "is_interactive": true
+  },
+  "ScoliHero.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 905,
+   "title": "Pentru școli și copii: deschiderea · inspirație: șablonul paginilor de serviciu: deschiderea aleasă pe Ateliere de grup (aman.com)",
+   "page": "scoli",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ScoliHeroMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 789,
+   "title": "Pentru școli și copii: deschiderea · mobil",
+   "page": "scoli",
+   "is_interactive": true
+  },
+  "ScoliDetalii.dc.html": {
+   "x": 0,
+   "y": 1165,
+   "w": 1440,
+   "h": 807,
+   "title": "Pentru școli și copii: cum funcționează · inspirație: șablonul paginilor de serviciu: „Cum funcționează” de pe Ateliere de grup",
+   "page": "scoli",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ScoliDetaliiMobil.dc.html": {
+   "x": 1520,
+   "y": 1165,
+   "w": 390,
+   "h": 1039,
+   "title": "Pentru școli și copii: cum funcționează · mobil",
+   "page": "scoli",
+   "is_interactive": true
+  },
+  "ScoliFaq.dc.html": {
+   "x": 0,
+   "y": 2464,
+   "w": 1440,
+   "h": 726,
+   "title": "Pentru școli și copii: întrebări frecvente · inspirație: șablonul paginilor de serviciu: FAQ 3, carduri (ales pe Acasă)",
+   "page": "scoli",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ScoliFaqMobil.dc.html": {
+   "x": 1520,
+   "y": 2464,
+   "w": 390,
+   "h": 888,
+   "title": "Pentru școli și copii: întrebări frecvente · mobil",
+   "page": "scoli",
+   "is_interactive": true
+  },
+  "Retreat1Ecran.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 900,
+   "title": "Retreaturi 1: un singur ecran · inspirație: șablonul (aman.com): fotografia pe tot ecranul, cu formularul de abonare în ea",
+   "page": "retreat",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Retreat1EcranMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 933,
+   "title": "Retreaturi 1: un singur ecran · mobil",
+   "page": "retreat",
+   "is_interactive": true
+  },
+  "Retreat2Jumatate.dc.html": {
+   "x": 2070,
+   "y": 0,
+   "w": 1440,
+   "h": 900,
+   "title": "Retreaturi 2: jumătate-jumătate · inspirație: squarespace.com, paginile „coming soon”: poza pe o jumătate, textul și formularul pe cealaltă",
+   "page": "retreat",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Retreat2JumatateMobil.dc.html": {
+   "x": 3590,
+   "y": 0,
+   "w": 390,
+   "h": 1015,
+   "title": "Retreaturi 2: jumătate-jumătate · mobil",
+   "page": "retreat",
+   "is_interactive": true
+  },
+  "Retreat3Linistit.dc.html": {
+   "x": 4140,
+   "y": 0,
+   "w": 1440,
+   "h": 900,
+   "title": "Retreaturi 3: liniștit, fără poză · inspirație: linear.app, listele de așteptare: centrat, mic, liniștit; singurul ornament sunt inelele de lut",
+   "page": "retreat",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Retreat3LinistitMobil.dc.html": {
+   "x": 5660,
+   "y": 0,
+   "w": 390,
+   "h": 830,
+   "title": "Retreaturi 3: liniștit, fără poză · mobil",
+   "page": "retreat",
+   "is_interactive": true
+  },
+  "Retreat4Vedere.dc.html": {
+   "x": 6210,
+   "y": 0,
+   "w": 1440,
+   "h": 870,
+   "title": "Retreaturi 4: carte poștală · inspirație: paperlesspost.com: o carte poștală din pădure, cu timbrul „În curând”",
+   "page": "retreat",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Retreat4VedereMobil.dc.html": {
+   "x": 7730,
+   "y": 0,
+   "w": 390,
+   "h": 1035,
+   "title": "Retreaturi 4: carte poștală · mobil",
+   "page": "retreat",
+   "is_interactive": true
+  },
+  "Evenimente1Ecran.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 900,
+   "title": "Evenimente 1: un singur ecran · inspirație: șablonul (aman.com): fotografia pe tot ecranul, cu formularul de abonare în ea (aceeași ca la Retreaturi)",
+   "page": "evenimente",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Evenimente1EcranMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 933,
+   "title": "Evenimente 1: un singur ecran · mobil",
+   "page": "evenimente",
+   "is_interactive": true
+  },
+  "Evenimente2Jumatate.dc.html": {
+   "x": 2070,
+   "y": 0,
+   "w": 1440,
+   "h": 900,
+   "title": "Evenimente 2: jumătate-jumătate · inspirație: squarespace.com, paginile „coming soon”: poza pe o jumătate, textul și formularul pe cealaltă (aceeași ca la Retreaturi)",
+   "page": "evenimente",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Evenimente2JumatateMobil.dc.html": {
+   "x": 3590,
+   "y": 0,
+   "w": 390,
+   "h": 1015,
+   "title": "Evenimente 2: jumătate-jumătate · mobil",
+   "page": "evenimente",
+   "is_interactive": true
+  },
+  "Evenimente3Linistit.dc.html": {
+   "x": 4140,
+   "y": 0,
+   "w": 1440,
+   "h": 900,
+   "title": "Evenimente 3: liniștit, fără poză · inspirație: linear.app, listele de așteptare: centrat, mic, liniștit; singurul ornament sunt inelele de lut (aceeași ca la Retreaturi)",
+   "page": "evenimente",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Evenimente3LinistitMobil.dc.html": {
+   "x": 5660,
+   "y": 0,
+   "w": 390,
+   "h": 830,
+   "title": "Evenimente 3: liniștit, fără poză · mobil",
+   "page": "evenimente",
+   "is_interactive": true
+  },
+  "Evenimente4Vedere.dc.html": {
+   "x": 6210,
+   "y": 0,
+   "w": 1440,
+   "h": 870,
+   "title": "Evenimente 4: carte poștală · inspirație: paperlesspost.com: o carte poștală din pădure, cu timbrul „În curând” (aceeași ca la Retreaturi)",
+   "page": "evenimente",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Evenimente4VedereMobil.dc.html": {
+   "x": 7730,
+   "y": 0,
+   "w": 390,
+   "h": 1035,
+   "title": "Evenimente 4: carte poștală · mobil",
+   "page": "evenimente",
+   "is_interactive": true
+  },
+  "Galerie1Zid.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 2284,
+   "title": "Galerie 1: zid de poze, cu filtre · inspirație: unsplash.com / pinterest.com: zid de poze pe coloane, fiecare cu înălțimea ei, filtrele deasupra",
+   "page": "galerie",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Galerie1ZidMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 1725,
+   "title": "Galerie 1: zid de poze, cu filtre · mobil",
+   "page": "galerie",
+   "is_interactive": true
+  },
+  "Galerie2Albume.dc.html": {
+   "x": 2070,
+   "y": 0,
+   "w": 1440,
+   "h": 1440,
+   "title": "Galerie 2: albume · inspirație: Apple Photos, albumele: câte un album pentru fiecare atelier; îl deschizi și vezi toate pozele",
+   "page": "galerie",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Galerie2AlbumeMobil.dc.html": {
+   "x": 3590,
+   "y": 0,
+   "w": 390,
+   "h": 1553,
+   "title": "Galerie 2: albume · mobil",
+   "page": "galerie",
+   "is_interactive": true
+  },
+  "Galerie3Eseu.dc.html": {
+   "x": 4140,
+   "y": 0,
+   "w": 1440,
+   "h": 3411,
+   "title": "Galerie 3: eseu foto · inspirație: Kinfolk, eseurile foto: câteva poze mari, altele mici, cu legende scurte, într-un ritm asimetric",
+   "page": "galerie",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Galerie3EseuMobil.dc.html": {
+   "x": 5660,
+   "y": 0,
+   "w": 390,
+   "h": 3090,
+   "title": "Galerie 3: eseu foto · mobil",
+   "page": "galerie",
+   "is_interactive": true
+  },
+  "Galerie4Profil.dc.html": {
+   "x": 6210,
+   "y": 0,
+   "w": 1440,
+   "h": 2147,
+   "title": "Galerie 4: ca un profil de Instagram · inspirație: instagram.com, un profil: titlul sus, filele cu categorii, grila strânsă de poze",
+   "page": "galerie",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Galerie4ProfilMobil.dc.html": {
+   "x": 7730,
+   "y": 0,
+   "w": 390,
+   "h": 1106,
+   "title": "Galerie 4: ca un profil de Instagram · mobil",
+   "page": "galerie",
+   "is_interactive": true
+  },
+  "Contact1Coloane.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 1091,
+   "title": "Contact 1: două coloane · inspirație: linear.app/contact: formularul într-un card, datele de contact liniștite alături",
+   "page": "contact",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Contact1ColoaneMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 1570,
+   "title": "Contact 1: două coloane · mobil",
+   "page": "contact",
+   "is_interactive": true
+  },
+  "Contact2Canale.dc.html": {
+   "x": 2070,
+   "y": 0,
+   "w": 1440,
+   "h": 1293,
+   "title": "Contact 2: întâi căile de contact · inspirație: apple.com/contact: întâi căile de contact, ca niște carduri pe care apeși, apoi formularul",
+   "page": "contact",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Contact2CanaleMobil.dc.html": {
+   "x": 3590,
+   "y": 0,
+   "w": 390,
+   "h": 1704,
+   "title": "Contact 2: întâi căile de contact · mobil",
+   "page": "contact",
+   "is_interactive": true
+  },
+  "Contact3Scrisoare.dc.html": {
+   "x": 4140,
+   "y": 0,
+   "w": 1440,
+   "h": 1047,
+   "title": "Contact 3: o scrisoare · inspirație: paperlesspost.com: mesajul ca o scrisoare pe hârtie liniată, cu „Dragă Alessia,” și semnătura",
+   "page": "contact",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Contact3ScrisoareMobil.dc.html": {
+   "x": 5660,
+   "y": 0,
+   "w": 390,
+   "h": 1717,
+   "title": "Contact 3: o scrisoare · mobil",
+   "page": "contact",
+   "is_interactive": true
+  },
+  "Contact4Chat.dc.html": {
+   "x": 6210,
+   "y": 0,
+   "w": 1440,
+   "h": 1258,
+   "title": "Contact 4: ca o conversație · inspirație: intercom.com, messengerul: Alessia te întreabă, tu răspunzi în conversație",
+   "page": "contact",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Contact4ChatMobil.dc.html": {
+   "x": 7730,
+   "y": 0,
+   "w": 390,
+   "h": 1896,
+   "title": "Contact 4: ca o conversație · mobil",
+   "page": "contact",
+   "is_interactive": true
+  },
+  "Contact5Pasi.dc.html": {
+   "x": 8280,
+   "y": 0,
+   "w": 1440,
+   "h": 789,
+   "title": "Contact 5: pas cu pas (ca la Pentru companii) · inspirație: typeform.com, ca formularul „Cere o ofertă” ales pe Pentru companii: câte o întrebare pe rând, cu bara de progres",
+   "page": "contact",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Contact5PasiMobil.dc.html": {
+   "x": 9800,
+   "y": 0,
+   "w": 390,
+   "h": 1053,
+   "title": "Contact 5: pas cu pas (ca la Pentru companii) · mobil",
+   "page": "contact",
+   "is_interactive": true
+  },
+  "Lectura1Cuprins.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 2426,
+   "title": "Paginile de text 1: cu cuprins alături · inspirație: stripe.com/legal: cuprinsul lipit în stânga, textul numerotat în dreapta, „Pe scurt” deasupra",
+   "page": "text",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Lectura1CuprinsMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 2878,
+   "title": "Paginile de text 1: cu cuprins alături · mobil",
+   "page": "text",
+   "is_interactive": true
+  },
+  "Lectura2Coloana.dc.html": {
+   "x": 2070,
+   "y": 0,
+   "w": 1440,
+   "h": 2337,
+   "title": "Paginile de text 2: o singură coloană · inspirație: basecamp.com/about/policies: o singură coloană centrată, cuvinte simple, rezumatul întâi",
+   "page": "text",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Lectura2ColoanaMobil.dc.html": {
+   "x": 3590,
+   "y": 0,
+   "w": 390,
+   "h": 2391,
+   "title": "Paginile de text 2: o singură coloană · mobil",
+   "page": "text",
+   "is_interactive": true
+  },
+  "Lectura3Margine.dc.html": {
+   "x": 4140,
+   "y": 0,
+   "w": 1440,
+   "h": 2322,
+   "title": "Paginile de text 3: rezumat pe margine · inspirație: termenii Tumblr: textul întreg și, lângă fiecare parte, varianta pe scurt pe margine",
+   "page": "text",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Lectura3MargineMobil.dc.html": {
+   "x": 5660,
+   "y": 0,
+   "w": 390,
+   "h": 2971,
+   "title": "Paginile de text 3: rezumat pe margine · mobil",
+   "page": "text",
+   "is_interactive": true
+  },
+  "Lectura4File.dc.html": {
+   "x": 6210,
+   "y": 0,
+   "w": 1440,
+   "h": 1992,
+   "title": "Paginile de text 4: file între pagini · inspirație: apple.com/legal: file între toate paginile de text, sus; textul liniștit, rezumatul alături",
+   "page": "text",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Lectura4FileMobil.dc.html": {
+   "x": 7730,
+   "y": 0,
+   "w": 390,
+   "h": 2459,
+   "title": "Paginile de text 4: file între pagini · mobil",
+   "page": "text",
+   "is_interactive": true
+  },
+  "Faq1Categorii.dc.html": {
+   "x": 0,
+   "y": 3471,
+   "w": 1440,
+   "h": 1665,
+   "title": "Întrebări frecvente 1: pe categorii · inspirație: airbnb.com/help: categoriile ca pastile sus, câte o categorie pe rând",
+   "page": "text",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Faq1CategoriiMobil.dc.html": {
+   "x": 1520,
+   "y": 3471,
+   "w": 390,
+   "h": 1480,
+   "title": "Întrebări frecvente 1: pe categorii · mobil",
+   "page": "text",
+   "is_interactive": true
+  },
+  "Faq2Lista.dc.html": {
+   "x": 2070,
+   "y": 3471,
+   "w": 1440,
+   "h": 4339,
+   "title": "Întrebări frecvente 2: toate, cu listă alături · inspirație: documentația Stripe / Notion Help: categoriile într-o listă alături, toate întrebările una sub alta",
+   "page": "text",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Faq2ListaMobil.dc.html": {
+   "x": 3590,
+   "y": 3471,
+   "w": 390,
+   "h": 4221,
+   "title": "Întrebări frecvente 2: toate, cu listă alături · mobil",
+   "page": "text",
+   "is_interactive": true
+  },
+  "Faq3Cautare.dc.html": {
+   "x": 4140,
+   "y": 3471,
+   "w": 1440,
+   "h": 4455,
+   "title": "Întrebări frecvente 3: cu căutare · inspirație: intercom.com/help: un câmp mare de căutare care filtrează întrebările pe loc",
+   "page": "text",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Faq3CautareMobil.dc.html": {
+   "x": 5660,
+   "y": 3471,
+   "w": 390,
+   "h": 4177,
+   "title": "Întrebări frecvente 3: cu căutare · mobil",
+   "page": "text",
+   "is_interactive": true
+  },
+  "Faq4Carduri.dc.html": {
+   "x": 6210,
+   "y": 3471,
+   "w": 1440,
+   "h": 1854,
+   "title": "Întrebări frecvente 4: carduri de categorii · inspirație: help.shopify.com: carduri mari de categorii, cu câte un desen; alegi una și se deschid întrebările ei",
+   "page": "text",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Faq4CarduriMobil.dc.html": {
+   "x": 7730,
+   "y": 3471,
+   "w": 390,
+   "h": 1850,
+   "title": "Întrebări frecvente 4: carduri de categorii · mobil",
+   "page": "text",
+   "is_interactive": true
+  },
+  "LegalInscriere.dc.html": {
+   "x": 0,
+   "y": 8426,
+   "w": 1440,
+   "h": 2426,
+   "title": "Text legal: Înscriere, plată și anulare · docs/texte-legale.md, în șablonul de lectură 1 (cuprins alături) până alegi șablonul",
+   "page": "text",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "LegalInscriereMobil.dc.html": {
+   "x": 1520,
+   "y": 8426,
+   "w": 390,
+   "h": 2878,
+   "title": "Text legal: Înscriere, plată și anulare · mobil",
+   "page": "text",
+   "is_interactive": true
+  },
+  "LegalTermeni.dc.html": {
+   "x": 2070,
+   "y": 8426,
+   "w": 1440,
+   "h": 4570,
+   "title": "Text legal: Termeni și condiții · docs/texte-legale.md, în șablonul de lectură 1 (cuprins alături) până alegi șablonul",
+   "page": "text",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "LegalTermeniMobil.dc.html": {
+   "x": 3590,
+   "y": 8426,
+   "w": 390,
+   "h": 5967,
+   "title": "Text legal: Termeni și condiții · mobil",
+   "page": "text",
+   "is_interactive": true
+  },
+  "LegalConfidentialitate.dc.html": {
+   "x": 4140,
+   "y": 8426,
+   "w": 1440,
+   "h": 3640,
+   "title": "Text legal: Politica de confidențialitate · docs/texte-legale.md, în șablonul de lectură 1 (cuprins alături) până alegi șablonul",
+   "page": "text",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "LegalConfidentialitateMobil.dc.html": {
+   "x": 5660,
+   "y": 8426,
+   "w": 390,
+   "h": 5423,
+   "title": "Text legal: Politica de confidențialitate · mobil",
+   "page": "text",
+   "is_interactive": true
+  },
+  "LegalCookies.dc.html": {
+   "x": 6210,
+   "y": 8426,
+   "w": 1440,
+   "h": 1961,
+   "title": "Text legal: Cookies · docs/texte-legale.md, în șablonul de lectură 1 (cuprins alături) până alegi șablonul",
+   "page": "text",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "LegalCookiesMobil.dc.html": {
+   "x": 7730,
+   "y": 8426,
+   "w": 390,
+   "h": 2429,
+   "title": "Text legal: Cookies · mobil",
+   "page": "text",
+   "is_interactive": true
+  },
+  "Confirmare1Bifa.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 1132,
+   "title": "După plată 1: o bifă și pașii · inspirație: pagina de succes Stripe Checkout: o bifă care se desenează, fraza, apoi pașii următori",
+   "page": "confirmari",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Confirmare1BifaMobil.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 1152,
+   "title": "După plată 1: o bifă și pașii · mobil",
+   "page": "confirmari",
+   "is_interactive": true
+  },
+  "Confirmare2Bilet.dc.html": {
+   "x": 2070,
+   "y": 0,
+   "w": 1440,
+   "h": 825,
+   "title": "După plată 2: biletul tău · inspirație: dice.fm, biletul după cumpărare: același bilet ca pe Ateliere de grup, cu ștampila „Confirmat”",
+   "page": "confirmari",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Confirmare2BiletMobil.dc.html": {
+   "x": 3590,
+   "y": 0,
+   "w": 390,
+   "h": 1182,
+   "title": "După plată 2: biletul tău · mobil",
+   "page": "confirmari",
+   "is_interactive": true
+  },
+  "Confirmare3Poza.dc.html": {
+   "x": 4140,
+   "y": 0,
+   "w": 1440,
+   "h": 1124,
+   "title": "După plată 3: cu poză · inspirație: airbnb.com, confirmarea rezervării: poza locului lângă text, detaliile într-o listă scurtă",
+   "page": "confirmari",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Confirmare3PozaMobil.dc.html": {
+   "x": 5660,
+   "y": 0,
+   "w": 390,
+   "h": 1434,
+   "title": "După plată 3: cu poză · mobil",
+   "page": "confirmari",
+   "is_interactive": true
+  },
+  "Confirmare4Bilet.dc.html": {
+   "x": 6210,
+   "y": 0,
+   "w": 1440,
+   "h": 946,
+   "title": "După plată 4: un bilețel de la Alessia · inspirație: bilețelele scrise de mână pe care meșterii de pe Etsy le pun în colet: câteva rânduri de la Alessia",
+   "page": "confirmari",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Confirmare4BiletMobil.dc.html": {
+   "x": 7730,
+   "y": 0,
+   "w": 390,
+   "h": 1259,
+   "title": "După plată 4: un bilețel de la Alessia · mobil",
+   "page": "confirmari",
+   "is_interactive": true
+  },
+  "ConfirmareProgramare.dc.html": {
+   "x": 0,
+   "y": 1834,
+   "w": 1440,
+   "h": 964,
+   "title": "După programare (consiliere, atelier privat) · inspirație: în așezarea variantei 1, până alegi; o deschide Cal.com după programare",
+   "page": "confirmari",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "ConfirmareProgramareMobil.dc.html": {
+   "x": 1520,
+   "y": 1834,
+   "w": 390,
+   "h": 1002,
+   "title": "După programare (consiliere, atelier privat) · mobil",
+   "page": "confirmari",
+   "is_interactive": true
+  },
+  "Pagina404.dc.html": {
+   "x": 2070,
+   "y": 1834,
+   "w": 1440,
+   "h": 710,
+   "title": "404: pagina nu există · inspirație: în așezarea variantei 1, până alegi",
+   "page": "confirmari",
+   "expand": "fill",
+   "is_interactive": true
+  },
+  "Pagina404Mobil.dc.html": {
+   "x": 3590,
+   "y": 1834,
+   "w": 390,
+   "h": 614,
+   "title": "404: pagina nu există · mobil",
+   "page": "confirmari",
+   "is_interactive": true
   }
  },
  "order": [
@@ -2753,7 +4089,143 @@
   "GrupCraciun3Crengute.dc.html",
   "GrupCraciun3CrenguteMobil.dc.html",
   "GrupCraciun4Glob.dc.html",
-  "GrupCraciun4GlobMobil.dc.html"
+  "GrupCraciun4GlobMobil.dc.html",
+  "PentruCompanii.dc.html",
+  "PentruCompaniiMobil.dc.html",
+  "CompHero.dc.html",
+  "CompHeroMobil.dc.html",
+  "CompFormate1Planuri.dc.html",
+  "CompFormate1PlanuriMobil.dc.html",
+  "CompFormate2Nevoi.dc.html",
+  "CompFormate2NevoiMobil.dc.html",
+  "CompFormate3Editorial.dc.html",
+  "CompFormate3EditorialMobil.dc.html",
+  "CompFormate4Fisa.dc.html",
+  "CompFormate4FisaMobil.dc.html",
+  "CompDetalii.dc.html",
+  "CompDetaliiMobil.dc.html",
+  "CompOferta1Vanzari.dc.html",
+  "CompOferta1VanzariMobil.dc.html",
+  "CompOferta2Alegeri.dc.html",
+  "CompOferta2AlegeriMobil.dc.html",
+  "CompOferta3Liniste.dc.html",
+  "CompOferta3LinisteMobil.dc.html",
+  "CompOferta4Pasi.dc.html",
+  "CompOferta4PasiMobil.dc.html",
+  "CompFaq.dc.html",
+  "CompFaqMobil.dc.html",
+  "ConsHero.dc.html",
+  "ConsHeroMobil.dc.html",
+  "ConsIntrebari1Calm.dc.html",
+  "ConsIntrebari1CalmMobil.dc.html",
+  "ConsIntrebari2Carduri.dc.html",
+  "ConsIntrebari2CarduriMobil.dc.html",
+  "ConsIntrebari3Mesaje.dc.html",
+  "ConsIntrebari3MesajeMobil.dc.html",
+  "ConsIntrebari4Portret.dc.html",
+  "ConsIntrebari4PortretMobil.dc.html",
+  "ConsDetalii.dc.html",
+  "ConsDetaliiMobil.dc.html",
+  "ConsProgramare1Luna.dc.html",
+  "ConsProgramare1LunaMobil.dc.html",
+  "ConsProgramare2Saptamana.dc.html",
+  "ConsProgramare2SaptamanaMobil.dc.html",
+  "ConsProgramare3Coloane.dc.html",
+  "ConsProgramare3ColoaneMobil.dc.html",
+  "ConsProgramare4Alegi.dc.html",
+  "ConsProgramare4AlegiMobil.dc.html",
+  "ConsFaq.dc.html",
+  "ConsFaqMobil.dc.html",
+  "PrivHero.dc.html",
+  "PrivHeroMobil.dc.html",
+  "PrivAteliere1Comparat.dc.html",
+  "PrivAteliere1ComparatMobil.dc.html",
+  "PrivAteliere2Comutator.dc.html",
+  "PrivAteliere2ComutatorMobil.dc.html",
+  "PrivAteliere3Alternat.dc.html",
+  "PrivAteliere3AlternatMobil.dc.html",
+  "PrivAteliere4Acordeon.dc.html",
+  "PrivAteliere4AcordeonMobil.dc.html",
+  "PrivDetalii.dc.html",
+  "PrivDetaliiMobil.dc.html",
+  "PrivFaq.dc.html",
+  "PrivFaqMobil.dc.html",
+  "ScoliHero.dc.html",
+  "ScoliHeroMobil.dc.html",
+  "ScoliDetalii.dc.html",
+  "ScoliDetaliiMobil.dc.html",
+  "ScoliFaq.dc.html",
+  "ScoliFaqMobil.dc.html",
+  "Retreat1Ecran.dc.html",
+  "Retreat1EcranMobil.dc.html",
+  "Retreat2Jumatate.dc.html",
+  "Retreat2JumatateMobil.dc.html",
+  "Retreat3Linistit.dc.html",
+  "Retreat3LinistitMobil.dc.html",
+  "Retreat4Vedere.dc.html",
+  "Retreat4VedereMobil.dc.html",
+  "Evenimente1Ecran.dc.html",
+  "Evenimente1EcranMobil.dc.html",
+  "Evenimente2Jumatate.dc.html",
+  "Evenimente2JumatateMobil.dc.html",
+  "Evenimente3Linistit.dc.html",
+  "Evenimente3LinistitMobil.dc.html",
+  "Evenimente4Vedere.dc.html",
+  "Evenimente4VedereMobil.dc.html",
+  "Galerie1Zid.dc.html",
+  "Galerie1ZidMobil.dc.html",
+  "Galerie2Albume.dc.html",
+  "Galerie2AlbumeMobil.dc.html",
+  "Galerie3Eseu.dc.html",
+  "Galerie3EseuMobil.dc.html",
+  "Galerie4Profil.dc.html",
+  "Galerie4ProfilMobil.dc.html",
+  "Contact1Coloane.dc.html",
+  "Contact1ColoaneMobil.dc.html",
+  "Contact2Canale.dc.html",
+  "Contact2CanaleMobil.dc.html",
+  "Contact3Scrisoare.dc.html",
+  "Contact3ScrisoareMobil.dc.html",
+  "Contact4Chat.dc.html",
+  "Contact4ChatMobil.dc.html",
+  "Contact5Pasi.dc.html",
+  "Contact5PasiMobil.dc.html",
+  "Lectura1Cuprins.dc.html",
+  "Lectura1CuprinsMobil.dc.html",
+  "Lectura2Coloana.dc.html",
+  "Lectura2ColoanaMobil.dc.html",
+  "Lectura3Margine.dc.html",
+  "Lectura3MargineMobil.dc.html",
+  "Lectura4File.dc.html",
+  "Lectura4FileMobil.dc.html",
+  "Faq1Categorii.dc.html",
+  "Faq1CategoriiMobil.dc.html",
+  "Faq2Lista.dc.html",
+  "Faq2ListaMobil.dc.html",
+  "Faq3Cautare.dc.html",
+  "Faq3CautareMobil.dc.html",
+  "Faq4Carduri.dc.html",
+  "Faq4CarduriMobil.dc.html",
+  "LegalInscriere.dc.html",
+  "LegalInscriereMobil.dc.html",
+  "LegalTermeni.dc.html",
+  "LegalTermeniMobil.dc.html",
+  "LegalConfidentialitate.dc.html",
+  "LegalConfidentialitateMobil.dc.html",
+  "LegalCookies.dc.html",
+  "LegalCookiesMobil.dc.html",
+  "Confirmare1Bifa.dc.html",
+  "Confirmare1BifaMobil.dc.html",
+  "Confirmare2Bilet.dc.html",
+  "Confirmare2BiletMobil.dc.html",
+  "Confirmare3Poza.dc.html",
+  "Confirmare3PozaMobil.dc.html",
+  "Confirmare4Bilet.dc.html",
+  "Confirmare4BiletMobil.dc.html",
+  "ConfirmareProgramare.dc.html",
+  "ConfirmareProgramareMobil.dc.html",
+  "Pagina404.dc.html",
+  "Pagina404Mobil.dc.html"
  ],
  "notes": {
   "title2": {
@@ -2888,12 +4360,12 @@
    "page": "hero-opt"
   },
   "titleText": {
-   "x": 1520,
+   "x": 0,
    "y": -400,
-   "text": "Text și butoane: 4 variante",
+   "text": "Paginile de text și întrebările frecvente",
    "kind": "title1",
-   "maxW": 1440,
-   "page": "hero-opt"
+   "maxW": 8000,
+   "page": "text"
   },
   "noteHeader": {
    "x": 0,
@@ -2905,13 +4377,13 @@
    "text": "Headers, each on the real hero with today's text.\nA. Editorial: logo centred, links split left and right in small tracked caps, a fading hairline below. Gallery / magazine feel.\nB. Announcement: a thin strip with the next workshop (date, place, 'Doar 8 locuri', Mă înscriu) above a minimal row; a small dot marks the page you're on.\nC. Gallery frame: the hero sits inside a fine cream frame; logo pairs AVA with 'Art & Soul' in script; links in small caps with dot separators; outlined 'Mă înscriu' that fills on hover.\nD. Glass bar: a floating dark-glass bar with a hairline edge; cream 'Mă înscriu' with an arrow chip."
   },
   "noteText": {
-   "x": 1520,
-   "y": 4320,
+   "x": 0,
+   "y": -200,
    "w": 1440,
    "size": "m",
-   "fill": "green",
-   "page": "hero-opt",
-   "text": "Hero text and buttons, each with today's header.\n1. Editorial: eyebrow 'Conectare · Comunitate · Apartenență', larger title, cream button with an arrow chip + 'Pentru companii' as a text link, the next workshop as one fine line under a hairline.\n2. Event card: title and buttons, plus a frosted card for the next workshop with a big '15'.\n3. Two doors: 'Pentru tine' (cream) and 'Pentru companii' (glass) as whole clickable cards with their one-line scope.\n4. Centred, monumental: stamp on top, a very large centred title, symmetric like a poster.\nMix and match: any header works with any text."
+   "fill": "orange",
+   "page": "text",
+   "text": "Sus: șablonul de lectură, în 4 variante, arătat pe „Înscriere, plată și anulare”. Termenii, Politica de confidențialitate și Cookies vor folosi același șablon când avem textele lor (documentul are doar indicații). Jos: pagina „Întrebări frecvente” (din footer), în 4 variante, cu toate întrebările de pe site pe categorii: cele generale din document și cele de pe fiecare pagină de serviciu (la Retreaturi nu, e „În curând”)."
   },
   "titleCombo": {
    "x": 1520,
@@ -3380,6 +4852,284 @@
    "fill": "orange",
    "page": "grup-arh",
    "text": "Biletele de Crăciun, variantele nealese (Vali, 12 nov, a ales beculețele): biletele fără decor (varianta 3 de bază) · 1 ninsoare · 3 crenguțe de brad · 4 globuri de lut."
+  },
+  "titleComp": {
+   "x": 0,
+   "y": -400,
+   "text": "Pentru companii",
+   "kind": "title1",
+   "maxW": 4010,
+   "page": "companii"
+  },
+  "noteComp": {
+   "x": 0,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "companii",
+   "text": "Pentru companii, pagina întreagă: deschiderea (fotografie pe tot ecranul) · Formate, varianta 1 (ca planurile) · Cum funcționează + cine facilitează · Cere o ofertă, varianta 4 (pas cu pas) · Întrebări frecvente · Footer 3. Butoanele „Cere o ofertă” din deschidere și de la formate duc la formular. Fotografia de sus e provizorie, până avem poze de la un atelier cu o firmă. Variantele nealese sunt pe „Arhivă: Pentru companii”. Secțiunile sunt în dreapta."
+  },
+  "noteCompText": {
+   "x": 2100,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "yellow",
+   "page": "companii",
+   "text": "Texte propuse de mine, de aprobat: titlul „Când e de folos” · variantele de la „Ce vă doriți să obțină echipa?” (Gestionarea stresului · Comunicare și încredere · Să se cunoască mai bine · O pauză reală · Să afle ce îi motivează · Altceva) · textul de acord GDPR · butonul „Trimite cererea” · titlurile pașilor din formular. Lipsesc încă: logo-urile firmelor și un testimonial de la un HR (au rămas ca [PLACEHOLDER] vizibil)."
+  },
+  "noteCompMobil": {
+   "x": 1520,
+   "y": -200,
+   "w": 390,
+   "size": "s",
+   "fill": "teal",
+   "page": "companii",
+   "text": "Aceeași pagină la lățime de telefon."
+  },
+  "noteArhComp": {
+   "x": 0,
+   "y": -200,
+   "w": 5600,
+   "size": "m",
+   "fill": "orange",
+   "page": "companii-arh",
+   "text": "Pentru companii, variantele nealese. Sus: Formate 2 (întâi nevoile), 3 (editorial), 4 (fișă); aleasă: 1 (ca planurile). Jos: Cere o ofertă 1 (ca la Stripe), 2 (întâi alegi), 3 (liniștit); aleasă: 4 (pas cu pas)."
+  },
+  "noteArhCompOferta": {
+   "x": 0,
+   "y": 1760,
+   "w": 5600,
+   "size": "s",
+   "fill": "orange",
+   "page": "companii-arh",
+   "text": "Cere o ofertă: variantele nealese."
+  },
+  "titleCons": {
+   "x": 0,
+   "y": -400,
+   "text": "Consiliere 1:1",
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "consiliere"
+  },
+  "noteCons": {
+   "x": 0,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "consiliere",
+   "text": "Pagina e făcută pe șablonul de la Ateliere de grup: deschiderea, „Cum funcționează” (cardul închis e prima întâlnire gratuită, iar dedesubt rămâne „Consiliere sau psihoterapie?”, cuvânt cu cuvânt) și întrebările în carduri. Secțiunile noi au câte 4 variante: „Te regăsești aici?” (rândul al doilea) și programarea (rândul al patrulea). Toate cele 4 programări se pot face cu Cal.com gratuit (pe lună, pe săptămână, pe coloane); zilele și orele sunt exemple. Varianta 1 de la întrebări se aprinde rând cu rând când derulezi pagina, așa că pe canvas unele rânduri pot părea stinse."
+  },
+  "noteConsText": {
+   "x": 4140,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "yellow",
+   "page": "consiliere",
+   "text": "Texte propuse de mine, de aprobat: pastilele din deschidere (60–90 de minute · online sau față în față · 180 lei / oră · prima discuție gratuită) · butonul „Programează discuția” · la programare: „Discuție de cunoaștere / Ședință de consiliere” cu rândurile lor, „Continuă”, „Ai ales:” și nota despre exemple. De lămurit: plata. Documentul spune „transfer bancar, la rezervarea locului”, iar planul tehnic e Cal.com + Stripe."
+  },
+  "titlePriv": {
+   "x": 0,
+   "y": -400,
+   "text": "Atelier privat 1:1",
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "privat"
+  },
+  "notePriv": {
+   "x": 0,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "privat",
+   "text": "Pe șablonul de la Ateliere de grup: deschiderea, „Cum funcționează” (cardul închis e voucherul-cadou) și întrebările. Secțiunea nouă, cu 4 variante, prezintă cele două ateliere: stagiul de modelaj și autocunoașterea prin lut și joacă, cu precizarea despre terapii păstrată cuvânt cu cuvânt. Programarea va fi aceeași ca la Consiliere 1:1, după ce alegi varianta acolo."
+  },
+  "notePrivText": {
+   "x": 4140,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "yellow",
+   "page": "privat",
+   "text": "Texte propuse de mine, de aprobat: pastilele din deschidere · butonul „Alege atelierul” și titlul secțiunii · „tehnici și proiecte personale” / „pentru adult sau pentru copilul tău” · cardul „Vrei să-l oferi cadou?”. Lipsește: unde au loc atelierele private ([UNDE]). De lămurit: 600 / 480 lei sunt pentru cele 4 ședințe pe lună?"
+  },
+  "titleScoli": {
+   "x": 0,
+   "y": -400,
+   "text": "Pentru școli și copii",
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "scoli"
+  },
+  "noteScoli": {
+   "x": 0,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "scoli",
+   "text": "Doar șablonul: deschiderea, „Cum funcționează” și întrebările. Documentul nu are încă alt conținut pentru o secțiune nouă (de exemplu poze de la ateliere cu copii sau un program pe pași). Texte propuse de mine, de aprobat: pastilele, fraza de sub „Cum funcționează” și cardul „Vreți un atelier la voi?”. Fotografia e provizorie."
+  },
+  "titleRetreat": {
+   "x": 0,
+   "y": -400,
+   "text": "Retreaturi: În curând",
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "retreat"
+  },
+  "noteRetreat": {
+   "x": 0,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "retreat",
+   "text": "Cum ai cerut: pagina arată doar „În curând”, cu textul din document și abonarea la newsletter (MailerLite), fără program, preț sau întrebări. Patru variante pentru toată pagina; la asamblare vine dedesubt footerul obișnuit. Butonul e „Anunță-mă la lansare”, ca pe Acasă. Propus de mine: textul de acord de sub email. Fotografia cu cabana e provizorie."
+  },
+  "titleEv": {
+   "x": 0,
+   "y": -400,
+   "text": "Evenimente: În curând",
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "evenimente"
+  },
+  "noteEv": {
+   "x": 0,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "evenimente",
+   "text": "Decizia lui Vali (12 nov): Evenimente nu mai are legătură cu atelierele (ele stau pe Ateliere de grup). Aici vin evenimentele pe care le pregătește Alessia; acum nu e niciunul, deci pagina arată „În curând” și abonarea la newsletter. Sunt aceleași 4 variante ca la Retreaturi, ca o singură alegere să meargă pe ambele pagini. Fotografia e lutul din hero-ul de pe Acasă."
+  },
+  "noteEvText": {
+   "x": 4140,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "yellow",
+   "page": "evenimente",
+   "text": "Din document: „Fii primul care află de următorul nostru eveniment și primește 5% discount la următorul eveniment.” Butonul „Abonează-te” e cel de la newsletter. Propus de mine, de aprobat: „Evenimente pe care le pregătesc pentru voi, dincolo de atelierele lunare.” și textul de acord de sub email."
+  },
+  "titleGal": {
+   "x": 0,
+   "y": -400,
+   "text": "Galerie",
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "galerie"
+  },
+  "noteGal": {
+   "x": 0,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "galerie",
+   "text": "Patru variante pentru toată pagina; footerul vine la asamblare. Categoriile sunt cele din document: Ateliere, Piese, Retreaturi. Orice poză se deschide mare (săgeți, Esc, glisare pe telefon). 4 poze sunt reale, de la atelierul din octombrie; celelalte 7 sunt provizorii (Unsplash), până avem poze de la ateliere. La Retreaturi nu am pus poza cu cabana, ca să nu pară un retreat care a avut loc."
+  },
+  "noteGalText": {
+   "x": 4140,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "yellow",
+   "page": "galerie",
+   "text": "Propuse de mine, de aprobat: fraza de sub titlu („Momente de la atelierele noastre: oameni, mâini, lut și ce prinde formă din el.”), filtrul „Toate”, nota „Pozele de la retreaturi vin după primul retreat.”, numele albumelor (varianta 2) și legendele scurte (varianta 3). Pentru pozele cu oameni e nevoie de acordul lor (bifa de acord foto de la înscriere)."
+  },
+  "titleContact": {
+   "x": 0,
+   "y": -400,
+   "text": "Contact",
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "contact"
+  },
+  "noteContact": {
+   "x": 0,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "contact",
+   "text": "Cinci variante pentru toată pagina (a cincea, pas cu pas, cerută de Vali, ca formularul de la Pentru companii); footerul vine la asamblare. Formularul are câmpurile din document (nume, email, telefon opțional, „Ce te interesează?”, mesaj, acord GDPR) și nu se trimite gol; după trimitere apare mulțumirea. Emailul, WhatsApp-ul și Instagramul sunt linkuri pe care apeși. Fără adresă exactă: „București, zona Cotroceni”. În cod, butoanele de pe celelalte pagini („Scrie-ne”, „Solicită un atelier”) vor aduce aici subiectul deja ales."
+  },
+  "noteContactText": {
+   "x": 4140,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "yellow",
+   "page": "contact",
+   "text": "Propuse de mine, de aprobat: textul de acord GDPR, butonul „Trimite mesajul”, mulțumirea („Mulțumesc! Mesajul a ajuns. …”), „Sau scrie-ne aici” (varianta 2), „Dragă Alessia,” și „Cu drag,” (varianta 3), replicile Alessiei din conversație (varianta 4), titlurile pașilor „Spune-mi mai multe” și „Cum îți răspund?” (varianta 5)."
+  },
+  "noteTextText": {
+   "x": 4140,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "yellow",
+   "page": "text",
+   "text": "Textul paginii „Înscriere, plată și anulare” e scris de mine din regulile din document, de aprobat; punctele legale au rămas [PLACEHOLDER] până le verifică contabila (OUG 34/2014, dreptul de retragere) și până alegem plata la consiliere. De lămurit: în FAQ-ul general, „Cum mă înscriu și cum plătesc?” spune „transfer bancar” și „completezi formularul”, dar la ateliere plata e online (Stripe). Tot de aprobat: „Pe scurt”, „Tot ce ne întrebați des, într-un singur loc.”, „Caută o întrebare…” și mesajul când căutarea nu găsește nimic."
+  },
+  "titleLegal": {
+   "x": 0,
+   "y": 8026,
+   "text": "Textele legale (ciornă)",
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "text"
+  },
+  "noteLegal": {
+   "x": 0,
+   "y": 8226,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "text",
+   "text": "Cele patru pagini legale, cu textul din docs/texte-legale.md (ciornă de verificat de contabilă / jurist). Sunt puse în șablonul 1 (cuprins alături) doar ca să se poată citi; când alegi șablonul, le mut în el. Golurile ([ADRESA SEDIULUI], TVA, plata la consiliere, perioadele de păstrare, voucherul, Web3Forms) rămân vizibile până le completăm."
+  },
+  "noteLegalNou": {
+   "x": 4140,
+   "y": 8226,
+   "w": 1440,
+   "size": "m",
+   "fill": "yellow",
+   "page": "text",
+   "text": "Reguli noi propuse de mine, care nu sunt în documentul Alessiei (de aprobat una câte una): dacă anulăm noi, alegi între alt atelier și banii înapoi · alergiile · cine deranjează grav poate fi rugat să plece · lutul se poate crăpa · piesele neridicate · excepția legală de la confidențialitate la consiliere (neapărat de verificat cu un jurist) · retragerea acordului foto · greșelile de pe site."
+  },
+  "titleConf": {
+   "x": 0,
+   "y": -400,
+   "text": "Confirmări și 404",
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "confirmari"
+  },
+  "noteConf": {
+   "x": 0,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "orange",
+   "page": "confirmari",
+   "text": "Sus: pagina pe care Stripe o deschide după plata unui atelier, în 4 variante (exemplul e atelierul din 6 decembrie; fiecare link de plată știe atelierul lui). Jos: confirmarea după o programare Cal.com și pagina 404, în așezarea variantei 1 până alegi. Fără adresa exactă: ea vine în emailul de confirmare. Formularele și abonarea mulțumesc pe loc, deci nu au pagină. „Adaugă în calendar” va descărca un fișier de calendar pentru atelier."
+  },
+  "noteConfText": {
+   "x": 4140,
+   "y": -200,
+   "w": 1440,
+   "size": "m",
+   "fill": "yellow",
+   "page": "confirmari",
+   "text": "Toate textele de aici sunt propuse de mine, de aprobat (regula cu 24 de ore e din document): titlurile, pașii „Ce urmează”, bilețelul Alessiei (varianta 4), „Pagina asta s-a crăpat la ardere.” la 404."
   }
  },
  "designSystems": []

@@ -50,7 +50,7 @@ Paginile de servicii folosesc același șablon: pentru cine e, ce se întâmplă
 
 Fiecare pagină are la final o secțiune „Întrebări frecvente” (acordeon), cu întrebările din documentul de conținut.
 
-Evenimente: cel mai apropiat eveniment primul (primul e cel din 15 noiembrie 2026). Dacă nu e niciunul viitor, afișează un mesaj „Pregătim următorul atelier…” + abonare la newsletter (textul îl propune Claude, îl aprobă Alessia). Evenimentele trecute merg într-o arhivă.
+Evenimente (decizia lui Vali, 12 nov 2026): pagina NU arată atelierele (acelea stau pe „Ateliere de grup”, cu toate datele care urmează). Aici apar evenimentele pe care le pregătește Alessia, separat de ateliere; momentan nu e niciunul stabilit, așa că pagina arată „În curând” + abonare la newsletter. Când apar evenimente: cel mai apropiat primul, cele trecute într-o arhivă.
 
 ## Locație
 
@@ -108,6 +108,7 @@ La final, raportează toate cele 20: Built / Already done / Skipped, cu fișiere
 - Date colectate: nume întreg, vârstă, email, detalii firmă dacă e cazul, adresă de facturare; email de promo doar opțional.
 - Fără banner de cookies cât timp analytics-ul e fără cookies. Pagina de cookies spune asta.
 - Link ANPC (SAL) în footer.
+- Textele paginilor legale (Înscriere, plată și anulare · Termeni și condiții · Politica de confidențialitate · Cookies): ciornă în `docs/texte-legale.md` (12 nov 2026), de verificat de contabilă / jurist înainte de lansare.
 - Contact: ava.events.26@gmail.com · 0730301996 · Instagram @ava.art.soul
 
 ## SEO și calitate

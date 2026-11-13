@@ -295,7 +295,7 @@ Procesul pe canvas:
 **Pagini de completat:**
 - **Șablonul paginilor de serviciu**, unul pentru toate 6, cu 4 variante pe secțiune. Structura: pentru cine e · ce se întâmplă concret · ce primești · cine facilitează · durată / preț / locație · întrebări frecvente · buton de înscriere sau contact (Stripe / Cal.com / formular). Consilierea păstrează delimitarea față de psihoterapie; atelierele pentru copii, precizarea despre terapii.
 - **Retreaturi** (decizia lui Vali, 12 nov): pagina arată doar „În curând”, pentru că nu e încă nimic concret. Fără program, preț sau FAQ până nu există.
-- **Evenimente**, cu 4 variante. Cel mai apropiat eveniment primul, arhiva celor trecute și starea „Pregătim următorul atelier…” + newsletter. Pornește de la cardul de eveniment de pe Acasă.
+- **Evenimente** (decizia lui Vali, 12 nov): nu are legătură cu atelierele; sunt evenimentele pe care le pregătește Alessia. Acum nu e niciunul, deci pagina arată doar „În curând” + newsletter, în aceleași 4 variante ca Retreaturi (o singură alegere poate servi ambele pagini). Lista de evenimente se proiectează când apare primul.
 - **Galerie.**
 - **Contact**, cu formularul Web3Forms și bifa GDPR. Propunere: 2 variante.
 - **Paginile legale**, doar text lung, cu un singur șablon de lectură. Propunere: 2 variante.

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Consiliere, te regăsești aici? 1: rânduri care se aprind · mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:wght@300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>
+body{margin:0;background:#F4EDE4}
+.pg{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--sand:#E6D5BD;--terra:#B4583A;--terra-d:#9C472C;--clay:#C07A4E;--glowc:#F2C79C;--display:'Bodoni Moda',Georgia,serif;--text:'Hanken Grotesk',system-ui,sans-serif;--script:'Pinyon Script',cursive;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.pg ::selection{background:#B4583A;color:#F4EDE4}
+.pg a{color:inherit}
+.pg a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.disp{font-family:var(--display);font-weight:400;font-variation-settings:'opsz' 20;letter-spacing:-.012em;text-wrap:balance;margin:0}
+.disp em{font-style:italic}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.ar{width:16px;height:16px;flex:none;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:18px;font-weight:500;text-decoration:none;text-underline-offset:6px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/100% 1px no-repeat;transition:background-size .3s cubic-bezier(.2,.7,.2,1)}
+.more:hover{background-size:0 1px;background-position:100% calc(100% - 9px)}
+.more:hover .ar{transform:translateX(4px)}
+.body{margin:0;text-wrap:pretty;max-width:46ch}
+.role{display:block;font:500 15px/1.45 var(--text);letter-spacing:.01em;max-width:34ch}
+/* the bottom of the chosen hero, for context (light variants keep its cream wave) */
+.heroend{position:relative;height:120px;background:#8A4A30 url(/_blob/a36432dd59596088ec01e9f25409bd5d) center 85%/cover no-repeat}
+.heroend::before{content:"";position:absolute;inset:0;background:rgba(42,20,12,.45)}
+.heroend svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+/* woodsprite + its warm halo, same recipe as the hero */
+.glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle var(--lr,340px) at var(--lx,70%) var(--ly,40%),rgba(255,206,150,.30) 0%,rgba(255,180,110,.10) 40%,rgba(255,170,100,0) 70%);mix-blend-mode:screen}
+.sprite{position:absolute;left:0;top:0;z-index:4;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#FFFDF6 0 35%,rgba(255,246,228,.9) 52%,rgba(255,236,206,0) 74%);box-shadow:0 0 16px 6px rgba(255,250,238,.85),0 0 60px 26px rgba(255,236,206,.4);will-change:transform}
+@media (max-width:820px){.wrap{padding:0 20px}.heroend{height:72px}.heroend svg{height:72px}}
+@media (prefers-reduced-motion:reduce){.sprite{display:none}.pg *{transition:none!important}}
+
+.cs{position:relative;padding:112px 0 120px;--so:cubic-bezier(.22,1,.36,1)}
+.cs a{text-decoration:none}
+.cs h2{font-size:clamp(40px,4.4vw,64px);line-height:1.05}
+.cs h3{margin:0;font:400 26px/1.15 var(--display);font-variation-settings:'opsz' 20;letter-spacing:-.01em;text-wrap:balance}
+.cs .intro{margin:20px 0 0;max-width:44ch;font:400 clamp(20px,1.7vw,24px)/1.45 var(--display);font-variation-settings:'opsz' 20;color:#4A382C;text-wrap:pretty}
+.cs .lab{margin:0;font:400 italic 21px/1.3 var(--display);font-variation-settings:'opsz' 20;color:var(--terra-d)}
+.cs .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;border-radius:999px;background:#9C472C;color:#F8F1E8;font:500 15px/1 var(--text);letter-spacing:.02em;white-space:nowrap;border:0;cursor:pointer;transition:background-color .25s ease}
+.cs .btn:hover{background:#833A22}.cs .btn:focus-visible{outline:2px solid #9C472C;outline-offset:3px}
+.cs .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.cs .chips li{display:inline-flex;align-items:center;min-height:38px;padding:0 16px;border-radius:999px;background:#F1E7DA;font-size:15px;color:#3A2A20}
+@keyframes cs-up{from{opacity:0;translate:0 16px}}
+.cs.js:not(.in) .ri{opacity:0}
+.cs.js.in .ri{animation:cs-up .8s var(--so) backwards;animation-delay:calc(var(--i,0) * 80ms)}
+@media (max-width:980px){.cs{padding:72px 0 80px}.cs h3{font-size:23px}.cs .btn{width:100%;box-sizing:border-box}}
+@media (prefers-reduced-motion:reduce){.cs *{animation:none!important;transition:none!important}}
+
+.q1{background:linear-gradient(180deg,#F4EDE4 0%,#EDE0CD 100%);text-align:center}
+.q1 h2{margin-bottom:56px}
+.q1 ol{max-width:900px;margin:0 auto;padding:0;list-style:none}
+.q1 li{margin:0;padding:22px 0;font:400 clamp(28px,3vw,42px)/1.25 var(--display);font-variation-settings:'opsz' 20;letter-spacing:-.01em;text-wrap:balance}
+.q1 li+li{border-top:1px solid rgba(58,42,32,.12)}
+@supports (animation-timeline: view()){
+  @keyframes q1-lit{0%,100%{opacity:.22}35%,65%{opacity:1}}
+  @media (prefers-reduced-motion:no-preference){.q1 li{animation:q1-lit linear both;animation-timeline:view();animation-range:cover}}
+}
+.q1 .more{margin-top:44px}
+@media (max-width:980px){.q1 h2{margin-bottom:28px}.q1 li{padding:18px 0;font-size:24px}}
+</style>
+</helmet>
+<div class="pg" data-src="calm.com: rânduri mari, centrate, care se aprind pe rând pe măsură ce derulezi">
+<section class="cs q1" aria-labelledby="cq-h" ref="{{ secRef }}"><div class="wrap"><h2 class="disp ri" id="cq-h">Te regăsești aici?</h2><ol><li>Treci printr-o schimbare și nu știi încă ce loc ocupă ea în viața ta?</li><li>Simți că ai rămas pe loc, deși îți dorești să mergi mai departe?</li><li>Îți dorești să te cunoști mai bine, să înțelegi ce simți și de ce?</li><li>Te întrebi încotro vrei să mergi și ce contează cu adevărat pentru tine?</li></ol><div class="ri"><a class="more" href="#programare">Programează o ședință <svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8H13M9 4L13 8L9 12" fill="none" stroke="currentColor" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path></svg></a></div></div></section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":757}}'>
+var WEEKS = ["16 – 20 noiembrie", "23 – 27 noiembrie", "30 nov – 4 dec", "7 – 11 decembrie"];
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this, s = this.sec; if (!s) return;
+    var reduce = this.reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    s.classList.add('js');
+    if (reduce || !window.IntersectionObserver) s.classList.add('in');
+    else { this.io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { s.classList.add('in'); self.io.disconnect(); } }, { threshold: 0.1 }); this.io.observe(s); }
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); }
+
+  month(d) { var s = this.sec, ms = s.querySelectorAll('.mon'), i = 0;
+    ms.forEach(function (m, k) { if (!m.hidden) i = k; }); i = Math.max(0, Math.min(ms.length - 1, i + d));
+    ms.forEach(function (m, k) { m.hidden = k !== i; });
+    s.querySelector('.mname').textContent = ['noiembrie 2026', 'decembrie 2026'][i];
+    s.querySelector('.pv').setAttribute('aria-disabled', i === 0 ? 'true' : 'false'); s.querySelector('.nx').setAttribute('aria-disabled', i === ms.length - 1 ? 'true' : 'false'); }
+  weekGo(d) { var s = this.sec, ws = s.querySelectorAll('.wk'), i = 0;
+    ws.forEach(function (w, k) { if (!w.hidden) i = k; }); i = Math.max(0, Math.min(ws.length - 1, i + d));
+    ws.forEach(function (w, k) { w.hidden = k !== i; });
+    s.querySelector('.mname').textContent = WEEKS[i];
+    s.querySelector('.pv').setAttribute('aria-disabled', i === 0 ? 'true' : 'false'); s.querySelector('.nx').setAttribute('aria-disabled', i === ws.length - 1 ? 'true' : 'false'); }
+  renderVals() { var self = this; if (!this.cb) this.cb = {
+    pickType: function (e) { var b = e.currentTarget, s = self.sec, k = b.getAttribute('data-k');
+      s.querySelectorAll('.type').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      s.classList.toggle('t-free', k === 'free'); s.classList.toggle('t-full', k === 'full'); },
+    pickDay: function (e) { var b = e.currentTarget, s = self.sec, d = b.getAttribute('data-d');
+      s.querySelectorAll('.day[data-d]').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      s.querySelectorAll('.slots').forEach(function (x) { x.hidden = x.getAttribute('data-d') !== d; });
+      var dn = s.querySelector('.dn'); if (dn) dn.textContent = b.getAttribute('aria-label'); },
+    pickSlot: function (e) { var b = e.currentTarget, s = self.sec;
+      s.querySelectorAll('.slot').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      s.querySelector('.sum .lab').textContent = b.getAttribute('data-l'); s.querySelector('.go').setAttribute('aria-disabled', 'false'); },
+    goOn: function (e) { },
+    prevM: function () { self.month(-1); }, nextM: function () { self.month(1); },
+    prevW: function () { self.weekGo(-1); }, nextW: function () { self.weekGo(1); }, secRef: function (el) { self.sec = el; } }; return this.cb; }
+}
+</script>
+</body>
+</html>

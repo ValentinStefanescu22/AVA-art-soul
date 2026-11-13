@@ -271,6 +271,8 @@ Paginile astea țin site-ul viu: dacă Evenimente arată ateliere trecute, oamen
 
 ### Evenimente
 
+*(Vali, 12 nov 2026) Pagina Evenimente nu mai arată atelierele: atelierele de grup, cu toate datele lor, stau pe pagina „Ateliere de grup”. Pe Evenimente vin evenimentele pe care le pregătește Alessia; momentan nu e niciunul stabilit, așa că pagina arată „În curând” și abonarea la newsletter. Textul de mai jos rămâne ca sursă pentru atelierul din 15 noiembrie.*
+
 O listă cu ce urmează, cel mai apropiat eveniment primul. Fiecare eveniment are un card cu:
 
 - *Atelier de ceramică & socializare** **15 noiembrie*
