@@ -23,20 +23,20 @@ PAGES = {
     "CeFacem": dict(title="Ce oferim", cls="cf", heights=(2843, 4633), dark=".s-cfhero .c1", current=("#ce-facem", "Ce oferim"),
                     sections=[("CFPagina1Comutator", "s-cfhero"), ("CFDeCe", "s-dece"), ("Footer3Heath", "s-footer")]),
     # Vali (12 nov): hero 2 (Aman) + lista 3 (bilete; the December ones with the light garland, Crăciun 2), then „Cum funcționează”, the FAQ (grup_page_options.py) and the footer
-    "AteliereDeGrup": dict(title="Ateliere de grup", cls="ag", heights=(5090, 7113), dark=".s-ghero .g2", current=("#ce-facem", "Ce oferim"),
+    "AteliereDeGrup": dict(title="Ateliere de grup", cls="ag", heights=(5155, 7113), dark=".s-ghero .g2", current=("#ce-facem", "Ce oferim"),
                            sections=[("GrupHero2Aman", "s-ghero"), ("GrupCraciun2Beculete", "s-glista"), ("GrupSolicita", "s-gsol"), ("GrupDetalii", "s-gdet"),
                                      ("GrupFaq", "s-gfaq"), ("Footer3Heath", "s-footer")]),
     # Vali (13 nov): every page assembled. Services on the same template as Ateliere de grup; the others are one whole-page
     # board each (their own header hidden) + the footer.
-    "Consiliere": dict(title="Consiliere 1:1", cls="cn", heights=(5327, 7090), dark=".s-chero .g2", current=("#ce-facem", "Ce oferim"), sheet="Consiliere 1:1",
+    "Consiliere": dict(title="Consiliere 1:1", cls="cn", heights=(5332, 7089), dark=".s-chero .g2", current=("#ce-facem", "Ce oferim"), sheet="Consiliere 1:1",
                        sections=[("ConsHero", "s-chero"), ("ConsIntrebari5Coloane", "s-cq"), ("ConsDetalii", "s-cdet"), ("ConsProgramare1Luna", "s-cbk"),
                                  ("ConsFaq", "s-cfaq"), ("Footer3Heath", "s-footer")]),
-    "AtelierPrivat": dict(title="Atelier privat 1:1", cls="ap", heights=(5487, 7356), dark=".s-phero .g2", current=("#ce-facem", "Ce oferim"), sheet="Atelier privat 1:1",
+    "AtelierPrivat": dict(title="Atelier privat 1:1", cls="ap", heights=(5486, 7356), dark=".s-phero .g2", current=("#ce-facem", "Ce oferim"), sheet="Atelier privat 1:1",
                           sections=[("PrivHero", "s-phero"), ("PrivAteliere4Acordeon", "s-pat"), ("PrivDetalii", "s-pdet"), ("PrivProgramare", "s-pbk"),
                                     ("PrivFaq", "s-pfaq"), ("Footer3Heath", "s-footer")]),
-    "ScoliCopii": dict(title="Pentru școli și copii", cls="sk", heights=(3314, 4514), dark=".s-shero .g2", current=("#ce-facem", "Ce oferim"), sheet="Pentru școli și copii",
+    "ScoliCopii": dict(title="Pentru școli și copii", cls="sk", heights=(3379, 4514), dark=".s-shero .g2", current=("#ce-facem", "Ce oferim"), sheet="Pentru școli și copii",
                        sections=[("ScoliHero", "s-shero"), ("ScoliDetalii", "s-sdet"), ("ScoliFaq", "s-sfaq"), ("Footer3Heath", "s-footer")]),
-    "Retreaturi": dict(title="Retreaturi", cls="rp", heights=(1874, 2744), dark=".s-rt .rt", current=("#ce-facem", "Ce oferim"), sheet="Retreaturi",
+    "Retreaturi": dict(title="Retreaturi", cls="rp", heights=(1927, 2743), dark=".s-rt .rt", current=("#ce-facem", "Ce oferim"), sheet="Retreaturi",
                        sections=[("Retreat1Ecran", "s-rt"), ("Footer3Heath", "s-footer")]),
     "Evenimente": dict(title="Evenimente", cls="ep", heights=(1889, 2716), dark=".s-ev .rt", current=("#evenimente", "Evenimente"), sheet="Evenimente",
                        sections=[("Evenimente1Ecran", "s-ev"), ("Footer3Heath", "s-footer")]),
@@ -174,7 +174,49 @@ def relink(text):
     return head + sep + LINK_RE.sub(one, rest) if sep else text
 
 
-ACASA = ["Acasa", "HeroAnuntCentrat", "CopertaH", "CeFacem5Acordeon", "UrmatorulA", "OameniB2", "Faq3Carduri", "Popup3Plic"]
+# ---- the way back to „Ce oferim” on the six service pages (Vali, 15 nov), not a „back” button (history would take someone
+# who came from Instagram off the site). It must stay reachable while scrolling:
+#  - desktop: the sticky header already shows „Ce oferim” (marked current); the hero adds the breadcrumb „Ce oferim › …”;
+#  - phone/tablet (≤1020px, where the header has only logo + burger): „‹ Ce oferim” sits in the sticky pill, next to the burger.
+# Inserted before relink (which turns #ce-facem into CeFacem.dc.html). Idempotent.
+CRUMB = {"GrupHero2Aman": "Ateliere de grup", "CompHero": "Pentru companii", "ConsHero": "Consiliere 1:1",
+         "PrivHero": "Atelier privat 1:1", "Retreat1Ecran": "Retreaturi", "ScoliHero": "Pentru școli și copii"}
+SERVICE_PAGES = {"AteliereDeGrup", "PentruCompanii", "Consiliere", "AtelierPrivat", "Retreaturi", "ScoliCopii"}
+CRUMB_CSS = ("/*crumb*/.g2 .crumb{margin:0 0 22px;font:500 15px/1 var(--text)}"
+             ".g2 .crumb ol{display:flex;justify-content:center;align-items:center;gap:10px;margin:0;padding:0;list-style:none;color:#E2D3C1}"
+             ".g2 .crumb li+li::before{content:\"›\";margin-right:10px;opacity:.7}"
+             ".g2 .crumb a{display:inline-flex;align-items:center;min-height:44px;color:#F4EDE4;text-decoration:underline;"
+             "text-decoration-color:rgba(244,237,228,.4);text-underline-offset:6px;transition:text-decoration-color .2s ease}"
+             ".g2 .crumb a:hover{text-decoration-color:currentColor}"
+             "@media (max-width:1020px){.g2 .crumb{display:none}}/*/crumb*/")
+BACK = ('<a class="hx-back" href="#ce-facem"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5" fill="none" '
+        'stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Ce oferim</a>')
+BACK_CSS = ("/*back*/.hx-back{display:none;align-items:center;gap:4px;min-height:44px;padding:0 14px 0 10px;border-radius:999px;"
+            "background:color-mix(in srgb,currentColor 10%,transparent);color:inherit;font:500 14.5px/1 var(--text);text-decoration:none;"
+            "white-space:nowrap;transition:background-color .3s ease}.hx-back svg{width:16px;height:16px;flex:none}"
+            ".hx-back:hover{background:color-mix(in srgb,currentColor 18%,transparent)}.hx-back:active{scale:.96}"
+            "@media (max-width:1020px){.hx-back{display:inline-flex}}"
+            "@media (max-width:359px){.hx-back{padding:0 10px 0 6px;font-size:13.5px}}/*/back*/")   # 320px phones: room next to the logo
+
+
+def back(text):
+    """„‹ Ce oferim” in the page's sticky header, before the burger."""
+    text = re.sub(r'<a class="hx-back".*?</a>', "", re.sub(r"/\*back\*/.*?/\*/back\*/", "", text, flags=re.S), flags=re.S)
+    i = text.index('<div class="hx-end">', text.index("<x-dc>"))
+    j = text.index('<button class="hx-burger"', i)
+    return (text[:j] + BACK + text[j:]).replace("</style>", BACK_CSS + "</style>", 1)
+
+
+def crumb(text, label):
+    text = re.sub(r'<nav class="crumb.*?</nav>', "", re.sub(r"/\*crumb\*/.*?/\*/crumb\*/", "", text, flags=re.S), flags=re.S)
+    nav = (f'<nav class="crumb up" style="--d: .1s" aria-label="Unde te afli"><ol><li><a href="#ce-facem">Ce oferim</a></li>'
+           f'<li aria-current="page">{label}</li></ol></nav>')
+    text, n = re.subn(r'(<section class="gp g2[^"]*"[^>]*>.*?<div class="in">)', lambda m: m.group(1) + nav, text, count=1, flags=re.S)
+    assert n == 1, label
+    return text.replace("</style>", CRUMB_CSS + "</style>", 1)
+
+
+ACASA = ["Acasa","HeroAnuntCentrat", "CopertaH", "CeFacem5Acordeon", "UrmatorulA", "OameniB2", "Faq3Carduri", "Popup3Plic"]
 COMPANII = ["PentruCompanii", "CompHero", "CompFormate1Planuri", "CompDetalii", "CompOferta4Pasi", "CompFaq"]   # assembled on the canvas (12 nov)
 LOCAL = {"Acasa": "acasa.html", "DespreNoi": "despre-noi.html", "CeFacem": "ce-facem.html", "AteliereDeGrup": "ateliere-de-grup.html",
          "PentruCompanii": "pentru-companii.html", "Consiliere": "consiliere.html", "AtelierPrivat": "atelier-privat.html",
@@ -211,7 +253,8 @@ if __name__ == "__main__":
     for f in sorted(files):
         p = os.path.join(P, f + ".dc.html")
         t = open(p, encoding="utf-8").read()
-        n = relink(t)
+        n = crumb(t, CRUMB[f]) if f in CRUMB else back(t) if f in SERVICE_PAGES else t
+        n = relink(n)
         if n != t:
             open(p, "w", encoding="utf-8").write(n)
     for name, local in LOCAL.items():

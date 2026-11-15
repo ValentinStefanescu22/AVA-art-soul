@@ -42,7 +42,7 @@
   },
   "AteliereDeGrup.dc.html": {
    "expand": "fill",
-   "h": 5090,
+   "h": 5155,
    "is_interactive": true,
    "page": "grup",
    "title": "Ateliere de grup: toate secțiunile alese, în ordine",
@@ -441,7 +441,7 @@
   },
   "CompHero.dc.html": {
    "expand": "fill",
-   "h": 860,
+   "h": 900,
    "is_interactive": true,
    "page": "companii",
    "title": "Pentru companii: deschiderea (șablonul, ca pe Ateliere de grup) · inspirație: șablonul paginilor de serviciu: deschidere",
@@ -764,7 +764,7 @@
   },
   "ConsHero.dc.html": {
    "expand": "fill",
-   "h": 860,
+   "h": 866,
    "is_interactive": true,
    "page": "consiliere",
    "title": "Consiliere 1:1: deschiderea (șablonul, ca pe Ateliere de grup) · inspirație: șablonul paginilor de serviciu: deschiderea",
@@ -2545,7 +2545,7 @@
   },
   "GrupHero2Aman.dc.html": {
    "expand": "fill",
-   "h": 905,
+   "h": 970,
    "is_interactive": true,
    "page": "grup",
    "title": "Ateliere de grup 2: fotografie pe tot ecranul · inspirație: aman.com: fotografia pe tot ecranul, titlul centrat, totul f",
@@ -3154,7 +3154,7 @@
   },
   "PentruCompanii.dc.html": {
    "expand": "fill",
-   "h": 5114,
+   "h": 5154,
    "is_interactive": true,
    "page": "companii",
    "title": "Pentru companii: toate secțiunile alese, în ordine",
@@ -3458,7 +3458,7 @@
   },
   "Retreat1Ecran.dc.html": {
    "expand": "fill",
-   "h": 900,
+   "h": 954,
    "is_interactive": true,
    "page": "retreat",
    "title": "Retreaturi 1: un singur ecran · inspirație: șablonul (aman.com): fotografia pe tot ecranul, cu formularul de abonare în",
@@ -3467,7 +3467,7 @@
    "y": 0
   },
   "Retreat1EcranMobil.dc.html": {
-   "h": 933,
+   "h": 932,
    "is_interactive": true,
    "page": "retreat",
    "title": "Retreaturi 1: un singur ecran · mobil",
@@ -3572,7 +3572,7 @@
   },
   "ScoliHero.dc.html": {
    "expand": "fill",
-   "h": 905,
+   "h": 970,
    "is_interactive": true,
    "page": "scoli",
    "title": "Pentru școli și copii: deschiderea · inspirație: șablonul paginilor de serviciu: deschiderea aleasă pe Ateliere de grup",
@@ -3793,7 +3793,7 @@
   },
   "Consiliere.dc.html": {
    "expand": "fill",
-   "h": 5327,
+   "h": 5332,
    "is_interactive": true,
    "page": "consiliere",
    "title": "Consiliere 1:1: pagina întreagă, legată de celelalte",
@@ -3802,7 +3802,7 @@
    "y": 0
   },
   "ConsiliereMobil.dc.html": {
-   "h": 7090,
+   "h": 7089,
    "is_interactive": true,
    "page": "consiliere",
    "title": "Consiliere 1:1 · mobil",
@@ -3812,7 +3812,7 @@
   },
   "AtelierPrivat.dc.html": {
    "expand": "fill",
-   "h": 5487,
+   "h": 5486,
    "is_interactive": true,
    "page": "privat",
    "title": "Atelier privat 1:1: pagina întreagă, legată de celelalte",
@@ -3831,7 +3831,7 @@
   },
   "ScoliCopii.dc.html": {
    "expand": "fill",
-   "h": 3314,
+   "h": 3379,
    "is_interactive": true,
    "page": "scoli",
    "title": "Pentru școli și copii: pagina întreagă, legată de celelalte",
@@ -3850,7 +3850,7 @@
   },
   "Retreaturi.dc.html": {
    "expand": "fill",
-   "h": 1874,
+   "h": 1927,
    "is_interactive": true,
    "page": "retreat",
    "title": "Retreaturi: pagina întreagă, legată de celelalte",
@@ -3859,7 +3859,7 @@
    "y": 0
   },
   "RetreaturiMobil.dc.html": {
-   "h": 2744,
+   "h": 2743,
    "is_interactive": true,
    "page": "retreat",
    "title": "Retreaturi · mobil",
