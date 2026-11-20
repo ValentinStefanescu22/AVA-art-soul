@@ -47,3 +47,14 @@ export function segments(page: PageKey): string[] {
   const { path } = PAGES[page];
   return path ? path.split("/") : [];
 }
+
+/** Which page a URL path shows: "/ro/ce-oferim/consiliere" → "consiliere"; unknown paths → null. */
+export function pageAt(pathname: string): PageKey | null {
+  const rest = pathname.replace(/^\/(ro|en)(?=\/|$)/, "").replace(/^\/|\/$/g, "");
+  return (Object.keys(PAGES) as PageKey[]).find((k) => PAGES[k].path === rest) ?? null;
+}
+
+/** The top-level menu entry a page belongs to (a service page belongs to Ce oferim). */
+export function sectionOf(page: PageKey): PageKey {
+  return (PAGES[page] as { parent?: PageKey }).parent ?? page;
+}

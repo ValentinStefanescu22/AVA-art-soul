@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>CTA mobil 2: pastilă plutitoare (Apple Store)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&amp;family=Newsreader:opsz,wght@6..72,200..800&amp;family=Host+Grotesk:wght@300..800&amp;family=Pinyon+Script&amp;display=swap">
+<style>body{margin:0;background:#F4EDE4}
+.cta{--ink:#3A2A20;--ink2:#6B5444;--paper:#F4EDE4;--acc:#2F5D50;--acc-d:#244A3F;--on:#F8F1E8;--display:'Bodoni Moda',Georgia,serif;--text:'Literata',Georgia,serif;
+  position:relative;width:390px;height:844px;overflow:hidden;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased}
+.cta .scr{position:absolute;inset:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none}
+.cta .scr::-webkit-scrollbar{display:none}
+.cta .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;background:var(--acc);color:var(--on);
+  font:500 15px/1 var(--text);letter-spacing:.02em;text-decoration:none;white-space:nowrap;transition:background-color .25s ease,scale .15s ease}
+.cta .btn:hover{background:var(--acc-d)}.cta .btn:active{scale:.97}
+.cta .btn:focus-visible{outline:2px solid #9C472C;outline-offset:3px}
+.cta .bar{position:absolute;z-index:5;box-sizing:border-box;transition:translate .42s cubic-bezier(.22,1,.36,1),opacity .3s ease}
+.cta .bar:not(.on){translate:0 calc(100% + 40px);opacity:0;pointer-events:none}
+.cta .num{font-variant-numeric:tabular-nums}
+/* the iPhone home indicator, so the safe-area padding is visible */
+.cta .home{position:absolute;z-index:6;left:50%;bottom:8px;width:134px;height:5px;margin-left:-67px;border-radius:3px;background:rgba(58,42,32,.85);pointer-events:none}
+@media (prefers-reduced-motion:reduce){.cta .bar{transition:opacity .2s ease}.cta .bar:not(.on){translate:none}}
+
+.cta .b2{left:16px;right:16px;bottom:calc(14px + 26px);display:flex}
+.cta .b2 .btn{flex:1;min-height:54px;font-size:16px;box-shadow:0 0 0 1px rgba(255,255,255,.08) inset,0 14px 30px -12px rgba(36,74,63,.55),0 4px 10px -4px rgba(36,74,63,.35)}
+.cta .b2 .btn .p{margin-left:10px;padding-left:10px;border-left:1px solid rgba(248,241,232,.35);font-weight:400;opacity:.9}
+</style>
+</helmet>
+<div class="cta" data-src="Apple Store">
+<div class="scr" ref="{{ scrRef }}"><div style="width: 390px"><dc-import name="AteliereDeGrup" hint-size="390px,7152px"></dc-import></div></div>
+<div class="bar b2 on" ref="{{ barRef }}"><a class="btn" href="#">Mă înscriu<span class="p num">de la 200 lei</span></a></div>
+<span class="home" aria-hidden="true"></span>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+var BUTTONS = [537, 1729, 2153, 2858, 4087], FOOTER = 5340, H = 844;
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this, s = this.scr; if (!s) return;
+    // The assembled page arrives a moment after the artboard (dc-import); then jump to the still.
+    // A second, 1px nudge wakes the sections' scroll reveals, which ignore the programmatic jump.
+    this.ts = [900, 1600, 2600, 4000].map(function (ms, i) {
+      return setTimeout(function () { if (i < 2) s.scrollTop = 3100 + i; self.sync(); }, ms); });
+    this.on = function () { if (!self.raf) self.raf = requestAnimationFrame(function () { self.raf = 0; self.sync(); }); };
+    s.addEventListener('scroll', this.on, { passive: true });
+  }
+  componentWillUnmount() { (this.ts || []).forEach(clearTimeout); if (this.scr) this.scr.removeEventListener('scroll', this.on); cancelAnimationFrame(this.raf); }
+  // Shown once the hero button is gone, hidden while another main button is on screen or at the footer.
+  sync() {
+    var y = this.scr.scrollTop, b = this.bar; if (!b) return;
+    // The page's header and reveals listen to the window, which doesn't scroll here: drive them from the phone.
+    var hx = this.scr.querySelector('.hx');
+    if (hx) { hx.setAttribute('data-sc', y > 40 ? '1' : '0'); hx.setAttribute('data-tone', y > 740 ? 'light' : 'dark'); }
+    this.scr.querySelectorAll('.js:not(.in)').forEach(function (s) { s.classList.add('in'); });
+    var pastHero = y > BUTTONS[0] + 40, other = BUTTONS.slice(1).some(function (t) { return t > y + 60 && t < y + H - 120; });
+    b.classList.toggle('on', pastHero && !other && y + H < FOOTER + 140);
+  }
+  renderVals() { var self = this; if (!this.cb) this.cb = {
+    scrRef: function (el) { self.scr = el; }, barRef: function (el) { self.bar = el; } }; return this.cb; }
+}
+</script>
+</body>
+</html>

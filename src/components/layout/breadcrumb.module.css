@@ -1,0 +1,43 @@
+/* Source: CRUMB_CSS in .aidesigner/pages_combine.py */
+.crumb {
+  margin: 0 0 22px;
+  font: 500 15px/1 var(--font-text);
+}
+.crumb ol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #e2d3c1;
+}
+.crumb li + li::before {
+  content: "›";
+  margin-right: 10px;
+  opacity: 0.7;
+}
+.crumb a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--color-paper);
+  text-decoration: underline;
+  text-decoration-color: rgb(244 237 228 / 0.4);
+  text-underline-offset: 6px;
+  transition: text-decoration-color 0.2s ease;
+}
+.crumb a:hover {
+  text-decoration-color: currentColor;
+}
+.crumb a:focus-visible {
+  outline: 2px solid var(--color-glow);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+@media (max-width: 1020px) {
+  .crumb {
+    display: none;
+  }
+}

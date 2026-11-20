@@ -65,7 +65,7 @@ for (const path of builtPages()) {
       await page.goto(path);
       await expect(page.locator("html")).toHaveAttribute("lang", /^(ro|en)$/);
       await expect(page).toHaveTitle(/\S/);
-      await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", /\S{10,}/);
+      await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", /.{50,}/);
       await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", new RegExp(`${path}$`));
       await expect(page.locator("h1")).toHaveCount(1);
     });

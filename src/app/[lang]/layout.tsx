@@ -1,6 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import "../globals.css";
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { RevealObserver } from "@/components/ui/RevealObserver";
+import { CONTACT, LAYOUT_COPY, NAV, SERVICES } from "@/content/ro/layout";
 import { bodoni, literata, pinyon } from "@/lib/fonts";
 import { LANG_TAG, PUBLISHED_LOCALES, toLocale } from "@/lib/i18n";
 import { SITE } from "@/lib/site";
@@ -36,7 +40,15 @@ export default async function RootLayout({
   return (
     <html lang={LANG_TAG[lang].html} className={`${bodoni.variable} ${literata.variable} ${pinyon.variable}`}>
       <body>
-        {children}
+        <a className="skip" href="#continut">
+          {LAYOUT_COPY.skip}
+        </a>
+        <Header lang={lang} nav={NAV} services={SERVICES} copy={LAYOUT_COPY} instagram={CONTACT.instagram} />
+        <main id="continut" tabIndex={-1}>
+          {children}
+        </main>
+        <Footer lang={lang} />
+        <RevealObserver />
         {SITE.analyticsToken && (
           // Cloudflare Web Analytics: no cookies, no personal data, so no cookie banner is needed.
           <script

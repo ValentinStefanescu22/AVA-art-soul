@@ -78,6 +78,46 @@
     outline: 2px solid var(--color-terra-d);
     outline-offset: 3px;
   }
+  /* „Sari la conținut”: hidden until a keyboard user tabs to it, then it lets them jump past the menu. */
+  .skip {
+    position: fixed;
+    left: 12px;
+    top: 12px;
+    z-index: 100;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: var(--color-ink);
+    color: var(--color-paper);
+    font: 500 15px/1 var(--font-text);
+    text-decoration: none;
+    translate: 0 -200%;
+  }
+  .skip:focus-visible {
+    translate: none;
+  }
+  main:focus {
+    outline: none;
+  }
+
+  /* Scroll reveal, driven by components/ui/RevealObserver.tsx. `translate` (not transform) and an animation (not a
+     transition), so it never fights a block's own hover effects. */
+  [data-reveal="wait"] {
+    opacity: 0;
+  }
+  [data-reveal="in"] {
+    animation: rv-in 0.8s var(--ease-out-soft) both;
+    animation-delay: calc(var(--rv-i, 0) * 80ms);
+  }
+  @keyframes rv-in {
+    from {
+      opacity: 0;
+      translate: 0 16px;
+    }
+    to {
+      opacity: 1;
+      translate: none;
+    }
+  }
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,

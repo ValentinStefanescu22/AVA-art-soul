@@ -145,7 +145,7 @@ Fiecare punct are și o verificare automată unde se poate:
 7. sitemap.xml;
 8. alt text pe fiecare imagine;
 9. breakpoint-uri mobile;
-10. CTA lipit jos pe mobil (de proiectat întâi pe canvas, 4 variante);
+10. ~~CTA lipit jos pe mobil~~: renunțat (Vali, 20 nov 2026: nu se potrivește cu eleganța site-ului; variantele sunt în „Arhivă: CTA lipit jos pe mobil”). Rămân butonul principal din hero (punctul 1) și meniul din pastilă;
 11. stări de încărcare;
 12. stări de eroare la formulare;
 13. pagini de mulțumire;

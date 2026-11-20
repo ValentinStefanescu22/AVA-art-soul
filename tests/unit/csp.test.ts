@@ -37,6 +37,13 @@ describe("scripts/csp.mjs", () => {
     expect(csp).toContain("connect-src 'self' https://cloudflareinsights.com");
   });
 
+  it("lets the browser reach the newsletter service only when it is configured", () => {
+    expect(cspFor([], { analytics: false, connectTo: ["https://assets.mailerlite.com"] })).toContain(
+      "connect-src 'self' https://assets.mailerlite.com",
+    );
+    expect(cspFor([], { analytics: false })).toContain("connect-src 'self';");
+  });
+
   it("tells search engines to stay away until launch", () => {
     const pages = [{ route: "/ro", hashes: [] }];
     expect(buildHeaders(pages, { indexable: false, analytics: false })).toContain("X-Robots-Tag: noindex");

@@ -4132,6 +4132,42 @@
    "w": 390,
    "x": 3590,
    "y": 0
+  },
+  "CtaMobil1Bara.dc.html": {
+   "h": 844,
+   "is_interactive": true,
+   "page": "cta-mobil-arh",
+   "title": "CTA mobil 1: bară cu data și prețul (Airbnb)",
+   "w": 390,
+   "x": 0,
+   "y": 0
+  },
+  "CtaMobil2Pastila.dc.html": {
+   "h": 844,
+   "is_interactive": true,
+   "page": "cta-mobil-arh",
+   "title": "CTA mobil 2: pastilă plutitoare (Apple Store)",
+   "w": 390,
+   "x": 470,
+   "y": 0
+  },
+  "CtaMobil3Editorial.dc.html": {
+   "h": 844,
+   "is_interactive": true,
+   "page": "cta-mobil-arh",
+   "title": "CTA mobil 3: bară editorială (Aesop)",
+   "w": 390,
+   "x": 940,
+   "y": 0
+  },
+  "CtaMobil4Bilet.dc.html": {
+   "h": 844,
+   "is_interactive": true,
+   "page": "cta-mobil-arh",
+   "title": "CTA mobil 4: cotor de bilet (Eventbrite)",
+   "w": 390,
+   "x": 1410,
+   "y": 0
   }
  },
  "createdOnFiles": {
@@ -4247,7 +4283,9 @@
   "noteLegalNou",
   "titleConf",
   "noteConf",
-  "noteConfText"
+  "noteConfText",
+  "titleCtaMobil",
+  "noteCtaMobil"
  ],
  "notes": {
   "noteA": {
@@ -5339,6 +5377,24 @@
    "w": 1440,
    "x": 0,
    "y": -200
+  },
+  "titleCtaMobil": {
+   "kind": "title1",
+   "maxW": 1800,
+   "page": "cta-mobil-arh",
+   "text": "CTA lipit jos pe mobil: 4 variante",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "noteCtaMobil": {
+   "fill": "gray",
+   "page": "cta-mobil-arh",
+   "size": "m",
+   "w": 1800,
+   "x": 0,
+   "y": 1004,
+   "text": "Respins de Vali (20 nov 2026): o bară lipită jos nu se potrivește cu eleganța site-ului. Rămâne butonul principal din hero, vizibil fără scroll, și meniul din pastilă.\n\nPunctul 10 din lista de lansare. Doar pe telefon: pe desktop butonul principal stă în hero și meniul e mereu sus.\nFiecare variantă e peste pagina reală „Ateliere de grup” la 390px. În Play poți face scroll în telefon.\nCum se comportă (la fel la toate 4):\n• apare după ce butonul din hero iese din ecran;\n• se ascunde cât timp pe ecran e alt buton principal (biletele, „Solicită un atelier”), ca să nu dubleze;\n• se ascunde la footer, când e deschis meniul și când apare tastatura;\n• stă deasupra liniei de „home” a iPhone-ului (safe area).\nPe celelalte pagini, același buton ca în hero: Consiliere „Programează o ședință”, Atelier privat „Alege atelierul”, Companii „Cere o ofertă”, Școli „Scrie-ne”, Retreaturi „Anunță-mă la lansare”.\n1. Airbnb: bară plină cu data și prețul următorului atelier.\n2. Apple Store: o singură pastilă verde, plutitoare.\n3. Aesop: bară editorială cu numele serviciului.\n4. Eventbrite: cotor de bilet, ca biletele din listă, cu locurile rămase (live, din E8).\nText nou, propus de mine, de aprobat: „Mai sunt 3 locuri”."
   }
  },
  "order": [
@@ -5776,7 +5832,11 @@
   "FonturiComparator.dc.html",
   "FonturiComparatorMobil.dc.html",
   "FonturiToate.dc.html",
-  "FonturiToateMobil.dc.html"
+  "FonturiToateMobil.dc.html",
+  "CtaMobil1Bara.dc.html",
+  "CtaMobil2Pastila.dc.html",
+  "CtaMobil3Editorial.dc.html",
+  "CtaMobil4Bilet.dc.html"
  ],
  "pages": [
   {
@@ -5874,6 +5934,10 @@
   {
    "id": "confirmari-arh",
    "name": "Arhivă: Confirmări"
+  },
+  {
+   "id": "cta-mobil-arh",
+   "name": "Arhivă: CTA lipit jos pe mobil"
   },
   {
    "id": "fonturi-text",
