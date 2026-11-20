@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "npm run images && next dev",
     "images": "node scripts/images.mjs",
+    "fonts": "node scripts/fonts.mjs",
     "build": "npm run images && next build && node scripts/csp.mjs",
     "preview": "wrangler dev --port 8788",
     "lint": "eslint . && prettier --check .",

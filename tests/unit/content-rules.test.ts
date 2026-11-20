@@ -7,7 +7,11 @@ import path from "node:path";
 const ALLOWED_PHRASES = [
   "terapia ocupațională", // copii: „nu înlocuiesc logopedia, terapia ocupațională sau kinetoterapia”
   "terapii experiențiale și artterapie", // Alessia studiază (not a service she offers)
-  "cu licență în Psihologie", // her degree (approved Coperta copy), not a title: she never presents herself as psiholog
+  // Her degrees, named as the diplomas name them (approved canvas copy): facts, not titles or services she offers.
+  "cu licență în Psihologie", // Acasă, „Despre”
+  "Am absolvit Psihologia", // Despre noi, the opening
+  "Licență în Psihologie", // Despre noi, „Formări”
+  "Psihodiagnoză, Psihoterapie Experiențială Unificatoare și Dezvoltare Personală", // Despre noi, „Formări”: the master's programme
 ];
 
 const RULES: { name: string; pattern: RegExp }[] = [

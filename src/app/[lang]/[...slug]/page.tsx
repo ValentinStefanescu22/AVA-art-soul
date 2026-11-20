@@ -6,7 +6,8 @@ import { pageMeta, pageMetadata } from "@/lib/seo";
 
 // Temporary pages for everything in routes.ts that isn't built yet, so the menu and footer never lead to a 404.
 // Each stage that builds a real page removes it from PENDING (the real route folder then takes over).
-export const PENDING: readonly PageKey[] = (Object.keys(PAGES) as PageKey[]).filter((k) => k !== "acasa");
+const BUILT: readonly PageKey[] = ["acasa", "despreNoi", "ceOferim"];
+export const PENDING: readonly PageKey[] = (Object.keys(PAGES) as PageKey[]).filter((k) => !BUILT.includes(k));
 
 export const dynamicParams = false;
 export function generateStaticParams() {

@@ -1,0 +1,23 @@
+/* Letters.tsx. Source: .s-dnhero .nm / .s-cfhero .cph on the canvas (letters 45ms apart, rising out of a blur). */
+.w {
+  display: inline-block;
+  white-space: nowrap;
+}
+.l {
+  display: inline-block;
+}
+/* Inside no-preference on purpose: the global reduced-motion rule shortens animations but keeps their delay,
+   and during the delay `backwards` would hold the letters invisible. */
+@media (prefers-reduced-motion: no-preference) {
+  .l {
+    animation: letter 1s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    animation-delay: calc(0.1s + var(--k) * 45ms);
+  }
+}
+@keyframes letter {
+  from {
+    opacity: 0;
+    translate: 0 0.42em;
+    filter: blur(8px);
+  }
+}

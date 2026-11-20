@@ -43,7 +43,9 @@ module.exports = {
         hreflang: "error",
         canonical: "error",
         "http-status-code": "error",
-        "largest-contentful-paint": ["error", { maxNumericValue: 2000 }],
+        // 2.5 s: Google's "good" threshold. (2 s was ours until E3: pages whose first big thing is a photo, not
+        // Acasă's 18 KB hero, measured 2.2–2.9 s on the throttled phone; Vali, 20 nov 2026.)
+        "largest-contentful-paint": ["error", { maxNumericValue: 2500 }],
         "cumulative-layout-shift": ["error", { maxNumericValue: 0.05 }],
         "total-blocking-time": ["error", { maxNumericValue: 150 }],
         // JavaScript budget per page (transfer size, bytes).

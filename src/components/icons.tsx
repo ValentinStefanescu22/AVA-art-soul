@@ -53,3 +53,29 @@ export function Close({ className }: IconProps) {
     </svg>
   );
 }
+
+/** Three people (Ce oferim: „Pentru companii”). */
+export function People({ className }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 64 64" aria-hidden="true">
+      <g {...line} strokeWidth={3.2}>
+        <circle cx="32" cy="20" r="8" />
+        <circle cx="15" cy="27" r="6.5" />
+        <circle cx="49" cy="27" r="6.5" />
+        <path d="M18 54C18 44 24 38 32 38S46 44 46 54M4 52C4 45 8 40 15 40M60 52C60 45 56 40 49 40" />
+      </g>
+    </svg>
+  );
+}
+
+/** A sun (Ce oferim: „Pentru școli și copii”). */
+export function Sun({ className }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 64 64" aria-hidden="true">
+      <g {...line} strokeWidth={3.2}>
+        <circle cx="32" cy="32" r="11" />
+        <path d="M32 6V13M32 51V58M6 32H13M51 32H58M13.6 13.6L18.5 18.5M45.5 45.5L50.4 50.4M13.6 50.4L18.5 45.5M45.5 18.5L50.4 13.6" />
+      </g>
+    </svg>
+  );
+}
