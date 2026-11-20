@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, type CSSProperties, type KeyboardEvent, type PointerEvent } from "react";
+import { useEffect, useRef, type KeyboardEvent, type PointerEvent } from "react";
 import { Arrow, Chevron, ChevronBack, Vase } from "@/components/icons";
 import type { LAYOUT_COPY, NAV, SERVICES } from "@/content/ro/layout";
 import type { Locale } from "@/lib/i18n";
@@ -19,15 +19,11 @@ export type HeaderProps = {
   instagram: { handle: string; href: string };
 };
 
-/** Height of Acasă's announcement strip, above the bar (42px once the real Acasă hero arrives in E2). */
-const ACASA_STRIP_PX = 0;
-
 export function Header({ lang, nav, services, copy, instagram }: HeaderProps) {
   const pathname = usePathname();
   const page = pageAt(pathname);
   const section = page ? sectionOf(page) : null;
   const isService = page !== null && (SERVICE_PAGES as readonly string[]).includes(page);
-  const top = page === "acasa" ? ACASA_STRIP_PX : 0;
 
   const hx = useRef<HTMLElement>(null);
   const menu = useRef<MobileMenuHandle>(null);
@@ -39,6 +35,8 @@ export function Header({ lang, nav, services, copy, instagram }: HeaderProps) {
       raf = 0;
       const el = hx.current;
       if (!el) return;
+      // --top: the announcement strip's height when the page has one (see header.module.css).
+      const top = parseFloat(getComputedStyle(el).getPropertyValue("--top")) || 0;
       const st = headerState(window.scrollY, top, darkBottomOf(document.querySelector("[data-hx-dark]")));
       el.dataset.sc = st.sc;
       el.dataset.tone = st.tone;
@@ -55,7 +53,7 @@ export function Header({ lang, nav, services, copy, instagram }: HeaderProps) {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };
-  }, [pathname, top]);
+  }, [pathname]);
 
   // „Ce oferim” dropdown. The safe triangle follows the pointer while it is above the panel.
   const ddEsc = useRef<((e: globalThis.KeyboardEvent) => void) | null>(null);
@@ -103,7 +101,7 @@ export function Header({ lang, nav, services, copy, instagram }: HeaderProps) {
   return (
     <>
       <div className={s.dock}>
-        <header ref={hx} className={s.hx} data-sc="0" style={{ "--top": `${top}px` } as CSSProperties}>
+        <header ref={hx} className={s.hx} data-sc="0">
           <div className={`${s.bar} ${s.glass}`}>
             <Link className={s.logo} href={href(lang, "acasa")}>
               <Vase />

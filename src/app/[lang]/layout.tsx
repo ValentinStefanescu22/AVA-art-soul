@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { RevealObserver } from "@/components/ui/RevealObserver";
 import { CONTACT, LAYOUT_COPY, NAV, SERVICES } from "@/content/ro/layout";
-import { bodoni, literata, pinyon } from "@/lib/fonts";
+import { bodoni, bodoniItalic, literata, pinyon } from "@/lib/fonts";
 import { LANG_TAG, PUBLISHED_LOCALES, toLocale } from "@/lib/i18n";
 import { SITE } from "@/lib/site";
 
@@ -38,7 +38,10 @@ export default async function RootLayout({
 }) {
   const lang = toLocale((await params).lang);
   return (
-    <html lang={LANG_TAG[lang].html} className={`${bodoni.variable} ${literata.variable} ${pinyon.variable}`}>
+    <html
+      lang={LANG_TAG[lang].html}
+      className={`${bodoni.variable} ${bodoniItalic.variable} ${literata.variable} ${pinyon.variable}`}
+    >
       <body>
         <a className="skip" href="#continut">
           {LAYOUT_COPY.skip}

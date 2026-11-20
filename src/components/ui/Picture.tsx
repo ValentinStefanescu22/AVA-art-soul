@@ -17,7 +17,7 @@ const srcSet = (list: readonly { w: number; src: string }[]) => list.map(({ w, s
 
 /**
  * A responsive photo: AVIF for browsers that support it, WebP otherwise, each at several widths,
- * with width/height set (no layout shift) and a blurred preview painted until the file arrives.
+ * with width/height set (no layout shift) and a blurred preview painted until the file arrives (not for cut-outs).
  */
 export function Picture({ image, alt, sizes, priority = false, className, style }: Props) {
   const img = IMAGES[image];
@@ -35,7 +35,11 @@ export function Picture({ image, alt, sizes, priority = false, className, style 
         fetchPriority={priority ? "high" : "auto"}
         decoding={priority ? "sync" : "async"}
         className={className}
-        style={{ backgroundImage: `url(${img.blur})`, backgroundSize: "cover", backgroundPosition: "center", ...style }}
+        style={
+          img.blur
+            ? { backgroundImage: `url(${img.blur})`, backgroundSize: "cover", backgroundPosition: "center", ...style }
+            : style
+        }
       />
     </picture>
   );

@@ -80,8 +80,13 @@ async function processImage({ key, rel }) {
       variants[format].push({ w, src: `/_img/${name}` });
     }
   }
-  const tiny = await sharp(input).autoOrient().resize({ width: 16 }).blur(1).webp({ quality: 40 }).toBuffer();
-  return { key, width, height, blur: `data:image/webp;base64,${tiny.toString("base64")}`, ...variants };
+  // A cut-out (transparent) photo gets no blurred preview: it would keep showing through the transparent parts.
+  let blur = null;
+  if (!meta.hasAlpha) {
+    const tiny = await sharp(input).autoOrient().resize({ width: 16 }).blur(1).webp({ quality: 40 }).toBuffer();
+    blur = `data:image/webp;base64,${tiny.toString("base64")}`;
+  }
+  return { key, width, height, blur, ...variants };
 }
 
 async function main() {

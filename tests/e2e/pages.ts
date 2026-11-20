@@ -18,7 +18,18 @@ export function builtPages(): string[] {
  * A `page` that records problems while the test runs: JS errors, console errors and CSP violations.
  * Tests end with `expect(problems).toEqual([])`.
  */
-export const test = base.extend<{ problems: string[] }>({
+export const test = base.extend<{ problems: string[]; quietPopup: void }>({
+  // The newsletter pop-up opens after 8 s or 40% scroll, which would cover whatever a test is clicking. Every test
+  // behaves like a visitor who has already seen it, except on URLs with ?popup (the pop-up's own test).
+  quietPopup: [
+    async ({ page }, use) => {
+      await page.addInitScript(() => {
+        if (!location.search.includes("popup")) localStorage.setItem("ava.popup.newsletter", "1");
+      });
+      await use();
+    },
+    { auto: true },
+  ],
   problems: async ({ page }, use) => {
     const problems: string[] = [];
     page.on("pageerror", (e) => problems.push(`pageerror: ${e.message}`));

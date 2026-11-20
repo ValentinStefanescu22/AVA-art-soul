@@ -34,6 +34,8 @@
   --color-on-night-body: #d8c6b2;
 
   --font-display: var(--font-bodoni), Georgia, serif;
+  /* Bodoni italic is a separate family (see lib/fonts.ts): every italic accent uses this token. */
+  --font-display-italic: var(--font-bodoni-italic), Georgia, serif;
   --font-text: var(--font-literata), Georgia, serif;
   --font-script: var(--font-pinyon), cursive;
 
@@ -107,6 +109,33 @@
   [data-reveal="in"] {
     animation: rv-in 0.8s var(--ease-out-soft) both;
     animation-delay: calc(var(--rv-i, 0) * 80ms);
+  }
+  /* A pair that glides in from its own side, a little slower (Acasă, „Despre”: the two roles). */
+  [data-reveal="in"][data-reveal-from="left"] {
+    animation: rv-l 1.1s var(--ease-out-soft) 0.15s both;
+  }
+  [data-reveal="in"][data-reveal-from="right"] {
+    animation: rv-r 1.1s var(--ease-out-soft) 0.3s both;
+  }
+  @keyframes rv-l {
+    from {
+      opacity: 0;
+      translate: -48px 0;
+    }
+    to {
+      opacity: 1;
+      translate: none;
+    }
+  }
+  @keyframes rv-r {
+    from {
+      opacity: 0;
+      translate: 48px 0;
+    }
+    to {
+      opacity: 1;
+      translate: none;
+    }
   }
   @keyframes rv-in {
     from {

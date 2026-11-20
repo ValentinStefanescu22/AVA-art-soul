@@ -23,10 +23,11 @@ describe("scripts/images.mjs", () => {
 describe("compressed images (launch checklist 17)", () => {
   const files = Object.entries(IMAGES).flatMap(([key, img]) => [...img.avif, ...img.webp].map((v) => ({ key, ...v })));
 
-  it("gives every image AVIF and WebP and a blur preview", () => {
+  it("gives every image AVIF and WebP, and a blur preview unless it is a cut-out", () => {
     for (const img of Object.values(IMAGES)) {
       expect(img.avif.length).toBeGreaterThan(0);
       expect(img.webp.length).toBe(img.avif.length);
+      if (img.blur === null) continue; // cut-out portraits (transparent) have none
       expect(img.blur).toMatch(/^data:image\/webp;base64,/);
       expect(img.blur.length).toBeLessThan(1200); // the preview must stay tiny: it is inlined in the HTML
     }

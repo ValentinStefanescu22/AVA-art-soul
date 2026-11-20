@@ -2,12 +2,20 @@
 
 import Link from "next/link";
 import { useRef, useState, type FormEvent } from "react";
-import { Button } from "@/components/ui/Button";
+import { Button, type ButtonVariant } from "@/components/ui/Button";
 import type { LAYOUT_COPY } from "@/content/ro/layout";
 import { subscribe, validateNewsletter, type NewsletterErrors } from "@/lib/newsletter";
-import s from "./footer.module.css";
+import footer from "./footer.module.css";
 
-type Props = { id: string; copy: (typeof LAYOUT_COPY)["newsletter"]; privacyHref: string };
+type Styles = Readonly<Record<string, string>>; // keys used: form, label, row, input, submit, consent, err, done
+type Props = {
+  id: string;
+  copy: (typeof LAYOUT_COPY)["newsletter"];
+  privacyHref: string;
+  /** Another look for the same form (the pop-up): a CSS module with the same class names. Default: the footer's. */
+  styles?: Styles;
+  variant?: ButtonVariant;
+};
 type Status = "idle" | "sending" | "sent" | "failed";
 
 /**
@@ -15,7 +23,7 @@ type Status = "idle" | "sending" | "sent" | "failed";
  * the first one), a disabled „Se trimite…” button while sending, a clear network error that keeps what you typed,
  * and the thank-you line.
  */
-export function NewsletterForm({ id, copy, privacyHref }: Props) {
+export function NewsletterForm({ id, copy, privacyHref, styles: s = footer, variant = "ink" }: Props) {
   const [errors, setErrors] = useState<NewsletterErrors>({});
   const [status, setStatus] = useState<Status>("idle");
   const email = useRef<HTMLInputElement>(null);
@@ -32,6 +40,7 @@ export function NewsletterForm({ id, copy, privacyHref }: Props) {
     setStatus("sending");
     const res = await subscribe(value.email);
     setStatus(res.ok ? "sent" : "failed");
+    if (res.ok) window.dispatchEvent(new CustomEvent("ava:subscribed")); // the home pop-up stays closed after this
   }
 
   if (status === "sent") {
@@ -62,7 +71,7 @@ export function NewsletterForm({ id, copy, privacyHref }: Props) {
           placeholder={copy.placeholder}
           {...describe("email", errors.email)}
         />
-        <Button variant="ink" type="submit" disabled={status === "sending"} className={s.submit}>
+        <Button variant={variant} type="submit" disabled={status === "sending"} className={s.submit}>
           {status === "sending" ? copy.sending : copy.submit}
         </Button>
       </div>

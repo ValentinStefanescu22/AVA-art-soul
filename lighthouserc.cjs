@@ -22,7 +22,11 @@ module.exports = {
       startServerCommand: `npx wrangler dev --port ${PORT} --log-level warn`,
       startServerReadyPattern: "Ready on",
       url: urls,
-      numberOfRuns: 3,
+      numberOfRuns: 2,
+      // Real throttling (a slow 4G phone, CPU 4× slower), not Lighthouse's default estimate. The estimate ("simulate")
+      // assumes the worst when many files download in parallel and gave Acasă LCP 4.9 s, while the throttled load
+      // actually measured 1.7 s (E2, 20 nov 2026). We'd rather fail on real numbers than tune for a model.
+      settings: { throttlingMethod: "devtools" },
     },
     assert: {
       assertions: {

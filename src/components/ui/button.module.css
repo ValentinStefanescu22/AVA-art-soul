@@ -51,6 +51,20 @@
 .cream:focus-visible {
   outline-color: var(--color-glow);
 }
+/* The quiet second button on a dark hero („Pentru companii”): glass with a cream ring. */
+.lineOnDark {
+  background: rgb(244 237 228 / 0.08);
+  color: var(--color-paper);
+  box-shadow: inset 0 0 0 1px rgb(244 237 228 / 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.lineOnDark:hover {
+  background: rgb(244 237 228 / 0.16);
+}
+.lineOnDark:focus-visible {
+  outline-color: var(--color-glow);
+}
 /* Principal: general actions (newsletter…). */
 .ink {
   background: var(--color-ink);

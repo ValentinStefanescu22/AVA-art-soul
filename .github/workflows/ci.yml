@@ -12,6 +12,9 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  # Every night: rebuild so a workshop whose day has passed leaves Acasă and the list by itself.
+  schedule:
+    - cron: "15 1 * * *"
 
 permissions:
   contents: read
@@ -114,8 +117,8 @@ jobs:
   deploy:
     name: Deploy to Cloudflare
     needs: [e2e, lighthouse]
-    # Only real pushes to main deploy (never pull requests or forks), and only once Vali has set it up.
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'
+    # Only main deploys (a push, the nightly rebuild or a manual run; never a pull request or a fork), once set up.
+    if: (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'
     runs-on: ubuntu-24.04
     environment:
       name: production

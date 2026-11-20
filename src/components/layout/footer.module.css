@@ -132,7 +132,7 @@
 }
 .done {
   margin: 0;
-  font: 400 italic 22px/1.3 var(--font-display);
+  font: 400 italic 22px/1.3 var(--font-display-italic);
   font-variation-settings: "opsz" 20;
 }
 
@@ -184,7 +184,7 @@
 }
 .tag {
   margin: 10px 0 0;
-  font: 400 italic 18px/1.3 var(--font-display);
+  font: 400 italic 18px/1.3 var(--font-display-italic);
   font-variation-settings: "opsz" 20;
   color: #d9c7b4;
 }

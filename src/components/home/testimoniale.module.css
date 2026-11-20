@@ -1,0 +1,365 @@
+/* „Ce spun oamenii”, ported from .aidesigner/canvas/project/OameniB2.dc.html. The page sets background and padding. */
+.og {
+  position: relative;
+  overflow: hidden;
+}
+.wrap {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: 52px;
+}
+.og h2 {
+  margin: 0;
+  font-size: clamp(44px, 5vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 28px;
+}
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  font-weight: 500;
+  color: var(--color-ink);
+  text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 calc(100% - 9px) / 100% 1px no-repeat;
+  transition: background-size 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.more:hover {
+  background-size: 0 1px;
+  background-position: 100% calc(100% - 9px);
+}
+.ar {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.more:hover .ar {
+  transform: translateX(4px);
+}
+.og img {
+  display: block;
+}
+
+/* Photo bands */
+.mq {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.mq ul {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  animation: obl 70s linear infinite;
+}
+.r2 ul {
+  animation-name: obr;
+  animation-duration: 80s;
+}
+.mq:hover ul,
+.og[data-still] .mq ul,
+.og[data-off] .mq ul {
+  animation-play-state: paused;
+}
+.mq li {
+  height: 250px;
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
+  corner-shape: squircle;
+  overflow: hidden;
+  flex: none;
+}
+.mq li:nth-child(3n + 2) {
+  aspect-ratio: 3 / 2;
+}
+.mq img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@keyframes obl {
+  to {
+    transform: translateX(-50%) translateX(-7px);
+  }
+}
+@keyframes obr {
+  from {
+    transform: translateX(-50%) translateX(-7px);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes obtick {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* The carousel: dots on top, arrows on the sides, one quote at a time. */
+.stage {
+  touch-action: pan-y;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  grid-template-areas:
+    ". g ."
+    "pv s nx";
+  column-gap: 56px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.sls {
+  grid-area: s;
+  display: grid;
+}
+.sl {
+  grid-area: 1/1;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(calc(var(--d, 1) * 22px));
+  transition:
+    opacity 0.45s,
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    visibility 0s linear 0.45s;
+}
+.sl.out {
+  transform: translateX(calc(var(--d, 1) * -22px));
+}
+.sl.on {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition-delay: 0s;
+}
+.q {
+  margin: 0;
+}
+.q blockquote {
+  margin: 0;
+  font: 400 clamp(28px, 2.8vw, 40px) / 1.22 var(--font-display);
+  font-variation-settings: "opsz" 20;
+  letter-spacing: -0.005em;
+  text-wrap: pretty;
+}
+.q blockquote::before {
+  content: "„";
+}
+.q blockquote::after {
+  content: "”";
+}
+.q figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px 10px;
+  align-items: baseline;
+  margin-top: 18px;
+  font-size: 15px;
+}
+.q figcaption b {
+  font-weight: 600;
+}
+:where(.og) button {
+  appearance: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.rd {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #fbf7f0;
+  color: #262626;
+  box-shadow:
+    0 1px 3px rgb(0 0 0 / 0.14),
+    0 6px 16px -6px rgb(0 0 0 / 0.22);
+  transition: transform 0.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.rd:hover {
+  transform: scale(1.06);
+}
+.rd svg {
+  width: 18px;
+  height: 18px;
+}
+.pv {
+  grid-area: pv;
+}
+.pv svg {
+  transform: rotate(180deg);
+}
+.nx {
+  grid-area: nx;
+}
+.segs {
+  grid-area: g;
+  justify-self: center;
+  display: flex;
+  gap: 6px;
+  width: min(260px, 100%);
+  margin-bottom: 30px;
+}
+.seg {
+  flex: 1;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+}
+.seg span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background: rgb(58 42 32 / 0.22);
+  overflow: hidden;
+}
+.seg:hover span {
+  background: rgb(58 42 32 / 0.28);
+}
+.tk {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--color-terra-d);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.tk.full {
+  transform: scaleX(1);
+}
+.tk.tick {
+  animation: obtick 9s linear;
+}
+.og[data-hold] .tk,
+.og[data-still] .tk,
+.og[data-off] .tk {
+  animation-play-state: paused;
+}
+.rd:focus-visible,
+.seg:focus-visible,
+.still:focus-visible {
+  outline: 2px solid var(--color-terra-d);
+  outline-offset: 3px;
+}
+.seg:focus-visible {
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* „Oprește mișcarea” */
+.stillrow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+.still {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px 0 13px;
+  border: 1px solid rgb(58 42 32 / 0.22);
+  border-radius: 999px;
+  background: none;
+  font-size: 14px;
+  color: var(--color-ink2);
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+.still:hover {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+.still svg {
+  width: 13px;
+  height: 13px;
+}
+
+@media (max-width: 820px) {
+  .wrap {
+    padding: 0 20px;
+  }
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .og h2 {
+    font-size: clamp(40px, 11vw, 52px);
+  }
+  .mq li {
+    height: 170px;
+  }
+  .stage {
+    grid-template-areas:
+      "pv g nx"
+      "s s s";
+    column-gap: 14px;
+    row-gap: 22px;
+    margin: 36px auto;
+    padding: 0 20px;
+  }
+  .segs {
+    margin: 0;
+    width: 100%;
+  }
+  .q blockquote {
+    font-size: 23px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mq ul {
+    animation: none;
+  }
+  .mq {
+    overflow-x: auto;
+  }
+  .still {
+    display: none;
+  }
+  .sl,
+  .more,
+  .ar,
+  .rd {
+    transition: none;
+  }
+}

@@ -7,6 +7,7 @@ import path from "node:path";
 const ALLOWED_PHRASES = [
   "terapia ocupațională", // copii: „nu înlocuiesc logopedia, terapia ocupațională sau kinetoterapia”
   "terapii experiențiale și artterapie", // Alessia studiază (not a service she offers)
+  "cu licență în Psihologie", // her degree (approved Coperta copy), not a title: she never presents herself as psiholog
 ];
 
 const RULES: { name: string; pattern: RegExp }[] = [

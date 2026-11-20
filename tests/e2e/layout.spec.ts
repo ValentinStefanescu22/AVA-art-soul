@@ -106,7 +106,7 @@ test("nothing is hidden for visitors who asked for less motion", async ({ browse
   const ctx = await browser.newContext({ reducedMotion: "reduce" });
   const page = await ctx.newPage();
   await page.goto("/ro");
-  await page.waitForLoadState("networkidle");
+  await page.waitForTimeout(500); // the reveal script runs right after hydration
   expect(await page.locator('[data-reveal="wait"]').count()).toBe(0);
   await ctx.close();
 });
@@ -118,4 +118,20 @@ test("the newsletter explains what is wrong (launch checklist 12)", async ({ pag
   await form.getByRole("button", { name: "Abonează-te" }).click();
   await expect(form.getByText("Scrie o adresă de email validă")).toBeVisible();
   await expect(form.getByLabel("Emailul tău")).toBeFocused();
+});
+
+test.describe("newsletter pop-up (Acasă)", () => {
+  test("opens once, after scrolling 40% of the page, and closes with Escape", async ({ page }) => {
+    await page.goto("/ro?popup");
+    const popup = page.getByRole("dialog").filter({ hasText: "Rămâi aproape" });
+    await expect(popup).toBeHidden();
+    await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight * 0.45));
+    await expect(popup).toBeVisible();
+    await page.keyboard.press("Escape");
+    await expect(popup).toBeHidden();
+    await page.reload();
+    await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight * 0.45));
+    await page.waitForTimeout(500);
+    await expect(popup).toBeHidden(); // never twice for the same visitor
+  });
 });
