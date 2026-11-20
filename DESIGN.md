@@ -45,8 +45,10 @@ Conținutul (texte, prețuri, FAQ) nu stă aici, ci în `docs/continut-site.md`.
 |---|---|---|
 | `--ink2` | `#6B5444` | text secundar (meta, descrieri scurte) |
 | `--body` | `#4A382C` | paragrafe lungi (Povestea, intro-uri) |
-| `--terra-d` | `#9C472C` | text mic / butoane în teracotă; roluri italice, întrebări |
+| `--terra-d` | `#9C472C` | text mic în teracotă; roluri italice, întrebări |
 | `--terra-dd` | `#833A22` | hover pe teracotă; meta mic (prețuri, durate) |
+| `--accent` Verde de glazură | `#2F5D50` | **doar** butoanele de acțiune principală (ales de Vali, 20 nov 2026); text `#F8F1E8` 6.7:1; niciodată pentru text, titluri sau decor |
+| `--accent-d` | `#244A3F` | hover pe accent |
 | `--sand-l` | `#EDE0CD` | nisip intermediar; fundalul cu care începe footerul |
 | `--cream-2` | `#EFE4D4` | capătul degradeului de la Ce oferim |
 | `--card` | `#FBF7F1` / `#FBF7F0` | carduri pe fundal deschis |
@@ -197,8 +199,9 @@ Sursa: `Footer3Heath`.
 | Tip | Cum arată | Unde |
 |---|---|---|
 | Principal | pastilă `--ink`, text `--paper`, 50–52px înălțime, padding 26–30px; hover `#2A1D15` | newsletter, acțiuni generale |
-| Rezervare | pastilă `--terra-d` `#9C472C`, text `#F8F1E8`; hover `#833A22` | înscriere, listă de așteptare |
-| Crem pe închis | pastilă `--paper` pe fundal închis | hero-uri |
+| Rezervare (accent) | pastilă `--accent` `#2F5D50`, text `#F8F1E8`; hover `#244A3F`; ora aleasă din calendar tot așa | înscriere, programare, rezervare, „Solicită un atelier”, „Adaugă în calendar” |
+| Accent pe închis | pastilă `--accent`, text `#F8F1E8`, contur interior 1px crem 50% (verdele singur are doar 1.95:1 față de maro); hover `#376B5C` | butonul principal din hero-uri, cardul „Cere o ofertă”, Contact, abonarea de la Evenimente / Retreaturi, „Programează discuția” (Vali, 20 nov 2026) |
+| Crem pe închis | pastilă `--paper` pe fundal închis | acțiuni secundare pe închis: „Scrie-ne”, newsletterul din footer |
 | Contur pe închis | `rgba(244,237,228,.08)` + contur 1px crem 50% + blur | al doilea buton din hero |
 | Link „mai mult” | text 500 + săgeată, sublinierea se strânge la hover, săgeata alunecă 4px | „Află mai multe”, „Vezi atelierul…” |
 

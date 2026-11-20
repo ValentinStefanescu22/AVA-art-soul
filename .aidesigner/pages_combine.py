@@ -216,6 +216,38 @@ def crumb(text, label):
     return text.replace("</style>", CRUMB_CSS + "</style>", 1)
 
 
+# Vali (20 nov): the main-action buttons (înscriere, programare, rezervare, ofertă) in „verde de glazură”, the one accent that
+# stands out from the warm palette. Only rules on button classes are touched; cream hero buttons and the ink newsletter stay.
+ACCENT = {"#9C472C": "#2F5D50", "#833A22": "#244A3F", "rgba(156,71,44,": "rgba(47,93,80,"}
+ACCENT_SEL = re.compile(r"\.(btn|cta|wait|slot)\b")
+ACCENT_SKIP = {"Footer3Heath", "Popup3Plic"}   # their grouped focus rings stay terracotta
+
+
+# Vali (20 nov, a doua rundă): the main action is green on dark too (heroes, the offer and contact cards, the subscribe
+# forms, „Programează discuția”). On dark brown green alone is 1.95:1, so it gets a thin cream ring; hover goes lighter.
+ACCENT_DARK = re.compile(r"(\.g2|\.o4|\.c5x) \.btn(:hover)?$|\.btn-cream(:hover)?$|\.gd \.btn-c(:hover)?$")
+ACCENT_DARK_SKIP = {"PrivDetalii", "GrupDetalii", "ScoliDetalii"}   # their btn-c is „Scrie-ne”, a secondary action
+RING = "box-shadow:inset 0 0 0 1px rgba(244,237,228,.5)"
+
+
+def accent(text, f=""):
+    def rule(m):
+        sel, body = m.group(1), m.group(2)
+        if ACCENT_SEL.search(sel):
+            for a, b in ACCENT.items():
+                body = re.sub(re.escape(a), b, body, flags=re.I)
+        if f not in ACCENT_DARK_SKIP and ACCENT_DARK.search(sel.strip()):
+            hover = sel.strip().endswith(":hover")
+            body2 = re.sub(r"background(-color)?:\s*(#F4EDE4|var\(--cream\)|var\(--paper\))", "background:#2F5D50", body, flags=re.I)
+            body2 = re.sub(r"background(-color)?:\s*#FFF8EE", "background:#376B5C", body2, flags=re.I)
+            if body2 != body:
+                body = re.sub(r"(;|^)color:\s*(#2E1D14|#3A2A20|var\(--ink\))", r"\1color:#F8F1E8", body2, flags=re.I)
+                if not hover and RING not in body:
+                    body += ";" + RING
+        return sel + "{" + body + "}"
+    return re.sub(r"([^{}]+)\{([^{}]*)\}", rule, text)
+
+
 ACASA = ["Acasa","HeroAnuntCentrat", "CopertaH", "CeFacem5Acordeon", "UrmatorulA", "OameniB2", "Faq3Carduri", "Popup3Plic"]
 COMPANII = ["PentruCompanii", "CompHero", "CompFormate1Planuri", "CompDetalii", "CompOferta4Pasi", "CompFaq"]   # assembled on the canvas (12 nov)
 LOCAL = {"Acasa": "acasa.html", "DespreNoi": "despre-noi.html", "CeFacem": "ce-facem.html", "AteliereDeGrup": "ateliere-de-grup.html",
@@ -254,7 +286,7 @@ if __name__ == "__main__":
         p = os.path.join(P, f + ".dc.html")
         t = open(p, encoding="utf-8").read()
         n = crumb(t, CRUMB[f]) if f in CRUMB else back(t) if f in SERVICE_PAGES else t
-        n = relink(n)
+        n = relink(n if f in ACCENT_SKIP else accent(n, f))
         if n != t:
             open(p, "w", encoding="utf-8").write(n)
     for name, local in LOCAL.items():

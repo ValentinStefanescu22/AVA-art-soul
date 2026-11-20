@@ -16,7 +16,7 @@ Designul ales și sistemul vizual: `DESIGN.md` (scris pe 12 nov 2026 din paginil
 
 - Next.js (App Router) + TypeScript + Tailwind CSS
 - Export static (`output: 'export'`), găzduire pe **Cloudflare Pages** (gratuit și pentru uz comercial). Domeniu nou, cumpărat mai târziu (Cloudflare Registrar).
-- Fără bază de date, fără CMS, fără server propriu. Conținutul care se schimbă des stă în fișiere de date: `content/evenimente.ts`, `content/testimoniale.ts`, `content/galerie.ts`. Le actualizează Vali.
+- Fără CMS. Server sau bază de date doar dacă ne ușurează munca (Vali, 15 nov 2026: regula „fără server” nu e obligatorie); preferăm ce e gratuit pe Cloudflare (Workers + D1), lângă Pages. Conținutul care se schimbă des stă în fișiere de date: `content/evenimente.ts`, `content/testimoniale.ts`, `content/galerie.ts`. Le actualizează Vali.
 - Imaginile se optimizează la build (scriptul nostru cu `sharp`, AVIF/WebP pe mai multe lățimi), pentru că exportul static dezactivează optimizarea din `next/image`.
 - Fonturile se încarcă local prin `next/font` (nu de la Google la runtime).
 
@@ -24,8 +24,8 @@ Designul ales și sistemul vizual: `DESIGN.md` (scris pe 12 nov 2026 din paginil
 
 | Nevoie | Serviciu | Cum |
 |---|---|---|
-| Plată ateliere de grup | Stripe Payment Links | Un link per eveniment, în `content/evenimente.ts`. Limită de plăți = nr. de locuri. Checkout-ul cere telefon, acord foto (câmp custom) și acord termeni. Cod de reducere 5% acceptat. Banii ajung în contul ING Business al PFA. |
-| Programări + plată consiliere și ateliere 1:1 | Cal.com (plan gratuit) + Stripe | Sincronizat cu calendarul de iPhone al Alessiei (iCloud). Încorporat pe paginile de servicii. |
+| Plată ateliere de grup | Stripe Payment Links + Cloudflare Worker + D1 | Un link per eveniment, în `content/evenimente.ts`. Limită de plăți = nr. de locuri. Opțiune și de transfer bancar (în contul ING): locul se rezervă 48 h, Alessia îl marchează plătit pe o pagină doar a ei, altfel se eliberează singur. Worker-ul ține evidența locurilor (webhook Stripe + rezervări prin transfer), scade limita linkului Stripe la fiecare transfer și dă site-ului locurile rămase live („Sold out” la plin). Checkout-ul cere telefon, acord foto (câmp custom) și acord termeni. Cod de reducere 5% acceptat. Banii ajung în contul ING Business al PFA. |
+| Programări + plată consiliere și ateliere 1:1 | Cal.com (plan gratuit) + Stripe | Două variante per ședință: plată online (Stripe) sau transfer bancar (confirmată de Alessia). Ambele citesc același calendar, deci o oră rezervată dispare pentru toți (de testat dacă o programare neconfirmată ține ora). Sincronizat cu calendarul de iPhone al Alessiei (iCloud). Încorporat pe paginile de servicii. |
 | Formulare (contact, ofertă companii) | Web3Forms | Trimite pe email, fără backend. Honeypot anti-spam. |
 | Newsletter + pop-up | MailerLite (gratuit) | Pop-up-ul e al nostru (în stilul site-ului) și trimite în MailerLite. Emailul de bun venit conține codul Stripe de 5%. |
 | Analytics | Cloudflare Web Analytics | Fără cookies, deci fără banner de cookies. |
@@ -96,7 +96,7 @@ La final, raportează toate cele 20: Built / Already done / Skipped, cu fișiere
 
 ## Înscrieri și plăți
 
-- Plata online e la lansare: Stripe Payment Links pentru ateliere de grup, Cal.com + Stripe pentru consiliere și ateliere 1:1.
+- Plata e la lansare, online (Stripe) sau prin transfer bancar (decizia lui Vali, 15 nov 2026): Stripe Payment Links + Worker pentru ateliere de grup, Cal.com + Stripe pentru consiliere și ateliere 1:1. Regula de expirare a rezervării prin transfer (48 h) e propusă, de aprobat și de trecut în „Înscriere, plată și anulare”.
 - Locul se confirmă după plata integrală.
 - Politica de anulare: banii nu se returnează, dar anunțul cu cel puțin 24 de ore înainte îți păstrează locul la următorul atelier (la consiliere: reprogramare).
 - De verificat cu contabila: excepția de la dreptul de retragere (OUG 34/2014) pentru ședințele de consiliere.
