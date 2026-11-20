@@ -1,0 +1,6 @@
+#!/bin/sh
+# Runs before every `git push`: we work directly on main, so this is the last check before code reaches GitHub.
+# Fast checks only (lint, types, unit tests); the slower e2e and Lighthouse run in CI.
+# Skip once in an emergency with: git push --no-verify
+echo "pre-push: npm run check"
+npm run check

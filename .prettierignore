@@ -1,0 +1,16 @@
+.aidesigner/
+.agents/
+.impeccable/
+.playwright-cli/
+.claude/
+.next/
+out/
+public/
+src/generated/
+playwright-report/
+test-results/
+docs/
+*.md
+package-lock.json
+.wrangler/
+.lighthouseci/

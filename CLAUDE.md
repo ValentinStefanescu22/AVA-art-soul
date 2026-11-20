@@ -67,8 +67,8 @@ Nicăieri adresa exactă. Pe site apare „București”, plus zona sau locația
 - Atmosferă: elegant, calm, bogat; lumină difuză care trece din bej în maro deschis.
 - „Woodsprites”: luminițe mici, calde, care plutesc și urmăresc cursorul (pe mobil plutesc singure). Se opresc complet la `prefers-reduced-motion`.
 - Mobile-first: majoritatea vizitatorilor vin de pe Instagram, de pe telefon.
-- Imagini în `public/images/`: `atelier-hero.(webp|jpg)` (atelierul din octombrie), `alessia.(webp|png)` (portret decupat cu segmentarea de persoane din macOS Vision, margini curățate, nuanțe încălzite), `alessia-stamp.webp` (încadrat pătrat pentru cercul-ștampilă). Logo în `public/brand/`.
-- Direcția aleasă (Runda 2 din canvas): hero „Ștampila în lut” (ștampila brandului imprimată în lut generat procedural cu filtre SVG; lumina-woodsprite urmărește cursorul cu arcuri critic amortizate și mută umbrele imprimării; text în dreapta, „AVA” deasupra „Art & Soul”), secțiunea-ștampilă din C pentru „Despre”, cardul de eveniment din A. Sursa de adevăr de portat: `.aidesigner/canvas/project/Acasa.dc.html` (sursele canvas-ului; `python3 .aidesigner/dc2html.py <artboard> <out.html>` le face pagini vizibile local, ex. `.aidesigner/acasa.html` (imaginile canvas-ului, `/_blob/<id>`, sunt copiate în `.aidesigner/_blob/`) pe serverul „design-preview” din `.claude/launch.json`). `.aidesigner/stampila.html` și `HeroStampila` sunt versiuni mai vechi. Fundalul hero-ului e o fotografie de lut sculptat în valuri, teracotă (`public/images/hero-lut.webp|jpg`, 2880px; mărită de Vali cu un upscaler AI la 2960px, apoi redusă la 2880 și cu o granulație fină de lut adăugată ca suprafețele să nu pară ceruite). Peste ea, un voal închis `rgba(42,20,12,…)` mai slab peste ștampilă și ~52% sub text (orizontal pe desktop, vertical pe mobil), ca textul crem să treacă de 4.5:1. Text crem (`#F4EDE4`, lede `#EFE3D3`, „Art & Soul” `#F2C79C`), meniu și butoane deschise pe fundal închis. Lumina-woodsprite are în jur un halou cald difuz (`.glow`, radial-gradient cu `mix-blend-mode: screen`, poziție în `--lx/--ly`). Ștampila NU folosește feDiffuseLighting (Chrome îl desenează la rezoluția viewBox-ului, deci neclar la zoom / Retina): e din straturi vectoriale cu `<mask>` (fundul canalului mai închis; umbră clară = forma minus forma mutată departe de lumină; perete umbrit moale = aceeași diferență pe 3–6 unități, cu blur, tăiată în forma clară; perete luminat și buză luminoasă de partea opusă), deplasate din JS după poziția luminii; apăsarea la încărcare e un `scale` din JS, nu o animație CSS. Să nu pară „corporatist”; hero-ul închis e cald (lut ars), nu greu, iar restul paginii rămâne deschis.
+- Imagini sursă în `assets/images/` (le optimizează `scripts/images.mjs` în `public/_img/`, folosite prin `<Picture image="…">`): `atelier-hero.(webp|jpg)` (atelierul din octombrie), `alessia.(webp|png)` (portret decupat cu segmentarea de persoane din macOS Vision, margini curățate, nuanțe încălzite), `alessia-stamp.webp` (încadrat pătrat pentru cercul-ștampilă). Logo în `assets/brand/` (favicon-urile se refac cu `node scripts/icons.mjs`).
+- Direcția aleasă (Runda 2 din canvas): hero „Ștampila în lut” (ștampila brandului imprimată în lut generat procedural cu filtre SVG; lumina-woodsprite urmărește cursorul cu arcuri critic amortizate și mută umbrele imprimării; text în dreapta, „AVA” deasupra „Art & Soul”), secțiunea-ștampilă din C pentru „Despre”, cardul de eveniment din A. Sursa de adevăr de portat: `.aidesigner/canvas/project/Acasa.dc.html` (sursele canvas-ului; `python3 .aidesigner/dc2html.py <artboard> <out.html>` le face pagini vizibile local, ex. `.aidesigner/acasa.html` (imaginile canvas-ului, `/_blob/<id>`, sunt copiate în `.aidesigner/_blob/`) pe serverul „design-preview” din `.claude/launch.json`). `.aidesigner/stampila.html` și `HeroStampila` sunt versiuni mai vechi. Fundalul hero-ului e o fotografie de lut sculptat în valuri, teracotă (`assets/images/hero-lut.webp|jpg`, 2880px; mărită de Vali cu un upscaler AI la 2960px, apoi redusă la 2880 și cu o granulație fină de lut adăugată ca suprafețele să nu pară ceruite). Peste ea, un voal închis `rgba(42,20,12,…)` mai slab peste ștampilă și ~52% sub text (orizontal pe desktop, vertical pe mobil), ca textul crem să treacă de 4.5:1. Text crem (`#F4EDE4`, lede `#EFE3D3`, „Art & Soul” `#F2C79C`), meniu și butoane deschise pe fundal închis. Lumina-woodsprite are în jur un halou cald difuz (`.glow`, radial-gradient cu `mix-blend-mode: screen`, poziție în `--lx/--ly`). Ștampila NU folosește feDiffuseLighting (Chrome îl desenează la rezoluția viewBox-ului, deci neclar la zoom / Retina): e din straturi vectoriale cu `<mask>` (fundul canalului mai închis; umbră clară = forma minus forma mutată departe de lumină; perete umbrit moale = aceeași diferență pe 3–6 unități, cu blur, tăiată în forma clară; perete luminat și buză luminoasă de partea opusă), deplasate din JS după poziția luminii; apăsarea la încărcare e un `scale` din JS, nu o animație CSS. Să nu pară „corporatist”; hero-ul închis e cald (lut ars), nu greu, iar restul paginii rămâne deschis.
 - Context de produs pentru skill-urile de design: `PRODUCT.md`.
 
 ## Animații
@@ -119,6 +119,40 @@ La final, raportează toate cele 20: Built / Already done / Skipped, cu fișiere
 - În afara site-ului (de făcut de Alessia / Vali): Google Search Console + trimis sitemap, Google Business Profile (zonă deservită, fără adresă).
 - Imagini cu text alternativ descriptiv în română (și engleză pe /en).
 - Accesibilitate: contrast bun, navigare de la tastatură, focus vizibil, butoane clare.
+
+## Cod (din 20 nov 2026)
+
+Planul aprobat: E0 fundația → E1 piese comune → E2 Acasă → E3 Despre / Ce oferim → E4 servicii → E5 restul paginilor → E6 SEO → E7 engleza → E8 plăți. Lucrăm direct pe `main`. Commit și push le face Vali; Claude îi dă la fiecare etapă un mesaj de commit sugerat, pe un singur rând.
+
+- `npm run dev`: local, cu reîncărcare la salvare (http://localhost:3000/ro).
+- `npm run build` apoi `npm run preview`: build-ul real servit ca pe Cloudflare, cu headere și CSP (http://localhost:8788).
+- `npm run check`: imagini + lint + typecheck + teste unit (rulează și la `git push`, prin `.githooks/pre-push`).
+- `npm run e2e`: Playwright + axe pe build (`npm run build` înainte). Lighthouse: `npx @lhci/cli@0.16.1 autorun`.
+- Toate paginile sunt în `src/lib/routes.ts`; titlurile și descrierile pentru Google în `src/content/meta.ts`.
+- Regulile de conținut de mai jos sunt și test (`tests/unit/content-rules.test.ts`).
+- Headerele de securitate și CSP-ul (cu hash-uri per pagină) le scrie `scripts/csp.mjs` după build, în `out/_headers`.
+- Publicarea: `docs/deploy.md`. Subagenți: Haiku pentru muncă mecanică, Sonnet pentru porturi după tipar, Opus pentru piesele grele.
+
+### Înainte de lansare (lista lui Vali, 20 nov 2026)
+
+Fiecare punct are și o verificare automată unde se poate:
+1. CTA vizibil fără scroll;
+2. meta title per pagină;
+3. meta description per pagină;
+4. imagine Open Graph;
+5. set de favicon;
+6. robots.txt;
+7. sitemap.xml;
+8. alt text pe fiecare imagine;
+9. breakpoint-uri mobile;
+10. CTA lipit jos pe mobil (de proiectat întâi pe canvas, 4 variante);
+11. stări de încărcare;
+12. stări de eroare la formulare;
+13. pagini de mulțumire;
+14. banner de cookies doar dacă e nevoie (acum nu e: analytics fără cookies);
+15. analytics instalat;
+16. conținut real, fără `[placeholder]` (inclusiv sediul PFA; locul atelierelor rămâne fără adresă exactă);
+17. imagini comprimate.
 
 ## Unelte
 

@@ -1,0 +1,16 @@
+// Cloudflare Worker that serves the static site from out/ (Workers Static Assets).
+// No script yet: every request is a file. The /api/* routes for payments (Worker + D1) come in stage E8.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ava-art-soul",
+  "compatibility_date": "2026-11-15",
+  "assets": {
+    "directory": "./out",
+    // /ro/despre-noi serves out/ro/despre-noi.html; /ro/despre-noi/ redirects to the version without the slash.
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "404-page",
+  },
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": false },
+}

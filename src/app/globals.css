@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* Design tokens from DESIGN.md §2–§5. Tailwind turns each --color-* into classes (bg-paper, text-ink, …). */
+@theme {
+  /* Brand palette */
+  --color-ink: #3a2a20; /* Lut ars: main text, logo, footer */
+  --color-sand: #e6d5bd;
+  --color-paper: #f4ede4; /* page background */
+  --color-terra: #b4583a; /* only text >= 24px, or decoration */
+  --color-clay: #c07a4e;
+  --color-sage: #6f7b5c;
+  --color-sage-text: #4f5a43;
+
+  /* Derived */
+  --color-ink2: #6b5444; /* secondary text */
+  --color-body: #4a382c; /* long paragraphs */
+  --color-terra-d: #9c472c; /* small terracotta text, focus ring on light */
+  --color-terra-dd: #833a22;
+  --color-accent: #2f5d50; /* Verde de glazură: ONLY main-action buttons */
+  --color-accent-d: #244a3f; /* accent hover on light */
+  --color-accent-l: #376b5c; /* accent hover on dark */
+  --color-on-accent: #f8f1e8;
+  --color-sand-l: #ede0cd;
+  --color-cream-2: #efe4d4;
+  --color-card: #fbf7f1;
+  --color-card-open: #fffdf9;
+  --color-glow: #f2c79c; /* "Art & Soul", focus ring on dark */
+
+  /* Dark heroes */
+  --color-night: #2e1c13;
+  --color-night-2: #22140d;
+  --color-on-night: #f4ede4;
+  --color-on-night-lede: #efe3d3;
+  --color-on-night-body: #d8c6b2;
+
+  --font-display: var(--font-bodoni), Georgia, serif;
+  --font-text: var(--font-literata), Georgia, serif;
+  --font-script: var(--font-pinyon), cursive;
+
+  /* Breakpoints of the design (§5) */
+  --breakpoint-mobile: 820px;
+  --breakpoint-cols: 980px;
+  --breakpoint-nav: 1020px;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 88px;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font: 400 17px/1.6 var(--font-text);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-variation-settings: "opsz" 20;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: var(--color-terra);
+    color: var(--color-paper);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-terra-d);
+    outline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
